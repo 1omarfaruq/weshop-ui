@@ -1,6 +1,6 @@
 <h1 align="center" style="position: relative;">
   <br>
-    <img src="./assets/shoppy-x-ray.svg" alt="logo" width="200">
+    <img src="./assets/weshope_logo.png" alt="logo" width="200">
   <br>
   WeShop Figma to HTML with Tailwind 4
 </h1>
