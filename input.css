@@ -7,3 +7,11 @@
 .svao-container {
   @apply mx-auto sm:w-[40rem] md:w-[48rem] lg:w-[64rem] xl:w-[80rem] 2xl:w-[105rem];
 }
+
+.svao-nav-item a {
+  @apply flex items-center p-2.5 text-base font-medium text-[var(--text-blue)] duration-100 ease-in-out hover:text-[var(--primary-lemon)];
+}
+
+.svao-nav-item a:hover span svg {
+  @apply fill-[var(--primary-lemon)] duration-100 ease-in-out;
+}
