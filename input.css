@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --breakpoint-3xl: 102.5rem; /* 1640px */
+}
+
+.svao-container {
+  @apply mx-auto sm:w-[40rem] md:w-[48rem] lg:w-[64rem] xl:w-[80rem] 2xl:w-[105rem];
+}

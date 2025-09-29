@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(80.8% 0.114 19.571);
     --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-cyan-300: oklch(86.5% 0.127 207.078);
@@ -22,8 +23,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
@@ -217,11 +216,17 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .flex-wrap {
     flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
   }
   .gap-x-4 {
     column-gap: calc(var(--spacing) * 4);
@@ -234,32 +239,18 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .bg-\(--text-black\) {
-    background-color: var(--text-black);
+  .bg-red-300 {
+    background-color: var(--color-red-300);
   }
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
-  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
-  }
-  .text-center {
-    text-align: center;
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -300,6 +291,31 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .sm\:grid-cols-6 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-8 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-10 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(10, minmax(0, 1fr));
+    }
+  }
+  .xl\:grid-cols-11 {
+    @media (width >= 80rem) {
+      grid-template-columns: repeat(11, minmax(0, 1fr));
+    }
+  }
+  .\32 xl\:grid-cols-12 {
+    @media (width >= 96rem) {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
   .dark\:bg-slate-800 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-slate-800);
@@ -333,6 +349,24 @@
         outline-color: color-mix(in oklab, var(--color-white) 10%, transparent);
       }
     }
+  }
+}
+.svao-container {
+  margin-inline: auto;
+  @media (width >= 40rem) {
+    width: 40rem;
+  }
+  @media (width >= 48rem) {
+    width: 48rem;
+  }
+  @media (width >= 64rem) {
+    width: 64rem;
+  }
+  @media (width >= 80rem) {
+    width: 80rem;
+  }
+  @media (width >= 96rem) {
+    width: 105rem;
   }
 }
 @property --tw-rotate-x {
