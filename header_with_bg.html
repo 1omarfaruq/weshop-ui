@@ -61,7 +61,7 @@
     <!-- Start:: Header Section -->
     <header>
       <!-- Start:: Top Navigation Bar -->
-      <div class="bg-[var(--bg-blue)] text-sm">
+      <div id="top-nav" class="bg-[var(--bg-blue)] text-sm">
         <div
           class="svao-container flex items-center justify-between py-2.5 font-light"
         >
@@ -231,7 +231,7 @@
       <!-- Start:: Main Navigation Bar with background -->
       <div
         id="navbar"
-        class="bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)]"
+        class="bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out"
       >
         <div
           class="svao-container flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
@@ -288,7 +288,7 @@
                 </a>
               </li>
 
-              <li class="svao-nav-item">
+              <li class="svao-nav-item svao-nav-active">
                 <a href="#">
                   Woman
 
@@ -517,32 +517,43 @@
       <!-- End:: Main Navigation Bar with background -->
 
       <!-- After your navbar div -->
-      <div id="navbar-spacer" style="height: 0"></div>
+      <div id="navbar-spacer" class="h-0"></div>
 
       <!-- Start:: Script for sticky navbar -->
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        window.onload = function () {
           const navbar = document.getElementById("navbar");
           const spacer = document.getElementById("navbar-spacer");
+          const topNav = document.getElementById("top-nav");
+
           const stickyOffset = navbar.offsetTop;
 
-          window.addEventListener("scroll", function () {
+          function handleSticky() {
             if (window.pageYOffset > stickyOffset) {
+              if (topNav) {
+                topNav.classList.add("hidden");
+              }
               navbar.classList.add("svao-sticky-navbar");
               spacer.style.height = navbar.offsetHeight + "px";
             } else {
+              if (topNav) {
+                topNav.classList.remove("hidden");
+              }
               navbar.classList.remove("svao-sticky-navbar");
               spacer.style.height = "0";
             }
-          });
-        });
+          }
+
+          window.addEventListener("scroll", handleSticky);
+          handleSticky();
+        };
       </script>
       <!-- End:: Script for sticky navbar -->
     </header>
     <!-- End:: Header Section -->
 
     <!-- Start:: Main Content Section -->
-    <main>
+    <main style="min-height: 2000px">
       <div>
         <img src="./assets/Hero.png" alt="Home Banner" class="w-full" />
       </div>

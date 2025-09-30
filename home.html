@@ -252,7 +252,7 @@
                 <a href="#"> Shop </a>
               </li>
 
-              <li class="svao-nav-item-tran">
+              <li class="svao-nav-item-tran svao-nav-active">
                 <a href="#">
                   Man
 
@@ -517,22 +517,39 @@
       </div>
       <!-- End:: Main Navigation Bar with background -->
 
+      <!-- After your navbar div -->
+      <div id="navbar-spacer" style="height: 0"></div>
+
       <!-- Start:: Script for sticky navbar -->
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        window.onload = function () {
           const navbar = document.getElementById("navbar");
+
+          // Create spacer if not exists
+          // let spacer = document.getElementById("navbar-spacer");
+          // if (!spacer) {
+          //   spacer = document.createElement("div");
+          //   spacer.id = "navbar-spacer";
+          //   navbar.parentNode.insertBefore(spacer, navbar.nextSibling);
+          // }
+
           const stickyOffset = navbar.offsetTop;
 
-          window.addEventListener("scroll", function () {
+          function handleSticky() {
             if (window.pageYOffset > stickyOffset) {
               navbar.classList.add("svao-sticky-navbar-transparent");
               navbar.classList.remove("absolute");
+              // spacer.style.height = navbar.offsetHeight + "px";
             } else {
               navbar.classList.remove("svao-sticky-navbar-transparent");
               navbar.classList.add("absolute");
+              // spacer.style.height = "0";
             }
-          });
-        });
+          }
+
+          window.addEventListener("scroll", handleSticky);
+          handleSticky(); // Run once on load
+        };
       </script>
       <!-- End:: Script for sticky navbar -->
     </header>

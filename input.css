@@ -4,10 +4,6 @@
   --breakpoint-3xl: 102.5rem; /* 1640px */
 }
 
-body {
-  @apply transition-all duration-300 ease-in-out;
-}
-
 .svao-container {
   @apply mx-auto sm:w-[40rem] md:w-[48rem] lg:w-[64rem] xl:w-[80rem] 2xl:w-[105rem];
 }
@@ -35,5 +31,12 @@ body {
 
 .svao-nav-item-tran a:hover span svg {
   @apply fill-[var(--primary-lemon)] duration-100 ease-in-out;
+}
+
+.svao-nav-active a {
+  @apply font-semibold text-[var(--primary-lemon)];
+}
+.svao-nav-active a span svg {
+  @apply fill-[var(--primary-lemon)];
 }
 /* End:: Navigation Bar Styles */
