@@ -42,14 +42,18 @@
         --shade-dark-3: rgba(37, 56, 88, 1);
         --shade-dark-4: rgba(23, 43, 77, 1);
         --shade-dark-5: rgba(9, 30, 66, 1);
+      }
 
-        --shade-1: rgba(179, 186, 197, 1);
-        --shade-2: rgba(165, 173, 186, 1);
-        --shade-3: rgba(151, 160, 175, 1);
-        --shade-4: rgba(137, 147, 164, 1);
+      .swiper {
+        width: 100%;
+        height: 100vh;
       }
     </style>
     <!-- End:: Custom Styles -->
+
+    <!-- Start:: Plugin stylesheet links -->
+    <link href="./assets/swiper@12/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- End:: Plugin stylesheet links -->
 
     <!-- Start:: Stylesheet Links -->
     <link href="./assets/font-style.css" rel="stylesheet" />
@@ -229,7 +233,7 @@
       <!-- End:: Top Navigation Bar -->
 
       <!-- Start:: Main Navigation Bar with background -->
-      <div id="navbar" class="absolute w-full">
+      <div id="navbar" class="z-10 w-full">
         <div
           class="svao-container flex items-center justify-between py-5 text-base text-white"
         >
@@ -557,8 +561,78 @@
 
     <!-- Start:: Main Content Section -->
     <main>
-      <div>
-        <img src="./assets/Hero.png" alt="Home Banner" class="w-full" />
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide relative">
+            <!-- Video Wrapper -->
+            <div class="relative bg-[rgba(0,0,0,.2)]">
+              <video autoplay loop muted class="relative -z-1">
+                <source
+                  src="./assets/Man_Street_1920x1080.mp4"
+                  type="video/mp4"
+                />
+              </video>
+
+              <!-- Content Overlay (Text) -->
+              <div class="absolute top-[25%] w-full">
+                <div class="svao-container">
+                  <h2 class="mb-[30px] font-[Playfair] text-8xl font-normal">
+                    Classic
+                  </h2>
+                  <h1
+                    class="mb-10 inline bg-gradient-to-l from-[#46DAFB] via-[#DBF8E2] to-[#D53434] bg-clip-text font-[Kalam] text-9xl font-normal text-transparent"
+                  >
+                    Fashion
+                  </h1>
+                  <p class="mb-14 max-w-[614px] text-2xl text-white">
+                    Fashion Stories That Embody Your Unique Journey and Evolve
+                    with You, style with us.
+                  </p>
+                  <button
+                    class="align-items-center flex cursor-pointer justify-center gap-5 rounded-full bg-[var(--bg-blue)] p-6 text-xl font-semibold"
+                  >
+                    EXPLORE COLLECTION
+                    <span>
+                      <svg
+                        width="27"
+                        height="26"
+                        viewBox="0 0 27 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21.9383 14.3882H1.88739C1.48804 14.3882 1.156 14.2563 0.891255 13.9924C0.626512 13.7285 0.494141 13.3975 0.494141 12.9995C0.494141 12.6014 0.626512 12.2704 0.891255 12.0066C1.156 11.7427 1.48804 11.6107 1.88739 11.6107H21.9383L12.8812 2.5828C12.6025 2.30502 12.4655 1.98099 12.4703 1.61072C12.475 1.24016 12.6167 0.915996 12.8954 0.638218C13.1741 0.369885 13.4991 0.233356 13.8706 0.228634C14.2421 0.223912 14.5672 0.36044 14.8459 0.638218L26.2719 12.0274C26.4204 12.1754 26.5249 12.3282 26.5854 12.4857C26.6456 12.6429 26.6757 12.8142 26.6757 12.9995C26.6757 13.1847 26.6456 13.356 26.5854 13.5132C26.5249 13.6707 26.4204 13.8235 26.2719 13.9715L14.8459 25.3607C14.5767 25.6291 14.2539 25.7632 13.8777 25.7632C13.5015 25.7632 13.1741 25.6291 12.8954 25.3607C12.6167 25.0829 12.4774 24.7566 12.4774 24.3816C12.4774 24.0066 12.6167 23.6802 12.8954 23.4024L21.9383 14.3882Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./assets/slide/slide_2.jpg" alt="Slider 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/slide/slide_3.jpg" alt="Slider 3" />
+          </div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="svao-container relative">
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
     </main>
     <!-- End:: Main Content Section -->
@@ -568,5 +642,35 @@
       <p>&copy; 2024 Our Website</p>
     </footer>
     <!-- End:: Footer Section -->
+
+    <!-- Start:: Plugin script links -->
+    <script src="./assets/swiper@12/swiper-bundle.min.js"></script>
+    <!-- End:: Plugin script links -->
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameter "vertical" or "horizontal"
+        direction: "horizontal",
+
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // Navigation arrows
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        // },
+      });
+    </script>
   </body>
 </html>
