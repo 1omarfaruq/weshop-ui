@@ -4,8 +4,21 @@
   --breakpoint-3xl: 102.5rem; /* 1640px */
 }
 
+body {
+  @apply transition-all duration-300 ease-in-out;
+}
+
 .svao-container {
   @apply mx-auto sm:w-[40rem] md:w-[48rem] lg:w-[64rem] xl:w-[80rem] 2xl:w-[105rem];
+}
+
+/* Start:: Navigation Bar Styles */
+.svao-sticky-navbar {
+  @apply fixed top-0 left-0 z-50 w-full backdrop-blur-[10px] transition-all duration-200 ease-in-out;
+}
+
+.svao-sticky-navbar-transparent {
+  @apply fixed top-0 left-0 z-50 w-full bg-[rgba(25,36,52,0.80)] backdrop-blur-[10px] transition-all duration-200 ease-in-out;
 }
 
 .svao-nav-item a {
@@ -15,3 +28,12 @@
 .svao-nav-item a:hover span svg {
   @apply fill-[var(--primary-lemon)] duration-100 ease-in-out;
 }
+
+.svao-nav-item-tran a {
+  @apply flex items-center p-2.5 text-base font-medium text-white duration-100 ease-in-out hover:text-[var(--primary-lemon)];
+}
+
+.svao-nav-item-tran a:hover span svg {
+  @apply fill-[var(--primary-lemon)] duration-100 ease-in-out;
+}
+/* End:: Navigation Bar Styles */
