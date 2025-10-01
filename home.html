@@ -744,11 +744,11 @@
         <div class="flex gap-5">
           <div
             id="product1-wrapper"
-            class="flex w-1/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)]"
+            class="flex w-1/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)] transition-all duration-300 ease-in-out"
           >
             <div
               id="product1-img"
-              class="relative max-h-[415px] w-full overflow-hidden rounded-[35px]"
+              class="relative max-h-[415px] w-full overflow-hidden rounded-[35px] transition-all duration-300 ease-in-out"
             >
               <img
                 src="./assets/products/young-filipino-traveler-man-looks-aside-smiling-cheerful-pleasant 1.png"
@@ -757,16 +757,19 @@
               />
               <div
                 id="product1-number"
-                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent transition-all duration-300 ease-in-out"
               >
                 01
               </div>
             </div>
-            <div id="product1-info" class="relative hidden w-1/2">
+            <div
+              id="product1-info"
+              class="relative hidden w-1/2 transition-all duration-200 ease-in-out"
+            >
               <h2 class="mt-7 mb-8 w-1/2 text-[36px] font-semibold uppercase">
                 Timeless Elegance
               </h2>
-              <p class="mb-8">
+              <p class="mb-8 transition-all duration-300 ease-in-out">
                 Every item is carefully crafted to seamlessly combine comfort
                 and versatility, ensuring they are suitable for any situation or
                 event
@@ -812,7 +815,7 @@
               </a>
               <!-- End:: Anchor tag -->
               <div
-                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent transition-all duration-300 ease-in-out"
               >
                 01
               </div>
@@ -820,11 +823,11 @@
           </div>
           <div
             id="product2-wrapper"
-            class="flex w-2/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)]"
+            class="flex w-2/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)] transition-all duration-300 ease-in-out"
           >
             <div
               id="product2-img"
-              class="relative max-h-[415px] w-1/2 overflow-hidden rounded-[35px]"
+              class="relative max-h-[415px] w-1/2 overflow-hidden rounded-[35px] transition-all duration-300 ease-in-out"
             >
               <img
                 src="./assets/products/portrait-young-man-posing-nature_23-2148377857 1.png"
@@ -833,13 +836,16 @@
               />
               <div
                 id="product2-number"
-                class="stroke-text absolute right-7 bottom-0 hidden text-right text-[96px] font-semibold text-transparent"
+                class="stroke-text absolute right-7 bottom-0 hidden text-right text-[96px] font-semibold text-transparent transition-all duration-300 ease-in-out"
               >
                 02
               </div>
             </div>
 
-            <div id="product2-info" class="relative w-1/2">
+            <div
+              id="product2-info"
+              class="relative w-1/2 transition-all duration-300 ease-in-out"
+            >
               <h2 class="mt-7 mb-8 w-1/2 text-[36px] font-semibold uppercase">
                 Timeless Elegance
               </h2>
@@ -889,7 +895,7 @@
               </a>
               <!-- End:: Anchor tag -->
               <div
-                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent transition-all duration-300 ease-in-out"
               >
                 02
               </div>
@@ -897,11 +903,11 @@
           </div>
           <div
             id="product3-wrapper"
-            class="flex w-1/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)]"
+            class="flex w-1/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)] transition-all duration-300 ease-in-out"
           >
             <div
-              id="product1-img"
-              class="relative max-h-[415px] w-full overflow-hidden rounded-[35px]"
+              id="product3-img"
+              class="relative max-h-[415px] w-full overflow-hidden rounded-[35px] transition-all duration-300 ease-in-out"
             >
               <img
                 src="./assets/products/imagine-sleek-minimalistic-photograph 1.png"
@@ -910,12 +916,15 @@
               />
               <div
                 id="product3-number"
-                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent transition-all duration-300 ease-in-out"
               >
                 03
               </div>
             </div>
-            <div id="product3-info" class="relative hidden w-1/2">
+            <div
+              id="product3-info"
+              class="relative hidden w-1/2 transition-all duration-300 ease-in-out"
+            >
               <h2 class="mt-7 mb-8 w-1/2 text-[36px] font-semibold uppercase">
                 Timeless Elegance
               </h2>
@@ -965,7 +974,7 @@
               </a>
               <!-- End:: Anchor tag -->
               <div
-                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent transition-all duration-300 ease-in-out"
               >
                 03
               </div>
@@ -1018,9 +1027,152 @@
     <!-- End:: Hero slider script -->
 
     <!-- Start:: New Arrival section's script  -->
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Event listeners for product clicks
+        var product1Wrapper = document.getElementById("product1-wrapper");
+        var product2Wrapper = document.getElementById("product2-wrapper");
+        var product3Wrapper = document.getElementById("product3-wrapper");
+
+        var product1Img = document.getElementById("product1-img");
+        var product2Img = document.getElementById("product2-img");
+        var product3Img = document.getElementById("product3-img");
+
+        var product1Info = document.getElementById("product1-info");
+        var product2Info = document.getElementById("product2-info");
+        var product3Info = document.getElementById("product3-info");
+
+        var product1Number = document.getElementById("product1-number");
+        var product2Number = document.getElementById("product2-number");
+        var product3Number = document.getElementById("product3-number");
+
+        if (product1Img) {
+          product1Img.addEventListener("click", function () {
+            console.log("product1Img");
+            // Add class
+            product1Wrapper.classList.add("w-2/4");
+            product2Wrapper.classList.add("w-1/4");
+            product3Wrapper.classList.add("w-1/4");
+
+            product1Number.classList.add("hidden");
+            product1Img.classList.add("w-1/2");
+            product2Info.classList.add("hidden");
+            product2Img.classList.add("w-full");
+            product3Info.classList.add("hidden");
+            product3Img.classList.add("w-full");
+
+            // Remove class
+            product2Wrapper.classList.remove("w-2/4");
+            product3Wrapper.classList.remove("w-2/4");
+            product2Number.classList.remove("hidden");
+            product3Number.classList.remove("hidden");
+            product1Img.classList.remove("w-full");
+            product1Info.classList.remove("hidden");
+          });
+        }
+
+        if (product2Img) {
+          product2Img.addEventListener("click", function () {
+            // Add class
+            product1Wrapper.classList.add("w-1/4");
+            product2Wrapper.classList.add("w-2/4");
+            product3Wrapper.classList.add("w-1/4");
+
+            product2Number.classList.add("hidden");
+            product2Img.classList.add("w-1/2");
+            product1Info.classList.add("hidden");
+            product1Img.classList.add("w-full");
+            product3Info.classList.add("hidden");
+            product3Img.classList.add("w-full");
+
+            // Remove class
+            product1Wrapper.classList.remove("w-2/4");
+            product3Wrapper.classList.remove("w-2/4");
+            product1Number.classList.remove("hidden");
+            product3Number.classList.remove("hidden");
+            product2Img.classList.remove("w-full");
+            product2Info.classList.remove("hidden");
+          });
+        }
+
+        if (product3Img) {
+          product3Img.addEventListener("click", function () {
+            // Add class
+            product1Wrapper.classList.add("w-1/4");
+            product2Wrapper.classList.add("w-1/4");
+            product3Wrapper.classList.add("w-2/4");
+
+            product3Number.classList.add("hidden");
+            product3Img.classList.add("w-1/2");
+            product1Info.classList.add("hidden");
+            product1Img.classList.add("w-full");
+            product2Info.classList.add("hidden");
+            product2Img.classList.add("w-full");
+
+            // Remove class
+            product1Wrapper.classList.remove("w-2/4");
+            product2Wrapper.classList.remove("w-2/4");
+            product1Number.classList.remove("hidden");
+            product2Number.classList.remove("hidden");
+            product3Img.classList.remove("w-full");
+            product3Info.classList.remove("hidden");
+          });
+        }
+      });
+    </script> -->
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        console.log("Hi Omar");
+        const productWrappers = [
+          {
+            wrapper: document.getElementById("product1-wrapper"),
+            img: document.getElementById("product1-img"),
+            info: document.getElementById("product1-info"),
+            number: document.getElementById("product1-number"),
+          },
+          {
+            wrapper: document.getElementById("product2-wrapper"),
+            img: document.getElementById("product2-img"),
+            info: document.getElementById("product2-info"),
+            number: document.getElementById("product2-number"),
+          },
+          {
+            wrapper: document.getElementById("product3-wrapper"),
+            img: document.getElementById("product3-img"),
+            info: document.getElementById("product3-info"),
+            number: document.getElementById("product3-number"),
+          },
+        ];
+
+        function resetProducts() {
+          productWrappers.forEach((product) => {
+            product.wrapper.classList.remove("w-2/4", "w-1/4");
+            product.wrapper.classList.add("w-1/4");
+            product.img.classList.remove("w-1/2");
+            product.img.classList.add("w-full");
+            product.info.classList.add("hidden");
+            product.number.classList.remove("hidden");
+          });
+        }
+
+        function expandProduct(index) {
+          resetProducts();
+
+          const product = productWrappers[index];
+          product.wrapper.classList.add("w-2/4");
+          product.img.classList.remove("w-full");
+          product.img.classList.add("w-1/2");
+          product.info.classList.remove("hidden");
+          product.number.classList.add("hidden");
+        }
+
+        productWrappers.forEach((product, index) => {
+          if (product.img) {
+            product.img.addEventListener("click", function () {
+              expandProduct(index);
+            });
+          }
+        });
       });
     </script>
     <!-- End:: New Arrival section's script  -->
