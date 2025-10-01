@@ -561,8 +561,9 @@
 
     <!-- Start:: Main Content Section -->
     <main>
-      <!-- Start:: Hero slider -->
-      <div class="swiper">
+      <!-- Start:: Hero Section -->
+      <section class="swiper">
+        <!-- Start:: Section content -->
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides 1 -->
@@ -689,84 +690,292 @@
 
         <!-- If we need scrollbar -->
         <!-- <div class="swiper-scrollbar"></div> -->
-      </div>
-
-      <!-- Start:: Hero Slider Script -->
-      <script>
-        const swiper = new Swiper(".swiper", {
-          // Optional parameter "vertical" or "horizontal"
-          direction: "horizontal",
-
-          loop: true,
-
-          // If we need pagination
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-
-          // Navigation arrows
-          // navigation: {
-          //   nextEl: ".swiper-button-next",
-          //   prevEl: ".swiper-button-prev",
-          // },
-
-          // And if we need scrollbar
-          // scrollbar: {
-          //   el: ".swiper-scrollbar",
-          // },
-        });
-      </script>
-      <!-- End:: Hero slider script -->
-      <!-- End:: Hero slider -->
+        <!-- End:: Section content -->
+      </section>
+      <!-- End:: Hero section -->
 
       <!-- Start:: Brands Section -->
-      <div class="bg-[var(--bg-blue)]">
+      <section class="rounded-b-4xl bg-[var(--bg-blue)]">
+        <!-- Start:: Section content -->
         <div
-          class="svao-container rounded-bottom-5 flex justify-center justify-items-center gap-12 py-14"
+          class="svao-container flex justify-center justify-items-center gap-12 py-14"
         >
-          <a href="#">
-            <img
-              src="./assets/brands/brand-1.png"
-              alt="Brand Logo 1"
-              class="object-contain"
-            />
-          </a>
+          <img
+            src="./assets/brands/brand-1.png"
+            alt="Brand Logo 1"
+            class="object-contain"
+          />
 
-          <a href="#">
-            <img
-              src="./assets/brands/brand-2.png"
-              alt="Brand Logo 1"
-              class="object-contain"
-            />
-          </a>
+          <img
+            src="./assets/brands/brand-2.png"
+            alt="Brand Logo 1"
+            class="object-contain"
+          />
 
-          <a href="#">
-            <img
-              src="./assets/brands/brand-3.png"
-              alt="Brand Logo 1"
-              class="object-contain"
-            />
-          </a>
-
-          <a href="#">
-            <img
-              src="./assets/brands/brand-4.png"
-              alt="Brand Logo 1"
-              class="object-contain"
-            />
-          </a>
-
-          <a href="#">
-            <img
-              src="./assets/brands/brand-4.png"
-              alt="Brand Logo 1"
-              class="object-contain"
-            />
-          </a>
+          <img
+            src="./assets/brands/brand-3.png"
+            alt="Brand Logo 1"
+            class="object-contain"
+          />
+          <img
+            src="./assets/brands/brand-4.png"
+            alt="Brand Logo 1"
+            class="object-contain"
+          />
+          <img
+            src="./assets/brands/brand-4.png"
+            alt="Brand Logo 1"
+            class="object-contain"
+          />
         </div>
-      </div>
-      <!-- End:: Brands Section -->
+        <!-- End:: Section content -->
+      </section>
+      <!-- End:: Brands section -->
+
+      <!-- Start:: New arrivals section -->
+      <section class="svao-container py-20">
+        <!-- Start:: Section title -->
+        <h1 class="mb-10 text-[64px] font-semibold text-[var(--text-blue)]">
+          New Arrivals
+        </h1>
+        <!-- End:: Section title -->
+
+        <!-- Start:: Section content -->
+        <div class="flex gap-5">
+          <div
+            id="product1-wrapper"
+            class="flex w-1/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)]"
+          >
+            <div
+              id="product1-img"
+              class="relative max-h-[415px] w-full overflow-hidden rounded-[35px]"
+            >
+              <img
+                src="./assets/products/young-filipino-traveler-man-looks-aside-smiling-cheerful-pleasant 1.png"
+                alt="products image"
+                class="w-full object-contain"
+              />
+              <div
+                id="product1-number"
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+              >
+                01
+              </div>
+            </div>
+            <div id="product1-info" class="relative hidden w-1/2">
+              <h2 class="mt-7 mb-8 w-1/2 text-[36px] font-semibold uppercase">
+                Timeless Elegance
+              </h2>
+              <p class="mb-8">
+                Every item is carefully crafted to seamlessly combine comfort
+                and versatility, ensuring they are suitable for any situation or
+                event
+              </p>
+              <!-- Start:: Anchor tag -->
+              <a
+                href="#"
+                class="group relative flex w-[155px] cursor-pointer items-center justify-center gap-2.5 overflow-hidden rounded-full bg-[var(--bg-blue)] px-4 py-3 text-base font-semibold text-white"
+              >
+                <span
+                  class="absolute inset-0 h-full w-full -translate-x-full transform rounded-r-4xl bg-[var(--primary-lemon)] transition-transform duration-230 ease-in-out group-hover:translate-x-0"
+                ></span>
+                <span
+                  class="relative z-10 transition-colors duration-230 group-hover:text-[var(--bg-blue)]"
+                  >SHOP NOW</span
+                >
+                <span class="relative z-10">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-white transition-colors duration-230 group-hover:fill-[var(--bg-blue)]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19488_3345"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19488_3345)">
+                      <path
+                        d="M12.2 13L11.3 13.9C11.1167 14.0833 11.025 14.3167 11.025 14.6C11.025 14.8833 11.1167 15.1167 11.3 15.3C11.4833 15.4833 11.7167 15.575 12 15.575C12.2833 15.575 12.5167 15.4833 12.7 15.3L15.3 12.7C15.5 12.5 15.6 12.2667 15.6 12C15.6 11.7333 15.5 11.5 15.3 11.3L12.7 8.7C12.5167 8.51667 12.2833 8.425 12 8.425C11.7167 8.425 11.4833 8.51667 11.3 8.7C11.1167 8.88333 11.025 9.11667 11.025 9.4C11.025 9.68333 11.1167 9.91667 11.3 10.1L12.2 11H9C8.71667 11 8.47917 11.0958 8.2875 11.2875C8.09583 11.4792 8 11.7167 8 12C8 12.2833 8.09583 12.5208 8.2875 12.7125C8.47917 12.9042 8.71667 13 9 13H12.2ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </a>
+              <!-- End:: Anchor tag -->
+              <div
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+              >
+                01
+              </div>
+            </div>
+          </div>
+          <div
+            id="product2-wrapper"
+            class="flex w-2/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)]"
+          >
+            <div
+              id="product2-img"
+              class="relative max-h-[415px] w-1/2 overflow-hidden rounded-[35px]"
+            >
+              <img
+                src="./assets/products/portrait-young-man-posing-nature_23-2148377857 1.png"
+                alt="products image"
+                class="w-full object-contain"
+              />
+              <div
+                id="product2-number"
+                class="stroke-text absolute right-7 bottom-0 hidden text-right text-[96px] font-semibold text-transparent"
+              >
+                02
+              </div>
+            </div>
+
+            <div id="product2-info" class="relative w-1/2">
+              <h2 class="mt-7 mb-8 w-1/2 text-[36px] font-semibold uppercase">
+                Timeless Elegance
+              </h2>
+              <p class="mb-8">
+                Every item is carefully crafted to seamlessly combine comfort
+                and versatility, ensuring they are suitable for any situation or
+                event
+              </p>
+              <!-- Start:: Anchor tag -->
+              <a
+                href="#"
+                class="group relative flex w-[155px] cursor-pointer items-center justify-center gap-2.5 overflow-hidden rounded-full bg-[var(--bg-blue)] px-4 py-3 text-base font-semibold text-white"
+              >
+                <span
+                  class="absolute inset-0 h-full w-full -translate-x-full transform rounded-r-4xl bg-[var(--primary-lemon)] transition-transform duration-230 ease-in-out group-hover:translate-x-0"
+                ></span>
+                <span
+                  class="relative z-10 transition-colors duration-230 group-hover:text-[var(--bg-blue)]"
+                  >SHOP NOW</span
+                >
+                <span class="relative z-10">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-white transition-colors duration-230 group-hover:fill-[var(--bg-blue)]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19488_3345"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19488_3345)">
+                      <path
+                        d="M12.2 13L11.3 13.9C11.1167 14.0833 11.025 14.3167 11.025 14.6C11.025 14.8833 11.1167 15.1167 11.3 15.3C11.4833 15.4833 11.7167 15.575 12 15.575C12.2833 15.575 12.5167 15.4833 12.7 15.3L15.3 12.7C15.5 12.5 15.6 12.2667 15.6 12C15.6 11.7333 15.5 11.5 15.3 11.3L12.7 8.7C12.5167 8.51667 12.2833 8.425 12 8.425C11.7167 8.425 11.4833 8.51667 11.3 8.7C11.1167 8.88333 11.025 9.11667 11.025 9.4C11.025 9.68333 11.1167 9.91667 11.3 10.1L12.2 11H9C8.71667 11 8.47917 11.0958 8.2875 11.2875C8.09583 11.4792 8 11.7167 8 12C8 12.2833 8.09583 12.5208 8.2875 12.7125C8.47917 12.9042 8.71667 13 9 13H12.2ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </a>
+              <!-- End:: Anchor tag -->
+              <div
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+              >
+                02
+              </div>
+            </div>
+          </div>
+          <div
+            id="product3-wrapper"
+            class="flex w-1/4 gap-6 overflow-hidden rounded-[35px] bg-white text-[var(--text-blue)]"
+          >
+            <div
+              id="product1-img"
+              class="relative max-h-[415px] w-full overflow-hidden rounded-[35px]"
+            >
+              <img
+                src="./assets/products/imagine-sleek-minimalistic-photograph 1.png"
+                alt="products image"
+                class="w-full object-contain"
+              />
+              <div
+                id="product3-number"
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+              >
+                03
+              </div>
+            </div>
+            <div id="product3-info" class="relative hidden w-1/2">
+              <h2 class="mt-7 mb-8 w-1/2 text-[36px] font-semibold uppercase">
+                Timeless Elegance
+              </h2>
+              <p class="mb-8">
+                Every item is carefully crafted to seamlessly combine comfort
+                and versatility, ensuring they are suitable for any situation or
+                event
+              </p>
+              <!-- Start:: Anchor tag -->
+              <a
+                href="#"
+                class="group relative flex w-[155px] cursor-pointer items-center justify-center gap-2.5 overflow-hidden rounded-full bg-[var(--bg-blue)] px-4 py-3 text-base font-semibold text-white"
+              >
+                <span
+                  class="absolute inset-0 h-full w-full -translate-x-full transform rounded-r-4xl bg-[var(--primary-lemon)] transition-transform duration-230 ease-in-out group-hover:translate-x-0"
+                ></span>
+                <span
+                  class="relative z-10 transition-colors duration-230 group-hover:text-[var(--bg-blue)]"
+                  >SHOP NOW</span
+                >
+                <span class="relative z-10">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-white transition-colors duration-230 group-hover:fill-[var(--bg-blue)]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19488_3345"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19488_3345)">
+                      <path
+                        d="M12.2 13L11.3 13.9C11.1167 14.0833 11.025 14.3167 11.025 14.6C11.025 14.8833 11.1167 15.1167 11.3 15.3C11.4833 15.4833 11.7167 15.575 12 15.575C12.2833 15.575 12.5167 15.4833 12.7 15.3L15.3 12.7C15.5 12.5 15.6 12.2667 15.6 12C15.6 11.7333 15.5 11.5 15.3 11.3L12.7 8.7C12.5167 8.51667 12.2833 8.425 12 8.425C11.7167 8.425 11.4833 8.51667 11.3 8.7C11.1167 8.88333 11.025 9.11667 11.025 9.4C11.025 9.68333 11.1167 9.91667 11.3 10.1L12.2 11H9C8.71667 11 8.47917 11.0958 8.2875 11.2875C8.09583 11.4792 8 11.7167 8 12C8 12.2833 8.09583 12.5208 8.2875 12.7125C8.47917 12.9042 8.71667 13 9 13H12.2ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </a>
+              <!-- End:: Anchor tag -->
+              <div
+                class="stroke-text absolute right-7 bottom-0 text-right text-[96px] font-semibold text-transparent"
+              >
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- End:: Section content -->
+      </section>
+      <!-- End:: New Arrivals -->
     </main>
     <!-- End:: Main Content Section -->
 
@@ -779,5 +988,41 @@
     <!-- Start:: Plugin script links -->
     <script src="./assets/swiper@12/swiper-bundle.min.js"></script>
     <!-- End:: Plugin script links -->
+
+    <!-- Start:: Hero Slider Script -->
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameter "vertical" or "horizontal"
+        direction: "horizontal",
+
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // Navigation arrows
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        // },
+      });
+    </script>
+    <!-- End:: Hero slider script -->
+
+    <!-- Start:: New Arrival section's script  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("Hi Omar");
+      });
+    </script>
+    <!-- End:: New Arrival section's script  -->
   </body>
 </html>

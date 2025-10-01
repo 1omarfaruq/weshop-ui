@@ -56,3 +56,8 @@
   outline: 1px solid #ffffff;
   outline-offset: 2px;
 }
+
+.stroke-text {
+  -webkit-text-stroke: 1px #b3bac5; /* Apply the stroke */
+  text-stroke: 1px #b3bac5; /* Fallback for non-WebKit browsers */
+}
