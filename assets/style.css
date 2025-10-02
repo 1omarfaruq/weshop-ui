@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-100: oklch(93.6% 0.032 17.717);
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-cyan-300: oklch(86.5% 0.127 207.078);
@@ -20,6 +22,8 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -238,9 +242,6 @@
   .-right-1 {
     right: calc(var(--spacing) * -1);
   }
-  .right-5 {
-    right: calc(var(--spacing) * 5);
-  }
   .right-7 {
     right: calc(var(--spacing) * 7);
   }
@@ -274,6 +275,9 @@
       max-width: 102.5rem;
     }
   }
+  .m-auto {
+    margin: auto;
+  }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
@@ -289,9 +293,6 @@
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
-  .mr-7 {
-    margin-right: calc(var(--spacing) * 7);
-  }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
@@ -303,6 +304,21 @@
   }
   .mb-\[30px\] {
     margin-bottom: 30px;
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .ml-28 {
+    margin-left: calc(var(--spacing) * 28);
+  }
+  .ml-32 {
+    margin-left: calc(var(--spacing) * 32);
+  }
+  .ml-36 {
+    margin-left: calc(var(--spacing) * 36);
+  }
+  .ml-40 {
+    margin-left: calc(var(--spacing) * 40);
   }
   .block {
     display: block;
@@ -443,6 +459,9 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
@@ -488,8 +507,30 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+  .border-\[\#42526E\] {
+    border-color: #42526E;
+  }
+  .border-\[42526E\] {
+    border-color: 42526E;
+  }
+  .border-red-100 {
+    border-color: var(--color-red-100);
+  }
+  .border-red-500 {
+    border-color: var(--color-red-500);
+  }
+  .bg-\[bar\] {
+    background-color: bar;
+  }
   .bg-\[rgba\(0\,0\,0\,\.2\)\] {
     background-color: rgba(0,0,0,.2);
+  }
+  .bg-\[var\(\)\] {
+    background-color: var();
   }
   .bg-\[var\(--bg-blue\)\] {
     background-color: var(--bg-blue);
@@ -503,14 +544,14 @@
   .bg-\[var\(--shade-1\)\] {
     background-color: var(--shade-1);
   }
+  .bg-\[var\] {
+    background-color: var;
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
-  }
-  .bg-gray-400 {
-    background-color: var(--color-gray-400);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -568,6 +609,9 @@
   .py-0\.5 {
     padding-block: calc(var(--spacing) * 0.5);
   }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -577,8 +621,17 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
   }
   .py-14 {
     padding-block: calc(var(--spacing) * 14);
@@ -632,6 +685,10 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
   .text-\[36px\] {
     font-size: 36px;
   }
@@ -664,6 +721,12 @@
   .font-thin {
     --tw-font-weight: var(--font-weight-thin);
     font-weight: var(--font-weight-thin);
+  }
+  .text-nowrap {
+    text-wrap: nowrap;
+  }
+  .text-wrap {
+    text-wrap: wrap;
   }
   .text-\[var\(--text-blue\)\] {
     color: var(--text-blue);
@@ -762,14 +825,6 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
-  .duration-400 {
-    --tw-duration: 400ms;
-    transition-duration: 400ms;
-  }
-  .duration-500 {
-    --tw-duration: 500ms;
-    transition-duration: 500ms;
-  }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
@@ -844,10 +899,24 @@
       }
     }
   }
+  .hover\:text-\[var\(\)\] {
+    &:hover {
+      @media (hover: hover) {
+        color: var();
+      }
+    }
+  }
   .hover\:text-\[var\(--primary-lemon\)\] {
     &:hover {
       @media (hover: hover) {
         color: var(--primary-lemon);
+      }
+    }
+  }
+  .hover\:text-\[var\] {
+    &:hover {
+      @media (hover: hover) {
+        color: var;
       }
     }
   }
