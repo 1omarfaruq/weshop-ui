@@ -58,7 +58,18 @@
 }
 /* End:: Slider modification */
 
-.stroke-text {
-  -webkit-text-stroke: 1px #b3bac5; /* Apply the stroke */
-  text-stroke: 1px #b3bac5; /* Fallback for non-WebKit browsers */
+/* Start:: Text stroke */
+.stroke-text-gray {
+  -webkit-text-stroke: 1px #b3bac5;
+  text-stroke: 1px #b3bac5;
 }
+
+.stroke-text-white {
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #ffffff;
+}
+.stroke-text-blue {
+  -webkit-text-stroke: 1px #192434;
+  text-stroke: 1px #192434;
+}
+/* End:: Text stroke */
