@@ -41,7 +41,7 @@
 }
 /* End:: Navigation Bar Styles */
 
-/* Slider modification */
+/* Start:: Slider modification */
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -56,6 +56,7 @@
   outline: 1px solid #ffffff;
   outline-offset: 2px;
 }
+/* End:: Slider modification */
 
 .stroke-text {
   -webkit-text-stroke: 1px #b3bac5; /* Apply the stroke */
