@@ -59,17 +59,20 @@
 /* End:: Slider modification */
 
 /* Start:: Text stroke */
-.stroke-text-gray {
+.svao-stroke-text-gray {
   -webkit-text-stroke: 1px #b3bac5;
   text-stroke: 1px #b3bac5;
 }
 
-.stroke-text-white {
+.svao-stroke-text-white {
   -webkit-text-stroke: 1px #ffffff;
   text-stroke: 1px #ffffff;
 }
-.stroke-text-blue {
+.svao-stroke-text-blue {
   -webkit-text-stroke: 1px #192434;
   text-stroke: 1px #192434;
 }
 /* End:: Text stroke */
+
+.svao-quantity-btn {
+}
