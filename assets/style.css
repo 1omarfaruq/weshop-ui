@@ -446,6 +446,9 @@
   .w-\[3\] {
     width: 3;
   }
+  .w-\[5\] {
+    width: 5;
+  }
   .w-\[25px\] {
     width: 25px;
   }
@@ -493,6 +496,12 @@
   }
   .w-\[500px\] {
     width: 500px;
+  }
+  .w-\[594\] {
+    width: 594;
+  }
+  .w-\[594px\] {
+    width: 594px;
   }
   .w-full {
     width: 100%;
@@ -909,6 +918,9 @@
   .text-\[\#B3BAC5\] {
     color: #B3BAC5;
   }
+  .text-\[var\(\)\] {
+    color: var();
+  }
   .text-\[var\(--primary-lemon\)\] {
     color: var(--primary-lemon);
   }
@@ -926,6 +938,9 @@
   }
   .text-\[var\(--text-white\)\] {
     color: var(--text-white);
+  }
+  .text-\[var\] {
+    color: var;
   }
   .text-amber-600 {
     color: var(--color-amber-600);
