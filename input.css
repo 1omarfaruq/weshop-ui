@@ -36,6 +36,7 @@
 .svao-nav-active a {
   @apply font-semibold text-[var(--primary-lemon)];
 }
+
 .svao-nav-active a span svg {
   @apply fill-[var(--primary-lemon)];
 }
