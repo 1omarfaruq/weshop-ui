@@ -798,6 +798,9 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .p-\[100px\] {
+    padding: 100px;
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -813,8 +816,14 @@
   .px-9 {
     padding-inline: calc(var(--spacing) * 9);
   }
+  .px-\[1\] {
+    padding-inline: 1;
+  }
   .px-\[14px\] {
     padding-inline: 14px;
+  }
+  .px-\[100px\] {
+    padding-inline: 100px;
   }
   .py-0 {
     padding-block: calc(var(--spacing) * 0);
@@ -852,6 +861,9 @@
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }
+  .py-\[0px\] {
+    padding-block: 0px;
+  }
   .py-\[38px\] {
     padding-block: 38px;
   }
@@ -861,8 +873,17 @@
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
   }
+  .pt-\[0px\] {
+    padding-top: 0px;
+  }
+  .pt-\[50px\] {
+    padding-top: 50px;
+  }
   .pt-\[60px\] {
     padding-top: 60px;
+  }
+  .pt-\[100px\] {
+    padding-top: 100px;
   }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
@@ -875,6 +896,12 @@
   }
   .pb-\[48px\] {
     padding-bottom: 48px;
+  }
+  .pb-\[50\] {
+    padding-bottom: 50;
+  }
+  .pb-\[50px\] {
+    padding-bottom: 50px;
   }
   .pb-\[100px\] {
     padding-bottom: 100px;
