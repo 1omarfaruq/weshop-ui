@@ -4,6 +4,30 @@
   --breakpoint-3xl: 102.5rem; /* 1640px */
 }
 
+/* Start:: Scroll bar design */
+/* End:: Scroll bar design */
+.svao-scrollbar {
+  overflow-y: auto;
+}
+
+.svao-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.svao-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ced3db;
+  border-radius: 10px;
+}
+
+.svao-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #b3bac5;
+}
+
+.svao-scrollbar::-webkit-scrollbar-track {
+  background-color: #dfe1e6;
+  border-radius: 10px;
+}
+
 .svao-container {
   @apply mx-auto sm:w-[40rem] md:w-[48rem] lg:w-[64rem] xl:w-[80rem] 2xl:w-[105rem];
 }
@@ -75,5 +99,8 @@
 }
 /* End:: Text stroke */
 
-.svao-quantity-btn {
+.svao-shadow-md {
+  box-shadow:
+    0 4px 6px -1px #b3bac5,
+    0 2px 4px -1px #b3bac5;
 }

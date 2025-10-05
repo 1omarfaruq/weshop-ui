@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before-After Image Comparison Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .comparison-slider {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .before-image,
+      .after-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .before-image {
+        clip-path: polygon(
+          0 0,
+          var(--slider-position, 50%) 0,
+          var(--slider-position, 50%) 100%,
+          0 100%
+        );
+      }
+
+      .after-image {
+        clip-path: polygon(
+          var(--slider-position, 50%) 0,
+          100% 0,
+          100% 100%,
+          var(--slider-position, 50%) 100%
+        );
+      }
+
+      .slider-handle {
+        position: absolute;
+        top: 0;
+        left: var(--slider-position, 50%);
+        width: 4px;
+        height: 100%;
+        background: white;
+        cursor: col-resize;
+        transform: translateX(-50%);
+        z-index: 10; /* Ensure the handle is above the images */
+      }
+
+      .slider-handle::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px;
+        height: 48px;
+        background: white;
+        border-radius: 50%;
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+    </style>
+  </head>
+  <body
+    class="flex min-h-screen items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 p-6"
+  >
+    <div class="w-full max-w-6xl">
+      <!-- Main Comparison Slider -->
+      <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
+        <div class="lg:col-span-2">
+          <div
+            class="comparison-slider aspect-video bg-gray-200"
+            id="comparisonSlider"
+          >
+            <!-- Before Image -->
+            <img
+              src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Before"
+              class="before-image"
+            />
+
+            <!-- After Image -->
+            <img
+              src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80&sat=-100&brightness=110&contrast=110"
+              alt="After"
+              class="after-image"
+            />
+
+            <!-- Slider Handle -->
+            <div class="slider-handle" id="sliderHandle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("comparisonSlider");
+        const handle = document.getElementById("sliderHandle");
+        let isDragging = false;
+
+        function updateSliderPosition(clientX) {
+          const rect = slider.getBoundingClientRect();
+          const position = ((clientX - rect.left) / rect.width) * 100;
+          const clampedPosition = Math.max(0, Math.min(100, position));
+
+          slider.style.setProperty("--slider-position", `${clampedPosition}%`);
+        }
+
+        // Mouse events
+        handle.addEventListener("mousedown", function (e) {
+          isDragging = true;
+          e.preventDefault();
+        });
+
+        document.addEventListener("mousemove", function (e) {
+          if (isDragging) {
+            updateSliderPosition(e.clientX);
+          }
+        });
+
+        document.addEventListener("mouseup", function () {
+          isDragging = false;
+        });
+
+        // Touch events for mobile
+        handle.addEventListener("touchstart", function (e) {
+          isDragging = true;
+          e.preventDefault();
+        });
+
+        document.addEventListener("touchmove", function (e) {
+          if (isDragging && e.touches.length > 0) {
+            updateSliderPosition(e.touches[0].clientX);
+          }
+        });
+
+        document.addEventListener("touchend", function () {
+          isDragging = false;
+        });
+
+        // Click on slider to move handle
+        slider.addEventListener("click", function (e) {
+          updateSliderPosition(e.clientX);
+        });
+      });
+    </script>
+  </body>
+</html>
