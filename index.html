@@ -42,6 +42,11 @@
         --shade-dark-3: rgba(37, 56, 88, 1);
         --shade-dark-4: rgba(23, 43, 77, 1);
         --shade-dark-5: rgba(9, 30, 66, 1);
+
+        --shade-1: rgba(179, 186, 197, 1);
+        --shade-2: rgba(165, 173, 186, 1);
+        --shade-3: rgba(151, 160, 175, 1);
+        --shade-4: rgba(137, 147, 164, 1);
       }
 
       .swiper {
@@ -239,7 +244,7 @@
       <!-- Start:: Main Navigation Bar with background -->
       <div
         id="navbar"
-        class="bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out"
+        class="hidden bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out sm:flex"
       >
         <div
           class="svao-container flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
@@ -524,6 +529,446 @@
       </div>
       <!-- End:: Main Navigation Bar with background -->
 
+      <!--Start:: Main Navigation for mobile -->
+      <div class="bg-white shadow-md">
+        <!--Start: Search Section-->
+
+        <div class="relative w-full">
+          <div class="flex justify-end">
+            <!--Start:: Close btn-->
+            <button>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 15L15 5M5 5L15 15"
+                  stroke="#1B2B41"
+                  stroke-opacity="0.69"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <!--End:: Close button-->
+          </div>
+
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full rounded-lg border border-blue-300 bg-white px-4 py-2 pr-10 text-gray-700 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+            <svg
+              class="h-5 w-5 text-blue-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <!--End: Search Section-->
+
+        <!--Start:: Menu section-->
+        <div class="mx-auto w-full overflow-hidden rounded-2xl">
+          <!-- Products -->
+          <div class="border-b">
+            <button
+              class="toggle-btn flex w-full items-center justify-between px-4 py-3 text-left font-semibold text-red-400"
+            >
+              Products
+              <svg
+                class="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="dropdown-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <div
+                class="ml-2 flex flex-col space-y-2 border-l-2 border-gray-300 py-2 pl-4"
+              >
+                <!-- Shoes -->
+                <div>
+                  <button
+                    class="toggle-btn flex w-full items-center justify-between text-sm text-gray-700 hover:text-black"
+                  >
+                    Shoes
+                    <svg
+                      class="h-4 w-4 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    class="dropdown-content max-h-0 overflow-hidden transition-all duration-300"
+                  >
+                    <div
+                      class="ml-2 flex flex-col space-y-2 border-l-2 border-gray-300 py-2 pl-4"
+                    >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Nike</a
+                      >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Air Jordan</a
+                      >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Adidas</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Hats -->
+                <div>
+                  <button
+                    class="toggle-btn flex w-full items-center justify-between text-sm text-gray-700 hover:text-black"
+                  >
+                    Hats
+                    <svg
+                      class="h-4 w-4 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    class="dropdown-content max-h-0 overflow-hidden transition-all duration-300"
+                  >
+                    <div
+                      class="ml-2 flex flex-col space-y-2 border-l-2 border-gray-300 py-2 pl-4"
+                    >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Baseball Caps</a
+                      >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Beanies</a
+                      >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Bucket Hats</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bags -->
+                <div>
+                  <button
+                    class="toggle-btn flex w-full items-center justify-between text-sm text-gray-700 hover:text-black"
+                  >
+                    Bags
+                    <svg
+                      class="h-4 w-4 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    class="dropdown-content max-h-0 overflow-hidden transition-all duration-300"
+                  >
+                    <div
+                      class="ml-2 flex flex-col space-y-2 border-l-2 border-gray-300 py-2 pl-4"
+                    >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Backpacks</a
+                      >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Handbags</a
+                      >
+                      <a href="#" class="text-sm text-gray-700 hover:text-black"
+                        >Messenger Bags</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="border-b">
+            <button
+              class="toggle-btn flex w-full items-center justify-between px-4 py-3 text-left font-semibold text-red-400"
+            >
+              Services
+              <svg
+                class="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              class="dropdown-content max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <div
+                class="ml-2 flex flex-col space-y-2 border-l-2 border-gray-300 py-2 pl-4"
+              >
+                <a href="#" class="text-sm text-gray-700 hover:text-black"
+                  >Consulting</a
+                >
+                <a href="#" class="text-sm text-gray-700 hover:text-black"
+                  >Design</a
+                >
+                <a href="#" class="text-sm text-gray-700 hover:text-black"
+                  >Development</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Wishlist -->
+          <div class="border-b">
+            <a
+              href="#"
+              class="flex w-full items-center justify-between px-4 py-3 text-left font-semibold text-red-400 transition hover:bg-gray-50"
+            >
+              <span class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-red-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 
+             4.5 0 116.364 6.364L12 20.682l-7.682-7.682a4.5 
+             4.5 0 010-6.364z"
+                  />
+                </svg>
+                Wishlist
+              </span>
+              <svg
+                class="h-5 w-5 text-gray-500"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- End: Menu section-->
+
+        <!-- Start:: Social section-->
+        <div>
+          <!--Start:: Social icons -->
+          <div class="flex justify-center">
+            <!--Start:: Facebook icon-->
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_2884)">
+                <path
+                  d="M20.4844 0H3.51562C1.57727 0 0 1.57727 0 3.51562V20.4844C0 22.4227 1.57727 24 3.51562 24H10.5938V15.5156H7.78125V11.2969H10.5938V8.4375C10.5938 6.11115 12.4861 4.21875 14.8125 4.21875H19.0781V8.4375H14.8125V11.2969H19.0781L18.375 15.5156H14.8125V24H20.4844C22.4227 24 24 22.4227 24 20.4844V3.51562C24 1.57727 22.4227 0 20.4844 0Z"
+                  fill="#192739"
+                  fill-opacity="0.96"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_2884">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <!--End: Facebook icon-->
+
+            <!-- Start: Linkedin icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_2886)">
+                <path
+                  d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
+                  fill="#192739"
+                  fill-opacity="0.96"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_2886">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <!--End: Linkedin icon-->
+
+            <!--Start:: Pinterest icon -->
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.7273 0H3.27273C2.40475 0 1.57232 0.344804 0.95856 0.95856C0.344804 1.57232 0 2.40475 0 3.27273L0 20.7273C0 21.5953 0.344804 22.4277 0.95856 23.0414C1.57232 23.6552 2.40475 24 3.27273 24H20.7273C21.5953 24 22.4277 23.6552 23.0414 23.0414C23.6552 22.4277 24 21.5953 24 20.7273V3.27273C24 2.40475 23.6552 1.57232 23.0414 0.95856C22.4277 0.344804 21.5953 0 20.7273 0ZM13.1577 15.3409C12.2264 15.3409 11.3523 14.8377 11.0523 14.2664C11.0523 14.2664 10.5518 16.2518 10.4468 16.635C10.0732 17.9877 8.97682 19.3432 8.89091 19.4536C8.8775 19.4715 8.85914 19.4851 8.8381 19.4927C8.81705 19.5003 8.79425 19.5016 8.77249 19.4964C8.75074 19.4911 8.73099 19.4797 8.71568 19.4633C8.70038 19.447 8.69019 19.4266 8.68636 19.4045C8.66318 19.2327 8.38364 17.5241 8.71227 16.1318L9.81818 11.4355C9.6316 11.0054 9.53864 10.5406 9.54545 10.0718C9.54545 8.79545 10.2859 7.84227 11.2077 7.84227C11.9905 7.84227 12.3695 8.43 12.3695 9.13636C12.3695 9.92318 11.8677 11.1014 11.6086 12.1936C11.3918 13.1073 12.0668 13.8532 12.9723 13.8532C14.6086 13.8532 15.6995 11.7559 15.6995 9.27136C15.6995 7.38409 14.4286 5.97 12.1145 5.97C9.50182 5.97 7.87227 7.91864 7.87227 10.0909C7.87227 10.8423 8.09455 11.3714 8.44091 11.7805C8.60046 11.9686 8.62364 12.045 8.565 12.2605C8.52409 12.42 8.42864 12.8059 8.38909 12.9518C8.38205 12.9985 8.36389 13.0429 8.33612 13.0811C8.30836 13.1193 8.27181 13.1503 8.22956 13.1714C8.18731 13.1925 8.1406 13.2032 8.09337 13.2024C8.04614 13.2017 7.99977 13.1897 7.95818 13.1673C6.75409 12.6818 6.19364 11.3632 6.19364 9.88227C6.19364 7.43455 8.25818 4.5 12.3518 4.5C15.6409 4.5 17.8064 6.87955 17.8064 9.435C17.8064 12.8182 15.9273 15.3409 13.1577 15.3409Z"
+                fill="#192739"
+                fill-opacity="0.96"
+              />
+            </svg>
+
+            <!-- End:: Pinterest icon-->
+
+            <!--Start:: X icon -->
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_2892)">
+                <path
+                  d="M12.8026 11.5902L18.2035 19.3154H15.9869L11.5797 13.0116V13.0112L10.9327 12.0859L5.7843 4.72156H8.00083L12.1555 10.6648L12.8026 11.5902Z"
+                  fill="#192739"
+                  fill-opacity="0.96"
+                />
+                <path
+                  d="M21.4067 0H2.59325C1.16108 0 0 1.16108 0 2.59325V21.4067C0 22.8389 1.16108 24 2.59325 24H21.4067C22.8389 24 24 22.8389 24 21.4067V2.59325C24 1.16108 22.8389 0 21.4067 0ZM15.308 20.3525L10.8481 13.8617L5.26435 20.3525H3.82122L10.2073 12.9295L3.82122 3.63521H8.69203L12.9152 9.78152L18.2026 3.63521H19.6458L13.5562 10.7139H13.5558L20.1788 20.3525H15.308Z"
+                  fill="#192739"
+                  fill-opacity="0.96"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_2892">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <!--End: X icon -->
+          </div>
+          <!--End: Social icons -->
+
+          <p class="text-center text-black">
+            24/7 Customer Support: +81 5203 888 61
+          </p>
+        </div>
+        <!--End: Social section-->
+
+        <!-- Script -->
+        <script>
+          function updateParentHeights(el) {
+            let parent = el.parentElement.closest(".dropdown-content");
+            while (parent) {
+              // Calculate the total height of all visible children
+              let totalHeight = 0;
+              const siblings = parent.querySelectorAll(":scope > *");
+              siblings.forEach((sibling) => {
+                totalHeight += sibling.scrollHeight;
+              });
+              parent.style.maxHeight = totalHeight + "px";
+              parent = parent.parentElement.closest(".dropdown-content");
+            }
+          }
+
+          document.querySelectorAll(".toggle-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const content = btn.nextElementSibling;
+              const icon = btn.querySelector("svg");
+
+              if (!content || !content.classList.contains("dropdown-content"))
+                return;
+
+              const isOpen =
+                content.style.maxHeight && content.style.maxHeight !== "0px";
+
+              if (isOpen) {
+                // Collapse the current dropdown
+                content.style.maxHeight = null;
+                icon.style.transform = "rotate(0deg)";
+                // Update parent heights to reflect the collapsed state
+                updateParentHeights(content);
+              } else {
+                // Expand the current dropdown
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = "rotate(180deg)";
+                // Use setTimeout to ensure height calculations happen after the transition
+                setTimeout(() => {
+                  updateParentHeights(content);
+                }, 300); // Match the CSS transition duration
+              }
+            });
+          });
+        </script>
+      </div>
+
+      <!--End:: Main Navigation for mobile-->
+
       <!-- After your navbar div -->
       <div id="navbar-spacer" class="h-0"></div>
 
@@ -550,6 +995,36 @@
         };
       </script>
       <!-- End:: Script for sticky navbar -->
+
+      <!--Start: Script for mobile toggle behavior -->
+      <!-- <script>
+        const buttons = document.querySelectorAll(".toggle-btn");
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector("svg");
+
+            // Collapse other dropdowns
+            document.querySelectorAll(".dropdown-content").forEach((el) => {
+              if (el !== content) el.style.maxHeight = null;
+            });
+            document.querySelectorAll(".toggle-btn svg").forEach((svg) => {
+              if (svg !== icon) svg.style.transform = "rotate(0deg)";
+            });
+
+            // Toggle this one
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+              icon.style.transform = "rotate(0deg)";
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.style.transform = "rotate(180deg)";
+            }
+          });
+        });
+      </script> -->
+
+      <!-- End: Script for mobile toggle behavior-->
     </header>
     <!-- End:: Header Section -->
 
