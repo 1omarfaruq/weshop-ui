@@ -570,6 +570,7 @@
           <!--Start:: Close Button Row -->
           <div class="mb-4 flex justify-end">
             <button onclick="toggleMenu()" class="cursor-pointer text-2xl">
+
               <svg
                 width="20"
                 height="20"
@@ -1278,7 +1279,7 @@
       </script>
 
       <!-- End:: JavaScript for Menu Toggle and Animated Dropdowns -->
-
+ 
       <!--End:: Main Navigation for mobile-->
 
       <!-- After your navbar div -->
@@ -1307,6 +1308,36 @@
         };
       </script>
       <!-- End:: Script for sticky navbar -->
+
+      <!--Start: Script for mobile toggle behavior -->
+      <!-- <script>
+        const buttons = document.querySelectorAll(".toggle-btn");
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector("svg");
+
+            // Collapse other dropdowns
+            document.querySelectorAll(".dropdown-content").forEach((el) => {
+              if (el !== content) el.style.maxHeight = null;
+            });
+            document.querySelectorAll(".toggle-btn svg").forEach((svg) => {
+              if (svg !== icon) svg.style.transform = "rotate(0deg)";
+            });
+
+            // Toggle this one
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+              icon.style.transform = "rotate(0deg)";
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.style.transform = "rotate(180deg)";
+            }
+          });
+        });
+      </script> -->
+
+      <!-- End: Script for mobile toggle behavior-->
     </header>
     <!-- End:: Header Section -->
 
