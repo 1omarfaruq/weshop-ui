@@ -42,6 +42,11 @@
         --shade-dark-3: rgba(37, 56, 88, 1);
         --shade-dark-4: rgba(23, 43, 77, 1);
         --shade-dark-5: rgba(9, 30, 66, 1);
+
+        --shade-1: rgba(179, 186, 197, 1);
+        --shade-2: rgba(165, 173, 186, 1);
+        --shade-3: rgba(151, 160, 175, 1);
+        --shade-4: rgba(137, 147, 164, 1);
       }
 
       .swiper {
@@ -49,6 +54,7 @@
         height: 100vh;
       }
     </style>
+
     <!-- End:: Custom Styles -->
 
     <!-- Start:: Plugin stylesheet links -->
@@ -63,6 +69,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+
+    <style></style>
   </head>
 
   <body class="bg-[var(--bg-off-white)] text-[var(--text-white)]">
@@ -156,7 +164,9 @@
           <!-- End:: Social Media Links & Icons -->
 
           <!-- Start:: Notice Area -->
-          <div class="text-center">Save 10% Now — Welcome Code: WELCOME</div>
+          <div class="flex text-center">
+            Save 10% Now — Welcome Code: WELCOME
+          </div>
           <!-- End:: Notice Area -->
 
           <!-- Start:: Store & Language Selector -->
@@ -239,7 +249,7 @@
       <!-- Start:: Main Navigation Bar with background -->
       <div
         id="navbar"
-        class="bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out"
+        class="hidden bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out sm:flex"
       >
         <div
           class="svao-container flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
@@ -524,6 +534,754 @@
       </div>
       <!-- End:: Main Navigation Bar with background -->
 
+      <!--Start:: Main Navigation for mobile -->
+
+      <!--Start:: Navigation Container -->
+      <nav
+        class="top-0 z-10 flex w-full items-center justify-between bg-white p-4 text-black sm:hidden"
+      >
+        <!-- Start:: Hamburger Menu -->
+        <div class="cursor-pointer text-2xl" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <!--End:: Hamburger Menu -->
+
+        <!-- Start:: Logo -->
+        <div class="text-xl font-bold">Logo</div>
+        <!-- End:: Logo -->
+
+        <!--Start:: Icons -->
+        <div class="flex gap-4">
+          <i class="fas fa-search cursor-pointer text-lg"></i>
+          <i class="fas fa-user cursor-pointer text-lg"></i>
+        </div>
+        <!--End: Icons -->
+      </nav>
+
+      <!--End:: Navigation Container -->
+
+      <!-- Start::  Popup Menu -->
+      <div
+        id="menuPopup"
+        class="bg-opacity-90 fixed inset-0 z-20 -translate-x-full transform bg-white opacity-0 transition-all duration-300 ease-in-out sm:hidden"
+      >
+        <!-- Start:: Menu Header with Close Button and Search Box -->
+        <div class="flex flex-col bg-white p-4 text-black">
+          <!--Start:: Close Button Row -->
+          <div class="mb-4 flex justify-end">
+            <button onclick="toggleMenu()" class="cursor-pointer text-2xl">
+
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 15L15 5M5 5L15 15"
+                  stroke="#1B2B41"
+                  stroke-opacity="0.69"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <!--End:: Close Button Row-->
+
+          <!-- Start::  Search Box -->
+          <div class="relative mb-4">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full rounded-md border border-black p-2 pr-10 pl-4 focus:ring-2 focus:ring-gray-400 focus:outline-none"
+            />
+            <i
+              class="fas fa-search absolute top-1/2 right-3 -translate-y-1/2 transform text-black"
+            ></i>
+          </div>
+          <!--End: Search Box -->
+        </div>
+        <!-- End:: Menu Header with Close Button and Search Box -->
+
+        <!-- Start:: Menu Items -->
+        <ul class="flex flex-col gap-4 p-4 text-lg text-black">
+          <li>
+            <a
+              href="#"
+              class="text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+              >Shop</a
+            >
+          </li>
+          <!--Start:: About with Nested Menu -->
+          <li>
+            <div
+              class="flex cursor-pointer items-center justify-between"
+              onclick="toggleParentMenu('aboutMenu', ['servicesMenu', 'productsMenu', 'resourcesMenu', 'communityMenu'], this)"
+            >
+              <span class="text-sm font-medium text-[var(--text-black)]"
+                >Man</span
+              >
+              <i class="fas fa-chevron-down svao-chevron"></i>
+            </div>
+            <ul
+              id="aboutMenu"
+              class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+            >
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('aboutSubMenu', ['missionSubMenu', 'historySubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]">
+                    Clothing</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="aboutSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Submenu1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Submenu2</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('missionSubMenu', ['aboutSubMenu', 'historySubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]">
+                    Footwear</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="missionSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Submenu1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Submenu2</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('historySubMenu', ['aboutSubMenu', 'missionSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Accessories</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="historySubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      class="text-sm font-medium text-[var(--text-black)]"
+                      href="#"
+                      class="block py-1 hover:text-gray-600"
+                      >Submenu1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-sm font-medium text-[var(--text-black)]"
+                      href="#"
+                      class="block py-1 hover:text-gray-600"
+                      >Submenu2</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- End:: About with Nested Menu -->
+
+          <!-- Start:: Services with Nested Menu -->
+          <li>
+            <div
+              class="flex cursor-pointer items-center justify-between"
+              onclick="toggleParentMenu('servicesMenu', ['aboutMenu', 'productsMenu', 'resourcesMenu', 'communityMenu'], this)"
+            >
+              <span class="text-sm font-medium text-[var(--text-black)]"
+                >Women</span
+              >
+              <i class="fas fa-chevron-down svao-chevron"></i>
+            </div>
+            <ul
+              id="servicesMenu"
+              class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+            >
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('consultingSubMenu', ['developmentSubMenu', 'supportSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Submenu1</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="consultingSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Submenu1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Submenu2</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('developmentSubMenu', ['consultingSubMenu', 'supportSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Kids</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="developmentSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Submenu1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Submenu2</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('supportSubMenu', ['consultingSubMenu', 'developmentSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Support</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="supportSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Technical</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Customer</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- End:: Services with Nested Menu -->
+
+          <!-- Start::  Products with Nested Menu -->
+          <li>
+            <div
+              class="flex cursor-pointer items-center justify-between"
+              onclick="toggleParentMenu('productsMenu', ['aboutMenu', 'servicesMenu', 'resourcesMenu', 'communityMenu'], this)"
+            >
+              <span class="text-sm font-medium text-[var(--text-black)]"
+                >Products</span
+              >
+              <i class="fas fa-chevron-down svao-chevron"></i>
+            </div>
+            <ul
+              id="productsMenu"
+              class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+            >
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('softwareSubMenu', ['hardwareSubMenu', 'subscriptionsSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Software</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="softwareSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a href="#" class="block py-1 hover:text-gray-600">Apps</a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Platforms</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('hardwareSubMenu', ['softwareSubMenu', 'subscriptionsSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Hardware</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="hardwareSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Devices</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Accessories</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('subscriptionsSubMenu', ['softwareSubMenu', 'hardwareSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Subscriptions</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="subscriptionsSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Plans</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Pricing</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- End:: Products with Nested Menu-->
+
+          <!-- Start:: Resources with Nested Menu -->
+          <li>
+            <div
+              class="flex cursor-pointer items-center justify-between"
+              onclick="toggleParentMenu('resourcesMenu', ['aboutMenu', 'servicesMenu', 'productsMenu', 'communityMenu'], this)"
+            >
+              <span class="text-sm font-medium text-[var(--text-black)]"
+                >Resources</span
+              >
+              <i class="fas fa-chevron-down svao-chevron"></i>
+            </div>
+            <ul
+              id="resourcesMenu"
+              class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+            >
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('guidesSubMenu', ['tutorialsSubMenu', 'docsSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Guides</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="guidesSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >User Guides</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >FAQs</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('tutorialsSubMenu', ['guidesSubMenu', 'docsSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Tutorials</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="tutorialsSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Videos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Articles</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('docsSubMenu', ['guidesSubMenu', 'tutorialsSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Documentation</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="docsSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >API</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Manuals</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- End:: Resources with Nested Menu -->
+
+          <!-- Start:: Services with Nested Menu -->
+          <li>
+            <div
+              class="flex cursor-pointer items-center justify-between"
+              onclick="toggleParentMenu('communityMenu', ['aboutMenu', 'servicesMenu', 'productsMenu', 'resourcesMenu'], this)"
+            >
+              <span class="text-sm font-medium text-[var(--text-black)]"
+                >Community</span
+              >
+              <i class="fas fa-chevron-down svao-chevron"></i>
+            </div>
+            <ul
+              id="communityMenu"
+              class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+            >
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('forumsSubMenu', ['eventsSubMenu', 'groupsSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Forums</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="forumsSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Discussions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Q&A</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div
+                  class="flex cursor-pointer items-center justify-between"
+                  onclick="toggleChildMenu('eventsSubMenu', ['forumsSubMenu', 'groupsSubMenu'], this)"
+                >
+                  <span class="text-sm font-medium text-[var(--text-black)]"
+                    >Events</span
+                  >
+                  <i class="fas fa-chevron-down svao-chevron"></i>
+                </div>
+                <ul
+                  id="eventsSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Webinars</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Meetups</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul
+                  id="groupsSubMenu"
+                  class="svao-submenu svao-closed-menu mt-2 border-l-2 border-black pl-4"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Local Groups</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-1 text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                      >Online Groups</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- End:: Services with Nested Menu -->
+
+          <!-- Start:: Contact Menu with Icons -->
+          <li>
+            <div class="flex items-center justify-between">
+              <a href="#" class="flex items-center gap-2 hover:text-gray-600">
+                <i class="fas fa-envelope"></i>
+                <span class="text-sm font-medium text-[var(--text-black)]"
+                  >Contact</span
+                >
+              </a>
+              <i class="fas fa-chevron-down text-lg"></i>
+            </div>
+          </li>
+          <!-- End:: Contact Menu with Icons -->
+
+          <!-- Start:: Social Icons and Contact/Support Section -->
+          <li class="mt-4 flex flex-col items-center">
+            <!-- Social Icons -->
+            <div class="mb-4 flex gap-6">
+              <a href="#" class="text-2xl hover:text-gray-600"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-2xl hover:text-gray-600"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-2xl hover:text-gray-600"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+            <!-- Contact and Support Links -->
+            <div class="flex flex-col items-center gap-2">
+              <a
+                href="#"
+                class="text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                >Contact</a
+              >
+              <a
+                href="#"
+                class="text-sm font-medium text-[var(--text-black)] hover:text-gray-600"
+                >Support</a
+              >
+            </div>
+          </li>
+          <!-- End:: Social Icons and Contact/Support Section -->
+        </ul>
+
+        <!--End:: Menu Item -->
+      </div>
+      <!-- End:: Popup Menu-->
+
+      <!-- Start:: JavaScript for Menu Toggle and Animated Dropdowns -->
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById("menuPopup");
+          menu.classList.toggle("translate-x-0");
+          menu.classList.toggle("-translate-x-full");
+          menu.classList.toggle("opacity-100");
+          menu.classList.toggle("opacity-0");
+        }
+
+        function toggleParentMenu(menuId, otherMenuIds, element) {
+          const menu = document.getElementById(menuId);
+          const chevron = element.querySelector(".svao-chevron");
+          const parentLi = element.closest("li");
+
+          // Close all other parent menus
+          otherMenuIds.forEach((id) => {
+            const otherMenu = document.getElementById(id);
+            if (otherMenu) {
+              otherMenu.classList.remove("svao-open-menu");
+              otherMenu.classList.add("svao-closed-menu");
+              const otherChevron =
+                otherMenu.previousElementSibling?.querySelector(
+                  ".svao-chevron",
+                );
+              if (otherChevron) otherChevron.classList.remove("rotated");
+              const otherParent = otherMenu.previousElementSibling;
+              if (otherParent) otherParent.classList.remove("bg-blue-200");
+            }
+          });
+
+          // Toggle this menu
+          const isOpen = menu.classList.contains("svao-open-menu");
+          if (isOpen) {
+            menu.classList.remove("svao-open-menu");
+            menu.classList.add("svao-closed-menu");
+            chevron.classList.remove("rotated");
+            element.classList.remove("bg-blue-200");
+          } else {
+            menu.classList.remove("svao-closed-menu");
+            menu.classList.add("svao-open-menu");
+            chevron.classList.add("rotated");
+            element.classList.add("bg-blue-200");
+          }
+        }
+
+        function toggleChildMenu(menuId, otherMenuIds, element) {
+          const menu = document.getElementById(menuId);
+          const chevron = element.querySelector(".svao-chevron");
+
+          // Close sibling submenus
+          otherMenuIds.forEach((id) => {
+            const sib = document.getElementById(id);
+            if (sib) {
+              sib.classList.remove("svao-open-menu");
+              sib.classList.add("svao-closed-menu");
+              const sibChevron =
+                sib.previousElementSibling?.querySelector(".svao-chevron");
+              if (sibChevron) sibChevron.classList.remove("rotated");
+              sib.previousElementSibling?.classList.remove("bg-blue-100");
+            }
+          });
+
+          // Toggle this submenu
+          const isOpen = menu.classList.contains("svao-open-menu");
+          if (isOpen) {
+            menu.classList.remove("svao-open-menu");
+            menu.classList.add("svao-closed-menu");
+            chevron.classList.remove("rotated");
+            element.classList.remove("bg-blue-100");
+          } else {
+            menu.classList.remove("svao-closed-menu");
+            menu.classList.add("svao-open-menu");
+            chevron.classList.add("rotated");
+            element.classList.add("bg-blue-100");
+          }
+        }
+      </script>
+
+      <!-- End:: JavaScript for Menu Toggle and Animated Dropdowns -->
+ 
+      <!--End:: Main Navigation for mobile-->
+
       <!-- After your navbar div -->
       <div id="navbar-spacer" class="h-0"></div>
 
@@ -550,6 +1308,36 @@
         };
       </script>
       <!-- End:: Script for sticky navbar -->
+
+      <!--Start: Script for mobile toggle behavior -->
+      <!-- <script>
+        const buttons = document.querySelectorAll(".toggle-btn");
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector("svg");
+
+            // Collapse other dropdowns
+            document.querySelectorAll(".dropdown-content").forEach((el) => {
+              if (el !== content) el.style.maxHeight = null;
+            });
+            document.querySelectorAll(".toggle-btn svg").forEach((svg) => {
+              if (svg !== icon) svg.style.transform = "rotate(0deg)";
+            });
+
+            // Toggle this one
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+              icon.style.transform = "rotate(0deg)";
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.style.transform = "rotate(180deg)";
+            }
+          });
+        });
+      </script> -->
+
+      <!-- End: Script for mobile toggle behavior-->
     </header>
     <!-- End:: Header Section -->
 
