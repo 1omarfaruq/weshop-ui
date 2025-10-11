@@ -57,11 +57,11 @@
   @apply fill-[var(--primary-lemon)] duration-100 ease-in-out;
 }
 
-.svao-nav-active a {
+.svao-nav-active > a {
   @apply font-semibold text-[var(--primary-lemon)];
 }
 
-.svao-nav-active a span svg {
+.svao-nav-active > a span svg {
   @apply fill-[var(--primary-lemon)];
 }
 /* End:: Navigation Bar Styles */
@@ -131,12 +131,24 @@
   @apply block px-5 py-3 text-sm font-medium text-[var(--text-black)] hover:text-gray-600;
 }
 
-#menuPopup ul li.active {
-  @apply bg-[var(--shade-light-4)];
+#menuPopup ul li > div.active {
+  @apply bg-[var(--shade-light-3)];
 }
 
-#menuPopup ul li > div.active {
-  @apply bg-[var(--shade-light-4)];
+#menuPopup ul li ul li > div.active {
+  @apply bg-[var(--shade-light-2)];
+}
+
+#menuPopup ul li ul li ul li.active a {
+  @apply text-[var(--primary-lemon)];
+}
+
+#menuPopup ul li > div.active svg {
+  @apply fill-[var(--primary-lemon)];
+}
+
+#menuPopup ul li ul li > div.active svg {
+  @apply fill-[var(--primary-lemon)];
 }
 
 #menuPopup ul li ul {
