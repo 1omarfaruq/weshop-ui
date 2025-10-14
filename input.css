@@ -204,4 +204,17 @@
   @apply border-b border-[var(--shade-light-3)];
 }
 
+
+
+
+
+/* footer css */
+
+.svao-dropdown-mobile ul {
+  @apply p-0
+}
+
+
+
+
 /* End menu style */

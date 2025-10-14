@@ -70,7 +70,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <style></style>
+    <style>
+      /* Slide-down animation for mobile dropdowns */
+      .dropdown-menu {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.3s ease-in-out,
+          opacity 0.3s ease-in-out;
+        padding: 0 1rem; /* Added for consistent spacing */
+      }
+      .dropdown-menu.svao-dropdown-mobile-open {
+        opacity: 1;
+      }
+    </style>
   </head>
 
   <body class="bg-[var(--bg-off-white)] text-[var(--text-white)]">
@@ -1362,229 +1376,9 @@
 
       <!-- End:: JavaScript for Menu Toggle and Animated Dropdowns -->
 
-      <!--End:: Main Navigation for mobile-->
 
-      <!-- After your navbar div -->
-      <div id="navbar-spacer" class="h-0"></div>
 
-      <!--Start: Script for mobile toggle behavior -->
-      <!-- <script>
-        const buttons = document.querySelectorAll(".toggle-btn");
-        buttons.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector("svg");
-
-            // Collapse other dropdowns
-            document.querySelectorAll(".dropdown-content").forEach((el) => {
-              if (el !== content) el.style.maxHeight = null;
-            });
-            document.querySelectorAll(".toggle-btn svg").forEach((svg) => {
-              if (svg !== icon) svg.style.transform = "rotate(0deg)";
-            });
-
-            // Toggle this one
-            if (content.style.maxHeight) {
-              content.style.maxHeight = null;
-              icon.style.transform = "rotate(0deg)";
-            } else {
-              content.style.maxHeight = content.scrollHeight + "px";
-              icon.style.transform = "rotate(180deg)";
-            }
-          });
-        });
-      </script> -->
-
-      <!-- End: Script for mobile toggle behavior-->
-    </header>
-    <!-- End:: Header Section -->
-
-    <!-- Start:: Main Content Section -->
-    <main class="py-[100px]">
-      <!-- Start:: Weekend Deals Section -->
-      <section>
-        <div class="svao-container text-[var(--text-blue)]">
-          <!-- Start:: Section title -->
-          <h1 class="mb-2 text-[64px] font-semibold uppercase">
-            <span class="svao-stroke-text-blue text-transparent">
-              WEEKEND
-            </span>
-            DEALS
-          </h1>
-          <!-- End:: Section title -->
-
-          <!-- Start:: Section description -->
-          <div class="mb-[50px] flex justify-between">
-            <p class="mb-12 text-xl">
-              Our top selection showcases the freshest additions to our
-              collection, <br />bringing you cutting-edge products and exciting
-              innovations.
-            </p>
-
-            <div class="flex items-end">
-              <button
-                class="svao-tab-button active mr-4"
-                onclick="openTab(event, 'tab1')"
-              >
-                Man
-              </button>
-              <button
-                class="svao-tab-button mr-4"
-                onclick="openTab(event, 'tab2')"
-              >
-                Women
-              </button>
-              <button
-                class="svao-tab-button mr-4"
-                onclick="openTab(event, 'tab3')"
-              >
-                Kids
-              </button>
-            </div>
-          </div>
-          <!-- End:: Section description -->
-
-          <!-- Start:: Section content -->
-          <div class="flex gap-5">
-            <div
-              class="relative min-h-[580px] w-1/4 overflow-hidden rounded-[32px] rounded-b-4xl bg-cover bg-center bg-no-repeat"
-              style="
-                background-image: url(./assets/stylish-young-man-buttoning-cuff-links-sleeves-style.png);
-              "
-            >
-              <div class="absolute bottom-[50px] mx-[32px]">
-                <div class="text-[40px] font-semibold text-white">SALE OFF</div>
-                <div class="mb-6 text-xl text-white">
-                  Advertise a promotion or a sale
-                </div>
-                <!-- Start:: Anchor tag -->
-                <a
-                  href="#"
-                  class="group relative flex w-[155px] cursor-pointer items-center justify-center gap-3.5 overflow-hidden rounded-full bg-[var(--primary-lemon)] px-4 py-3 text-base font-semibold text-[var(-text-blue)] transition-colors duration-450 ease-in-out hover:bg-transparent"
-                >
-                  <span
-                    class="absolute inset-0 h-full w-full -translate-x-full transform rounded-r-4xl bg-[var(--bg-blue)] transition-transform duration-230 ease-in-out group-hover:translate-x-0"
-                  ></span>
-                  <span
-                    class="relative z-10 transition-colors duration-230 group-hover:text-white"
-                    >SHOP SALE</span
-                  >
-                  <span class="relative z-10">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      class="fill-[var(--bg-blue)] transition-colors duration-230 group-hover:fill-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <mask
-                        id="mask0_19654_44929"
-                        style="mask-type: alpha"
-                        maskUnits="userSpaceOnUse"
-                        x="0"
-                        y="0"
-                        width="24"
-                        height="24"
-                      >
-                        <rect width="24" height="24" />
-                      </mask>
-                      <g mask="url(#mask0_19654_44929)">
-                        <path
-                          d="M12.2 13L11.3 13.9C11.1167 14.0833 11.025 14.3167 11.025 14.6C11.025 14.8833 11.1167 15.1167 11.3 15.3C11.4833 15.4833 11.7167 15.575 12 15.575C12.2833 15.575 12.5167 15.4833 12.7 15.3L15.3 12.7C15.5 12.5 15.6 12.2667 15.6 12C15.6 11.7333 15.5 11.5 15.3 11.3L12.7 8.7C12.5167 8.51667 12.2833 8.425 12 8.425C11.7167 8.425 11.4833 8.51667 11.3 8.7C11.1167 8.88333 11.025 9.11667 11.025 9.4C11.025 9.68333 11.1167 9.91667 11.3 10.1L12.2 11H9C8.71667 11 8.47917 11.0958 8.2875 11.2875C8.09583 11.4792 8 11.7167 8 12C8 12.2833 8.09583 12.5208 8.2875 12.7125C8.47917 12.9042 8.71667 13 9 13H12.2ZM12 22C10.6167 22 9.31667 21.7375 8.1 21.2125C6.88333 20.6875 5.825 19.975 4.925 19.075C4.025 18.175 3.3125 17.1167 2.7875 15.9C2.2625 14.6833 2 13.3833 2 12C2 10.6167 2.2625 9.31667 2.7875 8.1C3.3125 6.88333 4.025 5.825 4.925 4.925C5.825 4.025 6.88333 3.3125 8.1 2.7875C9.31667 2.2625 10.6167 2 12 2C13.3833 2 14.6833 2.2625 15.9 2.7875C17.1167 3.3125 18.175 4.025 19.075 4.925C19.975 5.825 20.6875 6.88333 21.2125 8.1C21.7375 9.31667 22 10.6167 22 12C22 13.3833 21.7375 14.6833 21.2125 15.9C20.6875 17.1167 19.975 18.175 19.075 19.075C18.175 19.975 17.1167 20.6875 15.9 21.2125C14.6833 21.7375 13.3833 22 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z"
-                        />
-                      </g>
-                    </svg>
-                  </span>
-                </a>
-                <!-- End:: Anchor tag -->
-              </div>
-            </div>
-
-            <div class="w-3/4 bg-gray-700">
-              <div class="tab-content">
-                <div id="tab1" class="svao-tab-body active">
-                  <div class="flex gap-5">
-                    <div
-                      class="w-1/3 overflow-hidden rounded-[32px] bg-red-400"
-                    >
-                      <div
-                        class="relative flex h-[483px] items-end justify-center"
-                      >
-                        <img
-                          src="./assets/handsome-man-athlete.png"
-                          alt="product image"
-                          class="object-contain"
-                        />
-                        <div
-                          class="absolute bottom-0 mx-4 flex w-[292px] flex-col justify-center rounded-t-xl bg-white/[.7] py-5"
-                        >
-                          <div
-                            class="mx-auto flex items-center justify-center gap-2"
-                          >
-                            <div
-                              class="min-w-5 rounded-[5px] border border-[#8993A4] px-2 text-center"
-                            >
-                              xs
-                            </div>
-                            <div
-                              class="min-w-5 rounded-[5px] border border-[#8993A4] px-2 text-center"
-                            >
-                              s
-                            </div>
-                            <div
-                              class="min-w-5 rounded-[5px] border border-[#8993A4] px-2 text-center"
-                            >
-                              m
-                            </div>
-                            <div
-                              class="min-w-5 rounded-[5px] border border-[#8993A4] px-2 text-center"
-                            >
-                              l
-                            </div>
-                            <div
-                              class="min-w-5 rounded-[5px] border border-[#8993A4] px-2 text-center"
-                            >
-                              xl
-                            </div>
-                            <div
-                              class="min-w-5 rounded-[5px] border border-[#8993A4] px-2 text-center"
-                            >
-                              xxl
-                            </div>
-                          </div>
-                          <div class="mx-auto">222</div>
-                          <div class="mx-auto">3333</div>
-                        </div>
-                      </div>
-                      <div class="min-h-[100px] bg-white">title</div>
-                    </div>
-                    <div class="w-1/3 bg-red-400">22</div>
-                    <div class="w-1/3 bg-red-400">33</div>
-                  </div>
-                </div>
-                <div id="tab2" class="svao-tab-body flex gap-5">
-                  <div class="flex gap-5">
-                    <div class="w-1/3 bg-green-400">11</div>
-                    <div class="w-1/3 bg-green-400">22</div>
-                    <div class="w-1/3 bg-green-400">33</div>
-                  </div>
-                </div>
-                <div id="tab3" class="svao-tab-body flex gap-5">
-                  <div class="flex gap-5">
-                    <div class="w-1/3 bg-yellow-400">11</div>
-                    <div class="w-1/3 bg-yellow-400">22</div>
-                    <div class="w-1/3 bg-yellow-400">33</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End:: Section content -->
-        </div>
-      </section>
-      <!-- End:: Weekend Deals Section  -->
-
-      <!-- Start:: JS for mobile menu-->
+            <!-- Start:: JS for mobile menu-->
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           const menuToggles = document.querySelectorAll(
@@ -1635,8 +1429,950 @@
       </script>
 
       <!-- End:: JS for mobile menu -->
+
+      <!--End:: Main Navigation for mobile-->
+
+      <!-- After your navbar div -->
+      <div id="navbar-spacer" class="h-0"></div>
+
+      <!--Start: Script for mobile toggle behavior -->
+      <!-- <script>
+        const buttons = document.querySelectorAll(".toggle-btn");
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector("svg");
+
+            // Collapse other dropdowns
+            document.querySelectorAll(".dropdown-content").forEach((el) => {
+              if (el !== content) el.style.maxHeight = null;
+            });
+            document.querySelectorAll(".toggle-btn svg").forEach((svg) => {
+              if (svg !== icon) svg.style.transform = "rotate(0deg)";
+            });
+
+            // Toggle this one
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+              icon.style.transform = "rotate(0deg)";
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+              icon.style.transform = "rotate(180deg)";
+            }
+          });
+        });
+      </script> -->
+
+      <!-- End: Script for mobile toggle behavior-->
+    </header>
+    <!-- End:: Header Section -->
+
+    <!-- Start:: Main Content Section -->
+    <main class="py-[100px] text-red-400">
+    
+    Its the main section
+
+ 
     </main>
     <!-- End:: Main Content Section -->
+
+    <!-- Start:: Footer Section -->
+    <footer class="mt-[100px] rounded-t-4xl bg-[var(--bg-blue)] px-5">
+      <!-- Start:: Footer top section-->
+      <div
+        class="svao-container md:flex-row flex-col  flex justify-between lg:border-b-2 lg:border-[#42526E] border-b border-[var(--shade-1)] pt-[60px] pb-[48px] text-sm gap-4"
+      >
+        <!-- Start:: Part one -->
+        <div class="w-full border-b border-[var(--shade-1)]">
+          <div class="mb-4 border-b border-[var(--shade-1)]">
+            <a href="#">
+              <img
+                src="./assets/logo-white.png"
+                alt="WeShope Logo"
+                class="h-auto object-contain w-[140px]"
+              />
+            </a>
+
+                 <p class="mb-7 mt-2.5">Your trusted fashion companion</p>
+          </div>
+
+      
+          <!--Start:: Social Icon-->
+          <div class="mb-4 flex gap-5 mt-7">
+            <div>
+              <a href="#">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  class="fill-white hover:fill-[var(--primary-lemon)]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.3633 0H2.63672C1.18295 0 0 1.18295 0 2.63672V15.3633C0 16.817 1.18295 18 2.63672 18H7.94531V11.6367H5.83594V8.47266H7.94531V6.32812C7.94531 4.58336 9.36461 3.16406 11.1094 3.16406H14.3086V6.32812H11.1094V8.47266H14.3086L13.7812 11.6367H11.1094V18H15.3633C16.817 18 18 16.817 18 15.3633V2.63672C18 1.18295 16.817 0 15.3633 0Z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div>
+              <a href="#">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  class="fill-white hover:fill-[var(--primary-lemon)]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_19525_13644)">
+                    <path
+                      d="M16.6676 0H1.32891C0.594141 0 0 0.580078 0 1.29727V16.6992C0 17.4164 0.594141 18 1.32891 18H16.6676C17.4023 18 18 17.4164 18 16.7027V1.29727C18 0.580078 17.4023 0 16.6676 0ZM5.34023 15.3387H2.66836V6.74648H5.34023V15.3387ZM4.0043 5.57578C3.14648 5.57578 2.45391 4.8832 2.45391 4.02891C2.45391 3.17461 3.14648 2.48203 4.0043 2.48203C4.85859 2.48203 5.55117 3.17461 5.55117 4.02891C5.55117 4.87969 4.85859 5.57578 4.0043 5.57578ZM15.3387 15.3387H12.6703V11.1621C12.6703 10.1672 12.6527 8.88398 11.2816 8.88398C9.89297 8.88398 9.68203 9.97031 9.68203 11.0918V15.3387H7.01719V6.74648H9.57656V7.9207H9.61172C9.9668 7.2457 10.8387 6.53203 12.1359 6.53203C14.8395 6.53203 15.3387 8.31094 15.3387 10.6242V15.3387Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_19525_13644">
+                      <rect width="18" height="18" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+
+            <div>
+              <a href="#">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  class="fill-white hover:fill-[var(--primary-lemon)]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.5455 0H2.45455C1.80356 0 1.17924 0.258603 0.71892 0.71892C0.258603 1.17924 0 1.80356 0 2.45455L0 15.5455C0 16.1964 0.258603 16.8208 0.71892 17.2811C1.17924 17.7414 1.80356 18 2.45455 18H15.5455C16.1964 18 16.8208 17.7414 17.2811 17.2811C17.7414 16.8208 18 16.1964 18 15.5455V2.45455C18 1.80356 17.7414 1.17924 17.2811 0.71892C16.8208 0.258603 16.1964 0 15.5455 0ZM9.86829 11.5057C9.16977 11.5057 8.5142 11.1283 8.2892 10.6998C8.2892 10.6998 7.91386 12.1889 7.83511 12.4762C7.55489 13.4908 6.73261 14.5074 6.66818 14.5902C6.65812 14.6037 6.64435 14.6138 6.62857 14.6195C6.61279 14.6252 6.59568 14.6262 6.57937 14.6223C6.56305 14.6184 6.54824 14.6097 6.53676 14.5975C6.52528 14.5853 6.51764 14.5699 6.51477 14.5534C6.49739 14.4245 6.28773 13.1431 6.5342 12.0989L7.36364 8.57659C7.2237 8.25404 7.15398 7.90542 7.15909 7.55386C7.15909 6.59659 7.71443 5.8817 8.4058 5.8817C8.99284 5.8817 9.27716 6.3225 9.27716 6.85227C9.27716 7.44239 8.90079 8.32602 8.70648 9.14523C8.54386 9.83045 9.05011 10.3899 9.7292 10.3899C10.9565 10.3899 11.7747 8.81693 11.7747 6.95352C11.7747 5.53807 10.8215 4.4775 9.08591 4.4775C7.12636 4.4775 5.9042 5.93898 5.9042 7.56818C5.9042 8.1317 6.07091 8.52852 6.33068 8.83534C6.45034 8.97648 6.46773 9.03375 6.42375 9.19534C6.39307 9.315 6.32148 9.60443 6.29182 9.71386C6.28654 9.7489 6.27291 9.78214 6.25209 9.8108C6.23127 9.83947 6.20385 9.8627 6.17217 9.87854C6.14048 9.89438 6.10545 9.90237 6.07003 9.90184C6.0346 9.9013 5.99983 9.89225 5.96864 9.87545C5.06557 9.51136 4.64523 8.52239 4.64523 7.4117C4.64523 5.57591 6.19364 3.375 9.26386 3.375C11.7307 3.375 13.3548 5.15966 13.3548 7.07625C13.3548 9.61364 11.9455 11.5057 9.86829 11.5057Z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div>
+              <a href="#"
+                ><svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  class="fill-white hover:fill-[var(--primary-lemon)]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_19525_13650)">
+                    <path
+                      d="M9.60161 8.69251L13.6523 14.4864H11.9899L8.68444 9.75857V9.75828L8.19916 9.06424L4.33789 3.54102H6.00029L9.11633 7.99847L9.60161 8.69251Z"
+                    />
+                    <path
+                      d="M16.0551 0H1.94494C0.870807 0 0 0.870807 0 1.94494V16.0551C0 17.1292 0.870807 18 1.94494 18H16.0551C17.1292 18 18 17.1292 18 16.0551V1.94494C18 0.870807 17.1292 0 16.0551 0ZM11.481 15.2644L8.13609 10.3963L3.94826 15.2644H2.86592L7.6555 9.69711L2.86592 2.72641H6.51902L9.68641 7.33614L13.652 2.72641H14.7343L10.1671 8.03545H10.1668L15.1341 15.2644H11.481Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_19525_13650">
+                      <rect width="18" height="18" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+         <!-- End:: Social Icon-->
+
+          <div class="flex flex-row md:flex-col items-center gap-2 mb-6"> <p class="pb-1">24/7 Customer Support: </p>
+          <p class="text-lg">+81 5203 888 61</p></div>
+         
+        </div>
+        <!-- end:: Part one -->
+
+        <!-- Start:: Part two -->
+        <div class="hidden w-48">
+          <h3 class="mb-4 text-lg font-medium uppercase">TOP CATEGORY</h3>
+
+          <ul class="p-0 m-0"> 
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Coats and Jacket
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Bags
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Watches
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Accessories
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Bracelet
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Necklace
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="flex items-center gap-2 text-[var(--primary-lemon)] transition-colors duration-300"
+              >
+                Browse All Product
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.125 10.5H16.875"
+                    stroke="#DBE112"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.25 4.875L16.875 10.5L11.25 16.125"
+                    stroke="#DBE112"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end:: Part two -->
+
+        <!-- Start:: Part three -->
+        <div class="hidden w-48">
+          <h3 class="mb-4 text-lg font-medium uppercase">QUICK LINKS</h3>
+
+          <ul>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Shop Product
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Shopping Cart
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Wishlist
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Track Order
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Customer Help
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                About Us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end:: Part three -->
+
+        <!-- Start:: Part four -->
+        <div class="hidden w-48">
+          <h3 class="mb-4 text-lg font-medium uppercase">Help and Support</h3>
+
+          <ul>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Privacy Policy
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Refund Policy
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Terms of Usage
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                Legal Documents
+              </a>
+            </li>
+            <li class="mb-3">
+              <a
+                href=""
+                class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+              >
+                <div
+                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                ></div>
+                User Data Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end:: Part four -->
+
+        <!-- test case -->
+        <div class="flex flex-col svao-dropdown-mobile gap-2 py-4 border-b border-[var(--shade-1)]">
+          <!-- Start:: Part two -->
+          <div class="w-full">
+            <button
+              class="mb-4 flex w-full items-center justify-between text-lg font-medium uppercase focus:outline-none md:mb-4"
+              onclick="toggleDropdown('topCategory')"
+            >
+              <span>TOP CATEGORY</span>
+              <div class="relative h-6 w-6">
+                <svg
+                  id="topCategoryPlus"
+                  class="absolute block h-4.5 w-4.5 transition-opacity duration-300"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z"
+                    fill="#B3BAC5"
+                  />
+                </svg>
+
+                <svg
+                  id="topCategoryMinus"
+                  class="absolute block h-4.5 w-4.5 transition-opacity duration-300"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 10C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H1Z"
+                    fill="#B3BAC5"
+                  />
+                </svg>
+              </div>
+            </button>
+            <ul id="topCategory" class="dropdown-menu md:block">
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Coats and Jacket
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Bags
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Watches
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Accessories
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Bracelet
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Necklace
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="flex items-center gap-2 text-[var(--primary-lemon)] transition-colors duration-300"
+                >
+                  Browse All Product
+                  <svg
+                    width="20"
+                    height="21"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.125 10.5H16.875"
+                      stroke="#DBE112"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.25 4.875L16.875 10.5L11.25 16.125"
+                      stroke="#DBE112"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end:: Part two -->
+
+          <!-- Start:: Part three -->
+          <div class=" w-full">
+            <button
+              class="mb-4 flex w-full items-center justify-between text-lg font-medium uppercase focus:outline-none md:mb-4"
+              onclick="toggleDropdown('quickLinks')"
+            >
+              <span>QUICK LINKS</span>
+              <div class="relative h-6 w-6">
+                <svg
+                  id="quickLinksPlus"
+                  class="absolute block h-4.5 w-4.5 transition-opacity duration-300"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z"
+                    fill="#B3BAC5"
+                  />
+                </svg>
+
+                <svg
+                  id="quickLinksMinus"
+                  class="absolute block h-4.5 w-4.5 transition-opacity duration-300"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 10C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H1Z"
+                    fill="#B3BAC5"
+                  />
+                </svg>
+              </div>
+            </button>
+            <ul id="quickLinks" class="dropdown-menu md:block">
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Shop Product
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Shopping Cart
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Wishlist
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Track Order
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Customer Help
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  About Us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end:: Part three -->
+
+          <!-- Start:: Part four -->
+          <div class=" w-full">
+            <button
+              class="mb-4 flex w-full items-center justify-between text-lg font-medium uppercase focus:outline-none md:mb-4"
+              onclick="toggleDropdown('helpSupport')"
+            >
+              <span>HELP AND SUPPORT</span>
+              <div class="relative h-6 w-6">
+                <svg
+                  id="helpSupportPlus"
+                  class="absolute block h-4.5 w-4.5 transition-opacity duration-300"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z"
+                    fill="#B3BAC5"
+                  />
+                </svg>
+
+                <svg
+                  id="helpSupportMinus"
+                  class="absolute block h-4.5 w-4.5 transition-opacity duration-300"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 10C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H1Z"
+                    fill="#B3BAC5"
+                  />
+                </svg>
+              </div>
+            </button>
+            <ul id="helpSupport" class="dropdown-menu md:block">
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Privacy Policy
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Refund Policy
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Terms of Usage
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Legal Documents
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  User Data Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end:: Part four -->
+
+          <script>
+            function toggleDropdown(id) {
+              const element = document.getElementById(id);
+              const plusIcon = document.getElementById(id + "Plus");
+              const minusIcon = document.getElementById(id + "Minus");
+              const isOpen = element.classList.toggle("svao-dropdown-mobile-open");
+              plusIcon.classList.toggle("hidden", isOpen);
+              plusIcon.classList.toggle("block", !isOpen);
+              minusIcon.classList.toggle("hidden", !isOpen);
+              minusIcon.classList.toggle("block", isOpen);
+              // Set max-height dynamically for smooth animation
+              if (isOpen) {
+                element.style.maxHeight = element.scrollHeight + "px";
+              } else {
+                element.style.maxHeight = "0";
+              }
+            }
+          </script>
+        </div>
+
+        <!-- test case -->
+
+        <!-- Start:: Part five -->
+        <div class="w-full">
+          <h3 class="mb-7 text-lg font-medium uppercase">POPULAR TAGS</h3>
+
+          <div class="mb-2.5">
+            <span
+              class="inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+            >
+              Bag
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Wallet
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Ring
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Fofar
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Suit
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Coat
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Warm Sweater
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Leather wallet
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Jeans
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >T-shirt
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Caps
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Jacket
+            </span>
+
+            <span
+              class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >Shoes
+            </span>
+          </div>
+
+          <div>
+            <div class="flex w-[38px] gap-2">
+              <img
+                src="./assets/payment_method/Visa.png"
+                alt="Payment method "
+              />
+              <img
+                src="./assets/payment_method/Mastercard.png"
+                alt="Payment method "
+              />
+              <img
+                src="./assets/payment_method/Stripe.png"
+                alt="Payment method "
+              />
+              <img
+                src="./assets/payment_method/PayPal.png"
+                alt="Payment method "
+              />
+              <img
+                src="./assets/payment_method/ApplePay.png"
+                alt="Payment method "
+              />
+              <img
+                src="./assets/payment_method/ShopPay.png"
+                alt="Payment method "
+              />
+            </div>
+          </div>
+        </div>
+        <!-- end:: Part five -->
+      </div>
+      <!-- End:: Footer top section-->
+
+      <!-- Start:: Footer bottom bar -->
+      <div
+        class="svao-container flex flex-col items-start justify-between pt-8 pb-7 text-xs lg:flex-row lg:items-center"
+      >
+        <!-- Start:: Left content -->
+        <div class="flex gap-2">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              id="mask0_19525_13802"
+              style="mask-type: alpha"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="14"
+              height="14"
+            >
+              <rect width="14" height="14" fill="#D9D9D9" />
+            </mask>
+            <g mask="url(#mask0_19525_13802)">
+              <path
+                d="M6.99935 12.8337C6.1924 12.8337 5.43407 12.6805 4.72435 12.3743C4.01463 12.068 3.39727 11.6524 2.87227 11.1274C2.34727 10.6024 1.93164 9.98505 1.62539 9.27533C1.31914 8.5656 1.16602 7.80727 1.16602 7.00033C1.16602 6.19338 1.31914 5.43505 1.62539 4.72533C1.93164 4.0156 2.34727 3.39824 2.87227 2.87324C3.39727 2.34824 4.01463 1.93262 4.72435 1.62637C5.43407 1.32012 6.1924 1.16699 6.99935 1.16699C7.80629 1.16699 8.56463 1.32012 9.27435 1.62637C9.98407 1.93262 10.6014 2.34824 11.1264 2.87324C11.6514 3.39824 12.0671 4.0156 12.3733 4.72533C12.6796 5.43505 12.8327 6.19338 12.8327 7.00033C12.8327 7.80727 12.6796 8.5656 12.3733 9.27533C12.0671 9.98505 11.6514 10.6024 11.1264 11.1274C10.6014 11.6524 9.98407 12.068 9.27435 12.3743C8.56463 12.6805 7.80629 12.8337 6.99935 12.8337ZM6.41602 11.6378V10.5003C6.09518 10.5003 5.82053 10.3861 5.59206 10.1576C5.36358 9.92914 5.24935 9.65449 5.24935 9.33366V8.75033L2.44935 5.95033C2.42018 6.12533 2.39345 6.30033 2.36914 6.47533C2.34484 6.65033 2.33268 6.82533 2.33268 7.00033C2.33268 8.17671 2.71914 9.20727 3.49206 10.092C4.26497 10.9767 5.23963 11.492 6.41602 11.6378ZM10.441 10.1503C10.6355 9.93644 10.8105 9.70553 10.966 9.45762C11.1216 9.2097 11.2504 8.95206 11.3525 8.6847C11.4546 8.41734 11.5323 8.14269 11.5858 7.86074C11.6393 7.5788 11.666 7.29199 11.666 7.00033C11.666 6.04755 11.4011 5.17741 10.8712 4.38991C10.3414 3.60241 9.63407 3.03366 8.74935 2.68366V2.91699C8.74935 3.23783 8.63511 3.51248 8.40664 3.74095C8.17817 3.96942 7.90352 4.08366 7.58268 4.08366H6.41602V5.25033C6.41602 5.4156 6.36011 5.55414 6.24831 5.66595C6.1365 5.77776 5.99796 5.83366 5.83268 5.83366H4.66602V7.00033H8.16602C8.33129 7.00033 8.46984 7.05623 8.58164 7.16803C8.69345 7.27984 8.74935 7.41838 8.74935 7.58366V9.33366H9.33268C9.58546 9.33366 9.81393 9.40901 10.0181 9.5597C10.2223 9.71039 10.3632 9.90727 10.441 10.1503Z"
+                fill="white"
+              />
+            </g>
+          </svg>
+
+          ৳ BDT/ EN
+        </div>
+        <!-- End:: Left content -->
+      <!-- Start:: Center content -->
+        <div>
+          <ul class="mt-5">
+            <li class="hover:text-[var(--primary-lemon)] inline pr-2.5 ">
+              <a href="">Refund Policy</a>
+            </li>
+            <li class="hover:text-[var(--primary-lemon)] inline pr-2.5">
+              <a href="">Privacy Policy</a>
+            </li>
+            <li class="hover:text-[var(--primary-lemon)] inline pr-2.5">
+              <a href="">Terms of Usage</a>
+            </li>
+            <li class="hover:text-[var(--primary-lemon)] inline pr-2.5 leading-8">
+              <a  href="">Legal Documents</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End:: Center content -->
+
+        <!-- Start:: Right content -->
+        <div class="mt-6 lg:mt-0">
+          &copy; Copyright, WeShop, 2025 Powered by ShopifyTeam.
+        </div>
+        <!-- End:: Right content -->
+      </div>
+      <!-- End:: Footer bottom bar -->
+    </footer>
+    <!-- End:: Footer Section -->
 
     <!-- Start:: Plugin script links -->
     <script src="./assets/swiper@12/swiper-bundle.min.js"></script>
