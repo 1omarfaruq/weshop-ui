@@ -4,6 +4,50 @@
   --breakpoint-3xl: 102.5rem; /* 1640px */
 }
 
+
+/* Start:: Carousel custom design */
+
+@keyframes right-left-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes left-right-scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@layer utilities {
+  .svao-collections-top-scroll {
+    animation: right-left-scroll 15s linear infinite;
+  }
+
+  .svao-collections-bottom-scroll {
+    animation: left-right-scroll 20s linear infinite;
+  }
+
+  .svao-collections-top-pause-hover:hover .svao-collections-top-scroll {
+    animation-play-state: paused;
+  }
+
+  .svao-collections-bottom-pause-hover:hover .svao-collections-bottom-scroll {
+    animation-play-state: paused;
+  }
+}
+
+/* End:: Carousel custom design */
+
+
+
 /* Start:: Scroll bar design */
 /* End:: Scroll bar design */
 .svao-scrollbar {

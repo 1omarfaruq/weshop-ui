@@ -51,55 +51,7 @@
     </style>
     <!-- End:: Custom Styles -->
 
-    <!-- Start:: Carousel style -->
-     <!-- <style>
-        .carousel {
-            margin: 100px auto;
-            width: 90%;
-            border: 5px solid red;
-            display: flex;
-            overflow-x: auto;
-        }
-
-        .carousel::-webkit-scrollbar {
-            display: none;
-        }
-
-        .cgroup{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1em;
-            animation: spin 5s infinite linear;
-            padding-right: 1em;
-        }
-
-        .card {
-            flex: 0 0 5em;
-            height: 5em;
-            padding: 1rem;
-            background: cornflowerblue;
-            font-size: 3rem;
-            border-radius: .2em;
-            text-align: center;
-            align-content: center;
-        }
-
-        @keyframes spin {
-            from {translate: 0;}
-            to {translate: -100%;}
-        }
-     </style> -->
-
     <!-- <style>
-        .carousel { margin: 100px auto; width: 90%; display: flex; overflow-x: hidden; gap: 1em;}
-        .carousel::-webkit-scrollbar { display: none; }
-        .cgroup{ display: flex; align-items: center; justify-content: center; animation: spin 10s infinite linear; padding-right: 1em; }
-        .card { flex: 0 0 5em; height: 5em; padding: 1rem; background: cornflowerblue; font-size: 3rem; border-radius: .2em; text-align: center; align-content: center; } @keyframes spin { from {translate: 0;} to {translate: -100%;} } 
-    </style> -->
-
-
-  <style>
     .carousel {
       margin: auto;
       width: 90%;
@@ -134,8 +86,8 @@
       0% { transform: translateX(-100%); }
       100% { transform: translateX(0); }
     }
-  </style>
-    
+  </style> -->
+
     <!-- End:: Carousel style -->
 
     <!-- Start:: Stylesheet Links -->
@@ -634,425 +586,811 @@
 
     <!-- Start:: Main Content Section -->
     <main style="min-height: 2000px">
-        <!-- Start:: Carousel -->
-        <div class="flex flex-col gap-8 my-[100px]">
-            <!-- Start:: left moving Carousel -->
-            <div class="carousel">
-                <div class="tgroup">
-                    <div class="flex items-center gap-[50px] rounded-[32px] w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                        <h3 class="text-[96px] text-black font-semibold uppercase">WINTER</h3>
-                    </div>
-                    
-                    <div class="flex items-center gap-[50px] rounded-[32px] w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="svao-stroke-text-blue text-[96px] text-transparent ">HOODIE</h3>
-                    </div>
-                    <div class="flex items-center gap-[50px] rounded-[32px] max-w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="text-[96px] text-black font-semibold uppercase">CAP</h3>
-                    </div>
-                </div>
-
-                <!-- duplicate group for infinite loop -->
-                <div class="tgroup">
-                    <div class="flex items-center gap-[50px] rounded-[32px] w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="text-[96px] text-black font-semibold uppercase">WINTER</h3>
-                    </div>
-                    
-                    <div class="flex items-center gap-[50px] rounded-[32px] w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="svao-stroke-text-blue text-[96px] text-transparent ">HOODIE</h3>
-                    </div>
-                    <div class="flex items-center gap-[50px] rounded-[32px] max-w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="text-[96px] text-black font-semibold uppercase">CAP</h3>
-                    </div>
-                </div>
+      <!-- Start:: Carousel -->
+      <div class="my-[100px] flex flex-col gap-6 md:gap-8">
+        <!-- Start:: Top moving Carousel -->
+        <div
+          class="relative mx-auto flex h-[80px] md:h-[164px] gap-[16px] overflow-hidden md:py-[10px] md:gap-[50px] svao-collections-top-pause-hover"
+        >
+          <!-- Group 1 -->
+          <div
+            class="svao-collections-top-scroll flex flex-shrink-0 items-center justify-center gap-[16px] text-[42px] md:gap-[50px] md:text-[96px] svao-collections-top-scroll"
+          >
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-winter.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-black uppercase">WINTER</h3>
             </div>
-            <!-- End:: left moving Carousel -->
-            
-            <!-- Start:: Right moving Carousel -->
-            <div class="carousel">
-                <div class="bgroup">
-                    <div class="flex items-center gap-[50px] rounded-[32px] w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="text-[96px] text-black font-semibold uppercase">WINTER</h3>
-                    </div>
-                    
-                    <div class="flex items-center gap-[50px] rounded-[32px] w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="svao-stroke-text-blue text-[96px] text-transparent ">HOODIE</h3>
-                    </div>
-                    <div class="flex items-center gap-[50px] rounded-[32px] max-w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="text-[96px] text-black font-semibold uppercase">CAP</h3>
-                    </div>
-                </div>
-
-                <!-- duplicate group for infinite loop -->
-                <div class="bgroup">
-                    <div class="flex items-center gap-[50px] rounded-[32px] w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="text-[96px] text-black font-semibold uppercase">WINTER</h3>
-                    </div>
-                    
-                    <div class="flex items-center gap-[50px] rounded-[32px] w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="svao-stroke-text-blue text-[96px] text-transparent ">HOODIE</h3>
-                    </div>
-                    <div class="flex items-center gap-[50px] rounded-[32px] max-w-[664px] h-[144px]">
-                        <div class="w-[270px] h-[144px]">
-                            <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200" alt="Spring" class="rounded-[32px] object-contain">
-                        </div>
-                    <h3 class="text-[96px] text-black font-semibold uppercase">CAP</h3>
-                    </div>
-                </div>
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-hoodie.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="svao-stroke-text-blue text-transparent">
+                HOODIE
+              </h3>
             </div>
-            <!-- End:: Right moving Carousel -->
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-cap.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-black uppercase">CAP</h3>
+            </div>
+          </div>
+
+          <!-- Duplicate Group (for infinite loop) -->
+          <div
+            class="svao-collections-top-scroll flex flex-shrink-0 items-center justify-center gap-[16px] text-[42px] md:gap-[50px] md:text-[96px] svao-collections-top-scroll"
+          >
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-winter.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-black uppercase">WINTER</h3>
+            </div>
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-hoodie.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="svao-stroke-text-blue text-transparent">
+                HOODIE
+              </h3>
+            </div>
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-cap.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-black uppercase">CAP</h3>
+            </div>
+          </div>
         </div>
-        <!-- Start:: Carousel -->
+        <!-- End:: Top moving Carousel -->
 
+        <!-- Start:: Bottom moving Carousel -->
+        <div
+          class="relative mx-auto flex h-[80px] md:h-[164px] gap-[16px] overflow-hidden md:py-[10px] md:gap-[50px] svao-collections-bottom-pause-hover"
+        >
+          <!-- Group 1 -->
+          <div
+            class="svao-collections-bottom-scroll flex flex-shrink-0 items-center justify-center gap-[16px] text-[42px] md:gap-[50px] md:text-[96px] svao-collections-bottom-scroll"
+          >
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-looks.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-black uppercase">LOOKS</h3>
+            </div>
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-sweater.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="svao-stroke-text-blue text-transparent">
+                SWEATER
+              </h3>
+            </div>
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-watch.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-black uppercase">WATCH</h3>
+            </div>
+          </div>
+
+          <!-- Duplicate Group (for infinite loop) -->
+          <div
+            class="svao-collections-bottom-scroll flex flex-shrink-0 items-center justify-center gap-[16px] text-[42px] md:gap-[50px] md:text-[96px] svao-collections-bottom-scroll"
+          >
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-looks.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-black uppercase">LOOKS</h3>
+            </div>
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-sweater.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="svao-stroke-text-blue text-transparent">
+                SWEATER
+              </h3>
+            </div>
+            <div class="flex h-[144px] items-center gap-[16px] md:gap-[50px]">
+              <div
+                class="h-[80px] w-[160px] overflow-hidden rounded-[32px] md:h-[144px] md:w-[270px]"
+              >
+                <img
+                  src="./assets/carousel/carousel-watch.png"
+                  alt="Spring"
+                  class="object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-black uppercase">WATCH</h3>
+            </div>
+          </div>
+        </div>
+        <!-- End:: Bottom moving Carousel -->
+      </div>
+      <!-- Start:: Carousel -->
     </main>
     <!-- End:: Main Content Section -->
 
-    
     <!-- Start:: Footer Section -->
-    <footer class="bg-[#192434] text-white mt-[100px] font-poppins">
-      <div class="py-[30px] md:pt-[60px] pb-[30px] px-[20px] md:px-[120px]">
-      
+    <footer class="font-poppins mt-[100px] bg-[#192434] text-white">
+      <div class="px-[20px] py-[30px] pb-[30px] md:px-[120px] md:pt-[60px]">
         <!-- Main Footer Content -->
-      <div class="mx-auto">
-        <div class="flex flex-wrap lg:flex-nowrap gap-5 md:gap-8 lg:gap-[114px]">
-          <!-- Brand Section -->
-          <div class="w-full lg:w-[312px] md:space-y-8">
-            <!-- title -->
-            <div class="space-y-2">
-              <h2 class="font-museo text-[32px] font-medium leading-[0.98] tracking-[-0.02em]">WESHOP</h2>
-              <p class="text-white text-[16px] font-normal max-w-[200px]">Your trusted fashion companion</p>
-            </div>
-
-            <div class="border border-slate-700 mt-[28px] mb-[32px] md:hidden bg-[#B3BAC5]"></div>
-            
-            <!-- Social Icons -->
-            <div class="flex flex-col gap-4">
-              <div class="flex gap-3">
-                <a href="#" class="w-8 h-8 bg-slate-700 rounded flex items-center justify-center hover:bg-slate-600 transition">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-                <a href="#" class="w-8 h-8 bg-slate-700 rounded flex items-center justify-center hover:bg-slate-600 transition">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <a href="#" class="w-8 h-8 bg-slate-700 rounded flex items-center justify-center hover:bg-slate-600 transition">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                </a>
-                <a href="#" class="w-8 h-8 bg-slate-700 rounded flex items-center justify-center hover:bg-slate-600 transition">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
-                </a>
+        <div class="mx-auto">
+          <div
+            class="flex flex-wrap gap-5 md:gap-8 lg:flex-nowrap lg:gap-[114px]"
+          >
+            <!-- Brand Section -->
+            <div class="w-full md:space-y-8 lg:w-[312px]">
+              <!-- title -->
+              <div class="space-y-2">
+                <h2
+                  class="font-museo text-[32px] leading-[0.98] font-medium tracking-[-0.02em]"
+                >
+                  WESHOP
+                </h2>
+                <p class="max-w-[200px] text-[16px] font-normal text-white">
+                  Your trusted fashion companion
+                </p>
               </div>
-              <!-- Contact Info -->
-              <div class="text-sm text-white flex gap-1 md:flex-col">
-                <p>24/7 Customer Support:</p>
-                <p class="font-medium text-[16px] md:text-[18px]">+81 5203 888 61</p>
+
+              <div
+                class="mt-[28px] mb-[32px] border border-slate-700 bg-[#B3BAC5] md:hidden"
+              ></div>
+
+              <!-- Social Icons -->
+              <div class="flex flex-col gap-4">
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    class="flex h-8 w-8 items-center justify-center rounded bg-slate-700 transition hover:bg-slate-600"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="flex h-8 w-8 items-center justify-center rounded bg-slate-700 transition hover:bg-slate-600"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="flex h-8 w-8 items-center justify-center rounded bg-slate-700 transition hover:bg-slate-600"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="flex h-8 w-8 items-center justify-center rounded bg-slate-700 transition hover:bg-slate-600"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <!-- Contact Info -->
+                <div class="flex gap-1 text-sm text-white md:flex-col">
+                  <p>24/7 Customer Support:</p>
+                  <p class="text-[16px] font-medium md:text-[18px]">
+                    +81 5203 888 61
+                  </p>
+                </div>
               </div>
+
+              <div
+                class="mt-[28px] border border-slate-700 bg-[#B3BAC5] md:hidden"
+              ></div>
             </div>
 
-            <div class="md:hidden border-slate-700 bg-[#B3BAC5] mt-[28px] border"></div>
-          </div>
-
-          <!-- top category  -->
-          <div class="w-full lg:w-[200px] md:mt-0">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-white font-semibold text-[18px]">TOP CATEGORY</h3>
-              <button class="toggle-btn text-white text-[18px] font-bold md:hidden">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z" fill="#B3BAC5"/>
-                </svg>
-              </button>
-            </div>
-            <ul class="toggle-list  space-y-2.5 text-[14px] font-normal hidden md:block">
-              <li class="">
-                <a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                  <!-- <span class="inline-block mr-1 opacity-0 absolute -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out">-</span> -->
-                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                  <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Coats and Jacket</span>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                    <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                  <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Bags</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                    <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                  <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Watches</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112] font-medium">
-                                    <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                  <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Accessories</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                    <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                  <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Bracelet</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                    <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                  <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Neckies</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="text-[14px] font-medium group flex items-center gap-1 transition-all duration-300 ease-in-out text-[#DBE112]">
-                  <span class="">Browse All Product</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            <!-- top category  -->
+            <div class="w-full md:mt-0 lg:w-[200px]">
+              <div class="mb-4 flex items-center justify-between">
+                <h3 class="text-[18px] font-semibold text-white">
+                  TOP CATEGORY
+                </h3>
+                <button
+                  class="toggle-btn text-[18px] font-bold text-white md:hidden"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z"
+                      fill="#B3BAC5"
+                    />
                   </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          
+                </button>
+              </div>
+              <ul
+                class="toggle-list hidden space-y-2.5 text-[14px] font-normal md:block"
+              >
+                <li class="">
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <!-- <span class="inline-block mr-1 opacity-0 absolute -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out">-</span> -->
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Coats and Jacket</span
+                    >
+                  </a>
+                </li>
 
-          <!-- Quick Links -->
-          <div class="w-full lg:w-[200px]">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-white font-medium text-[18px]">QUICK LINKS</h3>
-              <button class="toggle-btn text-white text-xl font-bold md:hidden">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z" fill="#B3BAC5"/>
-                </svg>
-              </button>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Bags</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Watches</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center font-medium transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Accessories</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Bracelet</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Neckies</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center gap-1 text-[14px] font-medium text-[#DBE112] transition-all duration-300 ease-in-out"
+                  >
+                    <span class="">Browse All Product</span>
+                    <svg
+                      class="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <ul class="toggle-list space-y-1.5 text-[14px] font-normal hidden md:block">
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Shop Product</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Shopping Cart</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Wishlist</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Track Order</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Customer Help</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Shop Product</span></a>
-              </li>
-            </ul>
-          </div>
 
-          <!-- Help and Support -->
-          <div class="w-full lg:w-[200px]">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-white font-medium text-[18px] ">HELP AND SUPPORT</h3>
-              <button class="toggle-btn text-white text-xl font-bold md:hidden">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z" fill="#B3BAC5"/>
-                </svg>
-
-              </button>
+            <!-- Quick Links -->
+            <div class="w-full lg:w-[200px]">
+              <div class="mb-4 flex items-center justify-between">
+                <h3 class="text-[18px] font-medium text-white">QUICK LINKS</h3>
+                <button
+                  class="toggle-btn text-xl font-bold text-white md:hidden"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z"
+                      fill="#B3BAC5"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <ul
+                class="toggle-list hidden space-y-1.5 text-[14px] font-normal md:block"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Shop Product</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Shopping Cart</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Wishlist</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Track Order</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Customer Help</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Shop Product</span
+                    ></a
+                  >
+                </li>
+              </ul>
             </div>
-            <ul class="toggle-list space-y-1.5 text-[14px] font-normal hidden md:block">
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
+
+            <!-- Help and Support -->
+            <div class="w-full lg:w-[200px]">
+              <div class="mb-4 flex items-center justify-between">
+                <h3 class="text-[18px] font-medium text-white">
+                  HELP AND SUPPORT
+                </h3>
+                <button
+                  class="toggle-btn text-xl font-bold text-white md:hidden"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z"
+                      fill="#B3BAC5"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <ul
+                class="toggle-list hidden space-y-1.5 text-[14px] font-normal md:block"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Privacy Policy</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Refund Policy</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Terms of Usage</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >Legal Documents</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]"
+                  >
+                    <div
+                      class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
+                    ></div>
+                    <span
+                      class="relative inline-block transition-all duration-300 ease-in-out group-hover:translate-x-3"
+                      >User Data Policy</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-full border border-slate-700 md:hidden"></div>
+
+            <!-- Popular Tags -->
+            <div class="w-full lg:w-[312px]">
+              <h3
+                class="mb-[18px] text-center text-[18px] font-medium text-white md:text-start"
+              >
+                POPULAR TAGS
+              </h3>
+              <div
+                class="mb-[18px] flex flex-wrap gap-2 text-[14px] font-normal md:max-w-[274px]"
+              >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Bag</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Wallet</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Ring</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Lofar</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Suit</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Coat</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] text-white transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Warm Sweater</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Leather Wallet</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Jeans</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >T-shirt</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Caps</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Jacket</span
+                >
+                <span
+                  class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
+                  >Shoes</span
+                >
+              </div>
+
+              <!-- Payment Icons -->
+              <div class="mt-[18px] hidden flex-wrap gap-2 md:flex">
                 <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Privacy Policy</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Refund Policy</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Terms of Usage</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">Legal Documents</span></a>
-              </li>
-              <li><a href="#" class="group flex items-center transition-all duration-300 ease-in-out hover:text-[#DBE112]">
-                  <div
-                    class="h-0.5 w-0 bg-[#DBE112] transition-all duration-300 ease-in-out group-hover:w-6"
-                  ></div>
-                <span class="inline-block relative group-hover:translate-x-3 transition-all duration-300 ease-in-out">User Data Policy</span></a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="border border-slate-700 md:hidden w-full"></div>
-          
-          <!-- Popular Tags -->
-          <div class="w-full lg:w-[312px]">
-            <h3 class="text-white font-medium text-[18px] mb-[18px] text-center md:text-start">POPULAR TAGS</h3>
-            <div class="flex flex-wrap gap-2 text-[14px] font-normal mb-[18px] md:max-w-[274px]">
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Bag</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Wallet</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Ring</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Lofar</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Suit</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Coat</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition text-white">Warm Sweater</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Leather Wallet</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Jeans</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">T-shirt</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Caps</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Jacket</span>
-              <span class="flex items-center justify-center px-[12px] h-[33px] border border-[#6C6F06] rounded-[2px] cursor-pointer hover:bg-[#DBE112] hover:text-[#192739]/90 transition">Shoes</span>
-            </div>
-            
-            <!-- Payment Icons -->
-            <div class="md:flex flex-wrap gap-2 mt-[18px] hidden ">
-              <div class="w-[38px] h-[26px] bg-white rounded-[6px] flex items-center justify-center">
-                <span class="text-blue-600 font-bold text-xs">VISA</span>
-              </div>
-              <div class="w-[38px] h-[26px] bg-gradient-to-r from-orange-500 to-red-500 rounded-[6px] flex items-center justify-center">
-                <span class="text-white font-bold text-xs">●●</span>
-              </div>
-              <div class="w-[38px] h-[26px] bg-white rounded-[6px] flex items-center justify-center">
-                <span class="text-blue-600 font-bold text-xs">stripe</span>
-              </div>
-              <div class="w-[38px] h-[26px] bg-blue-600 rounded-[6px] flex items-center justify-center">
-                <span class="text-white font-bold text-xs">Pay</span>
-              </div>
-              <div class="w-[38px] h-[26px] bg-white rounded-[6px] flex items-center justify-center">
-                <span class="text-purple-600 font-bold text-xs">$pay</span>
-              </div>
-              <div class="w-[38px] h-[26px] bg-gradient-to-r from-purple-600 to-purple-400 rounded-[6px] flex items-center justify-center">
-                <span class="text-white font-bold text-xs">Gpay</span>
+                  class="flex h-[26px] w-[38px] items-center justify-center rounded-[6px] bg-white"
+                >
+                  <span class="text-xs font-bold text-blue-600">VISA</span>
+                </div>
+                <div
+                  class="flex h-[26px] w-[38px] items-center justify-center rounded-[6px] bg-gradient-to-r from-orange-500 to-red-500"
+                >
+                  <span class="text-xs font-bold text-white">●●</span>
+                </div>
+                <div
+                  class="flex h-[26px] w-[38px] items-center justify-center rounded-[6px] bg-white"
+                >
+                  <span class="text-xs font-bold text-blue-600">stripe</span>
+                </div>
+                <div
+                  class="flex h-[26px] w-[38px] items-center justify-center rounded-[6px] bg-blue-600"
+                >
+                  <span class="text-xs font-bold text-white">Pay</span>
+                </div>
+                <div
+                  class="flex h-[26px] w-[38px] items-center justify-center rounded-[6px] bg-white"
+                >
+                  <span class="text-xs font-bold text-purple-600">$pay</span>
+                </div>
+                <div
+                  class="flex h-[26px] w-[38px] items-center justify-center rounded-[6px] bg-gradient-to-r from-purple-600 to-purple-400"
+                >
+                  <span class="text-xs font-bold text-white">Gpay</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Bottom Footer -->
-      <div class="border-t border-slate-700 mt-[28px] md:mt-[40px]">
-        <div class="mt-[32px]">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-center text-white text-[12px] font-normal">
-            <!-- Copyright -->
-            <div class="flex items-center gap-2 mb-[20px]">
-              <span>© $ BDT/ EN</span>
-            </div>
+        <!-- Bottom Footer -->
+        <div class="mt-[28px] border-t border-slate-700 md:mt-[40px]">
+          <div class="mt-[32px]">
+            <div
+              class="flex flex-col text-[12px] font-normal text-white md:flex-row md:items-center md:justify-between"
+            >
+              <!-- Copyright -->
+              <div class="mb-[20px] flex items-center gap-2">
+                <span>© $ BDT/ EN</span>
+              </div>
 
-            <!-- Footer Links -->
-            <div class="flex flex-wrap gap-3 md:gap-6 mb-[24px]">
-              <a href="#" class="hover:text-[#DBE112] transition">Refund Policy</a>
-              <a href="#" class="hover:text-[#DBE112] transition">Privacy Policy</a>
-              <a href="#" class="hover:text-[#DBE112] transition">Terms of Usage</a>
-              <a href="#" class="hover:text-[#DBE112] transition">Legal Documents</a>
-            </div>
+              <!-- Footer Links -->
+              <div class="mb-[24px] flex flex-wrap gap-3 md:gap-6">
+                <a href="#" class="transition hover:text-[#DBE112]"
+                  >Refund Policy</a
+                >
+                <a href="#" class="transition hover:text-[#DBE112]"
+                  >Privacy Policy</a
+                >
+                <a href="#" class="transition hover:text-[#DBE112]"
+                  >Terms of Usage</a
+                >
+                <a href="#" class="transition hover:text-[#DBE112]"
+                  >Legal Documents</a
+                >
+              </div>
 
-            <!-- Copyright Text -->
-            <div>
-              © Copyright. WeShop. 2024 Powered by ShopifyTeam.
+              <!-- Copyright Text -->
+              <div>© Copyright. WeShop. 2024 Powered by ShopifyTeam.</div>
             </div>
           </div>
         </div>
-      </div>
-
       </div>
     </footer>
     <!-- End:: Footer Section -->
   </body>
 
-    <!-- Start:: Javascript linking -->
-    <script>
-    const toggleButtons = document.querySelectorAll('.toggle-btn');
+  <!-- Start:: Javascript linking -->
+  <script>
+    const toggleButtons = document.querySelectorAll(".toggle-btn");
 
     const plusSVG = `
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z" fill="#B3BAC5"/>
-    </svg>`;
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18C8.71667 18 8.47917 17.9042 8.2875 17.7125C8.09583 17.5208 8 17.2833 8 17V10H1C0.716667 10 0.479167 9.90417 0.2875 9.7125C0.0958333 9.52083 0 9.28333 0 9C0 8.71667 0.0958333 8.47917 0.2875 8.2875C0.479167 8.09583 0.716667 8 1 8H8V1C8 0.716667 8.09583 0.479167 8.2875 0.2875C8.47917 0.0958333 8.71667 0 9 0C9.28333 0 9.52083 0.0958333 9.7125 0.2875C9.90417 0.479167 10 0.716667 10 1V8H17C17.2833 8 17.5208 8.09583 17.7125 8.2875C17.9042 8.47917 18 8.71667 18 9C18 9.28333 17.9042 9.52083 17.7125 9.7125C17.5208 9.90417 17.2833 10 17 10H10V17C10 17.2833 9.90417 17.5208 9.7125 17.7125C9.52083 17.9042 9.28333 18 9 18Z" fill="#B3BAC5"/>
+      </svg>`;
 
     const minusSVG = `
-    <svg width="18" height="3" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0.999837 1.83341C0.763726 1.83341 0.565809 1.75355 0.406087 1.59383C0.246365 1.43411 0.166504 1.23619 0.166504 1.00008C0.166504 0.76397 0.246365 0.566054 0.406087 0.406331C0.565809 0.246609 0.763726 0.166748 0.999837 0.166748H10.9998C11.2359 0.166748 11.4339 0.246609 11.5936 0.406331C11.7533 0.566054 11.8332 0.76397 11.8332 1.00008C11.8332 1.23619 11.7533 1.43411 11.5936 1.59383C11.4339 1.75355 11.2359 1.83341 10.9998 1.83341H0.999837Z" fill="#B3BAC5"/>
-    </svg>`;
+      <svg width="18" height="3" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.999837 1.83341C0.763726 1.83341 0.565809 1.75355 0.406087 1.59383C0.246365 1.43411 0.166504 1.23619 0.166504 1.00008C0.166504 0.76397 0.246365 0.566054 0.406087 0.406331C0.565809 0.246609 0.763726 0.166748 0.999837 0.166748H10.9998C11.2359 0.166748 11.4339 0.246609 11.5936 0.406331C11.7533 0.566054 11.8332 0.76397 11.8332 1.00008C11.8332 1.23619 11.7533 1.43411 11.5936 1.59383C11.4339 1.75355 11.2359 1.83341 10.9998 1.83341H0.999837Z" fill="#B3BAC5"/>
+      </svg>`;
 
     toggleButtons.forEach((btn) => {
-        // Initialize with plus SVG
-        btn.innerHTML = plusSVG;
+      // Initialize with plus SVG
+      btn.innerHTML = plusSVG;
 
-        btn.addEventListener('click', () => {
+      btn.addEventListener("click", () => {
         const list = btn.parentElement.nextElementSibling;
-        const isHidden = list.classList.toggle('hidden');
+        const isHidden = list.classList.toggle("hidden");
 
         btn.innerHTML = isHidden ? plusSVG : minusSVG;
-        });
+      });
     });
-    </script>
-    <!-- End:: Javascript linking -->
-
+  </script>
+  <!-- End:: Javascript linking -->
 </html>
