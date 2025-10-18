@@ -28,7 +28,7 @@
 
 @layer utilities {
   .svao-collections-top-scroll {
-    animation: right-left-scroll 15s linear infinite;
+    animation: right-left-scroll 20s linear infinite;
   }
 
   .svao-collections-bottom-scroll {
