@@ -51,9 +51,90 @@
 
       .swiper {
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
       }
     </style>
+
+    <!-- test swiper -->
+
+    <style>
+      /* .card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+        text-align: center;
+      }
+      .card h3 {
+        margin: 8px 0 0 0;
+        font-size: 18px;
+      }
+      .card p {
+        margin: 6px 0 0 0;
+        color: #596275;
+        font-size: 14px;
+      } */
+
+      /* .swiper {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px 0;
+      } */
+      /* .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } */
+      /* .swiper-slide .card {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      } */
+
+      /* Custom control container */
+      /* .swiper-controls {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 10px;
+        margin-top: 10px;
+        margin-right: 20px;
+      } */
+
+      /* .custom-button {
+        background: transparent;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s ease;
+        border : 1px solid var(--bg-blue)
+      } */
+
+      /* Hide pagination */
+      .swiper-pagination {
+        display: none !important;
+      }
+
+      /* @media (max-width: 480px) {
+        .swiper-slide .card {
+          height: 140px;
+        }
+      } */
+
+      .custom-button.next.swiper-button-disabled,
+      .custom-button.prev.swiper-button-disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        border: 2px solid rgba(28, 52, 84, 0.26);
+      }
+    </style>
+
+    <!-- test swiper -->
 
     <!-- End:: Custom Styles -->
 
@@ -261,7 +342,7 @@
       <!-- Start:: Main Navigation Bar with background -->
       <div
         id="navbar"
-        class="hidden bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out md:flex lg:px-12"
+        class="hidden bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out lg:flex lg:px-12"
       >
         <div
           class="svao-container flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
@@ -275,8 +356,10 @@
           <!-- End:: Logo -->
 
           <!-- Start:: Main Navigation -->
+
+          <!--Start:: Dropdown Navigation  -->
           <nav>
-            <div class="flex justify-center">
+            <div class="hidden">
               <ul class="flex items-center gap-4">
                 <li class="svao-nav-item">
                   <a href="#" class="flex items-center"> Shop </a>
@@ -517,6 +600,643 @@
               </ul>
             </div>
           </nav>
+          <!-- End:: Dropdown Navigation-->
+
+          <!--Start:: Mega menu Navigation -->
+
+          <nav class="bg-white">
+            <div class="flex justify-center">
+              <ul class="flex items-center gap-2">
+                <li class="mr-4">
+                  <a href="#" class="flex items-center">Shop</a>
+                </li>
+
+                <li class="group mr-2">
+                  <a href="#" class="flex items-center">
+                    Man
+                    <span class="pl-2.5">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19380_20040"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19380_20040)">
+                          <path
+                            d="M12.0008 14.9758C11.8674 14.9758 11.7424 14.9549 11.6258 14.9133C11.5091 14.8716 11.4008 14.8008 11.3008 14.7008L6.70078 10.1008C6.51745 9.91745 6.42578 9.68411 6.42578 9.40078C6.42578 9.11745 6.51745 8.88411 6.70078 8.70078C6.88411 8.51745 7.11745 8.42578 7.40078 8.42578C7.68411 8.42578 7.91745 8.51745 8.10078 8.70078L12.0008 12.6008L15.9008 8.70078C16.0841 8.51745 16.3174 8.42578 16.6008 8.42578C16.8841 8.42578 17.1174 8.51745 17.3008 8.70078C17.4841 8.88411 17.5758 9.11745 17.5758 9.40078C17.5758 9.68411 17.4841 9.91745 17.3008 10.1008L12.7008 14.7008C12.6008 14.8008 12.4924 14.8716 12.3758 14.9133C12.2591 14.9549 12.1341 14.9758 12.0008 14.9758Z"
+                            fill-opacity="0.69"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+
+                  <div
+                    class="invisible absolute top-[110px] left-0 z-10 w-screen rounded-4xl border-t border-[var(--shade-light-4)] bg-white pt-15 pb-20 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100"
+                  >
+                    <div
+                      class="svao-container grid grid-cols-7 gap-4 rounded-3xl"
+                    >
+                      <div class="col-1">
+                        <h3
+                          class="font-semibold text-[var(--text-blue)] lg:text-xl xl:text-2xl"
+                        >
+                          Clothing
+                        </h3>
+                        <div class="mt-6">
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Shirts</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 text-base font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Pants</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 text-base font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Jackets</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-span-1">
+                        <h3
+                          class="font-semibold text-[var(--text-blue)] lg:text-xl xl:text-2xl"
+                        >
+                          Accessories
+                        </h3>
+                        <div class="mt-6">
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Belts</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Hats</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-span-1">
+                        <h3
+                          class="font-semibold text-[var(--text-blue)] lg:text-xl xl:text-2xl"
+                        >
+                          Footwear
+                        </h3>
+
+                        <div class="mt-6">
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Sneakers</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Boots</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Formal Shoes</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-span-2">
+                        <img
+                          class="h-auto w-11/12 object-cover"
+                          src="assets/sneakers-megamenu.png"
+                          alt="shoes"
+                        />
+                      </div>
+
+                      <div class="col-span-2">
+                        <img
+                          class="h-auto w-11/12 object-cover"
+                          src="assets/watches-megamenu.png"
+                          alt="shoes"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="group svao-nav-active">
+                  <a href="#" class="flex items-center">
+                    Woman
+                    <span class="pl-2.5">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19380_20040"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19380_20040)">
+                          <path
+                            d="M12.0008 14.9758C11.8674 14.9758 11.7424 14.9549 11.6258 14.9133C11.5091 14.8716 11.4008 14.8008 11.3008 14.7008L6.70078 10.1008C6.51745 9.91745 6.42578 9.68411 6.42578 9.40078C6.42578 9.11745 6.51745 8.88411 6.70078 8.70078C6.88411 8.51745 7.11745 8.42578 7.40078 8.42578C7.68411 8.42578 7.91745 8.51745 8.10078 8.70078L12.0008 12.6008L15.9008 8.70078C16.0841 8.51745 16.3174 8.42578 16.6008 8.42578C16.8841 8.42578 17.1174 8.51745 17.3008 8.70078C17.4841 8.88411 17.5758 9.11745 17.5758 9.40078C17.5758 9.68411 17.4841 9.91745 17.3008 10.1008L12.7008 14.7008C12.6008 14.8008 12.4924 14.8716 12.3758 14.9133C12.2591 14.9549 12.1341 14.9758 12.0008 14.9758Z"
+                            fill-opacity="0.69"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+            
+                  <div
+                    class="invisible absolute top-[110px] left-0 z-10 w-screen rounded-b-4xl border-t border-[var(--shade-light-4)] bg-white pt-15 pb-20 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100"
+                  >
+                    <div
+                      class="svao-container grid grid-cols-7 gap-10 rounded-3xl"
+                    >
+                      <div class="col-span-1">
+                        <h3
+                          class="font-semibold text-[var(--text-blue)] lg:text-xl xl:text-2xl"
+                        >
+                          Clothing
+                        </h3>
+                        <div class="mt-6">
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Shirts</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 text-base font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Pants</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 text-base font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Jackets</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-span-1">
+                        <h3
+                          class="font-semibold text-[var(--text-blue)] lg:text-xl xl:text-2xl"
+                        >
+                          Accessories
+                        </h3>
+                        <div class="mt-6">
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Watches</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Belts</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Hats</a
+                          >
+                        </div>
+                      </div>
+                   
+                      <div class="col-span-1 border-r border-[var(--shade-light-4)] ">
+                        <h3
+                          class="font-semibold text-[var(--text-blue)] lg:text-xl xl:text-2xl"
+                        >
+                          Footwear
+                        </h3>
+
+                        <div class="mt-6">
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Sneakers</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Boots</a
+                          >
+                          <a
+                            href="#"
+                            class="block py-2 font-normal text-[var(--text-blue)] lg:text-lg xl:text-xl"
+                            >Formal Shoes</a
+                          >
+                        </div>
+                      </div>
+
+                
+      <!-- <div class="w-2 border-r-1 border-[var(--shade-light-4)]">
+
+                      </div> -->
+  
+                      <div class="col-span-3">
+                        <!-- Swiper -->
+                        <div class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div
+                                class="flex flex-col items-center justify-center rounded-2xl border-1 border-[var(--shade-light-4)] py-4"
+                              >
+                                <img
+                                  class="h-40 w-40 object-cover"
+                                  src="assets/products/glass.png"
+                                  alt="shoes"
+                                />
+                                <p
+                                  class="text-base font-normal text-center text-[var(--text-blue)]"
+                                >
+                                  Pink Stylish Goggle
+                                </p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div
+                                class="flex flex-col items-center justify-center rounded-2xl border-1 border-[var(--shade-light-4)] py-4"
+                              >
+                                <img
+                                  class="h-40 w-40 object-cover"
+                                  src="assets/products/watch.png"
+                                  alt="shoes"
+                                />
+                                <p
+                                  class="text-base text-center font-normal text-[var(--text-blue)]"
+                                >
+                                  Pink Stylish Goggle
+                                </p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div
+                                class="flex flex-col items-center justify-center rounded-2xl border-1 border-[var(--shade-light-4)] py-4"
+                              >
+                                <img
+                                  class="h-40 w-40 object-cover"
+                                  src="assets/products/sneaker.png"
+                                  alt="shoes"
+                                />
+                                <p
+                                  class="text-base text-center font-normal text-[var(--text-blue)]"
+                                >
+                                  Pink Stylish Goggle
+                                </p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div
+                                class="flex flex-col items-center justify-center rounded-2xl border-1 border-[var(--shade-light-4)] py-4"
+                              >
+                                <img
+                                  class="h-40 w-40 object-cover"
+                                  src="assets/products/watch.png"
+                                  alt="shoes"
+                                />
+                                <p
+                                  class="text-base font-normal text-[var(--text-blue)]"
+                                >
+                                  Pink Stylish Goggle
+                                </p>
+                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div
+                                class="flex flex-col items-center justify-center rounded-2xl border-1 border-[var(--shade-light-4)] py-4"
+                              >
+                                <img
+                                  class="h-40 w-40 object-cover"
+                                  src="assets/products/sneaker.png"
+                                  alt="shoes"
+                                />
+                                <p
+                                  class="text-base font-normal text-[var(--text-blue)]"
+                                >
+                                  Pink Stylish Goggle
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+
+                      <div class="col-span-1 flex items-end">
+                        <!-- Custom Controls (both on right) -->
+                        <div class="swiper-controls flex gap-4">
+                          <button
+                            class="custom-button prev rounded-xl border-2 border-[var(--bg-blue)] bg-transparent px-1.5 py-2"
+                          >
+                            <svg
+                              width="24"
+                              height="17"
+                              viewBox="0 0 24 17"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.46345 9.15627H23.0089C23.3008 9.15627 23.5435 9.05951 23.7371 8.866C23.9306 8.67248 24.0273 8.42976 24.0273 8.13786C24.0273 7.84595 23.9306 7.60324 23.7371 7.40972C23.5435 7.2162 23.3008 7.11944 23.0089 7.11944H3.46345L8.85132 1.72119C9.0483 1.52421 9.14852 1.28822 9.15198 1.01322C9.15524 0.738223 9.05502 0.498871 8.85132 0.295168C8.65454 0.0983899 8.41692 0 8.13845 0C7.85999 0 7.62237 0.0983899 7.42559 0.295168L0.295759 7.425C0.187185 7.53357 0.110796 7.64561 0.0665913 7.76111C0.0225925 7.8764 0.000591278 8.00199 0.000591278 8.13786C0.000591278 8.27373 0.0225925 8.39931 0.0665913 8.51461C0.110796 8.63011 0.187185 8.74214 0.295759 8.85072L7.42559 15.9805C7.62237 16.1773 7.85826 16.2757 8.13326 16.2757C8.40826 16.2757 8.64761 16.1773 8.85132 15.9805C9.05502 15.7768 9.15687 15.5375 9.15687 15.2625C9.15687 14.9875 9.05502 14.7481 8.85132 14.5444L3.46345 9.15627Z"
+                                fill="#192434"
+                                fill-opacity=" "
+                              />
+                            </svg>
+                          </button>
+                          <button
+                            class="custom-button next rounded-xl border-2 border-[var(--text-blue)] bg-transparent px-1.5 py-2.5"
+                          >
+                            <svg
+                              width="24"
+                              height="17"
+                              viewBox="0 0 24 17"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M20.3412 9.15628H0.79576C0.503853 9.15628 0.26114 9.05952 0.0676215 8.866C-0.125897 8.67248 -0.222656 8.42977 -0.222656 8.13786C-0.222656 7.84595 -0.125897 7.60324 0.0676215 7.40972C0.26114 7.2162 0.503853 7.11944 0.79576 7.11944H20.3412L14.9534 1.72119C14.7564 1.52421 14.6562 1.28822 14.6527 1.01322C14.6494 0.738223 14.7497 0.498871 14.9534 0.295168C15.1501 0.0983899 15.3878 0 15.6662 0C15.9447 0 16.1823 0.0983899 16.3791 0.295168L23.5089 7.425C23.6175 7.53358 23.6939 7.64561 23.7381 7.76111C23.7821 7.87641 23.8041 8.00199 23.8041 8.13786C23.8041 8.27373 23.7821 8.39931 23.7381 8.51461C23.6939 8.63011 23.6175 8.74215 23.5089 8.85072L16.3791 15.9806C16.1823 16.1773 15.9464 16.2757 15.6714 16.2757C15.3964 16.2757 15.1571 16.1773 14.9534 15.9806C14.7497 15.7769 14.6478 15.5375 14.6478 15.2625C14.6478 14.9875 14.7497 14.7481 14.9534 14.5444L20.3412 9.15628Z"
+                                fill="#192434"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- <div class="col-span-1">
+                        <div class="border-1 border-[var(--shade-light-4)] flex flex-col justify-center items-center rounded-2xl py-4">
+                               <img
+                          class="w-40 h-40 object-cover"
+                          src="assets/products/glass.png"
+                          alt="shoes"
+                        />
+                        <p class="font-normal text-base text-[var(--text-blue)]">Pink Stylish Goggle </p>
+                        </div>
+                   
+                      </div> -->
+
+                      <!-- <div class="col-span-1">
+                           <div class="border-1 border-[var(--shade-light-4)] flex flex-col justify-center items-center rounded-2xl py-4">
+                               <img
+                          class=" w-40 h-40 object-cover"
+                          src="assets/products/sneaker.png"
+                          alt="shoes"
+                        />
+                        <p class="font-normal text-base text-[var(--text-blue)]">Pink Stylish Goggle </p>
+                        </div>
+                      </div> -->
+                      <!-- <div class="col-span-1">
+                           <div class="border-1 border-[var(--shade-light-4)] flex flex-col justify-center items-center rounded-2xl py-4">
+                               <img
+                          class="w-40 h-40 object-cover"
+                          src="assets/products/watch.png"
+                          alt="shoes"
+                        />
+                        <p class="font-normal text-base text-[var(--text-blue)]">Pink Stylish Goggle </p>
+                        </div>
+                      </div> -->
+                      <!-- <div class="col-span-1">
+                        
+                      </div> -->
+                    </div>
+                  </div>
+                </li>
+
+                <li class="svao-nav-item group relative">
+                  <a href="#" class="flex items-center">
+                    Kids
+                    <span class="pl-2.5">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19380_20040"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19380_20040)">
+                          <path
+                            d="M12.0008 14.9758C11.8674 14.9758 11.7424 14.9549 11.6258 14.9133C11.5091 14.8716 11.4008 14.8008 11.3008 14.7008L6.70078 10.1008C6.51745 9.91745 6.42578 9.68411 6.42578 9.40078C6.42578 9.11745 6.51745 8.88411 6.70078 8.70078C6.88411 8.51745 7.11745 8.42578 7.40078 8.42578C7.68411 8.42578 7.91745 8.51745 8.10078 8.70078L12.0008 12.6008L15.9008 8.70078C16.0841 8.51745 16.3174 8.42578 16.6008 8.42578C16.8841 8.42578 17.1174 8.51745 17.3008 8.70078C17.4841 8.88411 17.5758 9.11745 17.5758 9.40078C17.5758 9.68411 17.4841 9.91745 17.3008 10.1008L12.7008 14.7008C12.6008 14.8008 12.4924 14.8716 12.3758 14.9133C12.2591 14.9549 12.1341 14.9758 12.0008 14.9758Z"
+                            fill-opacity="0.69"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                  <div
+                    class="invisible fixed top-[120px] left-0 z-10 w-screen border-t border-[var(--shade-light-4)] bg-white opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100"
+                  >
+                    <div class="grid grid-cols-4 gap-4 px-4 py-4">
+                      <div>
+                        <h3 class="pl-2 font-bold">Clothing</h3>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >T-Shirts</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Shorts</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Jackets</a
+                        >
+                      </div>
+                      <div>
+                        <h3 class="pl-2 font-bold">Accessories</h3>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Backpacks</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Hats</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Watches</a
+                        >
+                      </div>
+                      <div>
+                        <h3 class="pl-2 font-bold">Footwear</h3>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Sneakers</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Sandals</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Boots</a
+                        >
+                      </div>
+                      <div>
+                        <h3 class="pl-2 font-bold">Toys & More</h3>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Toys</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Games</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="svao-nav-item group relative">
+                  <a href="#" class="flex items-center">
+                    More
+                    <span class="pl-2.5">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19380_20040"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19380_20040)">
+                          <path
+                            d="M12.0008 14.9758C11.8674 14.9758 11.7424 14.9549 11.6258 14.9133C11.5091 14.8716 11.4008 14.8008 11.3008 14.7008L6.70078 10.1008C6.51745 9.91745 6.42578 9.68411 6.42578 9.40078C6.42578 9.11745 6.51745 8.88411 6.70078 8.70078C6.88411 8.51745 7.11745 8.42578 7.40078 8.42578C7.68411 8.42578 7.91745 8.51745 8.10078 8.70078L12.0008 12.6008L15.9008 8.70078C16.0841 8.51745 16.3174 8.42578 16.6008 8.42578C16.8841 8.42578 17.1174 8.51745 17.3008 8.70078C17.4841 8.88411 17.5758 9.11745 17.5758 9.40078C17.5758 9.68411 17.4841 9.91745 17.3008 10.1008L12.7008 14.7008C12.6008 14.8008 12.4924 14.8716 12.3758 14.9133C12.2591 14.9549 12.1341 14.9758 12.0008 14.9758Z"
+                            fill-opacity="0.69"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                  <div
+                    class="invisible fixed top-[120px] left-0 z-10 w-screen border-t border-[var(--shade-light-4)] bg-white opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100"
+                  >
+                    <div class="grid grid-cols-4 gap-4 px-4 py-4">
+                      <div>
+                        <h3 class="pl-2 font-bold">Collections</h3>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Seasonal</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Limited Edition</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Collaborations</a
+                        >
+                      </div>
+                      <div>
+                        <h3 class="pl-2 font-bold">Gift Ideas</h3>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Gift Cards</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Bundles</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Personalized</a
+                        >
+                      </div>
+                      <div>
+                        <h3 class="pl-2 font-bold">Services</h3>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Custom Orders</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Repairs</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Consultations</a
+                        >
+                      </div>
+                      <div>
+                        <h3 class="pl-2 font-bold">Explore</h3>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Blog</a
+                        >
+                        <a
+                          href="#"
+                          class="block px-4 py-2 text-gray-600 hover:text-[var(--text-blue)]"
+                          >Events</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!--End:: Mega menu Navigation -->
+
           <!-- End:: Main Navigation -->
 
           <!-- Start:: Actionable Icon Area -->
@@ -649,7 +1369,7 @@
 
       <!--Start:: Navigation Container -->
       <nav
-        class="top-0 z-10 flex w-full items-center justify-between bg-white p-4 text-black md:hidden"
+        class="top-0 z-10 flex w-full items-center justify-between bg-white p-4 text-black lg:hidden"
       >
         <!-- Start:: Hamburger Menu -->
         <div class="cursor-pointer text-2xl" onclick="toggleMenu()">
@@ -739,7 +1459,7 @@
       <!-- Start::  Popup Menu -->
       <div
         id="menuPopup"
-        class="bg-opacity-90 fixed inset-0 z-20 -translate-x-full transform bg-white text-[var(--text-blue)] opacity-0 transition-all duration-300 ease-in-out md:hidden"
+        class="bg-opacity-90 fixed inset-0 z-20 -translate-x-full transform bg-white text-[var(--text-blue)] opacity-0 transition-all duration-300 ease-in-out lg:hidden"
       >
         <!-- Start:: Menu Header with Close Button and Search Box -->
         <div class="flex flex-col bg-white text-black">
@@ -1376,9 +2096,7 @@
 
       <!-- End:: JavaScript for Menu Toggle and Animated Dropdowns -->
 
-
-
-            <!-- Start:: JS for mobile menu-->
+      <!-- Start:: JS for mobile menu-->
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           const menuToggles = document.querySelectorAll(
@@ -1468,37 +2186,564 @@
     <!-- End:: Header Section -->
 
     <!-- Start:: Main Content Section -->
-    <main class="py-[100px] text-red-400">
-    
-    Its the main section
-
- 
-    </main>
+    <main class="py-[100px] text-red-400">Its the main section</main>
     <!-- End:: Main Content Section -->
 
+    <footer class="mt-[100px] rounded-t-4xl bg-[var(--bg-blue)]">
+      <div
+        class="flex flex-col justify-center bg-[var(--bg-blue)] text-sm lg:px-12"
+      >
+        <div
+          class="container flex justify-between border-b border-[var(--shade-1)] px-5 py-2.5 pt-[60px] pb-[48px] text-sm font-light"
+        >
+          <!-- Start:: Part one -->
+          <div
+            class="w-full border-b border-[var(--shade-1)] lg:w-[300px] lg:border-0"
+          >
+            <div class="mb-4 border-b border-[var(--shade-1)] lg:border-0">
+              <a href="#">
+                <img
+                  src="./assets/logo-white.png"
+                  alt="WeShope Logo"
+                  class="h-auto w-[140px] object-contain"
+                />
+              </a>
+
+              <p class="mt-2.5 mb-7">Your trusted fashion companion</p>
+            </div>
+
+            <!--Start:: Social Icon-->
+            <div class="mt-7 mb-4 flex gap-5">
+              <div>
+                <a href="#">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-white hover:fill-[var(--primary-lemon)]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.3633 0H2.63672C1.18295 0 0 1.18295 0 2.63672V15.3633C0 16.817 1.18295 18 2.63672 18H7.94531V11.6367H5.83594V8.47266H7.94531V6.32812C7.94531 4.58336 9.36461 3.16406 11.1094 3.16406H14.3086V6.32812H11.1094V8.47266H14.3086L13.7812 11.6367H11.1094V18H15.3633C16.817 18 18 16.817 18 15.3633V2.63672C18 1.18295 16.817 0 15.3633 0Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <div>
+                <a href="#">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-white hover:fill-[var(--primary-lemon)]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_19525_13644)">
+                      <path
+                        d="M16.6676 0H1.32891C0.594141 0 0 0.580078 0 1.29727V16.6992C0 17.4164 0.594141 18 1.32891 18H16.6676C17.4023 18 18 17.4164 18 16.7027V1.29727C18 0.580078 17.4023 0 16.6676 0ZM5.34023 15.3387H2.66836V6.74648H5.34023V15.3387ZM4.0043 5.57578C3.14648 5.57578 2.45391 4.8832 2.45391 4.02891C2.45391 3.17461 3.14648 2.48203 4.0043 2.48203C4.85859 2.48203 5.55117 3.17461 5.55117 4.02891C5.55117 4.87969 4.85859 5.57578 4.0043 5.57578ZM15.3387 15.3387H12.6703V11.1621C12.6703 10.1672 12.6527 8.88398 11.2816 8.88398C9.89297 8.88398 9.68203 9.97031 9.68203 11.0918V15.3387H7.01719V6.74648H9.57656V7.9207H9.61172C9.9668 7.2457 10.8387 6.53203 12.1359 6.53203C14.8395 6.53203 15.3387 8.31094 15.3387 10.6242V15.3387Z"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_19525_13644">
+                        <rect width="18" height="18" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+
+              <div>
+                <a href="#">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-white hover:fill-[var(--primary-lemon)]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.5455 0H2.45455C1.80356 0 1.17924 0.258603 0.71892 0.71892C0.258603 1.17924 0 1.80356 0 2.45455L0 15.5455C0 16.1964 0.258603 16.8208 0.71892 17.2811C1.17924 17.7414 1.80356 18 2.45455 18H15.5455C16.1964 18 16.8208 17.7414 17.2811 17.2811C17.7414 16.8208 18 16.1964 18 15.5455V2.45455C18 1.80356 17.7414 1.17924 17.2811 0.71892C16.8208 0.258603 16.1964 0 15.5455 0ZM9.86829 11.5057C9.16977 11.5057 8.5142 11.1283 8.2892 10.6998C8.2892 10.6998 7.91386 12.1889 7.83511 12.4762C7.55489 13.4908 6.73261 14.5074 6.66818 14.5902C6.65812 14.6037 6.64435 14.6138 6.62857 14.6195C6.61279 14.6252 6.59568 14.6262 6.57937 14.6223C6.56305 14.6184 6.54824 14.6097 6.53676 14.5975C6.52528 14.5853 6.51764 14.5699 6.51477 14.5534C6.49739 14.4245 6.28773 13.1431 6.5342 12.0989L7.36364 8.57659C7.2237 8.25404 7.15398 7.90542 7.15909 7.55386C7.15909 6.59659 7.71443 5.8817 8.4058 5.8817C8.99284 5.8817 9.27716 6.3225 9.27716 6.85227C9.27716 7.44239 8.90079 8.32602 8.70648 9.14523C8.54386 9.83045 9.05011 10.3899 9.7292 10.3899C10.9565 10.3899 11.7747 8.81693 11.7747 6.95352C11.7747 5.53807 10.8215 4.4775 9.08591 4.4775C7.12636 4.4775 5.9042 5.93898 5.9042 7.56818C5.9042 8.1317 6.07091 8.52852 6.33068 8.83534C6.45034 8.97648 6.46773 9.03375 6.42375 9.19534C6.39307 9.315 6.32148 9.60443 6.29182 9.71386C6.28654 9.7489 6.27291 9.78214 6.25209 9.8108C6.23127 9.83947 6.20385 9.8627 6.17217 9.87854C6.14048 9.89438 6.10545 9.90237 6.07003 9.90184C6.0346 9.9013 5.99983 9.89225 5.96864 9.87545C5.06557 9.51136 4.64523 8.52239 4.64523 7.4117C4.64523 5.57591 6.19364 3.375 9.26386 3.375C11.7307 3.375 13.3548 5.15966 13.3548 7.07625C13.3548 9.61364 11.9455 11.5057 9.86829 11.5057Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <div>
+                <a href="#"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-white hover:fill-[var(--primary-lemon)]"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_19525_13650)">
+                      <path
+                        d="M9.60161 8.69251L13.6523 14.4864H11.9899L8.68444 9.75857V9.75828L8.19916 9.06424L4.33789 3.54102H6.00029L9.11633 7.99847L9.60161 8.69251Z"
+                      />
+                      <path
+                        d="M16.0551 0H1.94494C0.870807 0 0 0.870807 0 1.94494V16.0551C0 17.1292 0.870807 18 1.94494 18H16.0551C17.1292 18 18 17.1292 18 16.0551V1.94494C18 0.870807 17.1292 0 16.0551 0ZM11.481 15.2644L8.13609 10.3963L3.94826 15.2644H2.86592L7.6555 9.69711L2.86592 2.72641H6.51902L9.68641 7.33614L13.652 2.72641H14.7343L10.1671 8.03545H10.1668L15.1341 15.2644H11.481Z"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_19525_13650">
+                        <rect width="18" height="18" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- End:: Social Icon-->
+
+            <div
+              class="mb-6 flex flex-row items-center gap-2 lg:flex-col lg:items-start"
+            >
+              <p class="pb-1">24/7 Customer Support:</p>
+              <p class="text-lg">+81 5203 888 61</p>
+            </div>
+          </div>
+          <!-- end:: Part one -->
+
+          <!-- Start:: Part two -->
+          <div class="hidden w-48 lg:block">
+            <h3 class="mb-4 text-lg font-medium uppercase">TOP CATEGORY</h3>
+
+            <ul class="m-0 p-0">
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Coats and Jacket
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Bags
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Watches
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Accessories
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Bracelet
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Necklace
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="flex items-center gap-2 text-[var(--primary-lemon)] transition-colors duration-300"
+                >
+                  Browse All Product
+                  <svg
+                    width="20"
+                    height="21"
+                    viewBox="0 0 20 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.125 10.5H16.875"
+                      stroke="#DBE112"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.25 4.875L16.875 10.5L11.25 16.125"
+                      stroke="#DBE112"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End:: Part two -->
+
+          <!-- Start:: Part three -->
+          <div class="hidden w-48 lg:block">
+            <h3 class="mb-4 text-lg font-medium uppercase">QUICK LINKS</h3>
+
+            <ul>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Shop Product
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Shopping Cart
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Wishlist
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Track Order
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Customer Help
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  About Us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end:: Part three -->
+
+          <!-- Start:: Part four -->
+          <div class="hidden w-48 lg:block">
+            <h3 class="mb-4 text-lg font-medium uppercase">Help and Support</h3>
+
+            <ul>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Privacy Policy
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Refund Policy
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Terms of Usage
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  Legal Documents
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href=""
+                  class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
+                >
+                  <div
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  ></div>
+                  User Data Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- end:: Part four -->
+
+          <!-- Start:: Part five -->
+          <div class="w-full lg:w-[300px]">
+            <h3 class="mb-7 text-lg font-medium uppercase">POPULAR TAGS</h3>
+
+            <div class="mb-2.5">
+              <span
+                class="inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+              >
+                Bag
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Wallet
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Ring
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Fofar
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Suit
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Coat
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Warm Sweater
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Leather wallet
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Jeans
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >T-shirt
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Caps
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Jacket
+              </span>
+
+              <span
+                class="mb-2 inline-block rounded-[2px] border border-[#6C6F06] px-3 py-1.5 transition-all duration-300 ease-in-out hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >Shoes
+              </span>
+            </div>
+
+            <div>
+              <div class="flex flex-wrap gap-2">
+                <img
+                  src="./assets/payment_method/Visa.png"
+                  alt="Payment method "
+                />
+                <img
+                  src="./assets/payment_method/Mastercard.png"
+                  alt="Payment method "
+                />
+                <img
+                  src="./assets/payment_method/Stripe.png"
+                  alt="Payment method "
+                />
+                <img
+                  src="./assets/payment_method/PayPal.png"
+                  alt="Payment method "
+                />
+                <img
+                  src="./assets/payment_method/ApplePay.png"
+                  alt="Payment method "
+                />
+                <img
+                  src="./assets/payment_method/ShopPay.png"
+                  alt="Payment method "
+                />
+              </div>
+            </div>
+          </div>
+          <!-- end:: Part five -->
+        </div>
+
+        <!-- Start:: Footer bottom bar -->
+        <div
+          class="flex flex-col items-start justify-between px-5 pt-8 pb-7 text-xs lg:flex-row lg:items-center lg:px-10 xl:mx-15"
+        >
+          <!-- Start:: Left content -->
+          <div class="flex gap-2">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask
+                id="mask0_19525_13802"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="14"
+                height="14"
+              >
+                <rect width="14" height="14" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_19525_13802)">
+                <path
+                  d="M6.99935 12.8337C6.1924 12.8337 5.43407 12.6805 4.72435 12.3743C4.01463 12.068 3.39727 11.6524 2.87227 11.1274C2.34727 10.6024 1.93164 9.98505 1.62539 9.27533C1.31914 8.5656 1.16602 7.80727 1.16602 7.00033C1.16602 6.19338 1.31914 5.43505 1.62539 4.72533C1.93164 4.0156 2.34727 3.39824 2.87227 2.87324C3.39727 2.34824 4.01463 1.93262 4.72435 1.62637C5.43407 1.32012 6.1924 1.16699 6.99935 1.16699C7.80629 1.16699 8.56463 1.32012 9.27435 1.62637C9.98407 1.93262 10.6014 2.34824 11.1264 2.87324C11.6514 3.39824 12.0671 4.0156 12.3733 4.72533C12.6796 5.43505 12.8327 6.19338 12.8327 7.00033C12.8327 7.80727 12.6796 8.5656 12.3733 9.27533C12.0671 9.98505 11.6514 10.6024 11.1264 11.1274C10.6014 11.6524 9.98407 12.068 9.27435 12.3743C8.56463 12.6805 7.80629 12.8337 6.99935 12.8337ZM6.41602 11.6378V10.5003C6.09518 10.5003 5.82053 10.3861 5.59206 10.1576C5.36358 9.92914 5.24935 9.65449 5.24935 9.33366V8.75033L2.44935 5.95033C2.42018 6.12533 2.39345 6.30033 2.36914 6.47533C2.34484 6.65033 2.33268 6.82533 2.33268 7.00033C2.33268 8.17671 2.71914 9.20727 3.49206 10.092C4.26497 10.9767 5.23963 11.492 6.41602 11.6378ZM10.441 10.1503C10.6355 9.93644 10.8105 9.70553 10.966 9.45762C11.1216 9.2097 11.2504 8.95206 11.3525 8.6847C11.4546 8.41734 11.5323 8.14269 11.5858 7.86074C11.6393 7.5788 11.666 7.29199 11.666 7.00033C11.666 6.04755 11.4011 5.17741 10.8712 4.38991C10.3414 3.60241 9.63407 3.03366 8.74935 2.68366V2.91699C8.74935 3.23783 8.63511 3.51248 8.40664 3.74095C8.17817 3.96942 7.90352 4.08366 7.58268 4.08366H6.41602V5.25033C6.41602 5.4156 6.36011 5.55414 6.24831 5.66595C6.1365 5.77776 5.99796 5.83366 5.83268 5.83366H4.66602V7.00033H8.16602C8.33129 7.00033 8.46984 7.05623 8.58164 7.16803C8.69345 7.27984 8.74935 7.41838 8.74935 7.58366V9.33366H9.33268C9.58546 9.33366 9.81393 9.40901 10.0181 9.5597C10.2223 9.71039 10.3632 9.90727 10.441 10.1503Z"
+                  fill="white"
+                />
+              </g>
+            </svg>
+
+            ৳ BDT/ EN
+          </div>
+          <!-- End:: Left content -->
+          <!-- Start:: Center content -->
+          <div>
+            <ul class="mt-5 lg:mt-0">
+              <li class="inline pr-2.5 hover:text-[var(--primary-lemon)]">
+                <a href="">Refund Policy</a>
+              </li>
+              <li class="inline pr-2.5 hover:text-[var(--primary-lemon)]">
+                <a href="">Privacy Policy</a>
+              </li>
+              <li class="inline pr-2.5 hover:text-[var(--primary-lemon)]">
+                <a href="">Terms of Usage</a>
+              </li>
+              <li
+                class="inline pr-2.5 leading-8 hover:text-[var(--primary-lemon)]"
+              >
+                <a href="">Legal Documents</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End:: Center content -->
+
+          <!-- Start:: Right content -->
+          <div class="mt-6 lg:mt-0">
+            &copy; Copyright, WeShop, 2025 Powered by ShopifyTeam.
+          </div>
+          <!-- End:: Right content -->
+        </div>
+        <!-- End:: Footer bottom bar -->
+      </div>
+    </footer>
+
     <!-- Start:: Footer Section -->
-    <footer class="mt-[100px] rounded-t-4xl bg-[var(--bg-blue)] px-5">
+    <footer class="mt-[100px] rounded-t-4xl bg-[var(--bg-blue)]">
       <!-- Start:: Footer top section-->
       <div
-        class="svao-container md:flex-row flex-col  flex justify-between lg:border-b-2 lg:border-[#42526E] border-b border-[var(--shade-1)] pt-[60px] pb-[48px] text-sm gap-4"
+        class="svao-container flex flex-col justify-between gap-4 border-b border-[var(--shade-1)] px-5 pt-[60px] pb-[48px] text-sm lg:flex-row lg:border-b-2 lg:border-[#42526E] lg:px-10 xl:mx-15"
       >
         <!-- Start:: Part one -->
-        <div class="w-full border-b border-[var(--shade-1)]">
-          <div class="mb-4 border-b border-[var(--shade-1)]">
+        <div
+          class="w-full border-b border-[var(--shade-1)] lg:w-[300px] lg:border-0"
+        >
+          <div class="mb-4 border-b border-[var(--shade-1)] lg:border-0">
             <a href="#">
               <img
                 src="./assets/logo-white.png"
                 alt="WeShope Logo"
-                class="h-auto object-contain w-[140px]"
+                class="h-auto w-[140px] object-contain"
               />
             </a>
 
-                 <p class="mb-7 mt-2.5">Your trusted fashion companion</p>
+            <p class="mt-2.5 mb-7">Your trusted fashion companion</p>
           </div>
 
-      
           <!--Start:: Social Icon-->
-          <div class="mb-4 flex gap-5 mt-7">
+          <div class="mt-7 mb-4 flex gap-5">
             <div>
               <a href="#">
                 <svg
@@ -1580,26 +2825,29 @@
               </a>
             </div>
           </div>
-         <!-- End:: Social Icon-->
+          <!-- End:: Social Icon-->
 
-          <div class="flex flex-row md:flex-col items-center gap-2 mb-6"> <p class="pb-1">24/7 Customer Support: </p>
-          <p class="text-lg">+81 5203 888 61</p></div>
-         
+          <div
+            class="mb-6 flex flex-row items-center gap-2 lg:flex-col lg:items-start"
+          >
+            <p class="pb-1">24/7 Customer Support:</p>
+            <p class="text-lg">+81 5203 888 61</p>
+          </div>
         </div>
         <!-- end:: Part one -->
 
         <!-- Start:: Part two -->
-        <div class="hidden w-48">
+        <div class="hidden w-48 lg:block">
           <h3 class="mb-4 text-lg font-medium uppercase">TOP CATEGORY</h3>
 
-          <ul class="p-0 m-0"> 
+          <ul class="m-0 p-0">
             <li class="mb-3">
               <a
                 href=""
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Coats and Jacket
               </a>
@@ -1610,7 +2858,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Bags
               </a>
@@ -1621,7 +2869,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Watches
               </a>
@@ -1632,7 +2880,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Accessories
               </a>
@@ -1643,7 +2891,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Bracelet
               </a>
@@ -1654,7 +2902,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Necklace
               </a>
@@ -1691,10 +2939,10 @@
             </li>
           </ul>
         </div>
-        <!-- end:: Part two -->
+        <!-- End:: Part two -->
 
         <!-- Start:: Part three -->
-        <div class="hidden w-48">
+        <div class="hidden w-48 lg:block">
           <h3 class="mb-4 text-lg font-medium uppercase">QUICK LINKS</h3>
 
           <ul>
@@ -1704,7 +2952,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Shop Product
               </a>
@@ -1715,7 +2963,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Shopping Cart
               </a>
@@ -1726,7 +2974,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Wishlist
               </a>
@@ -1737,7 +2985,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Track Order
               </a>
@@ -1748,7 +2996,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Customer Help
               </a>
@@ -1759,7 +3007,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 About Us
               </a>
@@ -1769,7 +3017,7 @@
         <!-- end:: Part three -->
 
         <!-- Start:: Part four -->
-        <div class="hidden w-48">
+        <div class="hidden w-48 lg:block">
           <h3 class="mb-4 text-lg font-medium uppercase">Help and Support</h3>
 
           <ul>
@@ -1779,7 +3027,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Privacy Policy
               </a>
@@ -1790,7 +3038,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Refund Policy
               </a>
@@ -1801,7 +3049,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Terms of Usage
               </a>
@@ -1812,7 +3060,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 Legal Documents
               </a>
@@ -1823,7 +3071,7 @@
                 class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
               >
                 <div
-                  class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                  class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                 ></div>
                 User Data Policy
               </a>
@@ -1832,8 +3080,9 @@
         </div>
         <!-- end:: Part four -->
 
-        <!-- test case -->
-        <div class="flex flex-col svao-dropdown-mobile gap-2 py-4 border-b border-[var(--shade-1)]">
+        <div
+          class="svao-dropdown-mobile flex-col gap-2 border-b border-[var(--shade-1)] py-4 lg:hidden"
+        >
           <!-- Start:: Part two -->
           <div class="w-full">
             <button
@@ -1880,7 +3129,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Coats and Jacket
                 </a>
@@ -1891,7 +3140,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Bags
                 </a>
@@ -1902,7 +3151,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Watches
                 </a>
@@ -1913,7 +3162,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Accessories
                 </a>
@@ -1924,7 +3173,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Bracelet
                 </a>
@@ -1935,7 +3184,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Necklace
                 </a>
@@ -1975,7 +3224,7 @@
           <!-- end:: Part two -->
 
           <!-- Start:: Part three -->
-          <div class=" w-full">
+          <div class="w-full">
             <button
               class="mb-4 flex w-full items-center justify-between text-lg font-medium uppercase focus:outline-none md:mb-4"
               onclick="toggleDropdown('quickLinks')"
@@ -2020,7 +3269,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Shop Product
                 </a>
@@ -2031,7 +3280,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Shopping Cart
                 </a>
@@ -2042,7 +3291,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Wishlist
                 </a>
@@ -2053,7 +3302,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Track Order
                 </a>
@@ -2064,7 +3313,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Customer Help
                 </a>
@@ -2075,7 +3324,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   About Us
                 </a>
@@ -2085,7 +3334,7 @@
           <!-- end:: Part three -->
 
           <!-- Start:: Part four -->
-          <div class=" w-full">
+          <div class="w-full">
             <button
               class="mb-4 flex w-full items-center justify-between text-lg font-medium uppercase focus:outline-none md:mb-4"
               onclick="toggleDropdown('helpSupport')"
@@ -2130,7 +3379,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Privacy Policy
                 </a>
@@ -2141,7 +3390,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Refund Policy
                 </a>
@@ -2152,7 +3401,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Terms of Usage
                 </a>
@@ -2163,7 +3412,7 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   Legal Documents
                 </a>
@@ -2174,21 +3423,23 @@
                   class="group flex items-center transition-colors duration-300 hover:text-[var(--primary-lemon)]"
                 >
                   <div
-                    class=" h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
+                    class="h-0.5 w-0 bg-[var(--primary-lemon)] transition-all duration-300 ease-in-out group-hover:w-6"
                   ></div>
                   User Data Policy
                 </a>
               </li>
             </ul>
           </div>
-          <!-- end:: Part four -->
+          <!-- End:: Part four -->
 
           <script>
             function toggleDropdown(id) {
               const element = document.getElementById(id);
               const plusIcon = document.getElementById(id + "Plus");
               const minusIcon = document.getElementById(id + "Minus");
-              const isOpen = element.classList.toggle("svao-dropdown-mobile-open");
+              const isOpen = element.classList.toggle(
+                "svao-dropdown-mobile-open",
+              );
               plusIcon.classList.toggle("hidden", isOpen);
               plusIcon.classList.toggle("block", !isOpen);
               minusIcon.classList.toggle("hidden", !isOpen);
@@ -2203,10 +3454,8 @@
           </script>
         </div>
 
-        <!-- test case -->
-
         <!-- Start:: Part five -->
-        <div class="w-full">
+        <div class="w-full lg:w-[300px]">
           <h3 class="mb-7 text-lg font-medium uppercase">POPULAR TAGS</h3>
 
           <div class="mb-2.5">
@@ -2278,7 +3527,7 @@
           </div>
 
           <div>
-            <div class="flex w-[38px] gap-2">
+            <div class="flex flex-wrap gap-2">
               <img
                 src="./assets/payment_method/Visa.png"
                 alt="Payment method "
@@ -2312,7 +3561,7 @@
 
       <!-- Start:: Footer bottom bar -->
       <div
-        class="svao-container flex flex-col items-start justify-between pt-8 pb-7 text-xs lg:flex-row lg:items-center"
+        class="flex flex-col items-start justify-between px-5 pt-8 pb-7 text-xs lg:flex-row lg:items-center lg:px-10 xl:mx-15"
       >
         <!-- Start:: Left content -->
         <div class="flex gap-2">
@@ -2345,20 +3594,22 @@
           ৳ BDT/ EN
         </div>
         <!-- End:: Left content -->
-      <!-- Start:: Center content -->
+        <!-- Start:: Center content -->
         <div>
-          <ul class="mt-5">
-            <li class="hover:text-[var(--primary-lemon)] inline pr-2.5 ">
+          <ul class="mt-5 lg:mt-0">
+            <li class="inline pr-2.5 hover:text-[var(--primary-lemon)]">
               <a href="">Refund Policy</a>
             </li>
-            <li class="hover:text-[var(--primary-lemon)] inline pr-2.5">
+            <li class="inline pr-2.5 hover:text-[var(--primary-lemon)]">
               <a href="">Privacy Policy</a>
             </li>
-            <li class="hover:text-[var(--primary-lemon)] inline pr-2.5">
+            <li class="inline pr-2.5 hover:text-[var(--primary-lemon)]">
               <a href="">Terms of Usage</a>
             </li>
-            <li class="hover:text-[var(--primary-lemon)] inline pr-2.5 leading-8">
-              <a  href="">Legal Documents</a>
+            <li
+              class="inline pr-2.5 leading-8 hover:text-[var(--primary-lemon)]"
+            >
+              <a href="">Legal Documents</a>
             </li>
           </ul>
         </div>
@@ -2377,5 +3628,24 @@
     <!-- Start:: Plugin script links -->
     <script src="./assets/swiper@12/swiper-bundle.min.js"></script>
     <!-- End:: Plugin script links -->
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        loop: false,
+
+        navigation: {
+          nextEl: ".custom-button.next",
+          prevEl: ".custom-button.prev",
+        },
+        breakpoints: {
+          1280: { slidesPerView: 3 },
+          1024: { slidesPerView: 2 },
+          768: { slidesPerView: 2 },
+          0: { slidesPerView: 1 },
+        },
+      });
+    </script>
   </body>
 </html>
