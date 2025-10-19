@@ -51,45 +51,6 @@
     </style>
     <!-- End:: Custom Styles -->
 
-    <!-- <style>
-    .carousel {
-      margin: auto;
-      width: 90%;
-      display: flex;
-      overflow: hidden;
-      position: relative;
-      gap: 2em;
-    }
-
-    .tgroup {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-shrink: 0;
-      animation: tscroll 20s linear infinite;
-    }
-    .bgroup {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-shrink: 0;
-      animation: bscroll 20s linear infinite;
-    }
-
-    @keyframes tscroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-    @keyframes bscroll {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(0); }
-    }
-  </style> -->
-
-    <!-- End:: Carousel style -->
-
     <!-- Start:: Stylesheet Links -->
     <link href="./assets/font-style.css" rel="stylesheet" />
     <link href="./assets/style.css" rel="stylesheet" />
@@ -102,7 +63,7 @@
       <!-- Start:: Top Navigation Bar -->
       <div class="bg-[var(--bg-blue)] text-sm">
         <div
-          class="svao-container flex items-center justify-between py-2.5 font-light"
+          class="container flex items-center justify-between py-2.5 font-light"
         >
           <!-- Start:: Social Media Links & Icons -->
           <div class="flex gap-4">
@@ -270,10 +231,10 @@
       <!-- Start:: Main Navigation Bar with background -->
       <div
         id="navbar"
-        class="bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out"
+        class="bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out border border-red-400"
       >
         <div
-          class="svao-container flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
+          class="container mx-auto flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)] border border-blue-400"
         >
           <!-- Start:: Logo -->
           <div>
@@ -430,7 +391,7 @@
           <!-- End:: Main Navigation -->
 
           <!-- Start:: Actionable Icon Area -->
-          <div class="flex items-center">
+          <div class="flex items-center border">
             <!-- Start:: Search -->
             <div class="px-2.5 hover:cursor-pointer">
               <svg
@@ -587,7 +548,7 @@
     <!-- Start:: Main Content Section -->
     <main style="min-height: 2000px">
       <!-- Start:: Carousel -->
-      <div class="my-[100px] flex flex-col gap-6 md:gap-8">
+      <div class="my-[100px] flex flex-col gap-6 md:gap-8 overflow-hidden overflow-hidden">
         <!-- Start:: Top moving Carousel -->
         <div
           class="svao-collections-top-pause-hover relative mx-auto flex h-[80px] overflow-hidden md:h-[164px] md:py-[10px]"
@@ -725,7 +686,6 @@
               <h3 class="font-semibold text-black uppercase">WATCH</h3>
             </div>
           </div>
-
           <!-- End:: Group 1 -->
 
           <!-- Start:: Group 2 -->
@@ -778,21 +738,24 @@
     <!-- End:: Main Content Section -->
 
     <!-- Start:: Footer Section -->
-    <footer class="font-poppins mt-[100px] bg-[#192434] text-white">
-      <div class="px-[20px] py-[30px] pb-[30px] md:px-[120px] md:pt-[60px]">
+    <footer class="font-poppins mt-[100px] bg-[#192434] text-white px-[20px] pt-[40px] md:pt-[60px] pb-[30px] rounded-t-[32px]">
+      <div class="container mx-auto">
         <!-- Start:: Top Footer Content -->
-        <div class="mx-auto">
           <div
-            class="flex flex-wrap gap-5 md:gap-8 lg:flex-nowrap lg:gap-[114px]"
+            class="flex flex-wrap justify-between"
           >
-            <!-- Start:: Brand Section -->
+            <!-- Start:: Left Brand Section -->
             <div class="w-full md:space-y-8 lg:w-[312px]">
               <div class="space-y-[18px]">
-                <h2
-                  class="font-museo text-[32px] leading-[0.98] font-medium tracking-[-0.02em]"
-                >
-                  WESHOP
-                </h2>
+                <div class="mb-4 w-[140px]">
+                  <a href="#">
+                    <img
+                      src="./assets/logo-white.png"
+                      alt="WeShope Logo"
+                      class="w-full object-contain"
+                    />
+                  </a>
+                </div>
                 <p class="max-w-[200px] text-[16px] font-normal text-white">
                   Your trusted fashion companion
                 </p>
@@ -896,16 +859,18 @@
                 <!-- End:: Contact Info -->
               </div>
               <!-- End:: Social Icons -->
-
-              <div
-                class="mt-[28px] border border-slate-700 bg-[#B3BAC5] md:hidden"
-              ></div>
             </div>
-            <!-- End:: Brand Section -->
+            <!-- End:: Left Brand Section -->
 
+            <!-- Start:: Divider -->
+            <div
+              class="mb-[32px] mt-[28px] border w-full border-slate-700 bg-[#B3BAC5] md:hidden"
+            ></div>
+            <!-- End:: Divider -->
+            
             <!-- Start:: top category  -->
-            <div class="w-full md:mt-0 lg:w-[200px]">
-              <div class="flex items-center justify-between md:mb-4">
+            <div class="w-full md:mt-0 mb-5 lg:w-[200px]">
+              <div class="flex items-center justify-between mb-2.5 md:mb-4">
                 <h3 class="text-[18px] font-semibold text-white">
                   TOP CATEGORY
                 </h3>
@@ -1040,8 +1005,8 @@
             <!-- End:: top category  -->
 
             <!-- Start: Quick Links -->
-            <div class="w-full lg:w-[200px]">
-              <div class="flex items-center justify-between md:mb-4">
+            <div class="w-full lg:w-[200px] mb-5">
+              <div class="flex items-center justify-between mb-2.5 md:mb-4">
                 <h3 class="text-[18px] font-medium text-white">QUICK LINKS</h3>
                 <button
                   class="toggle-btn text-xl font-bold text-white md:hidden"
@@ -1153,7 +1118,7 @@
 
             <!-- Start:: Help and Support -->
             <div class="w-full lg:w-[200px]">
-              <div class="flex items-center justify-between md:mb-4">
+              <div class="flex items-center justify-between mb-2.5 md:mb-4">
                 <h3 class="text-[18px] font-medium text-white">
                   HELP AND SUPPORT
                 </h3>
@@ -1251,7 +1216,11 @@
             </div>
             <!-- End:: Help and Support -->
 
-            <div class="w-full border border-slate-700 md:hidden"></div>
+            <!-- Start:: Divider -->
+            <div
+              class="mb-[32px] mt-[28px] border w-full border-slate-700 bg-[#B3BAC5] md:hidden"
+            ></div>
+            <!-- End:: Divider -->
 
             <!-- Start:: Popular Tags -->
             <div class="w-full lg:w-[312px]">
@@ -1354,37 +1323,46 @@
             </div>
             <!-- End:: Popular Tags -->
           </div>
-        </div>
         <!-- End:: Top Footer Content -->
 
+        <!-- Start:: Divider -->
+        <div
+          class="mb-[32px] mt-[28px] border w-full border-slate-700 bg-[#B3BAC5]"
+        ></div>
+        <!-- End:: Divider -->
+
         <!-- Start:: Bottom Footer -->
-        <div class="mt-[28px] border-t border-slate-700 md:mt-[42px]">
-          <div class="mt-[24px] flex justify-between text-[12px] font-normal">
-            <!-- Copyright -->
-            <div class="flex items-center gap-2">
-              <span>© $ BDT/ EN</span>
-            </div>
-
-            <!-- Footer Links -->
-            <div class="flex flex-wrap gap-3 md:gap-6">
-              <a href="#" class="transition hover:text-[#DBE112]"
-                >Refund Policy</a
-              >
-              <a href="#" class="transition hover:text-[#DBE112]"
-                >Privacy Policy</a
-              >
-              <a href="#" class="transition hover:text-[#DBE112]"
-                >Terms of Usage</a
-              >
-              <a href="#" class="transition hover:text-[#DBE112]"
-                >Legal Documents</a
-              >
-            </div>
-
-            <!-- Copyright Text -->
-            <div>© Copyright. WeShop. 2024 Powered by ShopifyTeam.</div>
+        <!-- <div class="mt-[28px] border-t border-slate-700 md:mt-[42px]"></div> -->
+        <div class="flex flex-col md:flex-row justify-between text-[12px] font-normal">
+          <!-- Start:: Copyright -->
+          <div class="flex items-center w-[75px]">
+            <span>© $ BDT/ EN</span>
           </div>
+
+          <!-- Start:: Bottom footer Links -->
+          <div class="flex flex-wrap mt-[20px] md:mt-0 mb-[24px] md:mb-0 gap-2.5 md:gap-0 lg:gap-6 ">
+            <a href="#" class="transition hover:text-[#DBE112]"
+              >Refund Policy</a
+            >
+            <a href="#" class="transition hover:text-[#DBE112]"
+              >Privacy Policy</a
+            >
+            <a href="#" class="transition hover:text-[#DBE112]"
+              >Terms of Usage</a
+            >
+            <a href="#" class="transition hover:text-[#DBE112]"
+              >Legal Documents</a
+            >
+          </div>
+          <!-- End:: Bottom footer Links -->
+
+          <!-- Start:: Copyright Text -->
+          <div class="">© Copyright. WeShop. 2024 Powered by ShopifyTeam.</div>
+          <!-- End:: Copyright Text -->
+
+          <!-- End:: Copyright -->
         </div>
+        
         <!-- End:: Bottom Footer -->
       </div>
     </footer>
