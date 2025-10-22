@@ -4,7 +4,10 @@
     "tailwindcss": "^4.1.14"
   },
   "scripts": {
-    "watch": "npx @tailwindcss/cli -i ./input.css -o ./assets/style.css --watch"
+    "watch": "npx @tailwindcss/cli -i ./input.css -o ./assets/style.css --watch",
+    "watch_cart": "npx @tailwindcss/cli -i ./cart/input.css -o ./cart/cart.css --watch",
+    "watch_allProducts": "npx @tailwindcss/cli -i ./AllProducts/input.css -o ./AllProducts/all-products.css --watch"
+
   },
   "devDependencies": {
     "prettier": "^3.6.2",

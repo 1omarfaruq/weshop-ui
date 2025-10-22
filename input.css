@@ -50,24 +50,43 @@
 
 /* Start:: Scroll bar design */
 /* End:: Scroll bar design */
-.svao-scrollbar {
+.svao-scrollbar-y {
   overflow-y: auto;
 }
+.svao-scrollbar-x {
+  overflow-x: auto;
+}
 
-.svao-scrollbar::-webkit-scrollbar {
+.svao-scrollbar-x::-webkit-scrollbar {
+  
+  height: 5px;
+
+}
+.svao-scrollbar-y::-webkit-scrollbar {
   width: 6px;
 }
 
-.svao-scrollbar::-webkit-scrollbar-thumb {
+.svao-scrollbar-x::-webkit-scrollbar-thumb {
+  background-color: #ced3db;
+  border-radius: 10px;
+}
+.svao-scrollbar-y::-webkit-scrollbar-thumb {
   background-color: #ced3db;
   border-radius: 10px;
 }
 
-.svao-scrollbar::-webkit-scrollbar-thumb:hover {
+.svao-scrollbar-x::-webkit-scrollbar-thumb:hover {
+  background-color: #b3bac5;
+}
+.svao-scrollbar-y::-webkit-scrollbar-thumb:hover {
   background-color: #b3bac5;
 }
 
-.svao-scrollbar::-webkit-scrollbar-track {
+.svao-scrollbar-x::-webkit-scrollbar-track {
+  background-color: #dfe1e6;
+  border-radius: 10px;
+}
+.svao-scrollbar-y::-webkit-scrollbar-track {
   background-color: #dfe1e6;
   border-radius: 10px;
 }
