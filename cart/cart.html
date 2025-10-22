@@ -1,0 +1,860 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Start:: Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- End:: Meta Tags -->
+
+    <!-- Start:: Page Title -->
+    <title>
+      WeShope | Trendy Fashion & Stylish Clothing Online | Home Page
+    </title>
+    <!-- End:: Page Title -->
+
+    <!-- Start:: Favicon -->
+    <link rel="icon" type="image/png" href="./../WeShop/assets/favicon.png" />
+    <!-- End:: Favicon -->
+
+    <!-- Start:: Custom Styles var -->
+    <style>
+      :root {
+        --bg-off-white: rgba(244, 244, 244, 1);
+        --bg-black: rgba(7, 7, 7, 1);
+        --bg-blue: rgba(25, 36, 52, 1);
+
+        --primary-lemon: rgba(219, 225, 18, 1);
+        --primary-seashell: rgba(255, 245, 235, 1);
+        --primary-bronze: rgba(108, 111, 6, 1);
+
+        --text-white: rgba(255, 255, 255, 1);
+        --text-black: rgba(20, 20, 20, 1);
+        --text-blue: rgba(25, 39, 57, 0.96);
+        --text-grey: rgba(27, 43, 65, 0.69);
+
+        --shade-light-1: rgba(250, 251, 252, 1);
+        --shade-light-2: rgba(244, 245, 247, 1);
+        --shade-light-3: rgba(235, 236, 240, 1);
+        --shade-light-4: rgba(223, 225, 230, 1);
+
+        --shade-dark-1: rgba(66, 82, 110, 1);
+        --shade-dark-2: rgba(52, 69, 99, 1);
+        --shade-dark-3: rgba(37, 56, 88, 1);
+        --shade-dark-4: rgba(23, 43, 77, 1);
+        --shade-dark-5: rgba(9, 30, 66, 1);
+      }
+    </style>
+
+    <!-- End:: Custom Styles var -->
+
+    <!-- Start:: Plugin stylesheet links -->
+    <link href="../assets/swiper@12/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- End:: Plugin stylesheet links -->
+
+    <!-- Start:: Stylesheet Links -->
+    <link href="../assets/font-style.css" rel="stylesheet" />
+    <link href="../assets/style.css" rel="stylesheet" />
+    <link href="../input.css" rel="stylesheet" />
+    <!-- End:: Stylesheet Links -->
+
+    <link rel="stylesheet" href="cart.css" />
+    <style>
+      /* Custom styles for the smooth collapse transition */
+      .collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        /* Adjust duration as needed */
+      }
+
+      .collapsible-content.expanded {
+        max-height: 500px;
+        /* A value larger than the max possible height of the content */
+        transition: max-height 0.5s ease-in;
+      }
+      .progress-background {
+        width: 100%;
+        background-image: url("../assets/images/progress.png");
+        background-size: 10px 10px;
+
+        animation: slideProgress 5s linear infinite;
+        transition: all;
+      }
+      @keyframes slideProgress {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 30px 0;
+        }
+      }
+      /* Custom border for the outer container to match the soft, rounded appearance */
+    </style>
+  </head>
+
+  <body class="bg-[var(--bg-off-white)]">
+    <section class="py-[30px]">
+      <div class="mx-auto max-w-[1600px] px-2 sm:px-4 lg:px-8">
+        <!-- Start:: Breadcrumb -->
+
+        <div class="flex items-center gap-2.5">
+          <span class="h-6 w-6 text-[var(--shade-dark-5)]">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask
+                id="mask0_19210_82436"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="24"
+                height="24"
+              >
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_19210_82436)">
+                <path
+                  d="M6 19H9V14C9 13.7167 9.09583 13.4792 9.2875 13.2875C9.47917 13.0958 9.71667 13 10 13H14C14.2833 13 14.5208 13.0958 14.7125 13.2875C14.9042 13.4792 15 13.7167 15 14V19H18V10L12 5.5L6 10V19ZM4 19V10C4 9.68333 4.07083 9.38333 4.2125 9.1C4.35417 8.81667 4.55 8.58333 4.8 8.4L10.8 3.9C11.15 3.63333 11.55 3.5 12 3.5C12.45 3.5 12.85 3.63333 13.2 3.9L19.2 8.4C19.45 8.58333 19.6458 8.81667 19.7875 9.1C19.9292 9.38333 20 9.68333 20 10V19C20 19.55 19.8042 20.0208 19.4125 20.4125C19.0208 20.8042 18.55 21 18 21H14C13.7167 21 13.4792 20.9042 13.2875 20.7125C13.0958 20.5208 13 20.2833 13 20V15H11V20C11 20.2833 10.9042 20.5208 10.7125 20.7125C10.5208 20.9042 10.2833 21 10 21H6C5.45 21 4.97917 20.8042 4.5875 20.4125C4.19583 20.0208 4 19.55 4 19Z"
+                  fill="#1B2B41"
+                  fill-opacity="0.69"
+                />
+              </g>
+            </svg>
+          </span>
+          <span class="text-[12px] text-[var(--shade-dark-5)] opacity-60"
+            >/</span
+          >
+          <span class="text-[16px] font-medium text-[#192739F0]"
+            >Shopping cart</span
+          >
+        </div>
+
+        <!-- End:: Breadcrumb  -->
+        <!-- Start:: Heading -->
+        <h1
+          class="lg:text[32px] text-center text-[28px] font-semibold text-[#192434] xl:text-[64px]"
+        >
+          My Cart
+        </h1>
+        <!-- End:: Heading -->
+        <!-- Start:: Cart details -->
+        <div class="grid grid-cols-1 gap-8 py-10 lg:grid-cols-[1fr_1fr_480px]">
+          <div class="col-span-1 flex flex-col gap-[50px] lg:col-span-2">
+            <div class="overflow-hidden rounded-[32px] bg-white pt-4 pb-2">
+              <div class="svao-scrollbar-x overflow-x-auto">
+                <!-- Start:: Cart table  -->
+                <table class="w-full">
+                  <!-- Start:: table header -->
+                  <thead class="py-6">
+                    <tr
+                      class="border-b-[1.5px] border-[#DFE1E6] px-6 text-center text-[16px] font-semibold text-[var(--bg-blue)]"
+                    >
+                      <td class="px-6 py-6">PRODUCT</td>
+                      <td class="px-6 py-6">PRICE</td>
+                      <td class="px-6 py-6">QUANTITY</td>
+                      <td class="px-6 py-6">TOTAL</td>
+                      <td class="px-6 py-6"></td>
+                    </tr>
+                  </thead>
+                  <!-- End:: table header -->
+
+                  <!-- Start:: table body -->
+                  <tbody>
+                    <div class="px-6">
+                      <tr
+                        class="border-b border-[#DFE1E6] px-48 text-center last:border-0"
+                      >
+                        <td
+                          class="flex min-w-[380px] items-center gap-6 px-5 py-6"
+                        >
+                          <div
+                            class="flex h-[86px] min-h-[86px] w-[86px] min-w-[86px] items-center justify-center rounded-[12px] border border-[var(--shade-light-4)]"
+                          >
+                            <img
+                              src="../assets/images/product.jpg"
+                              class="object-contain"
+                              alt=""
+                            />
+                          </div>
+
+                          <div>
+                            <h1
+                              class="w-fit text-left text-lg text-[var(--shade-dark-4)]"
+                            >
+                              Retro Breathable Casual Shoe
+                            </h1>
+                            <div
+                              class="mt-2 flex items-center gap-4 text-[14px] font-normal text-[var(--bg-blue)]"
+                            >
+                              <div
+                                class="h-6 w-6 cursor-pointer rounded-full bg-[#f05151] hover:border hover:border-[var(--shade-4)]"
+                              ></div>
+                              <div
+                                class="cursor-pointer rounded-[5px] border border-[#8993A4] px-4 text-center text-[14px] uppercase hover:bg-[var(--primary-lemon)] hover:shadow-[var(--primary-lemon)]"
+                              >
+                                xs
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-6 py-6 text-[18px] text-[#1B2B41B0]">
+                          $320.00
+                        </td>
+                        <td class="px-6 text-[£192434]">
+                          <div
+                            class="mx-auto flex w-fit items-center gap-5 rounded-xl border-2 border-[var(--shade-light-4)] px-[10px] py-[8px]"
+                          >
+                            <span
+                              ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <mask
+                                  id="mask0_19210_82466"
+                                  style="mask-type: alpha"
+                                  maskUnits="userSpaceOnUse"
+                                  x="0"
+                                  y="0"
+                                  width="20"
+                                  height="20"
+                                >
+                                  <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_19210_82466)">
+                                  <path
+                                    d="M5.00033 10.8327C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H5.00033Z"
+                                    fill="#1C304A"
+                                    fill-opacity="0.52"
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                            <span class="text-[16px] font-medium text-[#192434]"
+                              >1</span
+                            >
+                            <span
+                              ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <mask
+                                  id="mask0_19210_82470"
+                                  style="mask-type: alpha"
+                                  maskUnits="userSpaceOnUse"
+                                  x="0"
+                                  y="0"
+                                  width="20"
+                                  height="20"
+                                >
+                                  <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_19210_82470)">
+                                  <path
+                                    d="M9.16699 10.8327H5.00033C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H9.16699V4.99935C9.16699 4.76324 9.24685 4.56532 9.40658 4.4056C9.5663 4.24588 9.76421 4.16602 10.0003 4.16602C10.2364 4.16602 10.4344 4.24588 10.5941 4.4056C10.7538 4.56532 10.8337 4.76324 10.8337 4.99935V9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H10.8337V14.9993C10.8337 15.2355 10.7538 15.4334 10.5941 15.5931C10.4344 15.7528 10.2364 15.8327 10.0003 15.8327C9.76421 15.8327 9.5663 15.7528 9.40658 15.5931C9.24685 15.4334 9.16699 15.2355 9.16699 14.9993V10.8327Z"
+                                    fill="#1C304A"
+                                    fill-opacity="0.52"
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-6 text-lg font-medium text-[var(--bg-blue)]"
+                        >
+                          $320.00
+                        </td>
+                        <td class="px-6 py-6 pr-6 hover:stroke-[#FF5630]">
+                          <svg
+                            class="cursor-pointer stroke-[#1B2B41B0] hover:stroke-[#FF5630]"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.74 9.00052L14.394 18.0005M9.606 18.0005L9.26 9.00052M19.228 5.79052C19.57 5.84252 19.91 5.89752 20.25 5.95652M19.228 5.79052L18.16 19.6735C18.1164 20.2387 17.8611 20.7667 17.445 21.1518C17.029 21.5368 16.4829 21.7507 15.916 21.7505H8.084C7.5171 21.7507 6.97102 21.5368 6.55498 21.1518C6.13894 20.7667 5.88359 20.2387 5.84 19.6735L4.772 5.79052M19.228 5.79052C18.0739 5.61604 16.9138 5.48362 15.75 5.39352M4.772 5.79052C4.43 5.84152 4.09 5.89652 3.75 5.95552M4.772 5.79052C5.92613 5.61604 7.08623 5.48362 8.25 5.39352M15.75 5.39352V4.47752C15.75 3.29752 14.84 2.31352 13.66 2.27652C12.5536 2.24116 11.4464 2.24116 10.34 2.27652C9.16 2.31352 8.25 3.29852 8.25 4.47752V5.39352M15.75 5.39352C13.2537 5.2006 10.7463 5.2006 8.25 5.39352"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b border-[#DFE1E6] px-48 text-center last:border-0"
+                      >
+                        <td
+                          class="flex min-w-[380px] items-center gap-6 px-5 py-6"
+                        >
+                          <div
+                            class="flex h-[86px] min-h-[86px] w-[86px] min-w-[86px] items-center justify-center rounded-[12px] border border-[var(--shade-light-4)]"
+                          >
+                            <img
+                              src="../assets/images/product.jpg"
+                              class="object-contain"
+                              alt=""
+                            />
+                          </div>
+
+                          <div>
+                            <h1
+                              class="w-fit text-left text-lg text-[var(--shade-dark-4)]"
+                            >
+                              Retro Breathable Casual Shoe
+                            </h1>
+                            <div
+                              class="mt-2 flex items-center gap-4 text-[14px] font-normal text-[var(--bg-blue)]"
+                            >
+                              <div
+                                class="h-6 w-6 cursor-pointer rounded-full bg-[#f05151] hover:border hover:border-[var(--shade-4)]"
+                              ></div>
+                              <div
+                                class="cursor-pointer rounded-[5px] border border-[#8993A4] px-4 text-center text-[14px] uppercase hover:bg-[var(--primary-lemon)] hover:shadow-[var(--primary-lemon)]"
+                              >
+                                xs
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="px-6 py-6 text-[18px] text-[#1B2B41B0]">
+                          $320.00
+                        </td>
+                        <td class="px-6 text-[£192434]">
+                          <div
+                            class="mx-auto flex w-fit items-center gap-5 rounded-xl border-2 border-[var(--shade-light-4)] px-[10px] py-[8px]"
+                          >
+                            <span
+                              ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <mask
+                                  id="mask0_19210_82466"
+                                  style="mask-type: alpha"
+                                  maskUnits="userSpaceOnUse"
+                                  x="0"
+                                  y="0"
+                                  width="20"
+                                  height="20"
+                                >
+                                  <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_19210_82466)">
+                                  <path
+                                    d="M5.00033 10.8327C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H5.00033Z"
+                                    fill="#1C304A"
+                                    fill-opacity="0.52"
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                            <span class="text-[16px] font-medium text-[#192434]"
+                              >1</span
+                            >
+                            <span
+                              ><svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <mask
+                                  id="mask0_19210_82470"
+                                  style="mask-type: alpha"
+                                  maskUnits="userSpaceOnUse"
+                                  x="0"
+                                  y="0"
+                                  width="20"
+                                  height="20"
+                                >
+                                  <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_19210_82470)">
+                                  <path
+                                    d="M9.16699 10.8327H5.00033C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H9.16699V4.99935C9.16699 4.76324 9.24685 4.56532 9.40658 4.4056C9.5663 4.24588 9.76421 4.16602 10.0003 4.16602C10.2364 4.16602 10.4344 4.24588 10.5941 4.4056C10.7538 4.56532 10.8337 4.76324 10.8337 4.99935V9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H10.8337V14.9993C10.8337 15.2355 10.7538 15.4334 10.5941 15.5931C10.4344 15.7528 10.2364 15.8327 10.0003 15.8327C9.76421 15.8327 9.5663 15.7528 9.40658 15.5931C9.24685 15.4334 9.16699 15.2355 9.16699 14.9993V10.8327Z"
+                                    fill="#1C304A"
+                                    fill-opacity="0.52"
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-6 text-lg font-medium text-[var(--bg-blue)]"
+                        >
+                          $320.00
+                        </td>
+                        <td class="px-6 py-6 pr-6 hover:stroke-[#FF5630]">
+                          <svg
+                            class="cursor-pointer stroke-[#1B2B41B0] hover:stroke-[#FF5630]"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.74 9.00052L14.394 18.0005M9.606 18.0005L9.26 9.00052M19.228 5.79052C19.57 5.84252 19.91 5.89752 20.25 5.95652M19.228 5.79052L18.16 19.6735C18.1164 20.2387 17.8611 20.7667 17.445 21.1518C17.029 21.5368 16.4829 21.7507 15.916 21.7505H8.084C7.5171 21.7507 6.97102 21.5368 6.55498 21.1518C6.13894 20.7667 5.88359 20.2387 5.84 19.6735L4.772 5.79052M19.228 5.79052C18.0739 5.61604 16.9138 5.48362 15.75 5.39352M4.772 5.79052C4.43 5.84152 4.09 5.89652 3.75 5.95552M4.772 5.79052C5.92613 5.61604 7.08623 5.48362 8.25 5.39352M15.75 5.39352V4.47752C15.75 3.29752 14.84 2.31352 13.66 2.27652C12.5536 2.24116 11.4464 2.24116 10.34 2.27652C9.16 2.31352 8.25 3.29852 8.25 4.47752V5.39352M15.75 5.39352C13.2537 5.2006 10.7463 5.2006 8.25 5.39352"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </td>
+                      </tr>
+                    </div>
+                  </tbody>
+
+                  <!-- Start:: table body -->
+                </table>
+                <!-- End:: Cart table  -->
+              </div>
+            </div>
+
+            <div class="">
+              <div>
+                <div class="mb-6">
+                  <button
+                    class="flex w-full items-center justify-between text-lg font-semibold text-[var(--bg-blue)] focus:outline-none"
+                    onclick="toggleCollapse('shippingForm', 'shippingFormArrow')"
+                  >
+                    Estimated shipping
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <mask
+                        id="mask0_19213_83173"
+                        style="mask-type: alpha"
+                        maskUnits="userSpaceOnUse"
+                        x="0"
+                        y="0"
+                        width="24"
+                        height="24"
+                      >
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_19213_83173)">
+                        <path
+                          d="M11.9998 14.9758C11.8665 14.9758 11.7415 14.9549 11.6248 14.9133C11.5081 14.8716 11.3998 14.8008 11.2998 14.7008L6.6998 10.1008C6.51647 9.91745 6.4248 9.68411 6.4248 9.40078C6.4248 9.11745 6.51647 8.88411 6.6998 8.70078C6.88314 8.51745 7.11647 8.42578 7.3998 8.42578C7.68314 8.42578 7.91647 8.51745 8.0998 8.70078L11.9998 12.6008L15.8998 8.70078C16.0831 8.51745 16.3165 8.42578 16.5998 8.42578C16.8831 8.42578 17.1165 8.51745 17.2998 8.70078C17.4831 8.88411 17.5748 9.11745 17.5748 9.40078C17.5748 9.68411 17.4831 9.91745 17.2998 10.1008L12.6998 14.7008C12.5998 14.8008 12.4915 14.8716 12.3748 14.9133C12.2581 14.9549 12.1331 14.9758 11.9998 14.9758Z"
+                          fill="#192739"
+                          fill-opacity="0.96"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                  <div
+                    id="shippingForm"
+                    class="collapsible-content expanded mt-2"
+                  >
+                    <div class="w-full">
+                      <form
+                        class="mb-8 flex flex-col flex-wrap gap-8 pt-[28px] md:flex-row"
+                      >
+                        <div class="relative w-full min-w-[150px] flex-1">
+                          <label
+                            for="country"
+                            class="absolute -top-[8px] left-3 z-10 bg-[var(--bg-off-white)] px-2 text-xs text-gray-500"
+                            >Country</label
+                          >
+                          <input
+                            type="text"
+                            id="country"
+                            class="h-12 w-full cursor-default rounded-[12px] border border-gray-300 px-4 pt-3 pb-2 text-base text-gray-800 focus:border-[var(--bg-blue)] focus:outline-none"
+                          />
+                        </div>
+
+                        <div class="relative w-full min-w-[150px] flex-1">
+                          <label
+                            for="province"
+                            class="absolute -top-[8px] left-3 z-10 bg-[var(--bg-off-white)] px-1 text-xs text-gray-500"
+                            >Province</label
+                          >
+                          <input
+                            type="text"
+                            id="province"
+                            class="h-12 w-full cursor-default rounded-[12px] border border-gray-300 px-4 pt-3 pb-2 text-base text-gray-800 focus:border-[var(--bg-blue)] focus:outline-none"
+                          />
+                        </div>
+
+                        <div class="relative min-w-[150px] flex-1">
+                          <label
+                            for="zip-code"
+                            class="absolute -top-[8px] left-3 z-10 bg-[var(--bg-off-white)] px-1 text-xs text-gray-500"
+                            >Zip Code</label
+                          >
+                          <input
+                            type="text"
+                            id="zip-code"
+                            class="h-12 w-full rounded-[12px] border border-gray-300 px-4 pt-3 pb-2 text-base text-gray-800 focus:border-[var(--bg-blue)] focus:ring-0 focus:outline-none"
+                          />
+                        </div>
+                      </form>
+
+                      <!-- Start:: Anchor tag -->
+                      <a
+                        href="#"
+                        class="group relative flex w-full max-w-[140px] cursor-pointer items-center justify-center gap-5 overflow-hidden rounded-full bg-[var(--bg-blue)] p-3 text-lg font-semibold text-white transition-colors duration-450 ease-in-out hover:bg-transparent"
+                      >
+                        <span
+                          class="absolute inset-0 h-full w-full -translate-x-full transform rounded-r-4xl bg-[var(--primary-lemon)] transition-transform duration-230 ease-in-out group-hover:translate-x-0"
+                        ></span>
+                        <span
+                          class="relative z-10 text-[16px] font-semibold transition-colors duration-230 group-hover:text-[var(--bg-blue)]"
+                          >Estimate</span
+                        >
+                        <!-- <span class="relative z-10">
+                          <svg
+                            width="18"
+                            height="24"
+                            viewBox="0 0 27 26"
+                            fill="none"
+                            class="fill-white transition-colors duration-230"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21.9383 14.3882H1.88739C1.48804 14.3882 1.156 14.2563 0.891255 13.9924C0.626512 13.7285 0.494141 13.3975 0.494141 12.9995C0.494141 12.6014 0.626512 12.2704 0.891255 12.0066C1.156 11.7427 1.48804 11.6107 1.88739 11.6107H21.9383L12.8812 2.5828C12.6025 2.30502 12.4655 1.98099 12.4703 1.61072C12.475 1.24016 12.6167 0.915996 12.8954 0.638218C13.1741 0.369885 13.4991 0.233356 13.8706 0.228634C14.2421 0.223912 14.5672 0.36044 14.8459 0.638218L26.2719 12.0274C26.4204 12.1754 26.5249 12.3282 26.5854 12.4857C26.6456 12.6429 26.6757 12.8142 26.6757 12.9995C26.6757 13.1847 26.6456 13.356 26.5854 13.5132C26.5249 13.6707 26.4204 13.8235 26.2719 13.9715L14.8459 25.3607C14.5767 25.6291 14.2539 25.7632 13.8777 25.7632C13.5015 25.7632 13.1741 25.6291 12.8954 25.3607C12.6167 25.0829 12.4774 24.7566 12.4774 24.3816C12.4774 24.0066 12.6167 23.6802 12.8954 23.4024L21.9383 14.3882Z"
+                            />
+                          </svg>
+                        </span> -->
+                      </a>
+                      <!-- End:: Anchor tag -->
+
+                      <div
+                        class="mt-[32px] mb-[28px] border-[1.5px] border-gray-200"
+                      ></div>
+
+                      <a
+                        href="#"
+                        class="mb-[28px] flex items-center gap-2 text-[18px] font-semibold text-[#055AD9]"
+                      >
+                        Continue shopping
+                        <svg
+                          width="13"
+                          height="13"
+                          viewBox="0 0 7 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="mt-1.5"
+                        >
+                          <path
+                            d="M6.55 5.57539C6.55 5.70872 6.52917 5.83372 6.4875 5.95039C6.44583 6.06706 6.375 6.17539 6.275 6.27539L1.675 10.8754C1.49167 11.0587 1.25833 11.1504 0.975 11.1504C0.691667 11.1504 0.458333 11.0587 0.275 10.8754C0.0916667 10.6921 0 10.4587 0 10.1754C0 9.89206 0.0916667 9.65872 0.275 9.47539L4.175 5.57539L0.275 1.67539C0.0916667 1.49206 0 1.25872 0 0.97539C0 0.692057 0.0916667 0.458724 0.275 0.275391C0.458333 0.0920572 0.691667 0.000390053 0.975 0.000390053C1.25833 0.000390053 1.49167 0.0920572 1.675 0.275391L6.275 4.87539C6.375 4.97539 6.44583 5.08372 6.4875 5.20039C6.52917 5.31706 6.55 5.44206 6.55 5.57539Z"
+                            fill="#055AD9"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- <hr class="border border-gray-200" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-[32px]">
+            <!-- Start:: Spend offer -->
+            <div class="rounded-[32px] bg-white px-8 py-[22px]">
+              <div class="flex items-center gap-3 text-lg">
+                <div>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.0627 20.1211H11.0752C10.5604 20.1055 10.5588 19.3562 11.0752 19.3398H14.0627C14.576 19.3555 14.5768 20.1055 14.0627 20.1211Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M13.2065 21.0879H11.0745C10.5589 21.0723 10.5581 20.323 11.0745 20.3066H13.2065C13.7222 20.3223 13.7237 21.0723 13.2065 21.0879Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M34.1512 20.9688H26.3926C26.289 20.9688 26.1896 20.9276 26.1164 20.8544C26.0431 20.7811 26.002 20.6818 26.002 20.5782V15.2461C26.002 15.1425 26.0431 15.0432 26.1164 14.9699C26.1896 14.8967 26.289 14.8555 26.3926 14.8555H30.7355C30.9233 14.8541 31.1086 14.8985 31.2753 14.9848C31.4421 15.0711 31.5853 15.1967 31.6926 15.3508L34.4926 20.3899C34.5253 20.4493 34.5419 20.5162 34.5409 20.584C34.5399 20.6518 34.5212 20.7182 34.4868 20.7766C34.4523 20.835 34.4033 20.8834 34.3444 20.9171C34.2856 20.9508 34.219 20.9686 34.1512 20.9688ZM26.7832 20.1875H33.4871L31.0285 15.7649C30.9909 15.7247 30.9456 15.6927 30.8952 15.6707C30.8449 15.6486 30.7905 15.6371 30.7355 15.6368H26.7832V20.1875Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M37.04 21.6852C37.0111 21.6414 32.9979 14.4 32.9689 14.3648C32.7512 14.058 32.4632 13.8077 32.129 13.6348C31.7948 13.4619 31.4241 13.3715 31.0479 13.3711H24.5174V10.7148C24.5174 10.6112 24.4762 10.5119 24.403 10.4386C24.3297 10.3654 24.2304 10.3242 24.1268 10.3242H3.30176C3.19816 10.3242 3.0988 10.3654 3.02554 10.4386C2.95229 10.5119 2.91113 10.6112 2.91113 10.7148V25.8508C2.91113 25.9544 2.95229 26.0537 3.02554 26.127C3.0988 26.2003 3.19816 26.2414 3.30176 26.2414H7.04395C7.02718 26.6871 7.10049 27.1316 7.25948 27.5483C7.41848 27.965 7.65989 28.3454 7.96929 28.6666C8.27868 28.9879 8.64969 29.2434 9.06013 29.418C9.47057 29.5925 9.912 29.6825 10.358 29.6825C10.804 29.6825 11.2454 29.5925 11.6559 29.418C12.0663 29.2434 12.4373 28.9879 12.7467 28.6666C13.0561 28.3454 13.2975 27.965 13.4565 27.5483C13.6155 27.1316 13.6888 26.6871 13.6721 26.2414C15.415 26.232 24.8197 26.2492 26.3283 26.2672C26.3147 26.711 26.3903 27.1529 26.5507 27.5669C26.7112 27.9809 26.9531 28.3585 27.2622 28.6772C27.5713 28.9959 27.9412 29.2493 28.3501 29.4224C28.7589 29.5954 29.1984 29.6846 29.6424 29.6846C30.0864 29.6846 30.5258 29.5954 30.9347 29.4224C31.3436 29.2493 31.7135 28.9959 32.0226 28.6772C32.3317 28.3585 32.5736 27.9809 32.734 27.5669C32.8944 27.1529 32.9701 26.711 32.9564 26.2672H36.6986C36.8022 26.2672 36.9016 26.226 36.9748 26.1528C37.0481 26.0795 37.0893 25.9802 37.0893 25.8766V21.8742C37.0891 21.808 37.0722 21.743 37.04 21.6852ZM3.69238 23.107L3.7002 23.1125C3.81566 23.1825 3.911 23.2813 3.97691 23.3992C4.04282 23.517 4.07705 23.65 4.07626 23.785C4.07548 23.9201 4.0397 24.0526 3.97242 24.1697C3.90514 24.2868 3.80866 24.3844 3.69238 24.4531V23.107ZM10.358 28.8969C9.9099 28.8966 9.46988 28.7775 9.08276 28.5518C8.69565 28.3261 8.37528 28.0018 8.15429 27.612C7.93329 27.2222 7.81957 26.7807 7.82471 26.3326C7.82985 25.8846 7.95366 25.4459 8.18354 25.0612C8.41341 24.6766 8.74114 24.3597 9.13332 24.1429C9.52551 23.9262 9.96815 23.8172 10.4161 23.8272C10.8641 23.8372 11.3015 23.9657 11.6836 24.1997C12.0658 24.4337 12.3791 24.7649 12.5916 25.1594C13.5064 26.8094 12.2486 28.9203 10.358 28.8969ZM23.7361 25.4594H13.551C12.7447 22.6633 9.01973 22.1734 7.51035 24.6562C7.36059 24.9074 7.2445 25.1772 7.16504 25.4586H3.69238V25.2891C5.24551 24.8586 5.24395 22.6984 3.69238 22.268V11.1016H23.7361V25.4594ZM29.6424 28.8969C28.0924 28.9109 26.8736 27.4656 27.1424 25.9406C27.6518 23.1375 31.6338 23.1383 32.1424 25.9406C32.4104 27.4648 31.1932 28.9109 29.6424 28.8969ZM36.308 24.4523C36.1909 24.3833 36.0938 24.2849 36.0264 24.1669C35.9589 24.0488 35.9234 23.9152 35.9234 23.7793C35.9234 23.6433 35.9589 23.5098 36.0264 23.3917C36.0938 23.2737 36.1909 23.1753 36.308 23.1062V24.4523ZM36.308 22.2695C34.7596 22.6852 34.7596 24.8742 36.308 25.2891V25.4852H32.8424C32.724 25.0484 32.5174 24.6406 32.2353 24.2867C30.5377 22.182 27.1572 22.8719 26.4424 25.4852H24.5174V14.1523H31.0479C31.2959 14.1525 31.5403 14.2113 31.7614 14.3238C31.9824 14.4364 32.1737 14.5995 32.3197 14.8L36.308 21.9766V22.2695Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M17.4516 14.2539H9.97656C9.87296 14.2539 9.77361 14.2951 9.70035 14.3683C9.62709 14.4416 9.58594 14.5409 9.58594 14.6445V21.9203C9.58594 22.0239 9.62709 22.1233 9.70035 22.1965C9.77361 22.2698 9.87296 22.3109 9.97656 22.3109H17.4516C17.5552 22.3109 17.6545 22.2698 17.7278 22.1965C17.801 22.1233 17.8422 22.0239 17.8422 21.9203V14.6445C17.8422 14.5409 17.801 14.4416 17.7278 14.3683C17.6545 14.2951 17.5552 14.2539 17.4516 14.2539ZM13.8781 15.0352V16.5109C13.8267 16.4871 13.7707 16.4748 13.7141 16.4748C13.6574 16.4748 13.6014 16.4871 13.55 16.5109V15.0352H13.8781ZM17.0609 21.5297H10.3672V15.0352H12.7688V17.6C12.7688 17.682 12.7945 17.7619 12.8425 17.8284C12.8904 17.8949 12.9581 17.9447 13.0358 17.9706C13.1136 17.9965 13.1976 17.9973 13.2758 17.9729C13.3541 17.9484 13.4227 17.9 13.4719 17.8344L13.7148 17.5133L13.9578 17.8344C14.007 17.9 14.0756 17.9484 14.1538 17.9729C14.2321 17.9973 14.3161 17.9965 14.3938 17.9706C14.4716 17.9447 14.5393 17.8949 14.5872 17.8284C14.6351 17.7619 14.6609 17.682 14.6609 17.6V15.0352H17.0625L17.0609 21.5297Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10.3579 28.056C9.16888 28.0802 8.31498 26.7825 8.79545 25.6997C9.37123 24.3349 11.3361 24.3341 11.9126 25.6997C12.4009 26.7817 11.5478 28.0794 10.3579 28.056ZM10.3579 25.4505C10.1163 25.4515 9.88475 25.548 9.71385 25.7189C9.54294 25.8898 9.44647 26.1213 9.44545 26.363C9.49545 27.5724 11.2204 27.5724 11.2704 26.363C11.2694 26.1213 11.1729 25.8898 11.002 25.7189C10.8311 25.548 10.5996 25.4515 10.3579 25.4505Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M29.6422 28.0554C28.4704 28.078 27.6149 26.8108 28.0711 25.7319C28.6274 24.3218 30.6579 24.3257 31.2141 25.7319C31.6696 26.8116 30.8172 28.078 29.6422 28.0554ZM29.6422 25.4499C29.4006 25.4509 29.1692 25.5474 28.9984 25.7184C28.8276 25.8893 28.7313 26.1208 28.7305 26.3624C28.7805 27.5726 30.5047 27.571 30.5547 26.3624C30.5541 26.1206 30.4578 25.8888 30.2868 25.7179C30.1158 25.5469 29.8841 25.4505 29.6422 25.4499Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+                <p class="text-[#1B2B41B0]">
+                  Spend <b class="text-[#192434]">$140.00</b> to get free
+                  shipping
+                </p>
+              </div>
+              <div class="mt-5 h-2 w-full rounded-2xl bg-[#1A38601A]">
+                <div class="h-2 w-4/5 rounded-2xl bg-[var(--primary-lemon)]">
+                  <div
+                    class="progress-background block h-2 w-full rounded-2xl bg-[url('../assets/images/loadingSlash.png')] bg-contain bg-repeat pl-10"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <!-- End:: Spend offer -->
+
+            <!-- Start:: Total price, Note, Discount offer -->
+            <div class="w-full rounded-[32px] bg-white p-6">
+              <div class="mb-6">
+                <button
+                  class="flex w-full items-center justify-between py-2 text-lg font-semibold text-[var(--bg-blue)] focus:outline-none"
+                  onclick="toggleCollapse('notesContent', 'notesArrow')"
+                >
+                  Notes
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19213_83185"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19213_83185)">
+                      <path
+                        d="M11.9998 14.9758C11.8665 14.9758 11.7415 14.9549 11.6248 14.9133C11.5081 14.8716 11.3998 14.8008 11.2998 14.7008L6.6998 10.1008C6.51647 9.91745 6.4248 9.68411 6.4248 9.40078C6.4248 9.11745 6.51647 8.88411 6.6998 8.70078C6.88314 8.51745 7.11647 8.42578 7.3998 8.42578C7.68314 8.42578 7.91647 8.51745 8.0998 8.70078L11.9998 12.6008L15.8998 8.70078C16.0831 8.51745 16.3165 8.42578 16.5998 8.42578C16.8831 8.42578 17.1165 8.51745 17.2998 8.70078C17.4831 8.88411 17.5748 9.11745 17.5748 9.40078C17.5748 9.68411 17.4831 9.91745 17.2998 10.1008L12.6998 14.7008C12.5998 14.8008 12.4915 14.8716 12.3748 14.9133C12.2581 14.9549 12.1331 14.9758 11.9998 14.9758Z"
+                        fill="#192739"
+                        fill-opacity="0.96"
+                      />
+                    </g>
+                  </svg>
+                </button>
+                <div
+                  id="notesContent"
+                  class="collapsible-content expanded mt-2"
+                >
+                  <textarea
+                    class="w-full resize-y rounded-md border border-gray-300 p-4 focus:border-[var(--bg-blue)] focus:outline-none"
+                    rows="4"
+                    placeholder="Order special instructions"
+                  ></textarea>
+                </div>
+                <hr class="mt-4 border-b border-gray-200" />
+              </div>
+
+              <div>
+                <button
+                  class="flex w-full items-center justify-between py-2 text-lg font-semibold text-[var(--bg-blue)] focus:outline-none"
+                  onclick="toggleCollapse('discountsContent', 'discountsArrow')"
+                >
+                  Discounts
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19213_83185"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19213_83185)">
+                      <path
+                        d="M11.9998 14.9758C11.8665 14.9758 11.7415 14.9549 11.6248 14.9133C11.5081 14.8716 11.3998 14.8008 11.2998 14.7008L6.6998 10.1008C6.51647 9.91745 6.4248 9.68411 6.4248 9.40078C6.4248 9.11745 6.51647 8.88411 6.6998 8.70078C6.88314 8.51745 7.11647 8.42578 7.3998 8.42578C7.68314 8.42578 7.91647 8.51745 8.0998 8.70078L11.9998 12.6008L15.8998 8.70078C16.0831 8.51745 16.3165 8.42578 16.5998 8.42578C16.8831 8.42578 17.1165 8.51745 17.2998 8.70078C17.4831 8.88411 17.5748 9.11745 17.5748 9.40078C17.5748 9.68411 17.4831 9.91745 17.2998 10.1008L12.6998 14.7008C12.5998 14.8008 12.4915 14.8716 12.3748 14.9133C12.2581 14.9549 12.1331 14.9758 11.9998 14.9758Z"
+                        fill="#192739"
+                        fill-opacity="0.96"
+                      />
+                    </g>
+                  </svg>
+                </button>
+                <div id="discountsContent" class="collapsible-content mt-2">
+                  <p class="p-0 text-gray-600">
+                    Apply discount codes here (e.g., input field, list of
+                    available discounts).
+                  </p>
+                  <div
+                    class="mx-auto mt-3 flex w-full items-center gap-2 rounded-lg"
+                  >
+                    <input
+                      type="text"
+                      id="coupon-code-tailwind"
+                      name="coupon-code"
+                      placeholder="Enter Coupon Code"
+                      class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none"
+                      aria-label="Discount coupon code input"
+                    />
+
+                    <button
+                      type="submit"
+                      id="apply-coupon-tailwind"
+                      class="rounded-lg bg-[var(--bg-blue)] px-4 py-2 font-semibold text-white focus:ring-2 focus:ring-offset-2 focus:outline-none"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                </div>
+                <hr class="mt-4 border-b border-gray-200" />
+              </div>
+              <div class="mt-[30px] flex flex-col">
+                <div class="mb-[10px] flex items-center justify-between">
+                  <h1 class="text-[18px] font-medium text-[#1B2B41B0]">
+                    Sub total
+                  </h1>
+                  <div class="text-[18px] font-semibold text-[var(--bg-blue)]">
+                    $18.00
+                  </div>
+                </div>
+
+                <div class="mb-[10px] flex items-center justify-between">
+                  <h1 class="text-[16px] font-medium text-[#1B2B41B0]">
+                    Discount
+                  </h1>
+                  <div class="text-[16px] font-semibold text-[var(--bg-blue)]">
+                    - $10.00
+                  </div>
+                </div>
+
+                <!-- <div class="mb-[10px] flex items-center justify-between">
+                  <h1 class="text-[16px] font-medium text-[#1B2B41B0]">
+                    Sub total
+                  </h1>
+                  <div class="text-[16px] font-semibold text-[var(--bg-blue)]">
+                    $8.00
+                  </div>
+                </div> -->
+                <div class="mb-[10px] flex items-center justify-between">
+                  <h1 class="text-[16px] font-medium text-[#1B2B41B0]">Tax</h1>
+                  <div class="text-[16px] font-semibold text-[var(--bg-blue)]">
+                    + $80.00
+                  </div>
+                </div>
+                <div class="mb-[10px] flex items-center justify-between">
+                  <h1 class="text-2xl font-semibold text-[#192434]">Total</h1>
+                  <div class="text-[28px] font-semibold text-[#192434]">
+                    $88.00
+                  </div>
+                </div>
+                <p class="mb-7 text-[12px] text-[#1B2B41B0]">
+                  Tax included and shipping calculated at checkout
+                </p>
+                <!-- Start:: Anchor tag -->
+                <a
+                  href="#"
+                  class="group relative flex w-full cursor-pointer items-center justify-center gap-5 overflow-hidden rounded-full bg-[var(--bg-blue)] p-3 text-lg font-semibold text-white transition-colors duration-450 ease-in-out hover:bg-transparent"
+                >
+                  <span
+                    class="absolute inset-0 h-full w-full -translate-x-full transform rounded-r-4xl bg-[var(--primary-lemon)] transition-transform duration-230 ease-in-out group-hover:translate-x-0"
+                  ></span>
+                  <span
+                    class="sm:text relative z-10 text-[16px] transition-colors duration-230 group-hover:text-[var(--bg-blue)]"
+                    >PROCEED TO CHECKOUT</span
+                  >
+                </a>
+                <!-- End:: Anchor tag -->
+              </div>
+            </div>
+            <!-- End:: Total price, Note, Discount offer -->
+
+            <!-- Start:: Guaranteed Safe checkout -->
+            <div>
+              <div
+                class="relative mx-auto w-full rounded-[32px] border border-[#DFE1E6] p-6 py-10"
+              >
+                <p
+                  class="absolute -top-[14px] left-1/2 mb-6 w-max -translate-x-1/2 bg-[var(--bg-off-white)] px-4 text-center text-base font-medium text-[var(--bg-blue)]"
+                >
+                  Guaranteed
+                  <span class="text-green-500">safe</span>
+                  checkout
+                </p>
+
+                <div class="flex justify-center space-x-4">
+                  <div
+                    class="flex h-10 w-16 items-center justify-center rounded-md border border-gray-200 bg-white p-1 shadow-sm"
+                  >
+                    <img src="../assets/images/visa-logo.png" alt="" />
+                  </div>
+
+                  <div
+                    class="flex h-10 w-16 items-center justify-center rounded-md border border-gray-200 bg-white p-1 shadow-sm"
+                  >
+                    <!-- <div class="flex -space-x-2">
+                      <div class="h-5 w-5 rounded-full bg-red-600"></div>
+                      <div
+                        class="h-5 w-5 rounded-full bg-yellow-500 opacity-80"
+                      ></div>
+                    </div> -->
+                    <img src="../assets/images/Mastercard.png" alt="" />
+                  </div>
+
+                  <div
+                    class="flex h-10 w-16 items-center justify-center rounded-md border border-gray-200 bg-white p-1 shadow-sm"
+                  >
+                    <img src="../assets/images/Stripe.png" alt="" />
+                  </div>
+
+                  <div
+                    class="flex h-10 w-16 items-center justify-center rounded-md border border-gray-200 bg-white p-1 shadow-sm"
+                  >
+                    <img src="../assets/images/PayPal.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p class="mt-[12px] text-center text-sm text-[var(--bg-blue)]">
+                Your Payment is 100% Secure
+              </p>
+            </div>
+
+            <!-- End:: Guaranteed Safe checkout -->
+          </div>
+        </div>
+        <!-- End:: Cart details -->
+      </div>
+    </section>
+
+    <script src="cart.js"></script>
+  </body>
+</html>
