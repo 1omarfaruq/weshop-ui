@@ -58,38 +58,6 @@
     <!-- End:: Stylesheet Links -->
 
     <link rel="stylesheet" href="cart.css" />
-    <style>
-      /* Custom styles for the smooth collapse transition */
-      .collapsible-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        /* Adjust duration as needed */
-      }
-
-      .collapsible-content.expanded {
-        max-height: 500px;
-        /* A value larger than the max possible height of the content */
-        transition: max-height 0.5s ease-in;
-      }
-      .progress-background {
-        width: 100%;
-        background-image: url("../assets/images/progress.png");
-        background-size: 10px 10px;
-
-        animation: slideProgress 5s linear infinite;
-        transition: all;
-      }
-      @keyframes slideProgress {
-        0% {
-          background-position: 0 0;
-        }
-        100% {
-          background-position: 30px 0;
-        }
-      }
-      /* Custom border for the outer container to match the soft, rounded appearance */
-    </style>
   </head>
 
   <body class="bg-[var(--bg-off-white)]">
@@ -144,7 +112,9 @@
         <!-- End:: Heading -->
         <!-- Start:: Cart details -->
         <div class="grid grid-cols-1 gap-8 py-10 lg:grid-cols-[1fr_1fr_480px]">
-          <div class="col-span-1 flex flex-col gap-[50px] lg:col-span-2">
+          <div
+            class="col-span-1 flex flex-col gap-8 md:gap-[50px] lg:col-span-2"
+          >
             <div class="overflow-hidden rounded-[32px] bg-white pt-4 pb-2">
               <div class="svao-scrollbar-x overflow-x-auto">
                 <!-- Start:: Cart table  -->
@@ -165,262 +135,260 @@
 
                   <!-- Start:: table body -->
                   <tbody>
-                    <div class="px-6">
-                      <tr
-                        class="border-b border-[#DFE1E6] px-48 text-center last:border-0"
+                    <tr
+                      class="border-b border-[#DFE1E6] px-48 text-center last:border-0"
+                    >
+                      <td
+                        class="flex min-w-[380px] items-center gap-6 px-5 py-6"
                       >
-                        <td
-                          class="flex min-w-[380px] items-center gap-6 px-5 py-6"
+                        <div
+                          class="flex h-[86px] min-h-[86px] w-[86px] min-w-[86px] items-center justify-center rounded-[12px] border border-[var(--shade-light-4)]"
                         >
-                          <div
-                            class="flex h-[86px] min-h-[86px] w-[86px] min-w-[86px] items-center justify-center rounded-[12px] border border-[var(--shade-light-4)]"
-                          >
-                            <img
-                              src="../assets/images/product.jpg"
-                              class="object-contain"
-                              alt=""
-                            />
-                          </div>
+                          <img
+                            src="../assets/images/product.jpg"
+                            class="object-contain"
+                            alt=""
+                          />
+                        </div>
 
-                          <div>
-                            <h1
-                              class="w-fit text-left text-lg text-[var(--shade-dark-4)]"
-                            >
-                              Retro Breathable Casual Shoe
-                            </h1>
+                        <div>
+                          <h1
+                            class="w-fit text-left text-lg text-[var(--shade-dark-4)]"
+                          >
+                            Retro Breathable Casual Shoe
+                          </h1>
+                          <div
+                            class="mt-2 flex items-center gap-4 text-[14px] font-normal text-[var(--bg-blue)]"
+                          >
                             <div
-                              class="mt-2 flex items-center gap-4 text-[14px] font-normal text-[var(--bg-blue)]"
+                              class="h-6 w-6 cursor-pointer rounded-full bg-[#f05151] hover:border hover:border-[var(--shade-4)]"
+                            ></div>
+                            <div
+                              class="cursor-pointer rounded-[5px] border border-[#8993A4] px-4 text-center text-[14px] uppercase hover:bg-[var(--primary-lemon)] hover:shadow-[var(--primary-lemon)]"
                             >
-                              <div
-                                class="h-6 w-6 cursor-pointer rounded-full bg-[#f05151] hover:border hover:border-[var(--shade-4)]"
-                              ></div>
-                              <div
-                                class="cursor-pointer rounded-[5px] border border-[#8993A4] px-4 text-center text-[14px] uppercase hover:bg-[var(--primary-lemon)] hover:shadow-[var(--primary-lemon)]"
-                              >
-                                xs
-                              </div>
+                              xs
                             </div>
                           </div>
-                        </td>
-                        <td class="px-6 py-6 text-[18px] text-[#1B2B41B0]">
-                          $320.00
-                        </td>
-                        <td class="px-6 text-[£192434]">
-                          <div
-                            class="mx-auto flex w-fit items-center gap-5 rounded-xl border-2 border-[var(--shade-light-4)] px-[10px] py-[8px]"
-                          >
-                            <span
-                              ><svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 20 20"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <mask
-                                  id="mask0_19210_82466"
-                                  style="mask-type: alpha"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="20"
-                                  height="20"
-                                >
-                                  <rect width="20" height="20" fill="#D9D9D9" />
-                                </mask>
-                                <g mask="url(#mask0_19210_82466)">
-                                  <path
-                                    d="M5.00033 10.8327C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H5.00033Z"
-                                    fill="#1C304A"
-                                    fill-opacity="0.52"
-                                  />
-                                </g>
-                              </svg>
-                            </span>
-                            <span class="text-[16px] font-medium text-[#192434]"
-                              >1</span
-                            >
-                            <span
-                              ><svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 20 20"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <mask
-                                  id="mask0_19210_82470"
-                                  style="mask-type: alpha"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="20"
-                                  height="20"
-                                >
-                                  <rect width="20" height="20" fill="#D9D9D9" />
-                                </mask>
-                                <g mask="url(#mask0_19210_82470)">
-                                  <path
-                                    d="M9.16699 10.8327H5.00033C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H9.16699V4.99935C9.16699 4.76324 9.24685 4.56532 9.40658 4.4056C9.5663 4.24588 9.76421 4.16602 10.0003 4.16602C10.2364 4.16602 10.4344 4.24588 10.5941 4.4056C10.7538 4.56532 10.8337 4.76324 10.8337 4.99935V9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H10.8337V14.9993C10.8337 15.2355 10.7538 15.4334 10.5941 15.5931C10.4344 15.7528 10.2364 15.8327 10.0003 15.8327C9.76421 15.8327 9.5663 15.7528 9.40658 15.5931C9.24685 15.4334 9.16699 15.2355 9.16699 14.9993V10.8327Z"
-                                    fill="#1C304A"
-                                    fill-opacity="0.52"
-                                  />
-                                </g>
-                              </svg>
-                            </span>
-                          </div>
-                        </td>
-                        <td
-                          class="px-6 py-6 text-lg font-medium text-[var(--bg-blue)]"
+                        </div>
+                      </td>
+                      <td class="px-6 py-6 text-[18px] text-[#1B2B41B0]">
+                        $320.00
+                      </td>
+                      <td class="px-6 text-[£192434]">
+                        <div
+                          class="mx-auto flex w-fit items-center gap-5 rounded-xl border-2 border-[var(--shade-light-4)] px-[10px] py-[8px]"
                         >
-                          $320.00
-                        </td>
-                        <td class="px-6 py-6 pr-6 hover:stroke-[#FF5630]">
-                          <svg
-                            class="cursor-pointer stroke-[#1B2B41B0] hover:stroke-[#FF5630]"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <span
+                            ><svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <mask
+                                id="mask0_19210_82466"
+                                style="mask-type: alpha"
+                                maskUnits="userSpaceOnUse"
+                                x="0"
+                                y="0"
+                                width="20"
+                                height="20"
+                              >
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                              </mask>
+                              <g mask="url(#mask0_19210_82466)">
+                                <path
+                                  d="M5.00033 10.8327C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H5.00033Z"
+                                  fill="#1C304A"
+                                  fill-opacity="0.52"
+                                />
+                              </g>
+                            </svg>
+                          </span>
+                          <span class="text-[16px] font-medium text-[#192434]"
+                            >1</span
                           >
-                            <path
-                              d="M14.74 9.00052L14.394 18.0005M9.606 18.0005L9.26 9.00052M19.228 5.79052C19.57 5.84252 19.91 5.89752 20.25 5.95652M19.228 5.79052L18.16 19.6735C18.1164 20.2387 17.8611 20.7667 17.445 21.1518C17.029 21.5368 16.4829 21.7507 15.916 21.7505H8.084C7.5171 21.7507 6.97102 21.5368 6.55498 21.1518C6.13894 20.7667 5.88359 20.2387 5.84 19.6735L4.772 5.79052M19.228 5.79052C18.0739 5.61604 16.9138 5.48362 15.75 5.39352M4.772 5.79052C4.43 5.84152 4.09 5.89652 3.75 5.95552M4.772 5.79052C5.92613 5.61604 7.08623 5.48362 8.25 5.39352M15.75 5.39352V4.47752C15.75 3.29752 14.84 2.31352 13.66 2.27652C12.5536 2.24116 11.4464 2.24116 10.34 2.27652C9.16 2.31352 8.25 3.29852 8.25 4.47752V5.39352M15.75 5.39352C13.2537 5.2006 10.7463 5.2006 8.25 5.39352"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </td>
-                      </tr>
-                      <tr
-                        class="border-b border-[#DFE1E6] px-48 text-center last:border-0"
+                          <span
+                            ><svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <mask
+                                id="mask0_19210_82470"
+                                style="mask-type: alpha"
+                                maskUnits="userSpaceOnUse"
+                                x="0"
+                                y="0"
+                                width="20"
+                                height="20"
+                              >
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                              </mask>
+                              <g mask="url(#mask0_19210_82470)">
+                                <path
+                                  d="M9.16699 10.8327H5.00033C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H9.16699V4.99935C9.16699 4.76324 9.24685 4.56532 9.40658 4.4056C9.5663 4.24588 9.76421 4.16602 10.0003 4.16602C10.2364 4.16602 10.4344 4.24588 10.5941 4.4056C10.7538 4.56532 10.8337 4.76324 10.8337 4.99935V9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H10.8337V14.9993C10.8337 15.2355 10.7538 15.4334 10.5941 15.5931C10.4344 15.7528 10.2364 15.8327 10.0003 15.8327C9.76421 15.8327 9.5663 15.7528 9.40658 15.5931C9.24685 15.4334 9.16699 15.2355 9.16699 14.9993V10.8327Z"
+                                  fill="#1C304A"
+                                  fill-opacity="0.52"
+                                />
+                              </g>
+                            </svg>
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="px-6 py-6 text-lg font-medium text-[var(--bg-blue)]"
                       >
-                        <td
-                          class="flex min-w-[380px] items-center gap-6 px-5 py-6"
+                        $320.00
+                      </td>
+                      <td class="px-6 py-6 pr-6 hover:stroke-[#FF5630]">
+                        <svg
+                          class="cursor-pointer stroke-[#1B2B41B0] hover:stroke-[#FF5630]"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <div
-                            class="flex h-[86px] min-h-[86px] w-[86px] min-w-[86px] items-center justify-center rounded-[12px] border border-[var(--shade-light-4)]"
-                          >
-                            <img
-                              src="../assets/images/product.jpg"
-                              class="object-contain"
-                              alt=""
-                            />
-                          </div>
+                          <path
+                            d="M14.74 9.00052L14.394 18.0005M9.606 18.0005L9.26 9.00052M19.228 5.79052C19.57 5.84252 19.91 5.89752 20.25 5.95652M19.228 5.79052L18.16 19.6735C18.1164 20.2387 17.8611 20.7667 17.445 21.1518C17.029 21.5368 16.4829 21.7507 15.916 21.7505H8.084C7.5171 21.7507 6.97102 21.5368 6.55498 21.1518C6.13894 20.7667 5.88359 20.2387 5.84 19.6735L4.772 5.79052M19.228 5.79052C18.0739 5.61604 16.9138 5.48362 15.75 5.39352M4.772 5.79052C4.43 5.84152 4.09 5.89652 3.75 5.95552M4.772 5.79052C5.92613 5.61604 7.08623 5.48362 8.25 5.39352M15.75 5.39352V4.47752C15.75 3.29752 14.84 2.31352 13.66 2.27652C12.5536 2.24116 11.4464 2.24116 10.34 2.27652C9.16 2.31352 8.25 3.29852 8.25 4.47752V5.39352M15.75 5.39352C13.2537 5.2006 10.7463 5.2006 8.25 5.39352"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
+                    <tr
+                      class="border-b border-[#DFE1E6] px-48 text-center last:border-0"
+                    >
+                      <td
+                        class="flex min-w-[380px] items-center gap-6 px-5 py-6"
+                      >
+                        <div
+                          class="flex h-[86px] min-h-[86px] w-[86px] min-w-[86px] items-center justify-center rounded-[12px] border border-[var(--shade-light-4)]"
+                        >
+                          <img
+                            src="../assets/images/product.jpg"
+                            class="object-contain"
+                            alt=""
+                          />
+                        </div>
 
-                          <div>
-                            <h1
-                              class="w-fit text-left text-lg text-[var(--shade-dark-4)]"
-                            >
-                              Retro Breathable Casual Shoe
-                            </h1>
+                        <div>
+                          <h1
+                            class="w-fit text-left text-lg text-[var(--shade-dark-4)]"
+                          >
+                            Retro Breathable Casual Shoe
+                          </h1>
+                          <div
+                            class="mt-2 flex items-center gap-4 text-[14px] font-normal text-[var(--bg-blue)]"
+                          >
                             <div
-                              class="mt-2 flex items-center gap-4 text-[14px] font-normal text-[var(--bg-blue)]"
+                              class="h-6 w-6 cursor-pointer rounded-full bg-[#f05151] hover:border hover:border-[var(--shade-4)]"
+                            ></div>
+                            <div
+                              class="cursor-pointer rounded-[5px] border border-[#8993A4] px-4 text-center text-[14px] uppercase hover:bg-[var(--primary-lemon)] hover:shadow-[var(--primary-lemon)]"
                             >
-                              <div
-                                class="h-6 w-6 cursor-pointer rounded-full bg-[#f05151] hover:border hover:border-[var(--shade-4)]"
-                              ></div>
-                              <div
-                                class="cursor-pointer rounded-[5px] border border-[#8993A4] px-4 text-center text-[14px] uppercase hover:bg-[var(--primary-lemon)] hover:shadow-[var(--primary-lemon)]"
-                              >
-                                xs
-                              </div>
+                              xs
                             </div>
                           </div>
-                        </td>
-                        <td class="px-6 py-6 text-[18px] text-[#1B2B41B0]">
-                          $320.00
-                        </td>
-                        <td class="px-6 text-[£192434]">
-                          <div
-                            class="mx-auto flex w-fit items-center gap-5 rounded-xl border-2 border-[var(--shade-light-4)] px-[10px] py-[8px]"
-                          >
-                            <span
-                              ><svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 20 20"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <mask
-                                  id="mask0_19210_82466"
-                                  style="mask-type: alpha"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="20"
-                                  height="20"
-                                >
-                                  <rect width="20" height="20" fill="#D9D9D9" />
-                                </mask>
-                                <g mask="url(#mask0_19210_82466)">
-                                  <path
-                                    d="M5.00033 10.8327C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H5.00033Z"
-                                    fill="#1C304A"
-                                    fill-opacity="0.52"
-                                  />
-                                </g>
-                              </svg>
-                            </span>
-                            <span class="text-[16px] font-medium text-[#192434]"
-                              >1</span
-                            >
-                            <span
-                              ><svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 20 20"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <mask
-                                  id="mask0_19210_82470"
-                                  style="mask-type: alpha"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="20"
-                                  height="20"
-                                >
-                                  <rect width="20" height="20" fill="#D9D9D9" />
-                                </mask>
-                                <g mask="url(#mask0_19210_82470)">
-                                  <path
-                                    d="M9.16699 10.8327H5.00033C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H9.16699V4.99935C9.16699 4.76324 9.24685 4.56532 9.40658 4.4056C9.5663 4.24588 9.76421 4.16602 10.0003 4.16602C10.2364 4.16602 10.4344 4.24588 10.5941 4.4056C10.7538 4.56532 10.8337 4.76324 10.8337 4.99935V9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H10.8337V14.9993C10.8337 15.2355 10.7538 15.4334 10.5941 15.5931C10.4344 15.7528 10.2364 15.8327 10.0003 15.8327C9.76421 15.8327 9.5663 15.7528 9.40658 15.5931C9.24685 15.4334 9.16699 15.2355 9.16699 14.9993V10.8327Z"
-                                    fill="#1C304A"
-                                    fill-opacity="0.52"
-                                  />
-                                </g>
-                              </svg>
-                            </span>
-                          </div>
-                        </td>
-                        <td
-                          class="px-6 py-6 text-lg font-medium text-[var(--bg-blue)]"
+                        </div>
+                      </td>
+                      <td class="px-6 py-6 text-[18px] text-[#1B2B41B0]">
+                        $320.00
+                      </td>
+                      <td class="px-6 text-[£192434]">
+                        <div
+                          class="mx-auto flex w-fit items-center gap-5 rounded-xl border-2 border-[var(--shade-light-4)] px-[10px] py-[8px]"
                         >
-                          $320.00
-                        </td>
-                        <td class="px-6 py-6 pr-6 hover:stroke-[#FF5630]">
-                          <svg
-                            class="cursor-pointer stroke-[#1B2B41B0] hover:stroke-[#FF5630]"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
+                          <span
+                            ><svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <mask
+                                id="mask0_19210_82466"
+                                style="mask-type: alpha"
+                                maskUnits="userSpaceOnUse"
+                                x="0"
+                                y="0"
+                                width="20"
+                                height="20"
+                              >
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                              </mask>
+                              <g mask="url(#mask0_19210_82466)">
+                                <path
+                                  d="M5.00033 10.8327C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H5.00033Z"
+                                  fill="#1C304A"
+                                  fill-opacity="0.52"
+                                />
+                              </g>
+                            </svg>
+                          </span>
+                          <span class="text-[16px] font-medium text-[#192434]"
+                            >1</span
                           >
-                            <path
-                              d="M14.74 9.00052L14.394 18.0005M9.606 18.0005L9.26 9.00052M19.228 5.79052C19.57 5.84252 19.91 5.89752 20.25 5.95652M19.228 5.79052L18.16 19.6735C18.1164 20.2387 17.8611 20.7667 17.445 21.1518C17.029 21.5368 16.4829 21.7507 15.916 21.7505H8.084C7.5171 21.7507 6.97102 21.5368 6.55498 21.1518C6.13894 20.7667 5.88359 20.2387 5.84 19.6735L4.772 5.79052M19.228 5.79052C18.0739 5.61604 16.9138 5.48362 15.75 5.39352M4.772 5.79052C4.43 5.84152 4.09 5.89652 3.75 5.95552M4.772 5.79052C5.92613 5.61604 7.08623 5.48362 8.25 5.39352M15.75 5.39352V4.47752C15.75 3.29752 14.84 2.31352 13.66 2.27652C12.5536 2.24116 11.4464 2.24116 10.34 2.27652C9.16 2.31352 8.25 3.29852 8.25 4.47752V5.39352M15.75 5.39352C13.2537 5.2006 10.7463 5.2006 8.25 5.39352"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </td>
-                      </tr>
-                    </div>
+                          <span
+                            ><svg
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <mask
+                                id="mask0_19210_82470"
+                                style="mask-type: alpha"
+                                maskUnits="userSpaceOnUse"
+                                x="0"
+                                y="0"
+                                width="20"
+                                height="20"
+                              >
+                                <rect width="20" height="20" fill="#D9D9D9" />
+                              </mask>
+                              <g mask="url(#mask0_19210_82470)">
+                                <path
+                                  d="M9.16699 10.8327H5.00033C4.76421 10.8327 4.5663 10.7528 4.40658 10.5931C4.24685 10.4334 4.16699 10.2355 4.16699 9.99935C4.16699 9.76324 4.24685 9.56532 4.40658 9.4056C4.5663 9.24588 4.76421 9.16602 5.00033 9.16602H9.16699V4.99935C9.16699 4.76324 9.24685 4.56532 9.40658 4.4056C9.5663 4.24588 9.76421 4.16602 10.0003 4.16602C10.2364 4.16602 10.4344 4.24588 10.5941 4.4056C10.7538 4.56532 10.8337 4.76324 10.8337 4.99935V9.16602H15.0003C15.2364 9.16602 15.4344 9.24588 15.5941 9.4056C15.7538 9.56532 15.8337 9.76324 15.8337 9.99935C15.8337 10.2355 15.7538 10.4334 15.5941 10.5931C15.4344 10.7528 15.2364 10.8327 15.0003 10.8327H10.8337V14.9993C10.8337 15.2355 10.7538 15.4334 10.5941 15.5931C10.4344 15.7528 10.2364 15.8327 10.0003 15.8327C9.76421 15.8327 9.5663 15.7528 9.40658 15.5931C9.24685 15.4334 9.16699 15.2355 9.16699 14.9993V10.8327Z"
+                                  fill="#1C304A"
+                                  fill-opacity="0.52"
+                                />
+                              </g>
+                            </svg>
+                          </span>
+                        </div>
+                      </td>
+                      <td
+                        class="px-6 py-6 text-lg font-medium text-[var(--bg-blue)]"
+                      >
+                        $320.00
+                      </td>
+                      <td class="px-6 py-6 pr-6 hover:stroke-[#FF5630]">
+                        <svg
+                          class="cursor-pointer stroke-[#1B2B41B0] hover:stroke-[#FF5630]"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.74 9.00052L14.394 18.0005M9.606 18.0005L9.26 9.00052M19.228 5.79052C19.57 5.84252 19.91 5.89752 20.25 5.95652M19.228 5.79052L18.16 19.6735C18.1164 20.2387 17.8611 20.7667 17.445 21.1518C17.029 21.5368 16.4829 21.7507 15.916 21.7505H8.084C7.5171 21.7507 6.97102 21.5368 6.55498 21.1518C6.13894 20.7667 5.88359 20.2387 5.84 19.6735L4.772 5.79052M19.228 5.79052C18.0739 5.61604 16.9138 5.48362 15.75 5.39352M4.772 5.79052C4.43 5.84152 4.09 5.89652 3.75 5.95552M4.772 5.79052C5.92613 5.61604 7.08623 5.48362 8.25 5.39352M15.75 5.39352V4.47752C15.75 3.29752 14.84 2.31352 13.66 2.27652C12.5536 2.24116 11.4464 2.24116 10.34 2.27652C9.16 2.31352 8.25 3.29852 8.25 4.47752V5.39352M15.75 5.39352C13.2537 5.2006 10.7463 5.2006 8.25 5.39352"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </td>
+                    </tr>
                   </tbody>
 
                   <!-- Start:: table body -->
@@ -466,7 +434,7 @@
                   </button>
                   <div
                     id="shippingForm"
-                    class="collapsible-content expanded mt-2"
+                    class="svao-collapsible-content expanded mt-2"
                   >
                     <div class="w-full">
                       <form
@@ -622,7 +590,7 @@
               <div class="mt-5 h-2 w-full rounded-2xl bg-[#1A38601A]">
                 <div class="h-2 w-4/5 rounded-2xl bg-[var(--primary-lemon)]">
                   <div
-                    class="progress-background block h-2 w-full rounded-2xl bg-[url('../assets/images/loadingSlash.png')] bg-contain bg-repeat pl-10"
+                    class="svao-progress-background block h-2 w-full rounded-2xl bg-[url('../assets/images/loadingSlash.png')] bg-contain bg-repeat pl-10"
                   ></div>
                 </div>
               </div>
@@ -666,7 +634,7 @@
                 </button>
                 <div
                   id="notesContent"
-                  class="collapsible-content expanded mt-2"
+                  class="svao-collapsible-content expanded mt-2"
                 >
                   <textarea
                     class="w-full resize-y rounded-md border border-gray-300 p-4 focus:border-[var(--bg-blue)] focus:outline-none"
@@ -710,7 +678,10 @@
                     </g>
                   </svg>
                 </button>
-                <div id="discountsContent" class="collapsible-content mt-2">
+                <div
+                  id="discountsContent"
+                  class="svao-collapsible-content mt-2"
+                >
                   <p class="p-0 text-gray-600">
                     Apply discount codes here (e.g., input field, list of
                     available discounts).
