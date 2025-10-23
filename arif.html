@@ -788,7 +788,7 @@
           <!-- Start:: Actionable Icon Area -->
           <div class="flex items-center">
               <!-- Start:: Search -->
-              <div class="relative inline-block ">
+              <div class="relative inline-block">
                 <!-- Search Button -->
                 <div
                   id="searchBtn"
@@ -820,69 +820,180 @@
                   </svg>
                 </div>
 
-                <!-- Popup Menu -->
+                <!-- Start:: Search Popup Menu -->
                 <div
                   id="popupMenu"
-                  class="absolute right-1/2 z-50 hidden w-[512px]  rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-7.5"
+                  class="absolute right-1/2 z-50 w-[370px]  rounded-xl border border-gray-200 bg-white  shadow-lg mt-7.5 opacity-0 scale-97 pointer-events-none transition-all duration-300 ease-in-out"
                 >
-                <div class="relative w-full">
                   <!-- Input Field -->
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    class="w-full pr-10 pl-3 border border-[#B3BAC5] rounded-full  focus:outline-none focus:shadow-md  h-12"
-                  />
-
-                  <!-- Search Icon on Right -->
-                  <svg
-                    class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 stroke-[var(--text-blue)]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <!-- Your SVG paths -->
-                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 21L16.65 16.65" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
+                  <div class="relative py-6 px-5">
+                    <div class="relative w-full py-[12px]">
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      class="w-full pl-[16px] border border-[var(--shade-1)] rounded-full
+                            focus:outline-none focus:shadow-[0_8px_20px_var(--shade-light-3)]
+                            h-12 placeholder:text-[14px] placeholder:font-medium
+                            transition-shadow duration-300 ease-in-out"
+                    />
 
 
-                  <ul class="mt-3 text-gray-700">
-                    <li
-                      class="cursor-pointer py-1 hover:text-[var(--primary-lemon)]"
-                    >
-                      Option 1
-                    </li>
-                    <li
-                      class="cursor-pointer py-1 hover:text-[var(--primary-lemon)]"
-                    >
-                      Option 2
-                    </li>
-                    <li
-                      class="cursor-pointer py-1 hover:text-[var(--primary-lemon)]"
-                    >
-                      Option 3
-                    </li>
-                  </ul>
-                </div>
+                      <!-- Search Icon -->
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 stroke-[var(--text-blue)] pointer-events-none"
+                      >
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20.9984 21.0004L16.6484 16.6504" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class=" px-5 py-3 border-t border-[var(--shade-light-4)]"><h3 class="text-[16px] font-semibold">Categories</h1></div>
+
+                  <div class="flex items-center justify-between border-t py-3 border-[var(--shade-light-4)] px-5">
+                    <h3 class="text-[14px] font-medium">Shoes</h3>
+                    <svg width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 0.75L18.75 4.5M18.75 4.5L15 8.25M18.75 4.5H0.75" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                  </div>                 
+
+                  
+                
+                  
+                  <div class="">
+                    <div class="px-5 border-t border-[var(--shade-light-4)] py-3"><h3 class="text-[16px] font-semibold">Products</h1></div> 
+                      
+                    <!-- Start:: Search Card Sections -->
+                    <ul class="flex flex-col">
+
+                      <li class="flex items-center px-5  w-fit border-t border-[var(--shade-light-4)] py-[15px]">
+                        <!-- Product Image -->
+                        <div class="w-[86px] h-[86px] flex items-center justify-between flex-shrink-0 overflow-hidden rounded-lg border border-[var(--shade-light-4)]">
+                          <img
+                            src="./assets/products/colour-shoe.png"
+                            alt="Product"
+                            class="object-contain"
+                          />
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="ml-[12px] flex flex-col justify-between h-[86px] ">
+                          <!-- Title -->
+                          <h3 class="text-[14px] font-[400] text-[var(--text-blue)] leading-ti">
+                            Classic Leather High-Top Sneakers
+                          </h3>
+
+                          <!-- Price Section -->
+                          <div class="flex items-center gap-1 mt-[16px]">
+                            <span class="text-[14px] font-[400] text-gray-400 line-through">
+                              $550.00
+                            </span>
+                            <span class="text-[var(--bg-blue)] font-[500] text-[14px]">
+                              $450.00
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+
+                      
+                      <li class="flex items-center px-5  w-fit border-t border-[var(--shade-light-4)] py-[15px]">
+                        <!-- Product Image -->
+                        <div class="w-[86px] h-[86px] flex items-center justify-between flex-shrink-0 overflow-hidden rounded-lg border border-[var(--shade-light-4)]">
+                          <img
+                            src="./assets/products/colour-shoe.png"
+                            alt="Product"
+                            class="object-contain"
+                          />
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="ml-[12px] flex flex-col justify-between h-[86px] ">
+                          <!-- Title -->
+                          <h3 class="text-[14px] font-[400] text-[var(--text-blue)] leading-ti">
+                            Classic Leather High-Top Sneakers
+                          </h3>
+
+                          <!-- Price Section -->
+                          <div class="flex items-center gap-1 mt-[16px]">
+                            <span class="text-[14px] font-[400] text-gray-400 line-through">
+                              $550.00
+                            </span>
+                            <span class="text-[var(--bg-blue)] font-[500] text-[14px]">
+                              $450.00
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="flex items-center px-5  w-fit border-t border-[var(--shade-light-4)] py-[15px]">
+                        <!-- Product Image -->
+                        <div class="w-[86px] h-[86px] flex items-center justify-between flex-shrink-0 overflow-hidden rounded-lg border border-[var(--shade-light-4)]">
+                          <img
+                            src="./assets/products/colour-shoe.png"
+                            alt="Product"
+                            class="object-contain"
+                          />
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="ml-[12px] flex flex-col justify-between h-[86px] ">
+                          <!-- Title -->
+                          <h3 class="text-[14px] font-[400] text-[var(--text-blue)] leading-ti">
+                            Classic Leather High-Top Sneakers
+                          </h3>
+
+                          <!-- Price Section -->
+                          <div class="flex items-center gap-1 mt-[16px]">
+                            <span class="text-[14px] font-[400] text-gray-400 line-through">
+                              $550.00
+                            </span>
+                            <span class="text-[var(--bg-blue)] font-[500] text-[14px]">
+                              $450.00
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      
+                    </ul>
+                    <!-- End:: Search Card Sections -->   
+
+                    <div class="border-t border-[var(--shade-light-4)] py-6"><h3 class="text-[16px] font-semibold uppercase text-center cursor-pointer">View All Results</h1></div>
+                    
+                   </div>
+                  </div>
+                <!-- End:: Search Popup Menu -->
               </div>
+              
 
               <!-- Start:: Search popup menu script -->
               <script>
-                function togglePopup() {
-                  const popup = document.getElementById("popupMenu");
-                  popup.classList.toggle("hidden");
-                }
+function togglePopup() {
+  const popup = document.getElementById("popupMenu");
+  popup.classList.toggle("opacity-0");
+  popup.classList.toggle("opacity-100");
+  popup.classList.toggle("scale-95");
+  popup.classList.toggle("scale-100");
+  popup.classList.toggle("pointer-events-none");
+}
+
 
                 // Optional: close when clicking outside
-                window.addEventListener("click", (e) => {
-                  const btn = document.getElementById("searchBtn");
-                  const popup = document.getElementById("popupMenu");
-                  if (!btn.contains(e.target) && !popup.contains(e.target)) {
-                    popup.classList.add("hidden");
-                  }
-                });
+window.addEventListener("click", (e) => {
+  const btn = document.getElementById("searchBtn");
+  const popup = document.getElementById("popupMenu");
+  if (!btn.contains(e.target) && !popup.contains(e.target)) {
+    popup.classList.add("opacity-0", "scale-95", "pointer-events-none");
+    popup.classList.remove("opacity-100", "scale-100");
+  }
+});
+
               </script>
 
               <!-- End:: Search popup menu script -->
