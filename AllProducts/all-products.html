@@ -58,45 +58,1639 @@
     <!-- End:: Stylesheet Links -->
 
     <link rel="stylesheet" href="all-products.css" />
+    <style>
+      .svao-check-box + label {
+        position: relative;
+        padding-left: 10px;
+        cursor: pointer;
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-right: 10px;
+        color: #241e1e;
+        line-height: 25px;
+      }
+      .svao-check-box + label::before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        outline: 2px solid #1c345442;
+        background: #fff;
+        left: -21px;
+        top: 3px;
+      }
+      .svao-check-box:checked + label::before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        outline: 2px solid var(--primary-lemon);
+        background: #fff;
+        left: -21px;
+        top: 3px;
+      }
+      .svao-check-box:checked + label::after {
+        content: "";
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        background-image: url("../assets/images/check-mark1.png");
+        left: -21px;
+        top: 3px;
+        background-size: contain;
+        color: var(--primary-lemon);
+      }
+      .svao-check-box:checked + label {
+        color: var(--primary-lemon);
+      }
+      .svao-collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+
+      .svao-collapsible-content.expanded {
+        max-height: 500px;
+
+        transition: max-height 0.5s ease-in;
+      }
+    </style>
+    <style>
+      .wrapper {
+        width: 100%;
+
+        padding-top: 10px;
+      }
+
+      .price-input .field {
+        /* width: 100%; */
+      }
+      .field input {
+        outline: none;
+
+        /* margin-left: 12px; */
+        /* border-radius: 5px; */
+        /* text-align: right; */
+        /* border: 1px solid #999; */
+        -moz-appearance: textfield;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      .slider {
+        height: 5px;
+        position: relative;
+        background: #ddd;
+        border-radius: 5px;
+      }
+      .slider .progress {
+        height: 100%;
+        left: 25%;
+        right: 25%;
+        position: absolute;
+        border-radius: 5px;
+        background: #192739f0;
+      }
+      .range-input {
+        position: relative;
+      }
+      .range-input input {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: -5px;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        height: 17px;
+        width: 17px;
+        border-radius: 50%;
+        background: #192739f0;
+        pointer-events: auto;
+        -webkit-appearance: none;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+      }
+      input[type="range"]::-moz-range-thumb {
+        height: 17px;
+        width: 17px;
+        border: none;
+        border-radius: 50%;
+        background: #192739f0;
+        pointer-events: auto;
+        -moz-appearance: none;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+      }
+    </style>
   </head>
-  <body>
-    <section class="m-40">
-      <div
-        class="group relative h-[378px] max-w-[320px] cursor-pointer overflow-hidden rounded-2xl"
-      >
-        <div class="h-full w-full overflow-hidden">
-          <img
-            class="object-contain duration-500 group-hover:scale-110"
-            src="../assets/images/pc1.png"
-            alt=""
-          />
-        </div>
-        <div
-          class="absolute bottom-0 z-30 flex w-full items-center justify-between p-6"
-        >
-          <div class="text-white">
-            <h1 class="text-[32px]">Pants</h1>
-            <p class="text-base font-light">16 items</p>
-          </div>
-          <div
-            class="rounded-full bg-white p-[15px] duration-500 group-hover:bg-[#192434]"
-          >
+  <body class="bg-[var(--bg-off-white)]">
+    <section>
+      <div class="svao-container py-[30px]">
+        <!-- Start:: Breadcrumb -->
+        <div class="flex items-center gap-2.5">
+          <span class="h-6 w-6 text-[var(--shade-dark-5)]">
             <svg
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="fill-[#192434] duration-500 group-hover:fill-white"
             >
-              <path
-                d="M18.1527 4.72208V18.6113C18.1527 19.0046 18.2864 19.3344 18.5536 19.6008C18.8208 19.8669 19.1518 20 19.5465 20C19.9415 20 20.2709 19.8669 20.5348 19.6008C20.7987 19.3344 20.9307 19.0046 20.9307 18.6113V1.38875C20.9307 0.995417 20.7976 0.665556 20.5315 0.399167C20.2651 0.133056 19.9352 0 19.5419 0H2.31941C1.92608 0 1.59622 0.133611 1.32983 0.400833C1.06372 0.667778 0.930664 0.998751 0.930664 1.39375C0.930664 1.78875 1.06372 2.11819 1.32983 2.38208C1.59622 2.64597 1.92608 2.77792 2.31941 2.77792H16.2086L0.402748 18.5833C0.134415 18.8519 0.000246048 19.176 0.000246048 19.5554C0.000246048 19.9351 0.134415 20.2593 0.402748 20.5279C0.67136 20.7963 0.995523 20.9304 1.37525 20.9304C1.75469 20.9304 2.07872 20.7963 2.34733 20.5279L18.1527 4.72208Z"
-              />
+              <mask
+                id="mask0_19210_82436"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="24"
+                height="24"
+              >
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_19210_82436)">
+                <path
+                  d="M6 19H9V14C9 13.7167 9.09583 13.4792 9.2875 13.2875C9.47917 13.0958 9.71667 13 10 13H14C14.2833 13 14.5208 13.0958 14.7125 13.2875C14.9042 13.4792 15 13.7167 15 14V19H18V10L12 5.5L6 10V19ZM4 19V10C4 9.68333 4.07083 9.38333 4.2125 9.1C4.35417 8.81667 4.55 8.58333 4.8 8.4L10.8 3.9C11.15 3.63333 11.55 3.5 12 3.5C12.45 3.5 12.85 3.63333 13.2 3.9L19.2 8.4C19.45 8.58333 19.6458 8.81667 19.7875 9.1C19.9292 9.38333 20 9.68333 20 10V19C20 19.55 19.8042 20.0208 19.4125 20.4125C19.0208 20.8042 18.55 21 18 21H14C13.7167 21 13.4792 20.9042 13.2875 20.7125C13.0958 20.5208 13 20.2833 13 20V15H11V20C11 20.2833 10.9042 20.5208 10.7125 20.7125C10.5208 20.9042 10.2833 21 10 21H6C5.45 21 4.97917 20.8042 4.5875 20.4125C4.19583 20.0208 4 19.55 4 19Z"
+                  fill="#1B2B41"
+                  fill-opacity="0.69"
+                />
+              </g>
             </svg>
+          </span>
+          <span class="text-[12px] text-[var(--shade-dark-5)] opacity-60"
+            >/</span
+          >
+          <span class="text-[16px] font-medium text-[#192739F0]">Shop</span>
+        </div>
+        <!-- End:: Breadcrumb  -->
+
+        <!-- Start:: Heading -->
+        <div>
+          <h1 class="text-center text-[64px] font-semibold text-[#192434]">
+            Shop All
+          </h1>
+          <p class="text-center text-[20px] font-normal text-[#192739F0]">
+            Discover a Place Where Fashion Meets Passion
+          </p>
+        </div>
+        <!-- End:: Heading -->
+        <!-- Start:: Collection cards -->
+        <div class="mt-[60px] grid grid-cols-5 gap-5">
+          <!-- Start:: Collection card -->
+          <div
+            class="group relative max-w-[320px] cursor-pointer overflow-hidden rounded-2xl"
+          >
+            <div class="h-full w-full overflow-hidden">
+              <img
+                class="object-contain duration-500 group-hover:scale-110"
+                src="../assets/images/pc1.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute bottom-0 z-30 flex w-full items-center justify-between p-6"
+            >
+              <div class="text-white">
+                <h1 class="text-[32px]">Pants</h1>
+                <p class="text-base font-light">16 items</p>
+              </div>
+              <div
+                class="rounded-full bg-white p-[15px] duration-500 group-hover:bg-[#192434]"
+              >
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-[#192434] duration-500 group-hover:fill-white"
+                >
+                  <path
+                    d="M18.1527 4.72208V18.6113C18.1527 19.0046 18.2864 19.3344 18.5536 19.6008C18.8208 19.8669 19.1518 20 19.5465 20C19.9415 20 20.2709 19.8669 20.5348 19.6008C20.7987 19.3344 20.9307 19.0046 20.9307 18.6113V1.38875C20.9307 0.995417 20.7976 0.665556 20.5315 0.399167C20.2651 0.133056 19.9352 0 19.5419 0H2.31941C1.92608 0 1.59622 0.133611 1.32983 0.400833C1.06372 0.667778 0.930664 0.998751 0.930664 1.39375C0.930664 1.78875 1.06372 2.11819 1.32983 2.38208C1.59622 2.64597 1.92608 2.77792 2.31941 2.77792H16.2086L0.402748 18.5833C0.134415 18.8519 0.000246048 19.176 0.000246048 19.5554C0.000246048 19.9351 0.134415 20.2593 0.402748 20.5279C0.67136 20.7963 0.995523 20.9304 1.37525 20.9304C1.75469 20.9304 2.07872 20.7963 2.34733 20.5279L18.1527 4.72208Z"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
+          <!-- End:: Collection card -->
+          <!-- Start:: Collection card -->
+          <div
+            class="group relative max-w-[320px] cursor-pointer overflow-hidden rounded-2xl"
+          >
+            <div class="h-full w-full overflow-hidden">
+              <img
+                class="object-contain duration-500 group-hover:scale-110"
+                src="../assets/images/pc1.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute bottom-0 z-30 flex w-full items-center justify-between p-6"
+            >
+              <div class="text-white">
+                <h1 class="text-[32px]">Pants</h1>
+                <p class="text-base font-light">16 items</p>
+              </div>
+              <div
+                class="rounded-full bg-white p-[15px] duration-500 group-hover:bg-[#192434]"
+              >
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-[#192434] duration-500 group-hover:fill-white"
+                >
+                  <path
+                    d="M18.1527 4.72208V18.6113C18.1527 19.0046 18.2864 19.3344 18.5536 19.6008C18.8208 19.8669 19.1518 20 19.5465 20C19.9415 20 20.2709 19.8669 20.5348 19.6008C20.7987 19.3344 20.9307 19.0046 20.9307 18.6113V1.38875C20.9307 0.995417 20.7976 0.665556 20.5315 0.399167C20.2651 0.133056 19.9352 0 19.5419 0H2.31941C1.92608 0 1.59622 0.133611 1.32983 0.400833C1.06372 0.667778 0.930664 0.998751 0.930664 1.39375C0.930664 1.78875 1.06372 2.11819 1.32983 2.38208C1.59622 2.64597 1.92608 2.77792 2.31941 2.77792H16.2086L0.402748 18.5833C0.134415 18.8519 0.000246048 19.176 0.000246048 19.5554C0.000246048 19.9351 0.134415 20.2593 0.402748 20.5279C0.67136 20.7963 0.995523 20.9304 1.37525 20.9304C1.75469 20.9304 2.07872 20.7963 2.34733 20.5279L18.1527 4.72208Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- End:: Collection card -->
+          <!-- Start:: Collection card -->
+          <div
+            class="group relative max-w-[320px] cursor-pointer overflow-hidden rounded-2xl"
+          >
+            <div class="h-full w-full overflow-hidden">
+              <img
+                class="object-contain duration-500 group-hover:scale-110"
+                src="../assets/images/pc1.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute bottom-0 z-30 flex w-full items-center justify-between p-6"
+            >
+              <div class="text-white">
+                <h1 class="text-[32px]">Pants</h1>
+                <p class="text-base font-light">16 items</p>
+              </div>
+              <div
+                class="rounded-full bg-white p-[15px] duration-500 group-hover:bg-[#192434]"
+              >
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-[#192434] duration-500 group-hover:fill-white"
+                >
+                  <path
+                    d="M18.1527 4.72208V18.6113C18.1527 19.0046 18.2864 19.3344 18.5536 19.6008C18.8208 19.8669 19.1518 20 19.5465 20C19.9415 20 20.2709 19.8669 20.5348 19.6008C20.7987 19.3344 20.9307 19.0046 20.9307 18.6113V1.38875C20.9307 0.995417 20.7976 0.665556 20.5315 0.399167C20.2651 0.133056 19.9352 0 19.5419 0H2.31941C1.92608 0 1.59622 0.133611 1.32983 0.400833C1.06372 0.667778 0.930664 0.998751 0.930664 1.39375C0.930664 1.78875 1.06372 2.11819 1.32983 2.38208C1.59622 2.64597 1.92608 2.77792 2.31941 2.77792H16.2086L0.402748 18.5833C0.134415 18.8519 0.000246048 19.176 0.000246048 19.5554C0.000246048 19.9351 0.134415 20.2593 0.402748 20.5279C0.67136 20.7963 0.995523 20.9304 1.37525 20.9304C1.75469 20.9304 2.07872 20.7963 2.34733 20.5279L18.1527 4.72208Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- End:: Collection card -->
+          <!-- Start:: Collection card -->
+          <div
+            class="group relative max-w-[320px] cursor-pointer overflow-hidden rounded-2xl"
+          >
+            <div class="h-full w-full overflow-hidden">
+              <img
+                class="object-contain duration-500 group-hover:scale-110"
+                src="../assets/images/pc1.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute bottom-0 z-30 flex w-full items-center justify-between p-6"
+            >
+              <div class="text-white">
+                <h1 class="text-[32px]">Pants</h1>
+                <p class="text-base font-light">16 items</p>
+              </div>
+              <div
+                class="rounded-full bg-white p-[15px] duration-500 group-hover:bg-[#192434]"
+              >
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-[#192434] duration-500 group-hover:fill-white"
+                >
+                  <path
+                    d="M18.1527 4.72208V18.6113C18.1527 19.0046 18.2864 19.3344 18.5536 19.6008C18.8208 19.8669 19.1518 20 19.5465 20C19.9415 20 20.2709 19.8669 20.5348 19.6008C20.7987 19.3344 20.9307 19.0046 20.9307 18.6113V1.38875C20.9307 0.995417 20.7976 0.665556 20.5315 0.399167C20.2651 0.133056 19.9352 0 19.5419 0H2.31941C1.92608 0 1.59622 0.133611 1.32983 0.400833C1.06372 0.667778 0.930664 0.998751 0.930664 1.39375C0.930664 1.78875 1.06372 2.11819 1.32983 2.38208C1.59622 2.64597 1.92608 2.77792 2.31941 2.77792H16.2086L0.402748 18.5833C0.134415 18.8519 0.000246048 19.176 0.000246048 19.5554C0.000246048 19.9351 0.134415 20.2593 0.402748 20.5279C0.67136 20.7963 0.995523 20.9304 1.37525 20.9304C1.75469 20.9304 2.07872 20.7963 2.34733 20.5279L18.1527 4.72208Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- End:: Collection card -->
+          <!-- Start:: Collection card -->
+          <div
+            class="group relative max-w-[320px] cursor-pointer overflow-hidden rounded-2xl"
+          >
+            <div class="h-full w-full overflow-hidden">
+              <img
+                class="object-contain duration-500 group-hover:scale-110"
+                src="../assets/images/pc1.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="absolute bottom-0 z-30 flex w-full items-center justify-between p-6"
+            >
+              <div class="text-white">
+                <h1 class="text-[32px]">Pants</h1>
+                <p class="text-base font-light">16 items</p>
+              </div>
+              <div
+                class="rounded-full bg-white p-[15px] duration-500 group-hover:bg-[#192434]"
+              >
+                <svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fill-[#192434] duration-500 group-hover:fill-white"
+                >
+                  <path
+                    d="M18.1527 4.72208V18.6113C18.1527 19.0046 18.2864 19.3344 18.5536 19.6008C18.8208 19.8669 19.1518 20 19.5465 20C19.9415 20 20.2709 19.8669 20.5348 19.6008C20.7987 19.3344 20.9307 19.0046 20.9307 18.6113V1.38875C20.9307 0.995417 20.7976 0.665556 20.5315 0.399167C20.2651 0.133056 19.9352 0 19.5419 0H2.31941C1.92608 0 1.59622 0.133611 1.32983 0.400833C1.06372 0.667778 0.930664 0.998751 0.930664 1.39375C0.930664 1.78875 1.06372 2.11819 1.32983 2.38208C1.59622 2.64597 1.92608 2.77792 2.31941 2.77792H16.2086L0.402748 18.5833C0.134415 18.8519 0.000246048 19.176 0.000246048 19.5554C0.000246048 19.9351 0.134415 20.2593 0.402748 20.5279C0.67136 20.7963 0.995523 20.9304 1.37525 20.9304C1.75469 20.9304 2.07872 20.7963 2.34733 20.5279L18.1527 4.72208Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- End:: Collection card -->
+        </div>
+        <!-- End:: Collection cards -->
+        <hr class="mt-[60px] mb-[50px] border-2 border-[#DFE1E6]" />
+
+        <div class="grid grid-cols-[327px_1fr] gap-[38px]">
+          <!-- Start:: Left side -->
+          <div class="hidden h-fit rounded-[16px] bg-white p-[22px] lg:block">
+            <!-- Start:: Collection Filter -->
+            <div class="mb-6">
+              <button
+                class="flex w-full items-center justify-between pb-2 text-[20px] font-medium text-[var(--bg-blue)] focus:outline-none"
+                onclick="toggleCollapse('notesContent', 'notesArrow')"
+              >
+                Product Type
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_19123_35007"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_19123_35007)">
+                    <path
+                      d="M6 13C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H6Z"
+                      fill="#192739"
+                      fill-opacity="0.94"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div id="notesContent" class="svao-collapsible-content expanded">
+                <!-- Start:: Category search -->
+                <div
+                  class="mt-[24px] flex items-center rounded-[8px] border border-gray-400 px-2 py-2"
+                >
+                  <input
+                    class="w-full resize-y rounded-md text-[14px] font-normal placeholder:text-[14px] placeholder:text-[var(--shade-dark-1)] focus:border-[var(--bg-blue)] focus:outline-none"
+                    placeholder="Find  a category"
+                  />
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                      stroke="#1C304A"
+                      stroke-opacity="0.52"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.5 17.5L13.875 13.875"
+                      stroke="#1C304A"
+                      stroke-opacity="0.52"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <!-- End:: Category search -->
+
+                <div class="svao-scrollbar-y mt-4 h-[264px] overflow-auto">
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="accessories"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">Accessories </span
+                      ><span class="text-[14px]">21</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Bags"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="Bags"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">Bags </span
+                      ><span class="text-[14px]">49</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Goods"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="Goods"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">Goods </span
+                      ><span class="text-[14px]">46</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories1"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="accessories1"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">Accessories </span
+                      ><span class="text-[14px]">21</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories3"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label for="accessories3" class="text-base font-normal">
+                      <span class="">Accessories </span
+                      ><span class="text-[14px]">21</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories2"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label for="accessories2" class="text-base font-normal">
+                      <span class="">Accessories </span
+                      ><span class="text-[14px]">21</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories2"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label for="accessories2" class="text-base font-normal">
+                      <span class="">Accessories </span
+                      ><span class="text-[14px]">21</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories2"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label for="accessories2" class="text-base font-normal">
+                      <span class="">Accessories </span
+                      ><span class="text-[14px]">21</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                </div>
+
+                <div
+                  class="mt-2.5 flex items-center text-[14px] font-medium text-[#1c304ab3]"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19123_35051"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19123_35051)">
+                      <path
+                        d="M11 13H6C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H11V6C11 5.71667 11.0958 5.47917 11.2875 5.2875C11.4792 5.09583 11.7167 5 12 5C12.2833 5 12.5208 5.09583 12.7125 5.2875C12.9042 5.47917 13 5.71667 13 6V11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H13V18C13 18.2833 12.9042 18.5208 12.7125 18.7125C12.5208 18.9042 12.2833 19 12 19C11.7167 19 11.4792 18.9042 11.2875 18.7125C11.0958 18.5208 11 18.2833 11 18V13Z"
+                        fill="#1C304A"
+                        fill-opacity="0.52"
+                      />
+                    </g>
+                  </svg>
+                  <span> 13 More </span>
+                </div>
+              </div>
+              <hr class="mt-4 border-b border-gray-200" />
+            </div>
+            <!-- End:: Collection Filter -->
+            <!-- Start:: Size Filter -->
+            <div class="mb-6">
+              <button
+                class="flex w-full items-center justify-between pb-2 text-[20px] font-medium text-[var(--bg-blue)] focus:outline-none"
+                onclick="toggleCollapse('notesContent1', 'notesArrow')"
+              >
+                Size
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_19123_35007"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_19123_35007)">
+                    <path
+                      d="M6 13C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H6Z"
+                      fill="#192739"
+                      fill-opacity="0.94"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div id="notesContent1" class="svao-collapsible-content">
+                <!-- Start:: Category search -->
+                <div
+                  class="mt-[24px] flex items-center rounded-[8px] border border-gray-400 px-2 py-2"
+                >
+                  <input
+                    class="w-full resize-y rounded-md text-[14px] font-normal placeholder:text-[14px] placeholder:text-[var(--shade-dark-1)] focus:border-[var(--bg-blue)] focus:outline-none"
+                    placeholder="Find  a category"
+                  />
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                      stroke="#1C304A"
+                      stroke-opacity="0.52"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.5 17.5L13.875 13.875"
+                      stroke="#1C304A"
+                      stroke-opacity="0.52"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <!-- End:: Category search -->
+
+                <div class="svao-scrollbar-y mt-4 max-h-[264px] overflow-auto">
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="accessories"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">S </span
+                      ><span class="text-[14px]">86</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Bags"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="Bags"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">M </span
+                      ><span class="text-[14px]">49</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Goods"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="Goods"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">Goods </span
+                      ><span class="text-[14px]">46</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories1"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="accessories1"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">Accessories </span
+                      ><span class="text-[14px]">21</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories3"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label for="accessories3" class="text-base font-normal">
+                      <span class="">Accessories </span
+                      ><span class="text-[14px]">21</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                </div>
+
+                <div
+                  class="mt-2.5 flex items-center text-[14px] font-medium text-[#1c304ab3]"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19123_35051"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19123_35051)">
+                      <path
+                        d="M11 13H6C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H11V6C11 5.71667 11.0958 5.47917 11.2875 5.2875C11.4792 5.09583 11.7167 5 12 5C12.2833 5 12.5208 5.09583 12.7125 5.2875C12.9042 5.47917 13 5.71667 13 6V11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H13V18C13 18.2833 12.9042 18.5208 12.7125 18.7125C12.5208 18.9042 12.2833 19 12 19C11.7167 19 11.4792 18.9042 11.2875 18.7125C11.0958 18.5208 11 18.2833 11 18V13Z"
+                        fill="#1C304A"
+                        fill-opacity="0.52"
+                      />
+                    </g>
+                  </svg>
+                  <span> 13 More </span>
+                </div>
+              </div>
+              <hr class="mt-4 border-b border-gray-200" />
+            </div>
+            <!-- End:: Size Filter -->
+            <!-- Start:: Status Filter -->
+            <div class="mb-6">
+              <button
+                class="flex w-full items-center justify-between pb-2 text-[20px] font-medium text-[var(--bg-blue)] focus:outline-none"
+                onclick="toggleCollapse('notesContent2', 'notesArrow')"
+              >
+                Product Status
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_19123_35007"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_19123_35007)">
+                    <path
+                      d="M6 13C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H6Z"
+                      fill="#192739"
+                      fill-opacity="0.94"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div id="notesContent2" class="svao-collapsible-content">
+                <div class="svao-scrollbar-y mt-4 max-h-[264px] overflow-auto">
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="accessories"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">In Stock </span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Bags"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="Bags"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">Out of Stock </span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Goods"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="Goods"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <span class="">On Sale </span
+                      ><span class="text-[14px]">46</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                </div>
+              </div>
+              <hr class="mt-4 border-b border-gray-200" />
+            </div>
+            <!-- End:: Status Filter -->
+            <!-- Start:: Rating Filter -->
+            <div class="mb-6">
+              <button
+                class="flex w-full items-center justify-between pb-2 text-[20px] font-medium text-[var(--bg-blue)] focus:outline-none"
+                onclick="toggleCollapse('notesContent3', 'notesArrow')"
+              >
+                Average rating
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_19123_35007"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_19123_35007)">
+                    <path
+                      d="M6 13C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H6Z"
+                      fill="#192739"
+                      fill-opacity="0.94"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div id="notesContent3" class="svao-collapsible-content expanded">
+                <div class="svao-scrollbar-y mt-4 max-h-[264px] overflow-auto">
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="accessories"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <div class="flex items-center gap-1">
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                            />
+                          </svg>
+                        </span>
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                            />
+                          </svg>
+                        </span>
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                            />
+                          </svg>
+                        </span>
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                            />
+                          </svg>
+                        </span>
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                      <span>5</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex items-center gap-2.5 first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories"
+                      class="svao-check-box opacity-0"
+                    />
+                    <label
+                      for="accessories"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <div class="flex items-center gap-1">
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                            />
+                          </svg>
+                        </span>
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                            />
+                          </svg>
+                        </span>
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                            />
+                          </svg>
+                        </span>
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                              class="fill-[#1C345442]"
+                            />
+                          </svg>
+                        </span>
+                        <span class=""
+                          ><svg
+                            width="18"
+                            height="17"
+                            viewBox="0 0 18 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.56154 13.7L4.41154 16.2C4.22821 16.3167 4.03654 16.3667 3.83654 16.35C3.63654 16.3333 3.46154 16.2667 3.31154 16.15C3.16154 16.0333 3.04487 15.8875 2.96154 15.7125C2.87821 15.5375 2.86154 15.3417 2.91154 15.125L4.01154 10.4L0.336538 7.225C0.169872 7.075 0.0657051 6.90417 0.0240385 6.7125C-0.0176282 6.52083 -0.0051282 6.33333 0.0615385 6.15C0.128205 5.96667 0.228205 5.81667 0.361538 5.7C0.494872 5.58333 0.678205 5.50833 0.911539 5.475L5.76154 5.05L7.63654 0.6C7.71987 0.4 7.84904 0.25 8.02404 0.15C8.19904 0.05 8.37821 0 8.56154 0C8.74487 0 8.92404 0.05 9.09904 0.15C9.27404 0.25 9.40321 0.4 9.48654 0.6L11.3615 5.05L16.2115 5.475C16.4449 5.50833 16.6282 5.58333 16.7615 5.7C16.8949 5.81667 16.9949 5.96667 17.0615 6.15C17.1282 6.33333 17.1407 6.52083 17.099 6.7125C17.0574 6.90417 16.9532 7.075 16.7865 7.225L13.1115 10.4L14.2115 15.125C14.2615 15.3417 14.2449 15.5375 14.1615 15.7125C14.0782 15.8875 13.9615 16.0333 13.8115 16.15C13.6615 16.2667 13.4865 16.3333 13.2865 16.35C13.0865 16.3667 12.8949 16.3167 12.7115 16.2L8.56154 13.7Z"
+                              fill="#FFCC00"
+                              class="fill-[#1C345442]"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                      <span>3 & Up</span>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                </div>
+              </div>
+              <hr class="mt-4 border-b border-gray-200" />
+            </div>
+            <!-- End:: Rating Filter -->
+            <!-- Start:: Price Filter -->
+            <div class="mb-6">
+              <button
+                class="flex w-full items-center justify-between pb-2 text-[20px] font-medium text-[var(--bg-blue)] focus:outline-none"
+                onclick="toggleCollapse('notesContent33', 'notesArrow')"
+              >
+                Price
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_19123_35007"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_19123_35007)">
+                    <path
+                      d="M6 13C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H6Z"
+                      fill="#192739"
+                      fill-opacity="0.94"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div
+                id="notesContent33"
+                class="svao-collapsible-content expanded"
+              >
+                <div class="svao-scrollbar-y mt-4 max-h-[264px] overflow-auto">
+                  <div class="wrapper">
+                    <div class="slider">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                      <input
+                        type="range"
+                        class="range-min"
+                        min="0"
+                        max="10000"
+                        value="2500"
+                        step="100"
+                      />
+                      <input
+                        type="range"
+                        class="range-max"
+                        min="0"
+                        max="10000"
+                        value="7500"
+                        step="100"
+                      />
+                    </div>
+
+                    <div class="price-input mt-6 flex items-center gap-[13px]">
+                      <div
+                        class="field flex items-center justify-between rounded-[8px] border border-gray-200 px-2 py-2.5"
+                      >
+                        <span
+                          ><svg
+                            width="7"
+                            height="13"
+                            viewBox="0 0 7 13"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.53816 8.35725C6.53816 8.80525 6.42616 9.23458 6.20216 9.64525C5.97816 10.0466 5.64682 10.3826 5.20816 10.6532C4.77882 10.9239 4.26082 11.0779 3.65416 11.1153V12.2493H2.89816V11.1153C2.04882 11.0406 1.35816 10.7699 0.826156 10.3032C0.294156 9.82725 0.0234896 9.22525 0.0141563 8.49725H1.37216C1.40949 8.88925 1.55416 9.22992 1.80616 9.51925C2.06749 9.80858 2.43149 9.99058 2.89816 10.0652V6.56525C2.27282 6.40658 1.76882 6.24325 1.38616 6.07525C1.00349 5.90725 0.676823 5.64592 0.406156 5.29125C0.13549 4.93658 0.000156283 4.46058 0.000156283 3.86325C0.000156283 3.10725 0.26149 2.48192 0.784156 1.98725C1.31616 1.49258 2.02082 1.21725 2.89816 1.16125V-0.000750661H3.65416V1.16125C4.44749 1.22658 5.08682 1.48325 5.57216 1.93125C6.05749 2.36992 6.33749 2.94392 6.41216 3.65325H5.05416C5.00749 3.32658 4.86282 3.03258 4.62016 2.77125C4.37749 2.50058 4.05549 2.32325 3.65416 2.23925V5.65525C4.27016 5.81392 4.76949 5.97725 5.15216 6.14525C5.54416 6.30392 5.87082 6.56058 6.13216 6.91525C6.40282 7.26992 6.53816 7.75058 6.53816 8.35725ZM1.30216 3.79325C1.30216 4.25058 1.43749 4.60058 1.70816 4.84325C1.97882 5.08592 2.37549 5.28658 2.89816 5.44525V2.21125C2.41282 2.25792 2.02549 2.41658 1.73616 2.68725C1.44682 2.94858 1.30216 3.31725 1.30216 3.79325ZM3.65416 10.0792C4.15816 10.0232 4.55016 9.84125 4.83016 9.53325C5.11949 9.22525 5.26416 8.85658 5.26416 8.42725C5.26416 7.96992 5.12416 7.61992 4.84416 7.37725C4.56416 7.12525 4.16749 6.92458 3.65416 6.77525V10.0792Z"
+                              fill="#192739"
+                              fill-opacity="0.94"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          type="number"
+                          class="input-min w-full pl-2 text-right text-[14px] text-[#192739F0]"
+                          value="2500"
+                        />
+                      </div>
+                      <div class="text-[14px] font-medium text-[#1B2B41B0]">
+                        To
+                      </div>
+                      <div
+                        class="field flex items-center justify-between rounded-[8px] border border-gray-200 px-2 py-2.5"
+                      >
+                        <span
+                          ><svg
+                            width="7"
+                            height="13"
+                            viewBox="0 0 7 13"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.53816 8.35725C6.53816 8.80525 6.42616 9.23458 6.20216 9.64525C5.97816 10.0466 5.64682 10.3826 5.20816 10.6532C4.77882 10.9239 4.26082 11.0779 3.65416 11.1153V12.2493H2.89816V11.1153C2.04882 11.0406 1.35816 10.7699 0.826156 10.3032C0.294156 9.82725 0.0234896 9.22525 0.0141563 8.49725H1.37216C1.40949 8.88925 1.55416 9.22992 1.80616 9.51925C2.06749 9.80858 2.43149 9.99058 2.89816 10.0652V6.56525C2.27282 6.40658 1.76882 6.24325 1.38616 6.07525C1.00349 5.90725 0.676823 5.64592 0.406156 5.29125C0.13549 4.93658 0.000156283 4.46058 0.000156283 3.86325C0.000156283 3.10725 0.26149 2.48192 0.784156 1.98725C1.31616 1.49258 2.02082 1.21725 2.89816 1.16125V-0.000750661H3.65416V1.16125C4.44749 1.22658 5.08682 1.48325 5.57216 1.93125C6.05749 2.36992 6.33749 2.94392 6.41216 3.65325H5.05416C5.00749 3.32658 4.86282 3.03258 4.62016 2.77125C4.37749 2.50058 4.05549 2.32325 3.65416 2.23925V5.65525C4.27016 5.81392 4.76949 5.97725 5.15216 6.14525C5.54416 6.30392 5.87082 6.56058 6.13216 6.91525C6.40282 7.26992 6.53816 7.75058 6.53816 8.35725ZM1.30216 3.79325C1.30216 4.25058 1.43749 4.60058 1.70816 4.84325C1.97882 5.08592 2.37549 5.28658 2.89816 5.44525V2.21125C2.41282 2.25792 2.02549 2.41658 1.73616 2.68725C1.44682 2.94858 1.30216 3.31725 1.30216 3.79325ZM3.65416 10.0792C4.15816 10.0232 4.55016 9.84125 4.83016 9.53325C5.11949 9.22525 5.26416 8.85658 5.26416 8.42725C5.26416 7.96992 5.12416 7.61992 4.84416 7.37725C4.56416 7.12525 4.16749 6.92458 3.65416 6.77525V10.0792Z"
+                              fill="#192739"
+                              fill-opacity="0.94"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          type="number"
+                          class="input-max w-full pl-2 text-right text-[14px] text-[#192739F0]"
+                          value="7500"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-4 border-b border-gray-200" />
+            </div>
+            <!-- End:: Price Filter -->
+            <!-- Start:: Brand Filter -->
+            <div class="mb-6">
+              <button
+                class="flex w-full items-center justify-between pb-2 text-[20px] font-medium text-[var(--bg-blue)] focus:outline-none"
+                onclick="toggleCollapse('notesContent12', 'notesArrow')"
+              >
+                Brand
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_19123_35007"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_19123_35007)">
+                    <path
+                      d="M6 13C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H6Z"
+                      fill="#192739"
+                      fill-opacity="0.94"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div
+                id="notesContent12"
+                class="svao-collapsible-content expanded"
+              >
+                <!-- Start:: Category search -->
+                <div
+                  class="mt-[24px] flex items-center rounded-[8px] border border-gray-400 px-2 py-2"
+                >
+                  <input
+                    class="w-full resize-y rounded-md text-[14px] font-normal placeholder:text-[14px] placeholder:text-[var(--shade-dark-1)] focus:border-[var(--bg-blue)] focus:outline-none"
+                    placeholder="Find  a category"
+                  />
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                      stroke="#1C304A"
+                      stroke-opacity="0.52"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.5 17.5L13.875 13.875"
+                      stroke="#1C304A"
+                      stroke-opacity="0.52"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <!-- End:: Category search -->
+
+                <div
+                  class="svao-scrollbar-y mt-4 grid max-h-[264px] grid-cols-2 gap-y-5 overflow-auto"
+                >
+                  <!-- Start:: Check box -->
+                  <div class="mt-5 flex cursor-pointer items-center first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Partner4"
+                      class="opacity-0"
+                    />
+                    <label
+                      for="Partner4"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <div class="-ml-5">
+                        <img src="../assets/images/Partner3.png" alt="" />
+                      </div>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div
+                    class="flex cursor-pointer items-center justify-end first:mt-0"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="accessories"
+                      class="opacity-0"
+                    />
+                    <label
+                      for="accessories"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <div class="-ml-5">
+                        <img src="../assets/images/Partner1.png" alt="" />
+                      </div>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="flex cursor-pointer items-center first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Partner2"
+                      class="opacity-0"
+                    />
+                    <label
+                      for="Partner2"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <div class="-ml-5">
+                        <img src="../assets/images/Partner2.png" alt="" />
+                      </div>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div
+                    class="flex cursor-pointer items-center justify-end first:mt-0"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Partner3"
+                      class="opacity-0"
+                    />
+                    <label
+                      for="Partner3"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <div class="-ml-5">
+                        <img src="../assets/images/Partner3.png" alt="" />
+                      </div>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                  <!-- Start:: Check box -->
+                  <div class="flex cursor-pointer items-center first:mt-0">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="Partner2"
+                      class="opacity-0"
+                    />
+                    <label
+                      for="Partner2"
+                      class="text-base font-normal text-[var(--bg-blue)]"
+                    >
+                      <div class="-ml-5">
+                        <img src="../assets/images/Partner2.png" alt="" />
+                      </div>
+                    </label>
+                  </div>
+                  <!-- End:: Check box -->
+                </div>
+
+                <div
+                  class="mt-2.5 flex items-center text-[14px] font-medium text-[#1c304ab3]"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19123_35051"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19123_35051)">
+                      <path
+                        d="M11 13H6C5.71667 13 5.47917 12.9042 5.2875 12.7125C5.09583 12.5208 5 12.2833 5 12C5 11.7167 5.09583 11.4792 5.2875 11.2875C5.47917 11.0958 5.71667 11 6 11H11V6C11 5.71667 11.0958 5.47917 11.2875 5.2875C11.4792 5.09583 11.7167 5 12 5C12.2833 5 12.5208 5.09583 12.7125 5.2875C12.9042 5.47917 13 5.71667 13 6V11H18C18.2833 11 18.5208 11.0958 18.7125 11.2875C18.9042 11.4792 19 11.7167 19 12C19 12.2833 18.9042 12.5208 18.7125 12.7125C18.5208 12.9042 18.2833 13 18 13H13V18C13 18.2833 12.9042 18.5208 12.7125 18.7125C12.5208 18.9042 12.2833 19 12 19C11.7167 19 11.4792 18.9042 11.2875 18.7125C11.0958 18.5208 11 18.2833 11 18V13Z"
+                        fill="#1C304A"
+                        fill-opacity="0.52"
+                      />
+                    </g>
+                  </svg>
+                  <span> 13 More </span>
+                </div>
+              </div>
+              <hr class="mt-4 border-b border-gray-200" />
+            </div>
+            <!-- End:: Collection Filter -->
+          </div>
+          <!-- End:: Left side -->
+          <!-- Start:: Right side -->
+          <div class="">
+            <div></div>
+            <div
+              class="grid grid-cols-2 gap-y-[50px] xl:gap-x-[20px] 2xl:gap-x-[57px]"
+            >
+              <!-- Start:: Horizontal card -->
+
+              <!-- End:: Horizontal card -->
+            </div>
+          </div>
+          <!-- End:: Right side -->
         </div>
       </div>
     </section>
+
+    <!-- Start:: Horizontal card -->
+    <section class="mt-96">
+      <div
+        class="flex max-w-[630px] items-center gap-[28px] rounded-[32px] bg-white p-5"
+      >
+        <div class="w-1/2 overflow-hidden rounded-[28px]">
+          <img class="object-contain" src="../assets/images/pc1.png" alt="" />
+        </div>
+        <div class="w-1/2">
+          <h1 class="text-[24px] font-medium text-[var(--shade-dark-5)]">
+            White comfort Hoodie
+          </h1>
+          <div class="mb-3 text-base font-normal text-[#1B2B41B0]">
+            <span>Menswear, Hoodie</span>
+          </div>
+          <div class="mb-[34px]">
+            <span class="text-[24px] font-medium text-[#192739F0]">$60.00</span>
+            <s class="text-base font-normal text-[#1B2B41B0]">$72.00</s>
+          </div>
+          <div class="mb-4">
+            <span
+              class="rounded-[4px] border border-[#8993A4] px-[25px] py-[5px] text-[20px] font-normal text-[#192434]"
+              >S</span
+            >
+            <span
+              class="rounded-[4px] border border-[#8993A4] px-[25px] py-[5px] text-[20px] font-normal text-[#192434]"
+              >M</span
+            >
+            <span
+              class="rounded-[4px] border border-[#8993A4] px-[25px] py-[5px] text-[20px] font-normal text-[#192434]"
+              >XL</span
+            >
+          </div>
+          <div class="mb-[32px]">
+            <div class="mb-2 text-base">
+              <span class="font-semibold text-[#192739F0]">Color</span>
+              <span class="font-normal text-[#1B2B41B0]">| Daisy White</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div
+                class="h-[26px] w-[26px] rounded-full bg-[#EEB1A4] hover:border hover:border-[var(--shade-dark-4)]"
+              ></div>
+              <div
+                class="h-[26px] w-[26px] rounded-full bg-[#EEB1A4] hover:border hover:border-[var(--shade-dark-4)]"
+              ></div>
+              <div
+                class="h-[26px] w-[26px] rounded-full bg-[#EEB1A4] hover:border hover:border-[var(--shade-dark-4)]"
+              ></div>
+              <div
+                class="h-[26px] w-[26px] rounded-full bg-[#EEB1A4] hover:border hover:border-[var(--shade-dark-4)]"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Start:: Anchor tag -->
+          <a
+            href="#"
+            class="group relative flex w-full cursor-pointer items-center justify-center gap-5 overflow-hidden rounded-full bg-[var(--bg-blue)] p-3 text-lg font-semibold text-white transition-colors duration-450 ease-in-out hover:bg-transparent"
+          >
+            <span
+              class="absolute inset-0 h-full w-full -translate-x-full transform rounded-r-4xl bg-[var(--primary-lemon)] transition-transform duration-230 ease-in-out group-hover:translate-x-0"
+            ></span>
+            <span
+              class="relative z-10 text-[16px] font-semibold transition-colors duration-230 group-hover:text-[var(--bg-blue)]"
+              >SElect options</span
+            >
+            <!-- <span class="relative z-10">
+                 <svg
+                   width="18"
+                   height="24"
+                   viewBox="0 0 27 26"
+                   fill="none"
+                   class="fill-white transition-colors duration-230"
+                   xmlns="http://www.w3.org/2000/svg"
+                 >
+                   <path
+                     d="M21.9383 14.3882H1.88739C1.48804 14.3882 1.156 14.2563 0.891255 13.9924C0.626512 13.7285 0.494141 13.3975 0.494141 12.9995C0.494141 12.6014 0.626512 12.2704 0.891255 12.0066C1.156 11.7427 1.48804 11.6107 1.88739 11.6107H21.9383L12.8812 2.5828C12.6025 2.30502 12.4655 1.98099 12.4703 1.61072C12.475 1.24016 12.6167 0.915996 12.8954 0.638218C13.1741 0.369885 13.4991 0.233356 13.8706 0.228634C14.2421 0.223912 14.5672 0.36044 14.8459 0.638218L26.2719 12.0274C26.4204 12.1754 26.5249 12.3282 26.5854 12.4857C26.6456 12.6429 26.6757 12.8142 26.6757 12.9995C26.6757 13.1847 26.6456 13.356 26.5854 13.5132C26.5249 13.6707 26.4204 13.8235 26.2719 13.9715L14.8459 25.3607C14.5767 25.6291 14.2539 25.7632 13.8777 25.7632C13.5015 25.7632 13.1741 25.6291 12.8954 25.3607C12.6167 25.0829 12.4774 24.7566 12.4774 24.3816C12.4774 24.0066 12.6167 23.6802 12.8954 23.4024L21.9383 14.3882Z"
+                   />
+                 </svg>
+               </span> -->
+          </a>
+          <!-- End:: Anchor tag -->
+        </div>
+      </div>
+    </section>
+    <!-- End:: Horizontal card -->
+    <div
+      class="flex max-w-[630px] items-center gap-[28px] rounded-[32px] bg-white p-5"
+    >
+      <div class="w-1/2 overflow-hidden rounded-[28px]">
+        <img class="object-contain" src="../assets/images/pc1.png" alt="" />
+      </div>
+      <div class="flex h-full w-1/2 flex-col justify-center">
+        <h1
+          class="line-clamp-2 text-[18px] font-medium text-[var(--shade-dark-5)]"
+        >
+          White comfort Hoodie asdsa dasfdas sdaf sadgsa asdfsdf sad sagd asgagf
+        </h1>
+        <div
+          class="mb-3 line-clamp-1 text-base font-normal text-[#1B2B41B0] 2xl:mb-2"
+        >
+          <span>Menswear, Hoodie</span>
+        </div>
+        <div class="mb-[10px]">
+          <span class="text-[18px] font-medium text-[#192739F0]">$60.00</span>
+          <s class="text-base font-normal text-[#1B2B41B0]">$72.00</s>
+        </div>
+        <div class="svao-scrollbar-x flex items-center gap-1 pr-1 pb-1">
+          <span
+            class="rounded-[4px] border border-[#8993A4] px-[6px] py-[3px] text-[14px] font-normal text-[#192434]"
+            >S</span
+          >
+          <span
+            class="rounded-[4px] border border-[#8993A4] px-[6px] py-[3px] text-[14px] font-normal text-[#192434]"
+            >M</span
+          >
+          <span
+            class="rounded-[4px] border border-[#8993A4] px-[6px] py-[3px] text-[14px] font-normal text-[#192434]"
+            >XL</span
+          >
+        </div>
+        <div class="mb-[14px]">
+          <div class="mb-2 text-base">
+            <span class="font-semibold text-[#192739F0]">Color</span>
+            <span class="font-normal text-[#1B2B41B0]">| Daisy White</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div
+              class="h-[20px] w-[20px] rounded-full bg-[#EEB1A4] hover:border hover:border-[var(--shade-dark-4)]"
+            ></div>
+            <div
+              class="h-[20px] w-[20px] rounded-full bg-[#EEB1A4] hover:border hover:border-[var(--shade-dark-4)]"
+            ></div>
+            <div
+              class="h-[20px] w-[20px] rounded-full bg-[#EEB1A4] hover:border hover:border-[var(--shade-dark-4)]"
+            ></div>
+            <div
+              class="h-[20px] w-[20px] rounded-full bg-[#EEB1A4] hover:border hover:border-[var(--shade-dark-4)]"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Start:: Anchor tag -->
+        <a
+          href="#"
+          class="group relative flex w-full cursor-pointer items-center justify-center gap-5 overflow-hidden rounded-full bg-[var(--bg-blue)] p-2.5 text-lg font-semibold text-white transition-colors duration-450 ease-in-out hover:bg-transparent"
+        >
+          <span
+            class="absolute inset-0 h-full w-full -translate-x-full transform rounded-r-4xl bg-[var(--primary-lemon)] transition-transform duration-230 ease-in-out group-hover:translate-x-0"
+          ></span>
+          <span
+            class="relative z-10 text-[14px] font-semibold transition-colors duration-230 group-hover:text-[var(--bg-blue)]"
+            >Select options</span
+          >
+          <!-- <span class="relative z-10">
+   <svg
+     width="18"
+     height="24"
+     viewBox="0 0 27 26"
+     fill="none"
+     class="fill-white transition-colors duration-230"
+     xmlns="http://www.w3.org/2000/svg"
+   >
+     <path
+       d="M21.9383 14.3882H1.88739C1.48804 14.3882 1.156 14.2563 0.891255 13.9924C0.626512 13.7285 0.494141 13.3975 0.494141 12.9995C0.494141 12.6014 0.626512 12.2704 0.891255 12.0066C1.156 11.7427 1.48804 11.6107 1.88739 11.6107H21.9383L12.8812 2.5828C12.6025 2.30502 12.4655 1.98099 12.4703 1.61072C12.475 1.24016 12.6167 0.915996 12.8954 0.638218C13.1741 0.369885 13.4991 0.233356 13.8706 0.228634C14.2421 0.223912 14.5672 0.36044 14.8459 0.638218L26.2719 12.0274C26.4204 12.1754 26.5249 12.3282 26.5854 12.4857C26.6456 12.6429 26.6757 12.8142 26.6757 12.9995C26.6757 13.1847 26.6456 13.356 26.5854 13.5132C26.5249 13.6707 26.4204 13.8235 26.2719 13.9715L14.8459 25.3607C14.5767 25.6291 14.2539 25.7632 13.8777 25.7632C13.5015 25.7632 13.1741 25.6291 12.8954 25.3607C12.6167 25.0829 12.4774 24.7566 12.4774 24.3816C12.4774 24.0066 12.6167 23.6802 12.8954 23.4024L21.9383 14.3882Z"
+     />
+   </svg>
+ </span> -->
+        </a>
+        <!-- End:: Anchor tag -->
+      </div>
+    </div>
     <script src="all-products.js"></script>
   </body>
 </html>

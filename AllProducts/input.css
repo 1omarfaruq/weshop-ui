@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.svao-container {
+    @apply mx-auto max-w-[1680px] px-2 sm:px-4 lg:px-8 ;
+}
