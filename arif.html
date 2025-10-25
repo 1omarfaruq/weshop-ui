@@ -788,7 +788,7 @@
           <!-- Start:: Actionable Icon Area -->
           <div class="flex items-center">
               <!-- Start:: Search -->
-              <div class="relative inline-block ">
+              <div class="relative inline-block">
                 <!-- Search Button -->
                 <div
                   id="searchBtn"
@@ -820,67 +820,270 @@
                   </svg>
                 </div>
 
-                <!-- Popup Menu -->
+                <!-- Start:: Search Popup Menu -->
+                 <!-- Start:: Backdrop -->
                 <div
-                  id="popupMenu"
-                  class="absolute right-1/2 z-50 hidden w-[512px]  rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-7.5"
+                  id="popupBackdrop"
+                  class="fixed inset-0 bg-[var(--bg-blue)]/50  backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-40"
                 >
-                <div class="relative w-full">
-                  <!-- Input Field -->
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    class="w-full pr-10 pl-3 border border-[#B3BAC5] rounded-full  focus:outline-none focus:shadow-md  h-12"
-                  />
-
-                  <!-- Search Icon on Right -->
-                  <svg
-                    class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 stroke-[var(--text-blue)]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    id="popupMenu"
+                    class="fixed left-1/2 mt-[78px] z-50 w-[758px] rounded-xl border border-gray-200 bg-white shadow-lg 
+                          opacity-0 scale-97 pointer-events-none transition-all duration-300 ease-in-out 
+                          -translate-x-1/2 overflow-hidden"
                   >
-                    <!-- Your SVG paths -->
-                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 21L16.65 16.65" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
+
+                    <!-- Start:: Input Field -->
+                    <div class="relative py-6 px-5">
+                      <div class="relative w-full">
+                        <input
+                          type="text"
+                          placeholder="Search..."
+                          class="w-full pl-[16px] border border-[var(--shade-1)] rounded-full
+                                focus:outline-none focus:shadow-[0_8px_20px_var(--shade-light-3)]
+                                h-12 placeholder:text-[14px] placeholder:font-medium
+                                transition-shadow duration-300 ease-in-out"
+                        />
 
 
-                  <ul class="mt-3 text-gray-700">
-                    <li
-                      class="cursor-pointer py-1 hover:text-[var(--primary-lemon)]"
-                    >
-                      Option 1
-                    </li>
-                    <li
-                      class="cursor-pointer py-1 hover:text-[var(--primary-lemon)]"
-                    >
-                      Option 2
-                    </li>
-                    <li
-                      class="cursor-pointer py-1 hover:text-[var(--primary-lemon)]"
-                    >
-                      Option 3
-                    </li>
-                  </ul>
+                        <!-- Search Icon -->
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 stroke-[var(--text-blue)] pointer-events-none"
+                        >
+                          <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M20.9984 21.0004L16.6484 16.6504" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <!-- End:: Input Field -->
+
+                    <div class="flex justify-between items-center px-5 mb-[16px]">
+                      <h3 class="text-[16px] font-semibold text-[var(--text-blue)]">Search History</h3>
+                      <h4 class="text-[14px] font-normal text-[var(--text-blue)]">Clear</4>
+                    </div>
+
+                    <ul class="space-y-3 mb-3">
+                      <li class="flex justify-between items-center px-5">
+                        <div class="flex items-center gap-2">
+                          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29167 16.6667C6.13889 16.6667 4.27083 15.9514 2.6875 14.5208C1.10417 13.0903 0.208333 11.3056 0 9.16667H1.6875C1.89583 10.8472 2.62847 12.2396 3.88542 13.3438C5.14236 14.4479 6.61111 15 8.29167 15C10.1528 15 11.7292 14.3542 13.0208 13.0625C14.3125 11.7708 14.9583 10.1944 14.9583 8.33333C14.9583 6.47222 14.3125 4.89583 13.0208 3.60417C11.7292 2.3125 10.1528 1.66667 8.29167 1.66667C7.09722 1.66667 5.98958 1.96181 4.96875 2.55208C3.94792 3.14236 3.13889 3.95833 2.54167 5H4.95833V6.66667H0.125C0.527778 4.72222 1.49306 3.125 3.02083 1.875C4.54861 0.625 6.30556 0 8.29167 0C9.44444 0 10.5278 0.21875 11.5417 0.65625C12.5556 1.09375 13.4375 1.6875 14.1875 2.4375C14.9375 3.1875 15.5312 4.06944 15.9688 5.08333C16.4062 6.09722 16.625 7.18056 16.625 8.33333C16.625 9.48611 16.4062 10.5694 15.9688 11.5833C15.5312 12.5972 14.9375 13.4792 14.1875 14.2292C13.4375 14.9792 12.5556 15.5729 11.5417 16.0104C10.5278 16.4479 9.44444 16.6667 8.29167 16.6667ZM10.625 11.8333L7.45833 8.66667V4.16667H9.125V8L11.7917 10.6667L10.625 11.8333Z" fill="#1B2B41" fill-opacity="0.69"/>
+                            </svg>
+
+                            <h3 class="text-[14px] font-normal text-[var(--text-blue)]">Sport shoe</h3>
+
+                        </div>
+
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 10.75L10.75 0.75M0.75 0.75L10.75 10.75" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </li>
+
+                      <li class="flex justify-between items-center px-5">
+                        <div class="flex items-center gap-2">
+                          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29167 16.6667C6.13889 16.6667 4.27083 15.9514 2.6875 14.5208C1.10417 13.0903 0.208333 11.3056 0 9.16667H1.6875C1.89583 10.8472 2.62847 12.2396 3.88542 13.3438C5.14236 14.4479 6.61111 15 8.29167 15C10.1528 15 11.7292 14.3542 13.0208 13.0625C14.3125 11.7708 14.9583 10.1944 14.9583 8.33333C14.9583 6.47222 14.3125 4.89583 13.0208 3.60417C11.7292 2.3125 10.1528 1.66667 8.29167 1.66667C7.09722 1.66667 5.98958 1.96181 4.96875 2.55208C3.94792 3.14236 3.13889 3.95833 2.54167 5H4.95833V6.66667H0.125C0.527778 4.72222 1.49306 3.125 3.02083 1.875C4.54861 0.625 6.30556 0 8.29167 0C9.44444 0 10.5278 0.21875 11.5417 0.65625C12.5556 1.09375 13.4375 1.6875 14.1875 2.4375C14.9375 3.1875 15.5312 4.06944 15.9688 5.08333C16.4062 6.09722 16.625 7.18056 16.625 8.33333C16.625 9.48611 16.4062 10.5694 15.9688 11.5833C15.5312 12.5972 14.9375 13.4792 14.1875 14.2292C13.4375 14.9792 12.5556 15.5729 11.5417 16.0104C10.5278 16.4479 9.44444 16.6667 8.29167 16.6667ZM10.625 11.8333L7.45833 8.66667V4.16667H9.125V8L11.7917 10.6667L10.625 11.8333Z" fill="#1B2B41" fill-opacity="0.69"/>
+                            </svg>
+
+                            <h3 class="text-[14px] font-normal text-[var(--text-blue)]">Sport shoe</h3>
+
+                        </div>
+
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 10.75L10.75 0.75M0.75 0.75L10.75 10.75" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </li>
+                      
+                    </ul>
+                    <div class="max-h-[500px] svao-scrollbar">
+                      <div class=" px-5 py-3 border-t border-[var(--shade-light-4)]"><h3 class="text-[16px] font-semibold text-[var(--text-blue)]">Categories</h1></div>
+
+                      <div class="flex items-center justify-between border-t py-3 border-[var(--shade-light-4)] px-5">
+                        <h3 class="text-[14px] font-medium">Shoes</h3>
+                        <svg width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 0.75L18.75 4.5M18.75 4.5L15 8.25M18.75 4.5H0.75" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                      </div>                 
+
+          
+                      <div class="">
+                        <div class="px-5 border-t border-[var(--shade-light-4)] py-3"><h3 class="text-[16px] font-semibold">Products</h1></div> 
+                          
+                        <!-- Start:: Search Card Sections -->
+                        <ul class="flex flex-col ">
+
+                          <li class="flex px-5  border-t border-[var(--shade-light-4)] py-[15px]">
+                            <!-- Product Image -->
+                            <div class="w-[86px] h-[86px] flex items-center justify-between flex-shrink-0 overflow-hidden rounded-lg border border-[var(--shade-light-4)]">
+                              <img
+                                src="./assets/products/colour-shoe.png"
+                                alt="Product"
+                                class="object-contain"
+                              />
+                            </div>
+
+                            <!-- Right Content -->
+                            <div class="ml-[12px] flex flex-col justify-around h-[86px] ">
+                              <!-- Title -->
+                              <h3 class="text-[14px] font-[400] text-[var(--text-blue)] leading-ti">
+                                Classic Leather High-Top Sneakers
+                              </h3>
+
+                              <!-- Price Section -->
+                              <div class="flex items-center gap-1 mt-[16px]">
+                                <span class="text-[14px] font-[400] text-gray-400 line-through">
+                                  $550.00
+                                </span>
+                                <span class="text-[var(--bg-blue)] font-[500] text-[14px]">
+                                  $450.00
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          
+                          <li class="flex px-5  border-t border-[var(--shade-light-4)] py-[15px]">
+                            <!-- Product Image -->
+                            <div class="w-[86px] h-[86px] flex items-center justify-between flex-shrink-0 overflow-hidden rounded-lg border border-[var(--shade-light-4)]">
+                              <img
+                                src="./assets/products/colour-shoe.png"
+                                alt="Product"
+                                class="object-contain"
+                              />
+                            </div>
+
+                            <!-- Right Content -->
+                            <div class="ml-[12px] flex flex-col justify-around h-[86px] ">
+                              <!-- Title -->
+                              <h3 class="text-[14px] font-[400] text-[var(--text-blue)] leading-ti">
+                                Classic Leather High-Top Sneakers
+                              </h3>
+
+                              <!-- Price Section -->
+                              <div class="flex items-center gap-1 mt-[16px]">
+                                <span class="text-[14px] font-[400] text-gray-400 line-through">
+                                  $550.00
+                                </span>
+                                <span class="text-[var(--bg-blue)] font-[500] text-[14px]">
+                                  $450.00
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="flex px-5  border-t border-[var(--shade-light-4)] py-[15px]">
+                            <!-- Product Image -->
+                            <div class="w-[86px] h-[86px] flex items-center justify-between flex-shrink-0 overflow-hidden rounded-lg border border-[var(--shade-light-4)]">
+                              <img
+                                src="./assets/products/colour-shoe.png"
+                                alt="Product"
+                                class="object-contain"
+                              />
+                            </div>
+
+                            <!-- Right Content -->
+                            <div class="ml-[12px] flex flex-col justify-around h-[86px] ">
+                              <!-- Title -->
+                              <h3 class="text-[14px] font-[400] text-[var(--text-blue)] leading-ti">
+                                Classic Leather High-Top Sneakers
+                              </h3>
+
+                              <!-- Price Section -->
+                              <div class="flex items-center gap-1 mt-[16px]">
+                                <span class="text-[14px] font-[400] text-gray-400 line-through">
+                                  $550.00
+                                </span>
+                                <span class="text-[var(--bg-blue)] font-[500] text-[14px]">
+                                  $450.00
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="flex px-5  border-t border-[var(--shade-light-4)] py-[15px]">
+                            <!-- Product Image -->
+                            <div class="w-[86px] h-[86px] flex items-center justify-between flex-shrink-0 overflow-hidden rounded-lg border border-[var(--shade-light-4)]">
+                              <img
+                                src="./assets/products/colour-shoe.png"
+                                alt="Product"
+                                class="object-contain"
+                              />
+                            </div>
+
+                            <!-- Right Content -->
+                            <div class="ml-[12px] flex flex-col justify-around h-[86px] ">
+                              <!-- Title -->
+                              <h3 class="text-[14px] font-[400] text-[var(--text-blue)] leading-ti">
+                                Classic Leather High-Top Sneakers
+                              </h3>
+
+                              <!-- Price Section -->
+                              <div class="flex items-center gap-1 mt-[16px]">
+                                <span class="text-[14px] font-[400] text-gray-400 line-through">
+                                  $550.00
+                                </span>
+                                <span class="text-[var(--bg-blue)] font-[500] text-[14px]">
+                                  $450.00
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          
+                          
+                        </ul>
+                        <!-- End:: Search Card Sections -->   
+
+                        <div class="border-t border-[var(--shade-light-4)] py-6"><h3 class="text-[16px] font-semibold uppercase text-center cursor-pointer">View All Results</h1></div>
+                        
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!-- End:: Backdrop -->
+
+                <!-- End:: Search Popup Menu -->
               </div>
+              
 
               <!-- Start:: Search popup menu script -->
               <script>
                 function togglePopup() {
                   const popup = document.getElementById("popupMenu");
-                  popup.classList.toggle("hidden");
-                }
+                  const backdrop = document.getElementById("popupBackdrop");
 
+                  const isHidden = popup.classList.contains("opacity-0");
+
+                  if (isHidden) {
+                    // Show popup
+                    popup.classList.remove("opacity-0", "scale-95", "pointer-events-none");
+                    popup.classList.add("opacity-100", "scale-100");
+                    // Show backdrop
+                    backdrop.classList.remove("opacity-0", "pointer-events-none");
+                    backdrop.classList.add("opacity-100");
+                  } else {
+                    // Hide popup
+                    popup.classList.add("opacity-0", "scale-95", "pointer-events-none");
+                    popup.classList.remove("opacity-100", "scale-100");
+                    // Hide backdrop
+                    backdrop.classList.add("opacity-0", "pointer-events-none");
+                    backdrop.classList.remove("opacity-100");
+                  }
+                }
                 // Optional: close when clicking outside
                 window.addEventListener("click", (e) => {
                   const btn = document.getElementById("searchBtn");
                   const popup = document.getElementById("popupMenu");
+                  const backdrop = document.getElementById("popupBackdrop");
+
                   if (!btn.contains(e.target) && !popup.contains(e.target)) {
-                    popup.classList.add("hidden");
+                    popup.classList.add("opacity-0", "scale-95", "pointer-events-none");
+                    popup.classList.remove("opacity-100", "scale-100");
+                    backdrop.classList.add("opacity-0", "pointer-events-none");
+                    backdrop.classList.remove("opacity-100");
                   }
                 });
               </script>
@@ -897,18 +1100,19 @@
             <!-- Start:: Wishlist -->
 
             <div class="relative inline-block">
-              <!-- Wishlist Button -->
+              <!-- Start:: Wishlist Button -->
               <div
                 id="wishlistBtn"
-                class="px-2.5 hover:cursor-pointer"
+                class="relative px-2.5 cursor-pointer group"
                 onclick="toggleWishlist()"
               >
+                <!-- Heart Icon -->
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
-                  class="stroke-[var(--text-blue)] duration-100 ease-in-out hover:stroke-[var(--primary-lemon)]"
+                  class="stroke-[var(--text-blue)] duration-100 ease-in-out group-hover:stroke-[var(--primary-lemon)]"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -928,7 +1132,7 @@
                 </div>
               </div>
 
-              <!-- Wishlist Popup -->
+              <!-- End:: Wishlist Popup -->
               <div
                 id="wishlistPopup"
                 class="absolute right-1/2 z-50 hidden w-[300px] rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-7.5"
@@ -990,10 +1194,10 @@
 
             <!-- Start:: Cart -->
             <div class="relative inline-block">
-              <!-- Cart Button -->
+              <!-- Start:: Cart Button -->
               <div
                 id="cartBtn"
-                class="px-2.5 hover:cursor-pointer"
+                class="px-2.5 hover:cursor-pointer group"
                 onclick="toggleCart()"
               >
                 <svg
@@ -1021,8 +1225,9 @@
                 </div>
                 <!-- End:: Cart Count -->
               </div>
+              <!-- End:: Cart Button -->
 
-              <!-- Cart Popup -->
+              <!-- Start:: Cart Popup -->
               <div
                 id="cartPopup"
                 class="absolute right-1/2 z-50 hidden w-[320px] rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-7.5"
@@ -1056,13 +1261,8 @@
                   <span>Total:</span>
                   <span>$80</span>
                 </div>
-
-                <button
-                  class="mt-4 w-full rounded-lg bg-[var(--bg-blue)] text-white py-2 hover:bg-[var(--primary-lemon)] transition"
-                >
-                  Checkout
-                </button>
               </div>
+              <!-- End:: Cart Popup -->
             </div>
             <!-- End:: Cart -->
 
@@ -1165,6 +1365,7 @@
         <div class="relative flex items-start gap-4">
           <!-- Search Icon -->
           <svg
+          onclick="toggleMenu()"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -1218,24 +1419,25 @@
             <!-- Popup (positioned below) -->
             <div
               id="popup"
-              class="pointer-events-none absolute top-10 right-0 z-50 w- scale-95 rounded-2xl border border-gray-100 bg-white p-5 opacity-0 shadow-xl transition-all duration-200 ease-out"
+              class="pointer-events-none absolute top-11 right-0 z-50 scale-95 rounded-2xl  bg-white opacity-0 shadow-xl transition-all duration-200 ease-out w-[350px] p-5"
             >
               <!-- Close button -->
-              <button
-                id="closePopup"
-                class="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
-              >
-                ✕
-              </button>
 
-              <!-- Country Dropdown -->
-              <div class="mt-2 mb-4">
-                <label class="mb-1 block text-sm font-medium text-gray-500"
+              <div class="flex justify-end mb-2">
+                <svg id="closePopup" class=" text-gray-400 hover:text-gray-600 p-[13px] shadow-[0_8px_20px_var(--shade-light-4)] rounded-full" width="40" height="40" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.575 7.975L1.675 12.875C1.49167 13.0583 1.25833 13.15 0.975 13.15C0.691667 13.15 0.458333 13.0583 0.275 12.875C0.0916667 12.6917 0 12.4583 0 12.175C0 11.8917 0.0916667 11.6583 0.275 11.475L5.175 6.575L0.275 1.675C0.0916667 1.49167 0 1.25833 0 0.975C0 0.691667 0.0916667 0.458333 0.275 0.275C0.458333 0.0916667 0.691667 0 0.975 0C1.25833 0 1.49167 0.0916667 1.675 0.275L6.575 5.175L11.475 0.275C11.6583 0.0916667 11.8917 0 12.175 0C12.4583 0 12.6917 0.0916667 12.875 0.275C13.0583 0.458333 13.15 0.691667 13.15 0.975C13.15 1.25833 13.0583 1.49167 12.875 1.675L7.975 6.575L12.875 11.475C13.0583 11.6583 13.15 11.8917 13.15 12.175C13.15 12.4583 13.0583 12.6917 12.875 12.875C12.6917 13.0583 12.4583 13.15 12.175 13.15C11.8917 13.15 11.6583 13.0583 11.475 12.875L6.575 7.975Z" fill="#192739" fill-opacity="0.94"/>
+                </svg>
+              </div>
+
+
+              <!-- Start:: Country Dropdown -->
+              <div class="mb-5">
+                <label class="block text-sm font-normal text-[var(--text-grey)] mb-3"
                   >Country</label
                 >
                 <div class="relative w-[310px]">
                   <select
-                    class="w-full appearance-none rounded-lg border border-gray-300 px-3 py-2.5 pr-8 text-sm text-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    class="w-full appearance-none rounded-lg border border-gray-300 px-3 py-2.5 pr-8 text-sm text-[var(--text-blue)] font-medium focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   >
                     <option>Bangladesh (BDT ৳)</option>
                     <option>United States (USD $)</option>
@@ -1244,7 +1446,7 @@
                   </select>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-gray-400"
+                    class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-[var(--text-blue)] font-medium"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -1258,15 +1460,16 @@
                   </svg>
                 </div>
               </div>
+              <!-- End:: Country Dropdown -->
 
-              <!-- Language Dropdown -->
+              <!-- Start:: Language Dropdown -->
               <div>
-                <label class="mb-1 block text-sm font-medium text-gray-500 "
+                <label class="block text-sm font-normal text-[var(--text-grey)] mb-3"
                   >Language</label
                 >
                 <div class="relative w-[310px] ">
                   <select
-                    class="w-full appearance-none rounded-lg border border-gray-300 px-3 py-2.5 pr-8 text-sm text-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    class="w-full appearance-none rounded-lg border border-gray-300 px-3 py-2.5 pr-8 text-sm text-[var(--text-blue)] font-medium focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   >
                     <option>English</option>
                     <option>বাংলা (Bangla)</option>
@@ -1274,7 +1477,7 @@
                   </select>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-gray-400"
+                    class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-[var(--text-blue)] font-medium"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -1288,6 +1491,7 @@
                   </svg>
                 </div>
               </div>
+              <!-- End:: Language Dropdown -->
             </div>
           </div>
         </div>
@@ -2074,7 +2278,7 @@
 
       <!-- Start:: Weekend Deals Section -->
       <section>
-        <div class="svao-container text-[var(--text-blue)]">
+        <div class="mx-auto svao-container text-[var(--text-blue)]">
           <!-- Start:: Section title -->
           <h1 class="mb-2 text-[32px] font-semibold uppercase md:text-[64px]">
             <span class="svao-stroke-text-blue text-transparent">
@@ -5709,6 +5913,153 @@
         <!-- End:: Bottom moving Carousel -->
       </div>
       <!-- End:: Carousel -->
+
+      <!-- Start:: Support & Resources -->
+      <section class="svao-container">
+      <h1 class="text-[64px] font-semibold"><span class="text-[var(--text-blue)]">support &</span> <span class="svao-stroke-text-blue">resources</span></h1>
+      <div class="flex flex-col md:flex-row gap-[21px] mt-[50px]">
+        <div class="p-[35px] bg-[var(--bg-blue)] max-w-[404px] rounded-4xl">
+          <div class="p-[21px] border rounded-full w-[70px] h-[70px] flex items-center">
+            <svg width="37" height="27" viewBox="0 0 37 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.89208 26.6388C6.51958 26.6388 5.35181 26.1581 4.38875 25.1967C3.42597 24.2353 2.94458 23.0679 2.94458 21.6946H1.38875C0.995417 21.6946 0.665556 21.5614 0.399167 21.295C0.133056 21.0289 0 20.699 0 20.3054V2.77792C0 2.02792 0.275417 1.37736 0.82625 0.826251C1.37736 0.275417 2.02792 0 2.77792 0H23.8612C24.6251 0 25.279 0.271945 25.8229 0.815834C26.3668 1.36 26.6388 2.01403 26.6388 2.77792V6.86125H29.8333C30.2731 6.86125 30.6897 6.95958 31.0833 7.15625C31.4769 7.35292 31.801 7.62486 32.0554 7.97208L36.3888 13.7363C36.4815 13.8518 36.551 13.979 36.5971 14.1179C36.6435 14.2568 36.6667 14.4074 36.6667 14.5696V20.3054C36.6667 20.699 36.5336 21.0289 36.2675 21.295C36.0011 21.5614 35.6712 21.6946 35.2779 21.6946H33.5833C33.5833 23.0649 33.1029 24.2315 32.1421 25.1946C31.1812 26.1574 30.0146 26.6388 28.6421 26.6388C27.2696 26.6388 26.1018 26.1581 25.1388 25.1967C24.176 24.2353 23.6946 23.0679 23.6946 21.6946H12.8333C12.8333 23.0649 12.3529 24.2315 11.3921 25.1946C10.4313 26.1574 9.26458 26.6388 7.89208 26.6388ZM7.88875 23.8612C8.49069 23.8612 9.00236 23.6506 9.42375 23.2292C9.84486 22.8078 10.0554 22.2963 10.0554 21.6946C10.0554 21.0926 9.84486 20.581 9.42375 20.1596C9.00236 19.7385 8.49069 19.5279 7.88875 19.5279C7.28708 19.5279 6.77556 19.7385 6.35417 20.1596C5.93278 20.581 5.72208 21.0926 5.72208 21.6946C5.72208 22.2963 5.93278 22.8078 6.35417 23.2292C6.77556 23.6506 7.28708 23.8612 7.88875 23.8612ZM28.6388 23.8612C29.2407 23.8612 29.7524 23.6506 30.1737 23.2292C30.5949 22.8078 30.8054 22.2963 30.8054 21.6946C30.8054 21.0926 30.5949 20.581 30.1737 20.1596C29.7524 19.7385 29.2407 19.5279 28.6388 19.5279C28.0371 19.5279 27.5256 19.7385 27.1042 20.1596C26.6828 20.581 26.4721 21.0926 26.4721 21.6946C26.4721 22.2963 26.6828 22.8078 27.1042 23.2292C27.5256 23.6506 28.0371 23.8612 28.6388 23.8612ZM26.6388 15.4167H34.1667L29.8333 9.63875H26.6388V15.4167Z" fill="white"/>
+            </svg>
+          </div>
+          <div class="mt-[30px]">
+            <h1 class="text-[32px] font-semibold">Free Shipping</h1>
+            <p class="text-[14px] font-normal">Enjoy free shipping on all orders, no minimum required.</p>
+          </div>
+
+        </div>
+
+        <div class="p-[35px] bg-slate-200 max-w-[404px] rounded-4xl">
+          <div class="p-[21px] border rounded-full w-[70px] h-[70px] text-[var(--text-blue)] flex items-center">
+          <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.9167 21.5H14.75C14.9583 21.5 15.14 21.4132 15.295 21.2396C15.4503 21.066 15.5001 20.875 15.4446 20.6667L14.5696 15.6804C15.1338 15.4185 15.5779 15.0385 15.9021 14.5404C16.2265 14.0424 16.3888 13.4918 16.3888 12.8888C16.3888 12.0485 16.0893 11.3292 15.4904 10.7308C14.8918 10.1325 14.1719 9.83333 13.3308 9.83333C12.49 9.83333 11.771 10.1325 11.1738 10.7308C10.5765 11.3292 10.2779 12.0485 10.2779 12.8888C10.2779 13.4918 10.4401 14.0424 10.7646 14.5404C11.0887 15.0385 11.5329 15.4185 12.0971 15.6804L11.2221 20.6667C11.1665 20.875 11.2164 21.066 11.3717 21.2396C11.5267 21.4132 11.7083 21.5 11.9167 21.5ZM13.3333 33C13.17 33 13.0183 32.9861 12.8783 32.9583C12.7383 32.9306 12.5983 32.8889 12.4583 32.8333C8.63417 31.5464 5.60181 29.2154 3.36125 25.8404C1.12042 22.4654 0 18.7861 0 14.8025V6.73625C0 6.14819 0.167778 5.61889 0.503333 5.14833C0.839167 4.67778 1.27319 4.33667 1.80542 4.125L12.3613 0.180417C12.6946 0.0601396 13.0186 0 13.3333 0C13.6481 0 13.9721 0.0601396 14.3054 0.180417L24.8612 4.125C25.3935 4.33667 25.8275 4.67778 26.1633 5.14833C26.4989 5.61889 26.6667 6.14819 26.6667 6.73625V14.8025C26.6667 18.7861 25.5463 22.4654 23.3054 25.8404C21.0649 29.2154 18.0325 31.5464 14.2083 32.8333C14.0683 32.8889 13.9283 32.9306 13.7883 32.9583C13.6483 32.9861 13.4967 33 13.3333 33Z" fill="#192434"/>
+          </svg>
+          </div>
+          <div class="mt-[30px] text-[var(--text-blue)]">
+            <h1 class="text-[32px] font-semibold">Free Shipping</h1>
+            <p class="text-[14px] font-normal">Enjoy free shipping on all orders, no minimum required.</p>
+          </div>
+        </div>
+
+        <div class="p-[35px] bg-slate-200 max-w-[404px] rounded-4xl">
+          <div class="p-[21px] border rounded-full w-[70px] h-[70px] text-[var(--text-blue)] flex items-center">
+          <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.0138 19.7221H20C20.3981 19.7221 20.729 19.5901 20.9929 19.3263C21.2568 19.0624 21.3888 18.7314 21.3888 18.3333C21.3888 17.9353 21.2568 17.6043 20.9929 17.3404C20.729 17.0765 20.3981 16.9446 20 16.9446H14.0138L15.9863 14.9721C16.2546 14.7038 16.3888 14.3821 16.3888 14.0071C16.3888 13.6321 16.2499 13.3057 15.9721 13.0279C15.7037 12.7593 15.3751 12.625 14.9863 12.625C14.5974 12.625 14.2686 12.7593 14 13.0279L9.63875 17.3613C9.36097 17.639 9.22208 17.9631 9.22208 18.3333C9.22208 18.7036 9.36097 19.0276 9.63875 19.3054L14 23.6667C14.2686 23.9353 14.595 24.0672 14.9792 24.0625C15.3633 24.0578 15.6943 23.9165 15.9721 23.6388C16.2407 23.3704 16.375 23.0418 16.375 22.6529C16.375 22.264 16.2407 21.9353 15.9721 21.6667L14.0138 19.7221ZM2.77792 33.3333C2.00931 33.3333 1.35417 33.0625 0.8125 32.5208C0.270833 31.9792 0 31.324 0 30.5554V6.11125C0 5.34264 0.270833 4.6875 0.8125 4.14583C1.35417 3.60417 2.00931 3.33333 2.77792 3.33333H10.8054C11.0185 2.35194 11.5163 1.55097 12.2988 0.930417C13.081 0.31014 13.9814 0 15 0C16.0186 0 16.919 0.31014 17.7013 0.930417C18.4838 1.55097 18.9815 2.35194 19.1946 3.33333H27.2221C27.9907 3.33333 28.6458 3.60417 29.1875 4.14583C29.7292 4.6875 30 5.34264 30 6.11125V30.5554C30 31.324 29.7292 31.9792 29.1875 32.5208C28.6458 33.0625 27.9907 33.3333 27.2221 33.3333H2.77792ZM15 5.22208C15.3797 5.22208 15.7061 5.08556 15.9792 4.8125C16.2522 4.53944 16.3888 4.21306 16.3888 3.83333C16.3888 3.45361 16.2522 3.12722 15.9792 2.85417C15.7061 2.58111 15.3797 2.44458 15 2.44458C14.6203 2.44458 14.2939 2.58111 14.0208 2.85417C13.7478 3.12722 13.6113 3.45361 13.6113 3.83333C13.6113 4.21306 13.7478 4.53944 14.0208 4.8125C14.2939 5.08556 14.6203 5.22208 15 5.22208Z" fill="#192434"/>
+            </svg>
+          </div>
+          <div class="mt-[30px] text-[var(--text-blue)]">
+            <h1 class="text-[32px] font-semibold">Free Shipping</h1>
+            <p class="text-[14px] font-normal">Enjoy free shipping on all orders, no minimum required.</p>
+          </div>
+        </div>
+
+        <div class="p-[35px] bg-slate-200 max-w-[404px] rounded-4xl">
+          <div class="p-[21px] border rounded-full w-[70px] h-[70px] text-[var(--text-blue)] flex items-center">
+            <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.9446 31.3612C31.7779 31.3612 31.6113 31.3288 31.4446 31.2638C31.2779 31.199 31.1204 31.0926 30.9721 30.9446L26.6946 26.6667H9.44458C8.67597 26.6667 8.02083 26.3958 7.47917 25.8542C6.9375 25.3125 6.66667 24.6574 6.66667 23.8887V21.1113H25C25.7686 21.1113 26.4238 20.8404 26.9654 20.2988C27.5071 19.7571 27.7779 19.1019 27.7779 18.3333V6.66667H30.5554C31.324 6.66667 31.9792 6.9375 32.5208 7.47917C33.0625 8.02083 33.3333 8.67597 33.3333 9.44458V29.9583C33.3333 30.3842 33.1899 30.7244 32.9029 30.9792C32.6157 31.2339 32.2963 31.3612 31.9446 31.3612ZM1.38875 23.0554C1.03708 23.0554 0.717639 22.9282 0.430417 22.6738C0.143472 22.419 0 22.0788 0 21.6529V2.77792C0 2.0093 0.270833 1.35417 0.8125 0.8125C1.35417 0.270833 2.00931 0 2.77792 0H22.2221C22.9907 0 23.6458 0.270833 24.1875 0.8125C24.7292 1.35417 25 2.0093 25 2.77792V15.5554C25 16.324 24.7292 16.9792 24.1875 17.5208C23.6458 18.0625 22.9907 18.3333 22.2221 18.3333H6.66667L2.36125 22.6387C2.21292 22.7871 2.05542 22.8936 1.88875 22.9583C1.72208 23.0231 1.55542 23.0554 1.38875 23.0554Z" fill="#192434"/>
+            </svg>
+          </div>
+          <div class="mt-[30px] text-[var(--text-blue)]">
+            <h1 class="text-[32px] font-semibold">Free Shipping</h1>
+            <p class="text-[14px] font-normal">Enjoy free shipping on all orders, no minimum required.</p>
+          </div>
+        </div>
+
+        
+      </div>
+      </section>
+      <!-- End:: Support & Resources -->
+
+
+      <!-- Start:: Shop the looks -->
+      <section class="bg-white">
+        <div class="container mx-auto px-4 py-12">
+          <div class="flex flex-col lg:flex-row gap-[85px] items-center">
+            <!-- Start:: Image Section -->
+            <div class="w-full max-w-[1200px]">
+              <div class="relative rounded-2xl overflow-hidden">
+                <img 
+                  src="./assets/images/show-the-looks.png" 
+                  alt="Shop the look - Man in casual streetwear"
+                  class="w-full h-auto object-cover"
+                />
+                <!-- Hotspot Markers -->
+                <button class="absolute top-[15%] right-[25%] w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
+                  <span class="w-3 h-3 bg-gray-800 rounded-full"></span>
+                </button>
+                <button class="absolute top-[45%] left-[20%] w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
+                  <span class="w-3 h-3 bg-gray-800 rounded-full"></span>
+                </button>
+                <button class="absolute bottom-[20%] right-[30%] w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
+                  <span class="w-3 h-3 bg-gray-800 rounded-full"></span>
+                </button>
+              </div>
+            </div>
+            <!-- End:: Image Section -->
+
+            <!-- Start:: Products Section -->
+            <div class="w-full max-w-[515px]">
+              <h2 class="text-4xl md:text[64px] font-bold mb-8">
+                <span class="text-[var(--text-blue)]">SHOP</span> <span class="svao-stroke-text-blue">THE LOOK</span>
+              </h2>
+
+              <div class="space-y-1">
+                <p class="text-sm font-medium text-gray-600 mb-4">Products:</p>
+
+                <!-- Start:: Product 1 -->
+                <div class="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                  <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=100&q=80" alt="Navy Blue Bomber Jacket" class="w-full h-full object-cover rounded-lg" />
+                  </div>
+                  <div class="flex-grow">
+                    <h3 class="font-medium text-[var(--text-blue)] text-[20px]">Navy Blue Boomber Jacket</h3>
+                    <p class="text-[24px] font-normal text-[var(--text-blue)]">$29.00</p>
+                  </div>
+                  <button class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
+                    <span>+</span> ADD
+                  </button>
+                </div>
+                <!-- End:: Product 1 -->
+
+                <!-- Start:: Product 2 -->
+                <div class="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                  <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=100&q=80" alt="Comfort white Pant" class="w-full h-full object-cover rounded-lg" />
+                  </div>
+                  <div class="flex-grow">
+                    <h3 class="font-medium text-gray-900">Comfort white Pant</h3>
+                    <p class="text-lg font-semibold text-gray-900">$29.00</p>
+                  </div>
+                  <button class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
+                    <span>+</span> ADD
+                  </button>
+                </div>
+                <!-- End:: Product 2 -->
+
+                 <!-- Start:: Product 3 -->
+                <div class="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
+                  <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=100&q=80" alt="Men's Lifestyle Sneaker" class="w-full h-full object-cover rounded-lg" />
+                  </div>
+                  <div class="flex-grow">
+                    <h3 class="font-medium text-gray-900">Men's Lifestyle Sneaker</h3>
+                    <p class="text-lg font-semibold text-gray-900">$29.00</p>
+                  </div>
+                  <button class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
+                    <span>+</span> ADD
+                  </button>
+                </div>
+                <!-- End:: Product 3 -->
+              </div>
+            </div>
+            <!-- End:: Products Section -->
+          </div>
+        </div>
+      </section>
+      <!-- End:: Shop the looks -->
+      
     </main>
     <!-- End:: Main Content Section -->
 
