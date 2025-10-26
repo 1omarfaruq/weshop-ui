@@ -11,9 +11,9 @@ function toggleCollapse(contentId, arrowId) {
   }
 }
 
-const rangeInput = document.querySelectorAll(".range-input input"),
+const rangeInput = document.querySelectorAll(".svao-range-input input"),
   priceInput = document.querySelectorAll(".price-input input"),
-  range = document.querySelector(".slider .progress");
+  range = document.querySelector(".svao-slider-x4 .svao-progress-x4");
 let priceGap = 1000;
 priceInput.forEach((input) => {
   input.addEventListener("input", (e) => {
