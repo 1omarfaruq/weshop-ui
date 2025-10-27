@@ -174,7 +174,7 @@
 }
 
 .svao-tab-button {
-  @apply cursor-pointer rounded-[12px] border-[1.5px] border-[var(--bg-blue)] px-9 py-2.5 text-xl font-medium text-[var(--text-blue)] transition-all duration-300;
+  @apply cursor-pointer rounded-[12px] border-[1.5px] border-[var(--bg-blue)] px-[38px] py-[8px]  md:px-9 md:py-2.5 text-[14px] md:text-xl font-medium text-[var(--text-blue)] transition-all duration-300;
 }
 
 .svao-tab-button:hover,
