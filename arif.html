@@ -87,7 +87,7 @@
     <!-- Start:: Top Navigation Bar -->
     <div class="hidden lg:flex justify-center bg-[var(--bg-blue)] text-sm lg:px-12">
       <div
-        class="svao-container flex items-center justify-between py-2.5 font-light"
+        class="container mx-auto flex items-center justify-between py-2.5 font-light"
       >
         <!-- Start:: Social Media Links & Icons -->
         <div class="hidden gap-4 sm:flex">
@@ -251,15 +251,16 @@
       </div>
     </div>
     <!-- End:: Top Navigation Bar -->
-    <header class="sticky top-0 z-50">
+    <header class="sticky top-0 z-50
+    ">
 
       <!-- Start:: Main Navigation Bar with background -->
       <div
         id="navbar"
-        class=" hidden bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out lg:flex lg:px-12"
+        class=" hidden bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out lg:flex lg:px-12 wfull mx-auto"
       >
         <div
-          class="svao-container flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
+          class="container mx-auto flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
         >
           <!-- Start:: Logo -->
           <div>
@@ -318,10 +319,11 @@
                       <a href="#" class="block px-4 py-2">Clothing</a>
                       <a href="#" class="block px-4 py-2">Accessories</a>
                       <div class="group/sub relative">
-                        <button class="flex w-full items-center px-3 py-2">
+                        <button class="flex w-full items-center justify-between px-3 py-2">
                           More
-                          <span class="pl-2.5">
+                          <span class="-rotate-90 flex items-center justify-center">
                             <svg
+                            class=""
                               width="24"
                               height="24"
                               viewBox="0 0 24 24"
@@ -397,7 +399,7 @@
                     class="invisible mt-[30px] absolute left-0 z-10 w-full rounded-4xl border-t border-[var(--shade-light-4)] bg-white pt-15 pb-20 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100"
                   >
                     <div
-                      class="svao-container grid grid-cols-7 gap-4 rounded-3xl"
+                      class="container grid grid-cols-7 gap-4 rounded-3xl"
                     >
                       <div class="col-1">
                         <h3
@@ -527,7 +529,7 @@
                     class="invisible absolute mt-[30px] left-0 right-0 z-10 rounded-b-4xl border-t border-[var(--shade-light-4)] bg-white pt-15 pb-20 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100"
                   >
                     <div
-                      class="svao-container grid grid-cols-7 gap-10 rounded-3xl"
+                      class="container grid grid-cols-7 gap-10 rounded-3xl"
                     >
                       <div class="col-span-1">
                         <h3
@@ -776,6 +778,75 @@
                     </div>
                   </div>
                 </li>
+
+
+
+                <li class="svao-nav-item group relative">
+                  <a href="#" class="flex items-center">
+                    Kids
+                    <span class="pl-2.5">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19380_20040"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19380_20040)">
+                          <path
+                            d="M12.0008 14.9758C11.8674 14.9758 11.7424 14.9549 11.6258 14.9133C11.5091 14.8716 11.4008 14.8008 11.3008 14.7008L6.70078 10.1008C6.51745 9.91745 6.42578 9.68411 6.42578 9.40078C6.42578 9.11745 6.51745 8.88411 6.70078 8.70078C6.88411 8.51745 7.11745 8.42578 7.40078 8.42578C7.68411 8.42578 7.91745 8.51745 8.10078 8.70078L12.0008 12.6008L15.9008 8.70078C16.0841 8.51745 16.3174 8.42578 16.6008 8.42578C16.8841 8.42578 17.1174 8.51745 17.3008 8.70078C17.4841 8.88411 17.5758 9.11745 17.5758 9.40078C17.5758 9.68411 17.4841 9.91745 17.3008 10.1008L12.7008 14.7008C12.6008 14.8008 12.4924 14.8716 12.3758 14.9133C12.2591 14.9549 12.1341 14.9758 12.0008 14.9758Z"
+                            fill-opacity="0.69"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="svao-nav-item group relative">
+                  <a href="#" class="flex items-center">
+                    More
+                    <span class="pl-2.5">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19380_20040"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19380_20040)">
+                          <path
+                            d="M12.0008 14.9758C11.8674 14.9758 11.7424 14.9549 11.6258 14.9133C11.5091 14.8716 11.4008 14.8008 11.3008 14.7008L6.70078 10.1008C6.51745 9.91745 6.42578 9.68411 6.42578 9.40078C6.42578 9.11745 6.51745 8.88411 6.70078 8.70078C6.88411 8.51745 7.11745 8.42578 7.40078 8.42578C7.68411 8.42578 7.91745 8.51745 8.10078 8.70078L12.0008 12.6008L15.9008 8.70078C16.0841 8.51745 16.3174 8.42578 16.6008 8.42578C16.8841 8.42578 17.1174 8.51745 17.3008 8.70078C17.4841 8.88411 17.5758 9.11745 17.5758 9.40078C17.5758 9.68411 17.4841 9.91745 17.3008 10.1008L12.7008 14.7008C12.6008 14.8008 12.4924 14.8716 12.3758 14.9133C12.2591 14.9549 12.1341 14.9758 12.0008 14.9758Z"
+                            fill-opacity="0.69"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                
+                
+                
 
               </ul>
             </div>
@@ -1094,7 +1165,7 @@
 
 
             <!-- Start:: Separator -->
-            <div class="mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
+            <div class="mx-2.5 xl:mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
             <!-- End:: Separator -->
 
             <!-- Start:: Wishlist -->
@@ -1189,7 +1260,7 @@
             <!-- End:: Wishlist -->
 
             <!-- Start:: Separator -->
-            <div class="mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
+            <div class="mx-2.5 xl:mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
             <!-- End:: Separator -->
 
             <!-- Start:: Cart -->
@@ -1230,7 +1301,8 @@
               <!-- Start:: Cart Popup -->
               <div
                 id="cartPopup"
-                class="absolute right-1/2 z-50 hidden w-[320px] rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-7.5"
+                class="absolute right-1/2 z-50 w-[320px] rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-7.5
+         opacity-0 scale-95 translate-y-2 pointer-events-none transition-all duration-300 ease-out"
               >
                 <div class="flex justify-between items-center mb-3">
                   <h2 class="text-sm font-semibold text-gray-800">Your Cart</h2>
@@ -1264,13 +1336,24 @@
               </div>
               <!-- End:: Cart Popup -->
             </div>
-            <!-- End:: Cart -->
 
-            <!-- Script -->
+            
+            <!-- Start:: Script -->
             <script>
               function toggleCart() {
                 const popup = document.getElementById("cartPopup");
-                popup.classList.toggle("hidden");
+
+                const isHidden = popup.classList.contains("opacity-0");
+
+                if (isHidden) {
+                  // Show popup smoothly
+                  popup.classList.remove("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.add("opacity-100", "scale-100", "translate-y-0");
+                } else {
+                  // Hide popup smoothly
+                  popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+                }
               }
 
               // Close when clicking outside
@@ -1278,23 +1361,26 @@
                 const btn = document.getElementById("cartBtn");
                 const popup = document.getElementById("cartPopup");
                 if (!btn.contains(e.target) && !popup.contains(e.target)) {
-                  popup.classList.add("hidden");
+                  popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
                 }
               });
 
-              // Close button
-              document
-                .getElementById("closeCartPopup")
-                .addEventListener("click", (e) => {
-                  e.stopPropagation();
-                  document.getElementById("cartPopup").classList.add("hidden");
-                });
+              // Close button inside popup
+              document.getElementById("closeCartPopup").addEventListener("click", (e) => {
+                e.stopPropagation();
+                const popup = document.getElementById("cartPopup");
+                popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+              });
             </script>
+            <!-- Start:: Script -->
+
 
             <!-- End:: Cart -->
 
             <!-- Start:: Separator -->
-            <div class="mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
+            <div class="mx-2.5 xl:mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
             <!-- End:: Separator -->
 
             <!-- Start:: User Profile -->
@@ -1326,8 +1412,9 @@
       <!--Start:: Main Navigation for mobile -->
 
       <!--Start:: Navigation Container -->
+      
       <nav
-        class="top-0 z-10 flex w-full items-center justify-between bg-white p-4 text-black lg:hidden"
+        class="mx-auto px-4 top-0 z-10 flex w-full items-center justify-between bg-white p-4  text-black lg:hidden"
       >
         <!-- Start:: Hamburger Menu -->
         <div class="cursor-pointer text-2xl" onclick="toggleMenu()">
@@ -1364,28 +1451,110 @@
 
         <div class="relative flex items-start gap-4">
           <!-- Search Icon -->
-          <svg
-          onclick="toggleMenu()"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="cursor-pointer stroke-[#192739] hover:stroke-[var(--primary-lemon)]"
+          <!-- Start:: Cart Button -->
+          <div
+            id="cartMbtn"
+            class="px-2.5 hover:cursor-pointer group"
+            onclick="toggleCart()"
           >
-            <path
-              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M20.9984 21.0004L16.6484 16.6504"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="stroke-[var(--text-blue)] duration-100 ease-in-out hover:stroke-[var(--primary-lemon)]"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.0004 9V6C16.0004 3.79086 14.2095 2 12.0004 2C9.79123 2 8.00037 3.79086 8.00037 6V9M3.59237 10.352L2.99237 16.752C2.82178 18.5717 2.73648 19.4815 3.03842 20.1843C3.30367 20.8016 3.76849 21.3121 4.35839 21.6338C5.0299 22 5.94374 22 7.77142 22H16.2293C18.057 22 18.9708 22 19.6423 21.6338C20.2322 21.3121 20.6971 20.8016 20.9623 20.1843C21.2643 19.4815 21.179 18.5717 21.0084 16.752L20.4084 10.352C20.2643 8.81535 20.1923 8.04704 19.8467 7.46616C19.5424 6.95458 19.0927 6.54511 18.555 6.28984C17.9444 6 17.1727 6 15.6293 6L8.37142 6C6.82806 6 6.05638 6 5.44579 6.28984C4.90803 6.54511 4.45838 6.95458 4.15403 7.46616C3.80846 8.04704 3.73643 8.81534 3.59237 10.352Z"
+                stroke-opacity="0.94"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <!-- Start:: Cart Count -->
+            <div
+              class="absolute -top-2.5 right-9 h-5 w-5 rounded-full bg-[var(--bg-blue)] py-0.5 text-center text-sm leading-none font-thin text-[var(--text-white)] duration-100 ease-in-out group-hover:bg-[var(--primary-lemon)]"
+            >
+              1
+            </div>
+            <!-- End:: Cart Count -->
+          </div>
+          <!-- End:: Cart Button -->
+           
+          <!-- Start:: Cart Popup -->
+          <div
+            id="cartMpopup"
+            class="absolute right-1/2 z-50 w-[320px] rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-11
+      opacity-0 scale-95 translate-y-2 pointer-events-none transition-all duration-300 ease-out"
+          >
+            <div class="flex justify-between items-center mb-3">
+              <h2 class="text-sm font-semibold text-gray-800">Your Cart</h2>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.75 10.75L10.75 0.75M0.75 0.75L10.75 10.75" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+            </div>
+
+            <ul class="divide-y divide-gray-200 text-gray-700">
+              <li class="py-2 flex justify-between items-center">
+                <span>Product 1</span>
+                <span class="font-semibold">$25</span>
+              </li>
+              <li class="py-2 flex justify-between items-center">
+                <span>Product 2</span>
+                <span class="font-semibold">$40</span>
+              </li>
+              <li class="py-2 flex justify-between items-center">
+                <span>Product 3</span>
+                <span class="font-semibold">$15</span>
+              </li>
+            </ul>
+
+            <div class="mt-3 flex justify-between items-center font-semibold text-gray-800">
+              <span>Total:</span>
+              <span>$80</span>
+            </div>
+          </div>
+          <!-- End:: Cart Popup -->
+
+          <script>
+            function toggleCart() {
+              const popup = document.getElementById("cartMpopup");
+
+              const isHidden = popup.classList.contains("opacity-0");
+
+              if (isHidden) {
+                // Show popup smoothly
+                popup.classList.remove("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                popup.classList.add("opacity-100", "scale-100", "translate-y-0");
+              } else {
+                // Hide popup smoothly
+                popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+              }
+            }
+
+            // Close when clicking outside
+            window.addEventListener("click", (e) => {
+              const btn = document.getElementById("cartMbtn");
+              const popup = document.getElementById("cartMpopup");
+              if (!btn.contains(e.target) && !popup.contains(e.target)) {
+                popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+              }
+            });
+
+            // Close button inside popup
+            document.getElementById("closeCartMpopup").addEventListener("click", (e) => {
+              e.stopPropagation();
+              const popup = document.getElementById("cartMpopup");
+              popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+              popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+            });
+          </script>
 
           <!-- Global Button (with relative wrapper) -->
           <div id="globalBtn" class="relative">
@@ -2178,8 +2347,8 @@
     <!-- Start:: Main Content Section -->
     <main style="min-height: 2000px">
       <!-- Start:: Buy more save more -->
-      <section class="bg-[rgba(5,8,12,1)] py-[40px] md:pt-20 md:pb-[100px]">
-        <div class="svao-container px-[20px]">
+      <section class="container mx-auto bg-[rgba(5,8,12,1)] py-[40px] md:pt-20 md:pb-[100px]">
+        <div class="container px-[20px]">
           <!-- Start:: Section title -->
           <h1
             class="mb-12 text-center text-[32px] font-semibold text-[var(--text-white)] md:text-[64px]"
@@ -2193,12 +2362,12 @@
 
           <!-- Start:: Section content -->
           <div
-            class="flex flex-col items-center justify-between gap-8 text-[var(--text-blue)] md:flex-row"
+            class="md:flex text-[var(--text-blue)] md:flex-row"
           >
             <!-- Start:: First -->
 
             <div
-              class="group flex-column h relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px]"
+              class="group flex-column relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px] "
             >
               <div class="mx-auto text-center">
                 <p class="uppercase">Latest</p>
@@ -2210,7 +2379,7 @@
                 <a href="" class="border-b border-[#42526E] pb-2.5">SHOP NOW</a>
               </div>
 
-              <div class="mx-auto w-[265px]">
+              <div class="mx-auto">
                 <img
                   class="mx-auto h-[130px] transition-all duration-500 ease-in-out group-hover:-rotate-12"
                   src="./assets/products/brown-white-shoe-with-white-stripe-brown-sole-jBVjrRuI_-transformed 1.png"
@@ -2223,7 +2392,7 @@
 
             <!-- Start:: Second -->
             <div
-              class="group flex-column h relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px]"
+              class="group flex-column relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px]"
             >
               <div class="mx-auto text-center">
                 <p class="uppercase">Latest</p>
@@ -2248,7 +2417,7 @@
             <!-- Start:: Third -->
 
             <div
-              class="group flex-column h relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px]"
+              class="group flex-column relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px]"
             >
               <div class="mx-auto text-center">
                 <p class="uppercase">Latest</p>
@@ -2278,7 +2447,7 @@
 
       <!-- Start:: Weekend Deals Section -->
       <section>
-        <div class="mx-auto svao-container text-[var(--text-blue)]">
+        <div class="mx-auto container text-[var(--text-blue)]">
           <!-- Start:: Section title -->
           <h1 class="mb-2 text-[32px] font-semibold uppercase md:text-[64px]">
             <span class="svao-stroke-text-blue text-transparent">
@@ -2448,7 +2617,7 @@
                               >
                                 <b>Color</b>
                                 <!-- Start:: Separator -->
-                                <div class="mx-3 h-5 w-0.5 bg-[#8993A4]"></div>
+                                <div class="mx-3  h-5 w-0.5 bg-[#8993A4]"></div>
                                 <!-- End:: Separator -->
                                 <span class="text-[var(--text-grey)]"
                                   >Daisy White</span
@@ -5915,9 +6084,9 @@
       <!-- End:: Carousel -->
 
       <!-- Start:: Support & Resources -->
-      <section class="svao-container">
+      <section class="bg-[var(--bg-off-white)] container mx-auto">
       <h1 class="text-[64px] font-semibold"><span class="text-[var(--text-blue)]">support &</span> <span class="svao-stroke-text-blue">resources</span></h1>
-      <div class="flex flex-col md:flex-row gap-[21px] mt-[50px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-[50px]">
         <div class="p-[35px] bg-[var(--bg-blue)] max-w-[404px] rounded-4xl">
           <div class="p-[21px] border rounded-full w-[70px] h-[70px] flex items-center">
             <svg width="37" height="27" viewBox="0 0 37 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -6065,13 +6234,13 @@
 
     <!-- Start:: Footer Section -->
     <footer
-      class="font-poppins mt-[100px] rounded-t-[32px] bg-[#192434] px-[20px] pt-[40px] pb-[30px] text-white md:pt-[60px]"
+      class="font-poppins mt-[100px] px-5 lg:px-12 rounded-t-[32px] bg-[#192434] pt-[40px] pb-[30px] text-white md:pt-[60px]"
     >
-      <div class="container mx-auto">
+      <div class="container mx-auto   ">
         <!-- Start:: Top Footer Content -->
         <div class="flex flex-wrap justify-between">
           <!-- Start:: Left Brand Section -->
-          <div class="w-full md:space-y-8 lg:w-[312px]">
+          <div class="w-full md:space-y-8 lg:w-[312px] flex flex-col sm:flex-row sm:justify-between lg:block lg:flex-col">
             <div class="space-y-[18px]">
               <div class="mb-4 w-[140px]">
                 <a href="#">
@@ -6088,7 +6257,7 @@
             </div>
 
             <div
-              class="mt-[28px] mb-[32px] border border-slate-700 bg-[#B3BAC5] md:hidden"
+              class="mt-[28px] mb-[32px] h-[1px] bg-[var(--shade-dark-1)] md:hidden"
             ></div>
             <!-- Start:: Social Icons -->
             <div class="flex flex-col gap-4">
@@ -6190,7 +6359,7 @@
 
           <!-- Start:: Divider -->
           <div
-            class="mt-[28px] mb-[32px] w-full border border-slate-700 bg-[#B3BAC5] md:hidden"
+            class="mt-[28px] mb-[32px] w-full h-[1px] bg-[var(--shade-dark-1)] lg:hidden"
           ></div>
           <!-- End:: Divider -->
 
@@ -6199,7 +6368,7 @@
             <div class="mb-2.5 flex items-center justify-between md:mb-4">
               <h3 class="text-[18px] font-semibold text-white">TOP CATEGORY</h3>
               <button
-                class="toggle-btn text-[18px] font-bold text-white transition-all duration-500 ease-in-out md:hidden"
+                class="toggle-btn text-[18px] font-bold text-white transition-all duration-500 ease-in-out lg:hidden"
               >
                 <svg
                   width="18"
@@ -6216,7 +6385,7 @@
               </button>
             </div>
             <ul
-              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out md:block md:max-h-none md:opacity-100"
+              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out lg:block lg:max-h-none lg:opacity-100"
             >
               <li class="">
                 <a
@@ -6332,7 +6501,7 @@
           <div class="mb-5 w-full lg:w-[200px]">
             <div class="mb-2.5 flex items-center justify-between md:mb-4">
               <h3 class="text-[18px] font-medium text-white">QUICK LINKS</h3>
-              <button class="toggle-btn text-xl font-bold text-white md:hidden">
+              <button class="toggle-btn text-xl font-bold text-white lg:hidden">
                 <svg
                   width="18"
                   height="18"
@@ -6348,7 +6517,7 @@
               </button>
             </div>
             <ul
-              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out md:block md:max-h-none md:opacity-100"
+              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out lg:block lg:max-h-none lg:opacity-100"
             >
               <li>
                 <a
@@ -6444,7 +6613,7 @@
               <h3 class="text-[18px] font-medium text-white">
                 HELP AND SUPPORT
               </h3>
-              <button class="toggle-btn text-xl font-bold text-white md:hidden">
+              <button class="toggle-btn text-xl font-bold text-white lg:hidden">
                 <svg
                   width="18"
                   height="18"
@@ -6460,7 +6629,7 @@
               </button>
             </div>
             <ul
-              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out md:block md:max-h-none md:opacity-100"
+              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out lg:block lg:max-h-none lg:opacity-100"
             >
               <li>
                 <a
@@ -6538,7 +6707,7 @@
 
           <!-- Start:: Divider -->
           <div
-            class="mt-[28px] mb-[32px] w-full border border-slate-700 bg-[#B3BAC5] md:hidden"
+            class="mt-[28px] mb-[32px] w-full h-[1px] bg-[var(--shade-dark-1)] lg:hidden"
           ></div>
           <!-- End:: Divider -->
 
@@ -6550,7 +6719,7 @@
               POPULAR TAGS
             </h3>
             <div
-              class="mb-[18px] flex flex-wrap gap-2 text-[14px] font-normal md:max-w-[274px]"
+              class="mb-[18px] flex flex-wrap gap-2 text-[14px] font-normal"
             >
               <span
                 class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
@@ -6647,7 +6816,7 @@
 
         <!-- Start:: Divider -->
         <div
-          class="mt-[28px] mb-[32px] w-full border border-slate-700 bg-[#B3BAC5]"
+          class="mt-[28px] mb-[32px] w-full h-[1px] bg-[var(--shade-dark-1)]"
         ></div>
         <!-- End:: Divider -->
 
@@ -6697,7 +6866,7 @@
   <script src="./assets/swiper@12/swiper-bundle.min.js"></script>
   <!-- End:: Plugin script links -->
 
-  <!-- Start:: Javascript linking -->
+  <!-- Start:: Footer Javascript linking -->
   <script>
     const toggleButtons = document.querySelectorAll(".toggle-btn");
 
@@ -6730,7 +6899,7 @@
       });
     });
   </script>
-  <!-- End:: Javascript linking -->
+  <!-- End:: Footer Javascript linking -->
 
   <!-- Start:: JS for Weekend Deals Section-->
   <script>
@@ -6898,4 +7067,7 @@
     });
   </script>
   <!-- End:: New Arrival section's script  -->
+
+  
+  
 </html>
