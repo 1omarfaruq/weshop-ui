@@ -2597,11 +2597,12 @@
       </section>
       <!-- End:: Weekly top section -->
 
+
       <!-- Start:: Weekend Deals Section -->
-      <section>
+      <section class="px-5 lg:px-12">
         <div class="mx-auto container text-[var(--text-blue)]">
           <!-- Start:: Section title -->
-          <h1 class="mb-2 text-[32px] font-semibold uppercase md:text-[64px]">
+          <h1 class="mb-2 text-[32px] font-semibold uppercase md:text-[64px] border border-red-400 px-5 lg:px-12">
             <span class="svao-stroke-text-blue text-transparent">
               WEEKEND
             </span>
@@ -2611,7 +2612,7 @@
 
           <!-- Start:: Section description -->
           <div
-            class="mb-7 flex flex-col justify-between md:mb-[50px] lg:flex-row lg:items-center"
+            class="mb-7 flex flex-col justify-between md:mb-[50px] lg:flex-row lg:items-center border border-yellow-400"
           >
             <p class="text-[14px] md:text-xl lg:w-1/2 lg:text-left">
               Our top selection showcases the freshest additions to our
@@ -2650,9 +2651,9 @@
           <!-- End:: Section description -->
 
           <!-- Start:: Section content -->
-          <div class="lg:bf flex flex-col-reverse gap-5 md:flex-row">
+          <div class="lg:bf flex flex-col-reverse gap-5 md:flex-row ">
             <div
-              class="xl:1/4 relative min-h-[580px] w-full overflow-hidden rounded-[32px] rounded-b-4xl bg-cover bg-center bg-no-repeat md:w-1/2 lg:block lg:w-2/6"
+              class="xl:w-1/4 relative min-h-[580px] w-full overflow-hidden rounded-[32px] rounded-b-4xl bg-cover bg-center bg-no-repeat md:w-1/2 lg:block lg:w-2/6"
               style="
                 background-image: url(./assets/stylish-young-man-buttoning-cuff-links-sleeves-style.png);
               "
@@ -2709,7 +2710,7 @@
               </div>
             </div>
 
-            <div class="xl:3/4 w-full md:w-1/2 lg:w-4/6">
+            <div class="xl:w-3/4 w-full md:w-1/2 lg:w-4/6">
               <div class="tab-content relative">
                 <!-- Start:: Tab-1 -->
                 <div id="tab1" class="svao-tab-body active overflow-hidden">
@@ -3783,7 +3784,7 @@
                   <!-- Start:: Product Swiper -->
 
                   <!-- Start:: Arrow button Tab-1 -->
-                  <div class="group flex justify-between">
+                  <div class="group flex justify-between ">
                     <button
                       class="custom-button2 prev tab1-prev absolute top-1/2 left-2 z-10 -translate-y-1/2 rounded-xl border-2 border-[var(--bg-blue)] bg-transparent px-1.5 py-2 hover:bg-[var(--bg-blue)]"
                     >
@@ -3802,7 +3803,7 @@
                       </svg>
                     </button>
                     <button
-                      class="custom-button2 next tab1-next absolute top-1/2 right-0 z-10 rounded-xl border-2 border-[var(--text-blue)] bg-transparent px-1.5 py-2.5 hover:bg-[var(--bg-blue)]"
+                      class="custom-button2 next tab1-next absolute top-1/2 right-2 z-10 -translate-y-1/2 rounded-xl border-2 border-[var(--text-blue)] bg-transparent px-1.5 py-2.5 hover:bg-[var(--bg-blue)]"
                     >
                       <svg
                         width="24"
@@ -6047,6 +6048,12 @@
       </section>
       <!-- End:: Weekend Deals Section  -->
 
+
+
+
+
+      
+
       <!-- Start:: Carousel -->
       <div class="my-[100px] flex flex-col gap-6 overflow-hidden md:gap-8">
         <!-- Start:: Top moving Carousel -->
@@ -6361,10 +6368,10 @@
 
 
       <!-- Start:: Shope the look -->
-      <section class="lg:flex bg-white">
+      <section class="lg:flex bg-white py-[30px] md:py-[100px]">
         <!-- Start:: Section image full -->
         <div
-          class="relative lg:w-[50%] xl:w-3/5 min-h-[550px] border border-red-500 overflow-hidden rounded-r-4xl bg-gray-200 bg-cover bg-center bg-no-repeat"
+          class="relative lg:w-[50%] xl:w-3/5 min-h-[600px] overflow-hidden lg:rounded-r-4xl bg-gray-200 bg-cover bg-center bg-no-repeat"
           style="background-image: url('./assets/shop-the-look.jpg')"
         >
           <!-- Start: Dot ping over the background image -->
@@ -6451,11 +6458,12 @@
         <!-- End:: Section image full -->
 
         <!-- Start:: Section info full -->
+        <div class="px-5 lg:w-[50%] xl:w-[40%]">
         <div
-          class=" lg:w-[50%] xl:w-[40%] px-5 py-8 lg:py-[65px] lg:pl-10 xl:pl-[85px] text-xl font-medium text-[var(--text-blue)]"
+          class="sm:px-0 py-8 xl:py-[65px] xl:pl-8  2xl:pl-[85px] text-xl font-medium text-[var(--text-blue)] sm:container lg:max-w-none mx-auto"
         >
           <!-- Start:: Section title-->
-          <h1 class="mb-8 lg:mb-[52px] text-[32px] md:text-[64px] font-semibold">
+          <h1 class="mb-8 lg:mb-[52px] text-[32px] lg:text-[58px] 2xl:text-[64px] font-semibold">
             SHOP
             <span class="svao-stroke-text-blue text-transparent">
               THE LOOK
@@ -6465,14 +6473,14 @@
 
           <!-- Start:: Products list -->
           <div class="pb-4">Products:</div>
-          <div class="svao-scrollbar lg:max-w-[515px] overflow-auto lg:pr-2.5 ">
+          <div class="svao-scrollbar-y pr-2 lg:max-w-[515px] overflow-auto lg:pr-2.5  h-[430px] space-y-4 md:space-y-6 ">
             <!-- Start:: Product's list item -->
             <div
-              class=" mb-6 lg:gap-0 xl:gap-2 flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-3 md:px-10 lg:px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-lg hover:shadow-[#F4F5F7]"
+              class=" lg:gap-0 xl:gap-2 flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-3 md:px-10 lg:px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-lg hover:shadow-[#F4F5F7]"
             >
-              <div class="border border-red-400 flex items-center gap-6">
+              <div class="flex items-center gap-6">
                 <div
-                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center"
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center "
                 >
                   <img
                     src="./assets/products/jaket.png"
@@ -6480,14 +6488,14 @@
                     class="object-contain"
                   />
                 </div>
-                <div class="border border-red-400">
+                <div class="">
                   <div class="text-[16px] md:text-xl font-medium">
                     Navy Blue Boomber Jacket
                   </div>
                   <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
                 </div>
               </div>
-              <div class="flex items-center border border-red-400">
+              <div class="flex items-center">
                 <a
                   href="#"
                   class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
@@ -6521,7 +6529,7 @@
             </div>
 
             <div
-              class="mb-6 flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
+              class=" flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
             >
               <div class="flex items-center gap-6">
                 <div
@@ -6541,7 +6549,7 @@
               <div class="flex items-center">
                 <a
                   href="#"
-                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
                   ><svg
                     width="18"
                     height="18"
@@ -6572,7 +6580,7 @@
             </div>
 
             <div
-              class="mb-6 flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
+              class="flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
             >
               <div class="flex items-center gap-6">
                 <div
@@ -6585,14 +6593,169 @@
                   />
                 </div>
                 <div>
-                  <div class="text-xl font-medium">Men's Lifestyle Sneaker</div>
-                  <div class="text-2xl text-[var(--text-blue)]">$29.00</div>
+                  <div class="text-[16px] md:text-xl font-medium">Men's Lifestyle Sneaker</div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
                 </div>
               </div>
               <div class="flex items-center">
                 <a
                   href="#"
-                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="lg:gap-0 xl:gap-2 flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-3 md:px-10 lg:px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-lg hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center "
+                >
+                  <img
+                    src="./assets/products/jaket.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div class="">
+                  <div class="text-[16px] md:text-xl font-medium">
+                    Navy Blue Boomber Jacket
+                  </div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+
+            <div
+              class=" flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center"
+                >
+                  <img
+                    src="./assets/products/gray-pant.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div>
+                  <div class="text-[16px] md:text-xl font-medium">Comfort white Pant</div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center"
+                >
+                  <img
+                    src="./assets/products/off-white-shoue.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div>
+                  <div class="text-[16px] md:text-xl font-medium">Men's Lifestyle Sneaker</div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
                   ><svg
                     width="18"
                     height="18"
@@ -6625,6 +6788,7 @@
           </div>
           <!-- End:: Products list -->
         </div>
+        </div>
         <!-- End:: Section info full -->
       </section>
       <!-- End:: Shope the look -->
@@ -6633,7 +6797,154 @@
 
 
 
+      <!-- Start:: Before/After image slider comparison  -->
+      <section class="px-5 lg:px-12 mt-[100px]">
+        <div class="container mx-auto ">
+          <style>
+            .comparison-slider {
+              position: relative;
+              overflow: hidden;
+              border-radius: 16px;
+              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+              height: 730px; /* Set your desired height here */
+            }
 
+            .before-image,
+            .after-image {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .before-image {
+              clip-path: polygon(
+                0 0,
+                var(--slider-position, 50%) 0,
+                var(--slider-position, 50%) 100%,
+                0 100%
+              );
+            }
+
+            .after-image {
+              clip-path: polygon(
+                var(--slider-position, 50%) 0,
+                100% 0,
+                100% 100%,
+                var(--slider-position, 50%) 100%
+              );
+            }
+
+            .slider-line {
+              position: absolute;
+              top: 0;
+              width: 0.2rem;
+              height: 100%;
+              background-color: #ffffff;
+              z-index: 8;
+              left: var(--slider-position, 50%);
+              transform: translateX(-50%);
+              pointer-events: none;
+            }
+
+            .slider-button {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 45px;
+              height: 45px;
+              background: white;
+              left: var(--slider-position, 50%);
+              border-radius: 50%;
+              z-index: 100;
+              box-shadow: 1px 1px 1p var(--shade-dark-4);
+            }
+          </style>
+          <!-- Start:: Section title and info -->
+          <div
+            class="mx-auto mb-6 md:mb-[40px] max-w-[872px] text-center text-xl text-[var(--text-blue)]"
+          >
+            <div class="text-[14px] mb-1.5 md:text-[20px]">Latest Fashion Demand</div>
+            <h1 class="mb-2.5 text-[32px] md:text-[64px] font-semibold uppercase">
+              ELEGANT
+              <span class="svao-stroke-text-blue text-transparent"> LOOK </span>
+            </h1>
+            <div class="text-[14px] md:text-[20px]">
+              Our latest collection of fashion item offers something special for
+              every occasion. Our festival and casual outfit ensures you are
+              prepared for anything.
+            </div>
+          </div>
+          <!-- End:: Section title and info -->
+
+          <!-- Start:: Section content -->
+          <div class="svao-comparison-container mx-auto w-full">
+            <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
+              <div class="lg:col-span-2 ">
+                <div
+                  class="comparison-slider mx-auto aspect-video w-full"
+                  id="comparisonSlider"
+                >
+                  <!-- Before Image -->
+                  <img
+                    src="./assets/comparison-image-dark.jpg"
+                    alt="Before"
+                    class="before-image"
+                  />
+
+                  <!-- After Image -->
+                  <img
+                    src="./assets/comparison-image.jpg"
+                    alt="After"
+                    class="after-image"
+                  />
+
+                  <!-- Slider Line -->
+                  <div class="slider-line"></div>
+
+                  <!-- Slider Handle -->
+                  <div class="slider-button" id="sliderHandle">
+                    <div
+                      class="flex h-full w-full items-center justify-center gap-1"
+                    >
+                      <svg
+                        width="12"
+                        height="20"
+                        viewBox="0 0 12 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.54922 9.99962L10.8992 17.3496C11.1492 17.5996 11.2701 17.8913 11.2617 18.2246C11.2534 18.558 11.1242 18.8496 10.8742 19.0996C10.6242 19.3496 10.3326 19.4746 9.99922 19.4746C9.66589 19.4746 9.37422 19.3496 9.12422 19.0996L1.42422 11.4246C1.22422 11.2246 1.07422 10.9996 0.974219 10.7496C0.874219 10.4996 0.824219 10.2496 0.824219 9.99962C0.824219 9.74962 0.874219 9.49962 0.974219 9.24962C1.07422 8.99962 1.22422 8.77462 1.42422 8.57462L9.12422 0.874622C9.37422 0.624622 9.67005 0.503789 10.0117 0.512122C10.3534 0.520455 10.6492 0.649622 10.8992 0.899622C11.1492 1.14962 11.2742 1.44129 11.2742 1.77462C11.2742 2.10796 11.1492 2.39962 10.8992 2.64962L3.54922 9.99962Z"
+                          fill="#1C1B1F"
+                        />
+                      </svg>
+
+                      <svg
+                        width="12"
+                        height="20"
+                        viewBox="0 0 12 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.45078 9.99962L1.10078 17.3496C0.850779 17.5996 0.729945 17.8913 0.738278 18.2246C0.746613 18.558 0.875778 18.8496 1.12578 19.0996C1.37578 19.3496 1.66745 19.4746 2.00078 19.4746C2.33411 19.4746 2.62578 19.3496 2.87578 19.0996L10.5758 11.4246C10.7758 11.2246 10.9258 10.9996 11.0258 10.7496C11.1258 10.4996 11.1758 10.2496 11.1758 9.99962C11.1758 9.74962 11.1258 9.49962 11.0258 9.24962C10.9258 8.99962 10.7758 8.77462 10.5758 8.57462L2.87578 0.874622C2.62578 0.624622 2.32995 0.503789 1.98828 0.512122C1.64661 0.520455 1.35078 0.649622 1.10078 0.899622C0.850779 1.14962 0.725779 1.44129 0.725779 1.77462C0.725779 2.10796 0.850779 2.39962 1.10078 2.64962L8.45078 9.99962Z"
+                          fill="#1C1B1F"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End:: Section content -->
+        </div>
+      </section>
+      <!-- End:: Before/After image slider comparison -->
 
       
       
@@ -7477,6 +7788,61 @@
     });
   </script>
   <!-- End:: New Arrival section's script  -->
+
+    <!-- Start:: JS Before/After image slider comparison -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("comparisonSlider");
+        const handle = document.getElementById("sliderHandle");
+        let isDragging = false;
+
+        function updateSliderPosition(clientX) {
+          const rect = slider.getBoundingClientRect();
+          const position = ((clientX - rect.left) / rect.width) * 100;
+          const clampedPosition = Math.max(0, Math.min(100, position));
+
+          slider.style.setProperty("--slider-position", `${clampedPosition}%`);
+        }
+
+        // Mouse events
+        handle.addEventListener("mousedown", function (e) {
+          isDragging = true;
+          e.preventDefault();
+        });
+
+        document.addEventListener("mousemove", function (e) {
+          if (isDragging) {
+            updateSliderPosition(e.clientX);
+          }
+        });
+
+        document.addEventListener("mouseup", function () {
+          isDragging = false;
+        });
+
+        // Touch events for mobile
+        handle.addEventListener("touchstart", function (e) {
+          isDragging = true;
+          e.preventDefault();
+        });
+
+        document.addEventListener("touchmove", function (e) {
+          if (isDragging && e.touches.length > 0) {
+            updateSliderPosition(e.touches[0].clientX);
+          }
+        });
+
+        document.addEventListener("touchend", function () {
+          isDragging = false;
+        });
+
+        // Click on slider to move handle
+        slider.addEventListener("click", function (e) {
+          updateSliderPosition(e.clientX);
+        });
+      });
+    </script>
+    <!-- End:: JS Before/After image slider comparison -->
 
   
   
