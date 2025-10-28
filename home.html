@@ -72,6 +72,27 @@
     </style>
     <!-- End:: Custom Styles -->
 
+    <!-- Start:: Help & Support Style -->
+    <style>
+      .svao-accordion-item.active {
+        background-color: white !important;
+        color: var(--bg-blue) !important;
+      }
+      .svao-accordion-item.active .svao-accordion-title {
+        color: var(--text-blue) !important;
+      }
+      .svao-accordion-item.active .svao-accordion-icon {
+        transform: rotate(45deg);
+        fill: var(--bg-blue);
+      }
+      .svao-accordion-item.active .svao-accordion-content {
+        max-height: 300px;
+        opacity: 1;
+      }
+    </style>
+
+    <!-- End:: Help & Support Style-->
+
     <!-- Start:: Plugin stylesheet links -->
     <link href="./assets/swiper@12/swiper-bundle.min.css" rel="stylesheet" />
     <!-- End:: Plugin stylesheet links -->
@@ -2347,7 +2368,7 @@
     <!-- End:: Header Section -->
 
     <!-- Start:: Main Content Section -->
-    <main>
+    
 
 
     <!-- Start:: Weekly top section -->
@@ -3382,10 +3403,137 @@
     </section>
     <!-- End:: Before/After image slider comparison -->
 
+
+    <!-- Start:: Help & Support -->
+    <section class="px-5 lg:px-12 py-10 md:py-[100px] bg-[#0F1B2D] text-white mt-10 md:mt-[100px]">
+      <div class="container mx-auto grid lg:grid-cols-2 gap-8 items-start">
+        
+        <!-- Left Content -->
+        <div class="max-w-[650px] mb-1.5 text-center md:text-start">
+          <h2 class="text-[32px] md:text-[64px] leading-tight">
+            <span>Help</span> <span class="svao-stroke-text-gray align-top text-transparent">Support</span>
+          </h2>
+          <p class="mt-[6px] text-[16px] md:text-[20px] font-normal leading-relaxed">
+            Our dedicated customer support team is here to assist you with any questions or concerns you may have.
+          </p>
+        </div>
+
+        <!-- Right Content -->
+        <div class="space-y-5 md:space-y-6" id="accordion">
+          
+          <div class="svao-accordion-item bg-[var(--bg-blue)] px-3 md:px-[32px] py-3 md:py-[24px] rounded-2xl border-[1.5px] border-white overflow-hidden transition-all duration-300">
+            <button class="accordion-header w-full flex justify-between items-center text-left transition-all duration-300 gap-3">
+              <span class="svao-accordion-title text-[16px] md:text-[24px] font-semibold text-white">
+                What payment methods do you accept?
+              </span>
+              <svg class="svao-accordion-icon transition-transform duration-300" width="40" height="40" viewBox="0 0 40 40" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.65 21.7V28.5C18.65 28.925 18.7947 29.2812 19.084 29.5685C19.373 29.8562 19.7313 30 20.159 30C20.5863 30 20.9417 29.8562 21.225 29.5685C21.5083 29.2812 21.65 28.925 21.65 28.5V21.7H28.5C28.925 21.7 29.2813 21.5553 29.569 21.266C29.8563 20.977 30 20.6187 30 20.191C30 19.7637 29.8563 19.4083 29.569 19.125C29.2813 18.8417 28.925 18.7 28.5 18.7H21.65V11.5C21.65 11.075 21.5053 10.7187 21.216 10.431C20.927 10.1437 20.5687 10 20.141 10C19.7137 10 19.3583 10.1437 19.075 10.431C18.7917 10.7187 18.65 11.075 18.65 11.5V18.7H11.5C11.075 18.7 10.7188 18.8447 10.4315 19.134C10.1438 19.423 10 19.7813 10 20.209C10 20.6363 10.1438 20.9917 10.4315 21.275C10.7188 21.5583 11.075 21.7 11.5 21.7H18.65ZM20.0135 40C17.2555 40 14.6638 39.475 12.2385 38.425C9.81283 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.186 1.575 27.758C0.525 25.33 0 22.7357 0 19.975C0 17.2143 0.525 14.62 1.575 12.192C2.625 9.764 4.05833 7.65 5.875 5.85C7.69167 4.05 9.814 2.625 12.242 1.575C14.67 0.525 17.2643 0 20.025 0C22.7857 0 25.38 0.525 27.808 1.575C30.236 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2288 40 19.9865C40 22.7445 39.475 25.3362 38.425 27.7615C37.375 30.1872 35.95 32.3053 34.15 34.116C32.35 35.9263 30.2333 37.3597 27.8 38.416C25.3667 39.472 22.7712 40 20.0135 40Z"/>
+              </svg>
+            </button>
+            <div class="svao-accordion-content pb-0 text-[14px] font-normal text-[var(--text-blue)] transition-all duration-500 ease-in-out max-h-0 opacity-0 overflow-hidden">
+              <p class="mt-3 md:mt-8">
+                We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay. 
+                All transactions are securely processed.
+              </p>
+            </div>
+          </div>
+
+          <div class="svao-accordion-item bg-[var(--bg-blue)] px-3 md:px-[32px] py-3 md:py-[24px] rounded-2xl border-[1.5px] border-white overflow-hidden transition-all duration-300">
+            <button class="accordion-header w-full flex justify-between items-center text-left transition-all duration-300 gap-2">
+              <span class="svao-accordion-title text-[16px] md:text-[24px] font-semibold text-white">
+                What payment methods do you accept?
+              </span>
+              <svg class="svao-accordion-icon transition-transform duration-300" width="40" height="40" viewBox="0 0 40 40" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.65 21.7V28.5C18.65 28.925 18.7947 29.2812 19.084 29.5685C19.373 29.8562 19.7313 30 20.159 30C20.5863 30 20.9417 29.8562 21.225 29.5685C21.5083 29.2812 21.65 28.925 21.65 28.5V21.7H28.5C28.925 21.7 29.2813 21.5553 29.569 21.266C29.8563 20.977 30 20.6187 30 20.191C30 19.7637 29.8563 19.4083 29.569 19.125C29.2813 18.8417 28.925 18.7 28.5 18.7H21.65V11.5C21.65 11.075 21.5053 10.7187 21.216 10.431C20.927 10.1437 20.5687 10 20.141 10C19.7137 10 19.3583 10.1437 19.075 10.431C18.7917 10.7187 18.65 11.075 18.65 11.5V18.7H11.5C11.075 18.7 10.7188 18.8447 10.4315 19.134C10.1438 19.423 10 19.7813 10 20.209C10 20.6363 10.1438 20.9917 10.4315 21.275C10.7188 21.5583 11.075 21.7 11.5 21.7H18.65ZM20.0135 40C17.2555 40 14.6638 39.475 12.2385 38.425C9.81283 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.186 1.575 27.758C0.525 25.33 0 22.7357 0 19.975C0 17.2143 0.525 14.62 1.575 12.192C2.625 9.764 4.05833 7.65 5.875 5.85C7.69167 4.05 9.814 2.625 12.242 1.575C14.67 0.525 17.2643 0 20.025 0C22.7857 0 25.38 0.525 27.808 1.575C30.236 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2288 40 19.9865C40 22.7445 39.475 25.3362 38.425 27.7615C37.375 30.1872 35.95 32.3053 34.15 34.116C32.35 35.9263 30.2333 37.3597 27.8 38.416C25.3667 39.472 22.7712 40 20.0135 40Z"/>
+              </svg>
+            </button>
+            <div class="svao-accordion-content pb-0 text-[14px] font-normal text-[var(--text-blue)] transition-all duration-500 ease-in-out max-h-0 opacity-0 overflow-hidden">
+              <p class="mt-3 md:mt-8">
+                We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay. 
+                All transactions are securely processed.
+              </p>
+            </div>
+          </div>
+
+          <div class="svao-accordion-item bg-[var(--bg-blue)] px-3 md:px-[32px] py-3 md:py-[24px] rounded-2xl border-[1.5px] border-white overflow-hidden transition-all duration-300">
+            <button class="accordion-header w-full flex justify-between items-center text-left transition-all duration-300 gap-2">
+              <span class="svao-accordion-title text-[16px] md:text-[24px] font-semibold text-white">
+                What payment methods do you accept?
+              </span>
+              <svg class="svao-accordion-icon transition-transform duration-300" width="40" height="40" viewBox="0 0 40 40" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.65 21.7V28.5C18.65 28.925 18.7947 29.2812 19.084 29.5685C19.373 29.8562 19.7313 30 20.159 30C20.5863 30 20.9417 29.8562 21.225 29.5685C21.5083 29.2812 21.65 28.925 21.65 28.5V21.7H28.5C28.925 21.7 29.2813 21.5553 29.569 21.266C29.8563 20.977 30 20.6187 30 20.191C30 19.7637 29.8563 19.4083 29.569 19.125C29.2813 18.8417 28.925 18.7 28.5 18.7H21.65V11.5C21.65 11.075 21.5053 10.7187 21.216 10.431C20.927 10.1437 20.5687 10 20.141 10C19.7137 10 19.3583 10.1437 19.075 10.431C18.7917 10.7187 18.65 11.075 18.65 11.5V18.7H11.5C11.075 18.7 10.7188 18.8447 10.4315 19.134C10.1438 19.423 10 19.7813 10 20.209C10 20.6363 10.1438 20.9917 10.4315 21.275C10.7188 21.5583 11.075 21.7 11.5 21.7H18.65ZM20.0135 40C17.2555 40 14.6638 39.475 12.2385 38.425C9.81283 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.186 1.575 27.758C0.525 25.33 0 22.7357 0 19.975C0 17.2143 0.525 14.62 1.575 12.192C2.625 9.764 4.05833 7.65 5.875 5.85C7.69167 4.05 9.814 2.625 12.242 1.575C14.67 0.525 17.2643 0 20.025 0C22.7857 0 25.38 0.525 27.808 1.575C30.236 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2288 40 19.9865C40 22.7445 39.475 25.3362 38.425 27.7615C37.375 30.1872 35.95 32.3053 34.15 34.116C32.35 35.9263 30.2333 37.3597 27.8 38.416C25.3667 39.472 22.7712 40 20.0135 40Z"/>
+              </svg>
+            </button>
+            <div class="svao-accordion-content pb-0 text-[14px] font-normal text-[var(--text-blue)] transition-all duration-500 ease-in-out max-h-0 opacity-0 overflow-hidden">
+              <p class="mt-3 md:mt-8">
+                We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay. 
+                All transactions are securely processed.
+              </p>
+            </div>
+          </div>
+
+          <div class="svao-accordion-item bg-[var(--bg-blue)] px-3 md:px-[32px] py-3 md:py-[24px] rounded-2xl border-[1.5px] border-white overflow-hidden transition-all duration-300">
+            <button class="accordion-header w-full flex justify-between items-center text-left transition-all duration-300 gap-2">
+              <span class="svao-accordion-title text-[16px] md:text-[24px] font-semibold text-white">
+                What payment methods do you accept?
+              </span>
+              <svg class="svao-accordion-icon transition-transform duration-300" width="40" height="40" viewBox="0 0 40 40" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.65 21.7V28.5C18.65 28.925 18.7947 29.2812 19.084 29.5685C19.373 29.8562 19.7313 30 20.159 30C20.5863 30 20.9417 29.8562 21.225 29.5685C21.5083 29.2812 21.65 28.925 21.65 28.5V21.7H28.5C28.925 21.7 29.2813 21.5553 29.569 21.266C29.8563 20.977 30 20.6187 30 20.191C30 19.7637 29.8563 19.4083 29.569 19.125C29.2813 18.8417 28.925 18.7 28.5 18.7H21.65V11.5C21.65 11.075 21.5053 10.7187 21.216 10.431C20.927 10.1437 20.5687 10 20.141 10C19.7137 10 19.3583 10.1437 19.075 10.431C18.7917 10.7187 18.65 11.075 18.65 11.5V18.7H11.5C11.075 18.7 10.7188 18.8447 10.4315 19.134C10.1438 19.423 10 19.7813 10 20.209C10 20.6363 10.1438 20.9917 10.4315 21.275C10.7188 21.5583 11.075 21.7 11.5 21.7H18.65ZM20.0135 40C17.2555 40 14.6638 39.475 12.2385 38.425C9.81283 37.375 7.69167 35.9417 5.875 34.125C4.05833 32.3083 2.625 30.186 1.575 27.758C0.525 25.33 0 22.7357 0 19.975C0 17.2143 0.525 14.62 1.575 12.192C2.625 9.764 4.05833 7.65 5.875 5.85C7.69167 4.05 9.814 2.625 12.242 1.575C14.67 0.525 17.2643 0 20.025 0C22.7857 0 25.38 0.525 27.808 1.575C30.236 2.625 32.35 4.05 34.15 5.85C35.95 7.65 37.375 9.76667 38.425 12.2C39.475 14.6333 40 17.2288 40 19.9865C40 22.7445 39.475 25.3362 38.425 27.7615C37.375 30.1872 35.95 32.3053 34.15 34.116C32.35 35.9263 30.2333 37.3597 27.8 38.416C25.3667 39.472 22.7712 40 20.0135 40Z"/>
+              </svg>
+            </button>
+            <div class="svao-accordion-content pb-0 text-[14px] font-normal text-[var(--text-blue)] transition-all duration-500 ease-in-out max-h-0 opacity-0 overflow-hidden">
+              <p class="mt-3 md:mt-8">
+                We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay. 
+                All transactions are securely processed.
+              </p>
+            </div>
+          </div>      
+          
+
+        </div>
+      </div>
+    </section>
+    <!-- End:: help & Support -->
+    
+
+    </main>
+    <!-- End:: Main Content Section -->     
+     
     <!-- Start:: Footer Section -->
     <footer
       class="font-poppins px-5 lg:px-12 mt-[100px] rounded-t-[32px] bg-[#192434] pt-[40px] pb-[30px] text-white md:pt-[60px]"
     >
+      <!-- Start:: Back to bottom circle button -->
+      <div id="backToTop" class="fixed bottom-6 right-5 sm:right-2 md:right-6 lg:right-12 xl:right-20 z-60 text-[var(--text-blue)] w-12 h-12 md:w-16 md:h-16 rounded-full shadow-2xl bg-white hover:bg-[var(--bg-blue)] transition-opacity opacity-0 cursor-pointer group flex items-center justify-center">
+
+        <svg class="absolute w-full h-full -rotate-90  " viewBox="0 0 100 100">
+          <circle
+            cx="50"
+            cy="50"
+            r="46"
+            stroke="var(--text-blue)"
+            stroke-width="4"
+            fill="transparent"
+            stroke-dasharray="289"
+            stroke-dashoffset="289"
+            class="transition-all duration-150 group-hover:stroke-[var(--primary-lemon)]"
+          />
+        </svg>
+        <svg 
+          width="33" 
+          height="23" 
+          viewBox="0 0 33 23" 
+          xmlns="http://www.w3.org/2000/svg"
+          class="relative -rotate-90"
+        >
+          <path 
+            d="M28.0417 12.4858H1.38875C0.990695 12.4858 0.659722 12.3539 0.395833 12.09C0.131944 11.8261 0 11.4951 0 11.0971C0 10.699 0.131944 10.3681 0.395833 10.1042C0.659722 9.84028 0.990695 9.70833 1.38875 9.70833H28.0417L20.6946 2.34708C20.426 2.07847 20.2893 1.75667 20.2846 1.38167C20.2801 1.00667 20.4168 0.680279 20.6946 0.402501C20.9629 0.134168 21.2869 0 21.6667 0C22.0464 0 22.3704 0.134168 22.6388 0.402501L32.3613 10.125C32.5093 10.2731 32.6135 10.4258 32.6738 10.5833C32.7338 10.7406 32.7638 10.9118 32.7638 11.0971C32.7638 11.2824 32.7338 11.4536 32.6738 11.6108C32.6135 11.7683 32.5093 11.9211 32.3613 12.0692L22.6388 21.7917C22.3704 22.06 22.0487 22.1942 21.6737 22.1942C21.2987 22.1942 20.9724 22.06 20.6946 21.7917C20.4168 21.5139 20.2779 21.1875 20.2779 20.8125C20.2779 20.4375 20.4168 20.1111 20.6946 19.8333L28.0417 12.4858Z" 
+            class="fill-[var(--text-blue)]  group-hover:fill-[var(--primary-lemon)] transition-colors"
+          />
+        </svg>
+      </div>
+      <!-- End:: Back to bottom square button -->
+    
       <div class="container mx-auto">
         <!-- Start:: Top Footer Content -->
         <div class="flex flex-wrap justify-between">
@@ -4010,11 +4158,34 @@
       </div>
     </footer>
     <!-- End:: Footer Section -->
-    
-    </main>
-    <!-- End:: Main Content Section -->
-  </body>
 
+
+  <!-- Start:: Back to bottom square button JS-->
+  <script>
+  const backToTop = document.getElementById('backToTop');
+  const circle = backToTop.querySelector('circle');
+  const totalHeight = document.body.scrollHeight - window.innerHeight;
+
+  window.addEventListener('scroll', () => {
+    const progress = window.scrollY / totalHeight;
+    const dashoffset = 289 * (1 - progress);
+    circle.style.strokeDashoffset = dashoffset;
+
+    if (window.scrollY > 200) {
+      backToTop.classList.add('opacity-100');
+      backToTop.classList.remove('opacity-0');
+    } else {
+      backToTop.classList.add('opacity-0');
+      backToTop.classList.remove('opacity-100');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  </script>
+  <!-- End:: Back to bottom square button JS  -->
+  
   <!-- Start:: Plugin script links -->
   <script src="./assets/swiper@12/swiper-bundle.min.js"></script>
   <!-- End:: Plugin script links -->
@@ -4136,6 +4307,24 @@
     });
   </script>
   <!-- End:: Footer Javascript linking -->
-  
+
+  <!-- Start:: Help & Support JS -->
+  <script>
+    const items = document.querySelectorAll(".svao-accordion-item");
+
+    items.forEach(item => {
+      const header = item.querySelector(".accordion-header");
+
+      header.addEventListener("click", () => {
+        // Close all others
+        items.forEach(i => i !== item && i.classList.remove("active"));
+        // Toggle current
+        item.classList.toggle("active");
+      });
+    });
+  </script>
+  <!-- End:: Help & Support JS -->
+   
+  </body>
   
 </html>
