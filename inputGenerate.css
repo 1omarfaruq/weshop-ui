@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-3xl: 105rem;
+    /* 1640px */
+}
+
+
+/* Start:: Carousel custom design */
+
+@keyframes right-left-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes left-right-scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
