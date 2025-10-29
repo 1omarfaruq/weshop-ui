@@ -47,7 +47,47 @@
         --shade-2: rgba(165, 173, 186, 1);
         --shade-3: rgba(151, 160, 175, 1);
         --shade-4: rgba(137, 147, 164, 1);
+
+        /* Start:: main color schema */
+        --background: rgb(244 244 244 / 1.0);
+        --color-background-secondary: rgb(255 255 255 / 1.0);
+        --color-background-gradient: rgb();
+        --color-text: rgb(25 39 57 / 1.0);
+        --color-subtext: rgb(255 255 255 / 1.0);
+        --color-heading-text: rgb(25 36 52 / 1.0);
+        --color-link-text-light: rgb(25 39 57 / 1.0);
+        --color-link-text-dark: rgb(255 255 255 / 1.0);
+        --color-link-text-light-hover: rgb(219 225 18 / 1.0);
+        --color-link-text-dark-hover: rgb(219 225 18 / 1.0);
+        --color-primary-button-background: rgb(25 36 52 / 1.0);
+        --color-primary-button-text: rgb(255 255 255 / 1.0);
+        --color-primary-button-border: rgb(25 36 52 / 1.0);
+        --color-primary-button-outline: rgb(25 36 52 / 1.0);
+        --color-primary-button-hover-background: rgb(219 225 18 / 1.0);
+        --color-primary-button-hover-text: rgb(25 36 52 / 1.0);
+        --color-primary-button-hover-border: rgb(219 225 18 / 1.0);
+        --color-primary-button-hover-outline: rgb(219 225 18 / 1.0);
+        --color-secondary-button-background: rgb(219 225 18 / 1.0);
+        --color-secondary-button-text: rgb(25 36 52 / 1.0);
+        --color-secondary-button-border: rgb(219 225 18 / 1.0);
+        --color-secondary-button-outline: rgb(219 225 18 / 1.0);
+        --color-secondary-button-hover-background: rgb(25 36 52 / 1.0);
+        --color-secondary-button-hover-text: rgb(255 255 255 / 1.0);
+        --color-secondary-button-hover-border: rgb(25 36 52 / 1.0);
+        --color-secondary-button-hover-outline: rgb(25 36 52 / 1.0);
+        --color-input-background: rgb(255 255 255 / 1.0);
+        --color-input-placeholder: rgb(137 147 164 / 1.0);
+        --color-input-text-color: rgb(25 39 57 / 1.0);
+        --color-input-border-color: rgb(223 225 230 / 1.0);
+        --color-input-active-borders-color: rgb(66 82 110 / 1.0);
+        --color-input-hover-background: rgb(250 251 252 / 1.0);
+        --color-tooltip-background: rgb(25 36 52 / 1.0);
+        --color-tooltip-text: rgb(255 255 255 / 1.0);
+        --color-border: rgb(223 225 230 / 1.0);
+        --color-shadow: rgb(0 0 0 / 1.0);
+        
       }
+
 
       /* .custom-button.next.swiper-button-disabled,
       .custom-button.prev.swiper-button-disabled {
@@ -3403,6 +3443,459 @@
     </section>
     <!-- End:: Before/After image slider comparison -->
 
+    <!-- Start:: Happy Customer -->
+    <section class="px-5 lg:px-12 mt-[40px] md:mt-[100px]">
+      <div class="container mx-auto">
+      <!-- Start:: testimonial heading -->
+      <div class="flex items-end justify-between">
+        <div class="">
+          <h1
+            class="text-[32px] font-bold text-[var(--text-blue)] md:text-[64px]"
+          >
+            <span>HAPPY</span>
+            <span class="svao-stroke-text-blue text-transparent"
+              >CUSTOMERS</span
+            >
+          </h1>
+          <p
+            class="max-w-xl text-[14px] text-[var(--text-blue)] md:text-[16px]"
+          >
+            Our top selection showcases the freshest additions to our
+            collection,bringing you cutting-edge products and exciting
+            innovations.
+          </p>
+        </div>
+        <!-- Start:: Arrow button  -->
+        <div class="hidden gap-4 sm:flex border-black">
+          <div
+            class="swiper-testimonial-prev group cursor-pointer rounded-xl w-[50px] h-[50px] flex items-center justify-center border-[2px] border-[var(--bg-blue)] p-2 transition-all duration-300 hover:bg-[var(--bg-blue)]"
+          >
+            <svg
+              width="24"
+              height="18"
+              viewBox="0 0 33 23"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-[var(--text-blue)] group-hover:fill-white rotate-180 transition-all duration-300"
+            >
+              <path
+                d="M28.0417 12.4858H1.38875C0.990695 12.4858 0.659722 12.3539 0.395833 12.09C0.131944 11.8261 0 11.4951 0 11.0971C0 10.699 0.131944 10.3681 0.395833 10.1042C0.659722 9.84028 0.990695 9.70833 1.38875 9.70833H28.0417L20.6946 2.34708C20.426 2.07847 20.2893 1.75667 20.2846 1.38167C20.2801 1.00667 20.4168 0.680279 20.6946 0.402501C20.9629 0.134168 21.2869 0 21.6667 0C22.0464 0 22.3704 0.134168 22.6388 0.402501L32.3613 10.125C32.5093 10.2731 32.6135 10.4258 32.6738 10.5833C32.7338 10.7406 32.7638 10.9118 32.7638 11.0971C32.7638 11.2824 32.7338 11.4536 32.6738 11.6108C32.6135 11.7683 32.5093 11.9211 32.3613 12.0692L22.6388 21.7917C22.3704 22.06 22.0487 22.1942 21.6737 22.1942C21.2987 22.1942 20.9724 22.06 20.6946 21.7917C20.4168 21.5139 20.2779 21.1875 20.2779 20.8125C20.2779 20.4375 20.4168 20.1111 20.6946 19.8333L28.0417 12.4858Z"
+              />
+            </svg>
+          </div>
+
+          <div
+            class="swiper-testimonial-next group cursor-pointer rounded-xl border-[2px] border-[var(--bg-blue)] w-[50px] h-[50px] flex items-center justify-center p-2 transition-all duration-300 hover:bg-[var(--bg-blue)]"
+          >
+            <svg
+              width="24"
+              height="18"
+              viewBox="0 0 33 23"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-[var(--text-blue)] group-hover:fill-white transition-all duration-300"
+            >
+              <path
+                d="M28.0417 12.4858H1.38875C0.990695 12.4858 0.659722 12.3539 0.395833 12.09C0.131944 11.8261 0 11.4951 0 11.0971C0 10.699 0.131944 10.3681 0.395833 10.1042C0.659722 9.84028 0.990695 9.70833 1.38875 9.70833H28.0417L20.6946 2.34708C20.426 2.07847 20.2893 1.75667 20.2846 1.38167C20.2801 1.00667 20.4168 0.680279 20.6946 0.402501C20.9629 0.134168 21.2869 0 21.6667 0C22.0464 0 22.3704 0.134168 22.6388 0.402501L32.3613 10.125C32.5093 10.2731 32.6135 10.4258 32.6738 10.5833C32.7338 10.7406 32.7638 10.9118 32.7638 11.0971C32.7638 11.2824 32.7338 11.4536 32.6738 11.6108C32.6135 11.7683 32.5093 11.9211 32.3613 12.0692L22.6388 21.7917C22.3704 22.06 22.0487 22.1942 21.6737 22.1942C21.2987 22.1942 20.9724 22.06 20.6946 21.7917C20.4168 21.5139 20.2779 21.1875 20.2779 20.8125C20.2779 20.4375 20.4168 20.1111 20.6946 19.8333L28.0417 12.4858Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- End:: Arrow button -->
+      </div>
+      <!-- End:: testimonial heading -->
+
+      <!-- Start:: testimonial swiper -->
+      <div class="swiper mt-[20px] md:mt-[50px] w-full">
+        <div class="swiper-wrapper mb-6 h-auto">
+          <div
+            class="swiper-slide h-xl rounded-2xl bg-[var(--shade-light-1)] p-4 sm:p-6 
+            text-[var(--text-blue)] transition-all duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] 
+            hover:shadow-[0_8px_32px_2px_rgba(0,0,0,0.12)]"
+          >
+            <div class="flex justify-between gap-2">
+              <div class="flex flex-shrink-0 items-center gap-2">
+                <img
+                  class="h-14 w-14 rounded-full border object-cover p-1 md:h-18 md:w-18"
+                  src="./assets/images/t2.jpg"
+                  alt=""
+                />
+                <h1
+                  class="text-[22px] font-bold text-[var(--bg-blue)] md:text-[28px] lg:text-[36px]"
+                >
+                  Olivia Chen
+                </h1>
+              </div>
+              <div class="h-[22px] w-[28px] md:h-[38px] md:w-[58px]">
+                <!-- width="64"
+                  height="43" -->
+                <svg
+                  width="w-full"
+                  height="h-full"
+                  viewBox="0 0 64 43"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.875 38.152C17.3443 40.0512 15.9758 41.2801 13.7693 41.8666C11.5629 42.4531 9.71953 42.7324 8.29512 42.7324C6.8707 42.7324 5.47422 42.5648 4.10566 42.2576C1.36855 41.5314 0 40.135 0 38.152V4.74805C0 2.84883 2.2623 1.48027 6.81484 0.642384C9.02129 0.223438 11.3115 0 13.6297 0C15.9479 0 18.266 0.223438 20.5842 0.642384C25.1088 1.48027 27.399 2.84883 27.399 4.74805C27.3711 4.74805 17.875 38.152 17.875 38.152ZM53.6529 38.152C53.1223 40.0512 51.7537 41.2801 49.5473 41.8666C47.3408 42.4531 45.4975 42.7324 44.073 42.7324C42.6486 42.7324 41.2521 42.5648 39.8836 42.2576C37.1465 41.5314 35.7779 40.135 35.7779 38.152V4.74805C35.7779 2.84883 38.0402 1.48027 42.5928 0.642384C44.7992 0.223438 47.0894 0 49.4076 0C51.7258 0 54.0439 0.223438 56.39 0.642384C60.9146 1.48027 63.2049 2.84883 63.2049 4.74805L53.6529 38.152Z"
+                    fill="#1C3454"
+                    fill-opacity="0.26"
+                  />
+                </svg>
+              </div>
+            </div>
+            <hr class="my-4 text-[var(--shade-dark-1)] lg:my-6" />
+
+            <div class="">
+              <div class="flex items-center gap-2">
+                <span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.88214 12.825L4.18214 15.65C3.99881 15.8 3.79881 15.8708 3.58214 15.8625C3.36548 15.8542 3.17381 15.7917 3.00714 15.675C2.84048 15.5583 2.71131 15.4 2.61964 15.2C2.52798 15 2.52381 14.7833 2.60714 14.55L4.03214 9.925L0.407143 7.35C0.207143 7.21667 0.0821429 7.04167 0.0321429 6.825C-0.0178571 6.60833 -0.00952381 6.40833 0.0571429 6.225C0.12381 6.04167 0.240476 5.87917 0.407143 5.7375C0.57381 5.59583 0.77381 5.525 1.00714 5.525H5.48214L6.93214 0.725C7.01548 0.491667 7.14464 0.3125 7.31964 0.1875C7.49464 0.0625 7.68214 0 7.88214 0C8.08214 0 8.26964 0.0625 8.44464 0.1875C8.61964 0.3125 8.74881 0.491667 8.83214 0.725L10.2821 5.525H14.7571C14.9905 5.525 15.1905 5.59583 15.3571 5.7375C15.5238 5.87917 15.6405 6.04167 15.7071 6.225C15.7738 6.40833 15.7821 6.60833 15.7321 6.825C15.6821 7.04167 15.5571 7.21667 15.3571 7.35L11.7321 9.925L13.1571 14.55C13.2405 14.7833 13.2363 15 13.1446 15.2C13.053 15.4 12.9238 15.5583 12.7571 15.675C12.5905 15.7917 12.3988 15.8542 12.1821 15.8625C11.9655 15.8708 11.7655 15.8 11.5821 15.65L7.88214 12.825Z"
+                      fill="#192434"
+                    /></svg></span
+                ><span class="mt-[2px] text-[18px] font-semibold">5.0</span>
+              </div>
+              <h3
+                class="mt-3 text-[18px] font-medium ] md:text-[18px] md:font-bold lg:text-xl"
+              >
+                Best Quality Knitwear
+              </h3>
+              <p class="mt-4 text-[14px] font-[400] md:text-[16px]">
+                Fantastic selection and fast shipping! Found exactly what I
+                needed for my new laptop and had it delivered within two days.
+                Highly recommend!
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide h-xl rounded-2xl bg-[var(--shade-light-1)] p-4 sm:p-6 
+            text-[var(--text-blue)] transition-all duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] 
+            hover:shadow-[0_8px_32px_2px_rgba(0,0,0,0.12)]"
+          >
+            <div class="flex justify-between gap-2">
+              <div class="flex flex-shrink-0 items-center gap-2">
+                <img
+                  class="h-14 w-14 rounded-full border object-cover p-1 md:h-18 md:w-18"
+                  src="./assets/images/t2.jpg"
+                  alt=""
+                />
+                <h1
+                  class="text-[22px] font-bold text-[var(--bg-blue)] md:text-[28px] lg:text-[36px]"
+                >
+                  Olivia Chen
+                </h1>
+              </div>
+              <div class="h-[22px] w-[28px] md:h-[38px] md:w-[58px]">
+                <!-- width="64"
+                  height="43" -->
+                <svg
+                  width="w-full"
+                  height="h-full"
+                  viewBox="0 0 64 43"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.875 38.152C17.3443 40.0512 15.9758 41.2801 13.7693 41.8666C11.5629 42.4531 9.71953 42.7324 8.29512 42.7324C6.8707 42.7324 5.47422 42.5648 4.10566 42.2576C1.36855 41.5314 0 40.135 0 38.152V4.74805C0 2.84883 2.2623 1.48027 6.81484 0.642384C9.02129 0.223438 11.3115 0 13.6297 0C15.9479 0 18.266 0.223438 20.5842 0.642384C25.1088 1.48027 27.399 2.84883 27.399 4.74805C27.3711 4.74805 17.875 38.152 17.875 38.152ZM53.6529 38.152C53.1223 40.0512 51.7537 41.2801 49.5473 41.8666C47.3408 42.4531 45.4975 42.7324 44.073 42.7324C42.6486 42.7324 41.2521 42.5648 39.8836 42.2576C37.1465 41.5314 35.7779 40.135 35.7779 38.152V4.74805C35.7779 2.84883 38.0402 1.48027 42.5928 0.642384C44.7992 0.223438 47.0894 0 49.4076 0C51.7258 0 54.0439 0.223438 56.39 0.642384C60.9146 1.48027 63.2049 2.84883 63.2049 4.74805L53.6529 38.152Z"
+                    fill="#1C3454"
+                    fill-opacity="0.26"
+                  />
+                </svg>
+              </div>
+            </div>
+            <hr class="my-4 text-[var(--shade-dark-1)] lg:my-6" />
+
+            <div class="">
+              <div class="flex items-center gap-2">
+                <span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.88214 12.825L4.18214 15.65C3.99881 15.8 3.79881 15.8708 3.58214 15.8625C3.36548 15.8542 3.17381 15.7917 3.00714 15.675C2.84048 15.5583 2.71131 15.4 2.61964 15.2C2.52798 15 2.52381 14.7833 2.60714 14.55L4.03214 9.925L0.407143 7.35C0.207143 7.21667 0.0821429 7.04167 0.0321429 6.825C-0.0178571 6.60833 -0.00952381 6.40833 0.0571429 6.225C0.12381 6.04167 0.240476 5.87917 0.407143 5.7375C0.57381 5.59583 0.77381 5.525 1.00714 5.525H5.48214L6.93214 0.725C7.01548 0.491667 7.14464 0.3125 7.31964 0.1875C7.49464 0.0625 7.68214 0 7.88214 0C8.08214 0 8.26964 0.0625 8.44464 0.1875C8.61964 0.3125 8.74881 0.491667 8.83214 0.725L10.2821 5.525H14.7571C14.9905 5.525 15.1905 5.59583 15.3571 5.7375C15.5238 5.87917 15.6405 6.04167 15.7071 6.225C15.7738 6.40833 15.7821 6.60833 15.7321 6.825C15.6821 7.04167 15.5571 7.21667 15.3571 7.35L11.7321 9.925L13.1571 14.55C13.2405 14.7833 13.2363 15 13.1446 15.2C13.053 15.4 12.9238 15.5583 12.7571 15.675C12.5905 15.7917 12.3988 15.8542 12.1821 15.8625C11.9655 15.8708 11.7655 15.8 11.5821 15.65L7.88214 12.825Z"
+                      fill="#192434"
+                    /></svg></span
+                ><span class="mt-[2px] text-[18px] font-semibold">5.0</span>
+              </div>
+              <h3
+                class="mt-3 text-[18px] font-medium ] md:text-[18px] md:font-bold lg:text-xl"
+              >
+                Best Quality Knitwear
+              </h3>
+              <p class="mt-4 text-[14px] font-[400] md:text-[16px]">
+                Fantastic selection and fast shipping! Found exactly what I
+                needed for my new laptop and had it delivered within two days.
+                Highly recommend!
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide h-xl rounded-2xl bg-[var(--shade-light-1)] p-4 sm:p-6 
+            text-[var(--text-blue)] transition-all duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] 
+            hover:shadow-[0_8px_32px_2px_rgba(0,0,0,0.12)]"
+          >
+            <div class="flex justify-between gap-2">
+              <div class="flex flex-shrink-0 items-center gap-2">
+                <img
+                  class="h-14 w-14 rounded-full border object-cover p-1 md:h-18 md:w-18"
+                  src="./assets/images/t2.jpg"
+                  alt=""
+                />
+                <h1
+                  class="text-[22px] font-bold text-[var(--bg-blue)] md:text-[28px] lg:text-[36px]"
+                >
+                  Olivia Chen
+                </h1>
+              </div>
+              <div class="h-[22px] w-[28px] md:h-[38px] md:w-[58px]">
+                <!-- width="64"
+                  height="43" -->
+                <svg
+                  width="w-full"
+                  height="h-full"
+                  viewBox="0 0 64 43"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.875 38.152C17.3443 40.0512 15.9758 41.2801 13.7693 41.8666C11.5629 42.4531 9.71953 42.7324 8.29512 42.7324C6.8707 42.7324 5.47422 42.5648 4.10566 42.2576C1.36855 41.5314 0 40.135 0 38.152V4.74805C0 2.84883 2.2623 1.48027 6.81484 0.642384C9.02129 0.223438 11.3115 0 13.6297 0C15.9479 0 18.266 0.223438 20.5842 0.642384C25.1088 1.48027 27.399 2.84883 27.399 4.74805C27.3711 4.74805 17.875 38.152 17.875 38.152ZM53.6529 38.152C53.1223 40.0512 51.7537 41.2801 49.5473 41.8666C47.3408 42.4531 45.4975 42.7324 44.073 42.7324C42.6486 42.7324 41.2521 42.5648 39.8836 42.2576C37.1465 41.5314 35.7779 40.135 35.7779 38.152V4.74805C35.7779 2.84883 38.0402 1.48027 42.5928 0.642384C44.7992 0.223438 47.0894 0 49.4076 0C51.7258 0 54.0439 0.223438 56.39 0.642384C60.9146 1.48027 63.2049 2.84883 63.2049 4.74805L53.6529 38.152Z"
+                    fill="#1C3454"
+                    fill-opacity="0.26"
+                  />
+                </svg>
+              </div>
+            </div>
+            <hr class="my-4 text-[var(--shade-dark-1)] lg:my-6" />
+
+            <div class="">
+              <div class="flex items-center gap-2">
+                <span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.88214 12.825L4.18214 15.65C3.99881 15.8 3.79881 15.8708 3.58214 15.8625C3.36548 15.8542 3.17381 15.7917 3.00714 15.675C2.84048 15.5583 2.71131 15.4 2.61964 15.2C2.52798 15 2.52381 14.7833 2.60714 14.55L4.03214 9.925L0.407143 7.35C0.207143 7.21667 0.0821429 7.04167 0.0321429 6.825C-0.0178571 6.60833 -0.00952381 6.40833 0.0571429 6.225C0.12381 6.04167 0.240476 5.87917 0.407143 5.7375C0.57381 5.59583 0.77381 5.525 1.00714 5.525H5.48214L6.93214 0.725C7.01548 0.491667 7.14464 0.3125 7.31964 0.1875C7.49464 0.0625 7.68214 0 7.88214 0C8.08214 0 8.26964 0.0625 8.44464 0.1875C8.61964 0.3125 8.74881 0.491667 8.83214 0.725L10.2821 5.525H14.7571C14.9905 5.525 15.1905 5.59583 15.3571 5.7375C15.5238 5.87917 15.6405 6.04167 15.7071 6.225C15.7738 6.40833 15.7821 6.60833 15.7321 6.825C15.6821 7.04167 15.5571 7.21667 15.3571 7.35L11.7321 9.925L13.1571 14.55C13.2405 14.7833 13.2363 15 13.1446 15.2C13.053 15.4 12.9238 15.5583 12.7571 15.675C12.5905 15.7917 12.3988 15.8542 12.1821 15.8625C11.9655 15.8708 11.7655 15.8 11.5821 15.65L7.88214 12.825Z"
+                      fill="#192434"
+                    /></svg></span
+                ><span class="mt-[2px] text-[18px] font-semibold">5.0</span>
+              </div>
+              <h3
+                class="mt-3 text-[18px] font-medium ] md:text-[18px] md:font-bold lg:text-xl"
+              >
+                Best Quality Knitwear
+              </h3>
+              <p class="mt-4 text-[14px] font-[400] md:text-[16px]">
+                Fantastic selection and fast shipping! Found exactly what I
+                needed for my new laptop and had it delivered within two days.
+                Highly recommend!
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide h-xl rounded-2xl bg-[var(--shade-light-1)] p-4 sm:p-6 
+            text-[var(--text-blue)] transition-all duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] 
+            hover:shadow-[0_8px_32px_2px_rgba(0,0,0,0.12)]"
+          >
+            <div class="flex justify-between gap-2">
+              <div class="flex flex-shrink-0 items-center gap-2">
+                <img
+                  class="h-14 w-14 rounded-full border object-cover p-1 md:h-18 md:w-18"
+                  src="./assets/images/t2.jpg"
+                  alt=""
+                />
+                <h1
+                  class="text-[22px] font-bold text-[var(--bg-blue)] md:text-[28px] lg:text-[36px]"
+                >
+                  Olivia Chen
+                </h1>
+              </div>
+              <div class="h-[22px] w-[28px] md:h-[38px] md:w-[58px]">
+                <!-- width="64"
+                  height="43" -->
+                <svg
+                  width="w-full"
+                  height="h-full"
+                  viewBox="0 0 64 43"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.875 38.152C17.3443 40.0512 15.9758 41.2801 13.7693 41.8666C11.5629 42.4531 9.71953 42.7324 8.29512 42.7324C6.8707 42.7324 5.47422 42.5648 4.10566 42.2576C1.36855 41.5314 0 40.135 0 38.152V4.74805C0 2.84883 2.2623 1.48027 6.81484 0.642384C9.02129 0.223438 11.3115 0 13.6297 0C15.9479 0 18.266 0.223438 20.5842 0.642384C25.1088 1.48027 27.399 2.84883 27.399 4.74805C27.3711 4.74805 17.875 38.152 17.875 38.152ZM53.6529 38.152C53.1223 40.0512 51.7537 41.2801 49.5473 41.8666C47.3408 42.4531 45.4975 42.7324 44.073 42.7324C42.6486 42.7324 41.2521 42.5648 39.8836 42.2576C37.1465 41.5314 35.7779 40.135 35.7779 38.152V4.74805C35.7779 2.84883 38.0402 1.48027 42.5928 0.642384C44.7992 0.223438 47.0894 0 49.4076 0C51.7258 0 54.0439 0.223438 56.39 0.642384C60.9146 1.48027 63.2049 2.84883 63.2049 4.74805L53.6529 38.152Z"
+                    fill="#1C3454"
+                    fill-opacity="0.26"
+                  />
+                </svg>
+              </div>
+            </div>
+            <hr class="my-4 text-[var(--shade-dark-1)] lg:my-6" />
+
+            <div class="">
+              <div class="flex items-center gap-2">
+                <span
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.88214 12.825L4.18214 15.65C3.99881 15.8 3.79881 15.8708 3.58214 15.8625C3.36548 15.8542 3.17381 15.7917 3.00714 15.675C2.84048 15.5583 2.71131 15.4 2.61964 15.2C2.52798 15 2.52381 14.7833 2.60714 14.55L4.03214 9.925L0.407143 7.35C0.207143 7.21667 0.0821429 7.04167 0.0321429 6.825C-0.0178571 6.60833 -0.00952381 6.40833 0.0571429 6.225C0.12381 6.04167 0.240476 5.87917 0.407143 5.7375C0.57381 5.59583 0.77381 5.525 1.00714 5.525H5.48214L6.93214 0.725C7.01548 0.491667 7.14464 0.3125 7.31964 0.1875C7.49464 0.0625 7.68214 0 7.88214 0C8.08214 0 8.26964 0.0625 8.44464 0.1875C8.61964 0.3125 8.74881 0.491667 8.83214 0.725L10.2821 5.525H14.7571C14.9905 5.525 15.1905 5.59583 15.3571 5.7375C15.5238 5.87917 15.6405 6.04167 15.7071 6.225C15.7738 6.40833 15.7821 6.60833 15.7321 6.825C15.6821 7.04167 15.5571 7.21667 15.3571 7.35L11.7321 9.925L13.1571 14.55C13.2405 14.7833 13.2363 15 13.1446 15.2C13.053 15.4 12.9238 15.5583 12.7571 15.675C12.5905 15.7917 12.3988 15.8542 12.1821 15.8625C11.9655 15.8708 11.7655 15.8 11.5821 15.65L7.88214 12.825Z"
+                      fill="#192434"
+                    /></svg></span
+                ><span class="mt-[2px] text-[18px] font-semibold">5.0</span>
+              </div>
+              <h3
+                class="mt-3 text-[18px] font-medium ] md:text-[18px] md:font-bold lg:text-xl"
+              >
+                Best Quality Knitwear
+              </h3>
+              <p class="mt-4 text-[14px] font-[400] md:text-[16px]">
+                Fantastic selection and fast shipping! Found exactly what I
+                needed for my new laptop and had it delivered within two days.
+                Highly recommend!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar static mt-4 sm:hidden"></div>
+      </div>
+      <!-- End:: testimonial swiper -->
+        </div>
+    </section>
+    <!-- End:: Happy Customer -->
+
+
+    <!-- Start:: Our stores -->
+    <section class="px-5 lg:px-12 py-[40px] md:py-[100px] bg-white">
+      <div class="container mx-auto">
+        <div class="flex gap-8 justify-between">
+          
+          <!-- Start:: Left info - Store List -->
+          <div class="h-[540px] w-full md:max-w-[392px] flex flex-col justify-between">
+            <h1 class="text-[32px]  md:text-[64px] font-semibold mb-8 ">
+              <span class="text-[var(--text-blue)]">OUR</span><span class="svao-stroke-text-blue ml-4">STORES</span>
+            </h1>
+
+            <div class="svao-scrollbar-y pr-2 space-y-4 ">
+              <!-- Start:: Store 1 -->
+              <div class="bg-white rounded-lg border-b-[1.5px] border-[var(--shade-light-3)] overflow-hidden text-[var(--text-blue)]">
+                <div class="p-5 flex justify-between items-center cursor-pointer select-none" onclick="toggleStore('store1')">
+                  <h3 class=" text-[20px] font-normal text-[var(--text-blue)]">Zindabazar, Sylhet</h3>
+                    <svg id="arrow1" class="transition-transform duration-300 rotate-0 text-[var(--text-blue)]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.575 2.4L1.675 6.3C1.49167 6.48333 1.25833 6.575 0.975 6.575C0.691667 6.575 0.458333 6.48333 0.275 6.3C0.0916667 6.11667 0 5.88333 0 5.6C0 5.31667 0.0916667 5.08333 0.275 4.9L4.875 0.3C5.075 0.1 5.30833 0 5.575 0C5.84167 0 6.075 0.1 6.275 0.3L10.875 4.9C11.0583 5.08333 11.15 5.31667 11.15 5.6C11.15 5.88333 11.0583 6.11667 10.875 6.3C10.6917 6.48333 10.4583 6.575 10.175 6.575C9.89167 6.575 9.65833 6.48333 9.475 6.3L5.575 2.4Z" fill="#192739" fill-opacity="0.94"/>
+                    </svg>
+                </div>
+
+                <div id="store1" class="overflow-hidden transition-all duration-500 ease-in-out opacity-0 max-h-0 px-5 pb-0">
+                  <p class="font-light mb-3">
+                    123 Sholjalal Avenue,<br>
+                    Zindabazar, Sylhet 3100,<br>
+                    Bangladesh
+                  </p>
+                  <div class="text-[16px] font-semibold text-[var(--text-blue)] border border-[var(--shade-light-3)] max-w-[205px]  py-3 rounded-[32px]">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Zindabazar,Sylhet,Bangladesh" class="flex items-center gap-3 justify-center" target="_blank">
+                      GET DIRECTIONS
+                      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.575 3.4L1.675 12.3C1.49167 12.4833 1.25833 12.575 0.975 12.575C0.691667 12.575 0.458333 12.4833 0.275 12.3C0.0916667 12.1167 0 11.8833 0 11.6C0 11.3167 0.0916667 11.0833 0.275 10.9L9.175 2H1.575C1.29167 2 1.05417 1.90417 0.8625 1.7125C0.670833 1.52083 0.575 1.28333 0.575 1C0.575 0.716667 0.670833 0.479167 0.8625 0.2875C1.05417 0.0958333 1.29167 0 1.575 0H11.575C11.8583 0 12.0958 0.0958333 12.2875 0.2875C12.4792 0.479167 12.575 0.716667 12.575 1V11C12.575 11.2833 12.4792 11.5208 12.2875 11.7125C12.0958 11.9042 11.8583 12 11.575 12C11.2917 12 11.0542 11.9042 10.8625 11.7125C10.6708 11.5208 10.575 11.2833 10.575 11V3.4Z" fill="#192739" fill-opacity="0.94"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End:: Store 1 -->
+
+              <!-- Start:: Store 2 -->
+              <div class="bg-white rounded-lg border-b-[1.5px] border-[var(--shade-light-3)] overflow-hidden text-[var(--text-blue)]">
+                <div class="p-5 flex justify-between items-center cursor-pointer select-none" onclick="toggleStore('store2')">
+                  <h3 class=" text-[20px] font-normal text-[var(--text-blue)]">Zindabazar, Sylhet</h3>
+                    <svg id="arrow2" class="transition-transform duration-300 rotate-0 text-[var(--text-blue)]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.575 2.4L1.675 6.3C1.49167 6.48333 1.25833 6.575 0.975 6.575C0.691667 6.575 0.458333 6.48333 0.275 6.3C0.0916667 6.11667 0 5.88333 0 5.6C0 5.31667 0.0916667 5.08333 0.275 4.9L4.875 0.3C5.075 0.1 5.30833 0 5.575 0C5.84167 0 6.075 0.1 6.275 0.3L10.875 4.9C11.0583 5.08333 11.15 5.31667 11.15 5.6C11.15 5.88333 11.0583 6.11667 10.875 6.3C10.6917 6.48333 10.4583 6.575 10.175 6.575C9.89167 6.575 9.65833 6.48333 9.475 6.3L5.575 2.4Z" fill="#192739" fill-opacity="0.94"/>
+                    </svg>
+                </div>
+
+                <div id="store2" class="overflow-hidden transition-all duration-500 ease-in-out opacity-0 max-h-0 px-5 pb-0">
+                  <p class="font-light mb-3">
+                    123 Sholjalal Avenue,<br>
+                    Zindabazar, Sylhet 3100,<br>
+                    Bangladesh
+                  </p>
+                  <div class="text-[16px] font-semibold text-[var(--text-blue)] border border-[var(--shade-light-3)] max-w-[205px]  py-3 rounded-[32px]">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Zindabazar,Sylhet,Bangladesh" class="flex items-center gap-3 justify-center" target="_blank">
+                      GET DIRECTIONS
+                      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.575 3.4L1.675 12.3C1.49167 12.4833 1.25833 12.575 0.975 12.575C0.691667 12.575 0.458333 12.4833 0.275 12.3C0.0916667 12.1167 0 11.8833 0 11.6C0 11.3167 0.0916667 11.0833 0.275 10.9L9.175 2H1.575C1.29167 2 1.05417 1.90417 0.8625 1.7125C0.670833 1.52083 0.575 1.28333 0.575 1C0.575 0.716667 0.670833 0.479167 0.8625 0.2875C1.05417 0.0958333 1.29167 0 1.575 0H11.575C11.8583 0 12.0958 0.0958333 12.2875 0.2875C12.4792 0.479167 12.575 0.716667 12.575 1V11C12.575 11.2833 12.4792 11.5208 12.2875 11.7125C12.0958 11.9042 11.8583 12 11.575 12C11.2917 12 11.0542 11.9042 10.8625 11.7125C10.6708 11.5208 10.575 11.2833 10.575 11V3.4Z" fill="#192739" fill-opacity="0.94"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End:: Store 2 -->
+
+              <!-- Start:: Store 3 -->
+              <div class="bg-white rounded-lg border-b-[1.5px] border-[var(--shade-light-3)] overflow-hidden text-[var(--text-blue)]">
+                <div class="p-5 flex justify-between items-center cursor-pointer select-none" onclick="toggleStore('store3')">
+                  <h3 class=" text-[20px] font-normal text-[var(--text-blue)]">Zindabazar, Sylhet</h3>
+                    <svg id="arrow3" class="transition-transform duration-300 rotate-0 text-[var(--text-blue)]" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.575 2.4L1.675 6.3C1.49167 6.48333 1.25833 6.575 0.975 6.575C0.691667 6.575 0.458333 6.48333 0.275 6.3C0.0916667 6.11667 0 5.88333 0 5.6C0 5.31667 0.0916667 5.08333 0.275 4.9L4.875 0.3C5.075 0.1 5.30833 0 5.575 0C5.84167 0 6.075 0.1 6.275 0.3L10.875 4.9C11.0583 5.08333 11.15 5.31667 11.15 5.6C11.15 5.88333 11.0583 6.11667 10.875 6.3C10.6917 6.48333 10.4583 6.575 10.175 6.575C9.89167 6.575 9.65833 6.48333 9.475 6.3L5.575 2.4Z" fill="#192739" fill-opacity="0.94"/>
+                    </svg>
+                </div>
+
+                <div id="store3" class="overflow-hidden transition-all duration-500 ease-in-out opacity-0 max-h-0 px-5 pb-0">
+                  <p class="font-light mb-3">
+                    123 Sholjalal Avenue,<br>
+                    Zindabazar, Sylhet 3100,<br>
+                    Bangladesh
+                  </p>
+                  <div class="text-[16px] font-semibold text-[var(--text-blue)] border border-[var(--shade-light-3)] max-w-[205px]  py-3 rounded-[32px]">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Zindabazar,Sylhet,Bangladesh" class="flex items-center gap-3 justify-center" target="_blank">
+                      GET DIRECTIONS
+                      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.575 3.4L1.675 12.3C1.49167 12.4833 1.25833 12.575 0.975 12.575C0.691667 12.575 0.458333 12.4833 0.275 12.3C0.0916667 12.1167 0 11.8833 0 11.6C0 11.3167 0.0916667 11.0833 0.275 10.9L9.175 2H1.575C1.29167 2 1.05417 1.90417 0.8625 1.7125C0.670833 1.52083 0.575 1.28333 0.575 1C0.575 0.716667 0.670833 0.479167 0.8625 0.2875C1.05417 0.0958333 1.29167 0 1.575 0H11.575C11.8583 0 12.0958 0.0958333 12.2875 0.2875C12.4792 0.479167 12.575 0.716667 12.575 1V11C12.575 11.2833 12.4792 11.5208 12.2875 11.7125C12.0958 11.9042 11.8583 12 11.575 12C11.2917 12 11.0542 11.9042 10.8625 11.7125C10.6708 11.5208 10.575 11.2833 10.575 11V3.4Z" fill="#192739" fill-opacity="0.94"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- End:: Store 3 -->
+            </div>
+          </div>
+          <!-- End:: Left info - Store List -->
+
+          <!-- Start:: Right Content - Google Map -->
+          <div class="hidden md:block h-[540px] max-w-[1188px] w-full rounded-lg overflow-hidden shadow-lg ">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116834.00977969664!2d90.34928492548358!3d23.780573257568402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1698765432109!5m2!1sen!2sbd" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <!-- End:: Right Content - Google Map -->
+        </div>
+      </div>
+    </section>
+    <!-- End:: Our stores -->
+
 
     <!-- Start:: Help & Support -->
     <section class="px-5 lg:px-12 py-10 md:py-[100px] bg-[#0F1B2D] text-white mt-10 md:mt-[100px]">
@@ -3494,6 +3987,7 @@
       </div>
     </section>
     <!-- End:: help & Support -->
+     
     
 
     </main>
@@ -4324,6 +4818,53 @@
     });
   </script>
   <!-- End:: Help & Support JS -->
+
+
+    <!-- Start:: Happy customer slider JS -->
+    <script>
+      const testimonialSwiper= new Swiper(".swiper", {
+        direction: "horizontal",
+        loop: true,
+
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        navigation: {
+          nextEl: ".swiper-testimonial-next",
+          prevEl: ".swiper-testimonial-prev",
+        },
+
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        breakpoints: {
+          // When window width is >= 320px
+          320: {
+            slidesPerView: 1, // Show 1 slide
+            spaceBetween: 16,
+          },
+          // When window width is >= 640px
+          640: {
+            slidesPerView: 2, // Show 2 slides
+            spaceBetween: 16,
+          },
+          // When window width is >= 1024px
+          1024: {
+            slidesPerView: 2, // Show 2 slides
+            spaceBetween: 30,
+          },
+          // When window width is >= 1440px
+          1280: {
+            slidesPerView: 3, // Show 3 slides
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+    <!-- End:: Happy customer slider JS -->
+  
+  
    
   </body>
   
