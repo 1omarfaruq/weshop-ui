@@ -301,8 +301,17 @@
   .top-\[120px\] {
     top: 120px;
   }
+  .-right-0 {
+    right: calc(var(--spacing) * -0);
+  }
   .-right-1 {
     right: calc(var(--spacing) * -1);
+  }
+  .-right-5 {
+    right: calc(var(--spacing) * -5);
+  }
+  .-right-10 {
+    right: calc(var(--spacing) * -10);
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
@@ -771,6 +780,15 @@
   .h-\[90px\] {
     height: 90px;
   }
+  .h-\[100\%\$\] {
+    height: 100%$;
+  }
+  .h-\[100\%\] {
+    height: 100%;
+  }
+  .h-\[100\] {
+    height: 100;
+  }
   .h-\[144px\] {
     height: 144px;
   }
@@ -933,6 +951,12 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
+  .w-\[1px\] {
+    width: 1px;
+  }
+  .w-\[2\%\] {
+    width: 2%;
+  }
   .w-\[20px\] {
     width: 20px;
   }
@@ -950,6 +974,15 @@
   }
   .w-\[45px\] {
     width: 45px;
+  }
+  .w-\[49\%\] {
+    width: 49%;
+  }
+  .w-\[49\] {
+    width: 49;
+  }
+  .w-\[49px\] {
+    width: 49px;
   }
   .w-\[50px\] {
     width: 50px;
@@ -1257,6 +1290,9 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1855,6 +1891,9 @@
   }
   .fill-\[\#192739\] {
     fill: #192739;
+  }
+  .fill-\[var\(\)\] {
+    fill: var();
   }
   .fill-\[var\(--bg-blue\)\] {
     fill: var(--bg-blue);
@@ -2791,6 +2830,13 @@
       }
     }
   }
+  .group-hover\/arrow\:fill-white {
+    &:is(:where(.group\/arrow):hover *) {
+      @media (hover: hover) {
+        fill: var(--color-white);
+      }
+    }
+  }
   .group-hover\/btn\:translate-x-0 {
     &:is(:where(.group\/btn):hover *) {
       @media (hover: hover) {
@@ -2973,6 +3019,13 @@
     &:hover {
       @media (hover: hover) {
         fill: var(--primary-lemon);
+      }
+    }
+  }
+  .hover\:fill-white {
+    &:hover {
+      @media (hover: hover) {
+        fill: var(--color-white);
       }
     }
   }
@@ -3662,6 +3715,11 @@
       opacity: 100%;
     }
   }
+  .lg\:-right-5 {
+    @media (width >= 64rem) {
+      right: calc(var(--spacing) * -5);
+    }
+  }
   .lg\:right-12 {
     @media (width >= 64rem) {
       right: calc(var(--spacing) * 12);
@@ -3964,6 +4022,11 @@
           translate: var(--tw-translate-x) var(--tw-translate-y);
         }
       }
+    }
+  }
+  .xl\:right-0 {
+    @media (width >= 80rem) {
+      right: calc(var(--spacing) * 0);
     }
   }
   .xl\:right-20 {
