@@ -87,7 +87,7 @@
     <!-- Start:: Top Navigation Bar -->
     <div class="hidden lg:flex justify-center bg-[var(--bg-blue)] text-sm lg:px-12">
       <div
-        class="svao-container flex items-center justify-between py-2.5 font-light"
+        class="container mx-auto flex items-center justify-between py-2.5 font-light"
       >
         <!-- Start:: Social Media Links & Icons -->
         <div class="hidden gap-4 sm:flex">
@@ -251,15 +251,16 @@
       </div>
     </div>
     <!-- End:: Top Navigation Bar -->
-    <header class="sticky top-0 z-50">
+    <header class="sticky top-0 z-50
+    ">
 
       <!-- Start:: Main Navigation Bar with background -->
       <div
         id="navbar"
-        class=" hidden bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out lg:flex lg:px-12"
+        class=" hidden bg-white shadow-[0_3px_4px_0_rgba(146,114,75,0.10)] transition-all duration-200 ease-in-out lg:flex lg:px-12 w-full mx-auto"
       >
         <div
-          class="svao-container flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
+          class="container mx-auto flex items-center justify-between py-5 text-base font-medium text-[var(--text-blue)]"
         >
           <!-- Start:: Logo -->
           <div>
@@ -318,10 +319,11 @@
                       <a href="#" class="block px-4 py-2">Clothing</a>
                       <a href="#" class="block px-4 py-2">Accessories</a>
                       <div class="group/sub relative">
-                        <button class="flex w-full items-center px-3 py-2">
+                        <button class="flex w-full items-center justify-between px-3 py-2">
                           More
-                          <span class="pl-2.5">
+                          <span class="-rotate-90 flex items-center justify-center">
                             <svg
+                            class=""
                               width="24"
                               height="24"
                               viewBox="0 0 24 24"
@@ -397,7 +399,7 @@
                     class="invisible mt-[30px] absolute left-0 z-10 w-full rounded-4xl border-t border-[var(--shade-light-4)] bg-white pt-15 pb-20 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100"
                   >
                     <div
-                      class="svao-container grid grid-cols-7 gap-4 rounded-3xl"
+                      class="container grid grid-cols-7 gap-4 rounded-3xl"
                     >
                       <div class="col-1">
                         <h3
@@ -527,7 +529,7 @@
                     class="invisible absolute mt-[30px] left-0 right-0 z-10 rounded-b-4xl border-t border-[var(--shade-light-4)] bg-white pt-15 pb-20 opacity-0 shadow-lg transition-all duration-300 group-hover:visible group-hover:opacity-100"
                   >
                     <div
-                      class="svao-container grid grid-cols-7 gap-10 rounded-3xl"
+                      class="container grid grid-cols-7 gap-10 rounded-3xl"
                     >
                       <div class="col-span-1">
                         <h3
@@ -776,6 +778,75 @@
                     </div>
                   </div>
                 </li>
+
+
+
+                <li class="svao-nav-item group relative">
+                  <a href="#" class="flex items-center">
+                    Kids
+                    <span class="pl-2.5">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19380_20040"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19380_20040)">
+                          <path
+                            d="M12.0008 14.9758C11.8674 14.9758 11.7424 14.9549 11.6258 14.9133C11.5091 14.8716 11.4008 14.8008 11.3008 14.7008L6.70078 10.1008C6.51745 9.91745 6.42578 9.68411 6.42578 9.40078C6.42578 9.11745 6.51745 8.88411 6.70078 8.70078C6.88411 8.51745 7.11745 8.42578 7.40078 8.42578C7.68411 8.42578 7.91745 8.51745 8.10078 8.70078L12.0008 12.6008L15.9008 8.70078C16.0841 8.51745 16.3174 8.42578 16.6008 8.42578C16.8841 8.42578 17.1174 8.51745 17.3008 8.70078C17.4841 8.88411 17.5758 9.11745 17.5758 9.40078C17.5758 9.68411 17.4841 9.91745 17.3008 10.1008L12.7008 14.7008C12.6008 14.8008 12.4924 14.8716 12.3758 14.9133C12.2591 14.9549 12.1341 14.9758 12.0008 14.9758Z"
+                            fill-opacity="0.69"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+
+                <li class="svao-nav-item group relative">
+                  <a href="#" class="flex items-center">
+                    More
+                    <span class="pl-2.5">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19380_20040"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="24"
+                          height="24"
+                        >
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19380_20040)">
+                          <path
+                            d="M12.0008 14.9758C11.8674 14.9758 11.7424 14.9549 11.6258 14.9133C11.5091 14.8716 11.4008 14.8008 11.3008 14.7008L6.70078 10.1008C6.51745 9.91745 6.42578 9.68411 6.42578 9.40078C6.42578 9.11745 6.51745 8.88411 6.70078 8.70078C6.88411 8.51745 7.11745 8.42578 7.40078 8.42578C7.68411 8.42578 7.91745 8.51745 8.10078 8.70078L12.0008 12.6008L15.9008 8.70078C16.0841 8.51745 16.3174 8.42578 16.6008 8.42578C16.8841 8.42578 17.1174 8.51745 17.3008 8.70078C17.4841 8.88411 17.5758 9.11745 17.5758 9.40078C17.5758 9.68411 17.4841 9.91745 17.3008 10.1008L12.7008 14.7008C12.6008 14.8008 12.4924 14.8716 12.3758 14.9133C12.2591 14.9549 12.1341 14.9758 12.0008 14.9758Z"
+                            fill-opacity="0.69"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                
+                
+                
 
               </ul>
             </div>
@@ -1094,7 +1165,7 @@
 
 
             <!-- Start:: Separator -->
-            <div class="mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
+            <div class="mx-2.5 xl:mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
             <!-- End:: Separator -->
 
             <!-- Start:: Wishlist -->
@@ -1189,7 +1260,7 @@
             <!-- End:: Wishlist -->
 
             <!-- Start:: Separator -->
-            <div class="mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
+            <div class="mx-2.5 xl:mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
             <!-- End:: Separator -->
 
             <!-- Start:: Cart -->
@@ -1230,7 +1301,8 @@
               <!-- Start:: Cart Popup -->
               <div
                 id="cartPopup"
-                class="absolute right-1/2 z-50 hidden w-[320px] rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-7.5"
+                class="absolute right-1/2 z-50 w-[320px] rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-7.5
+         opacity-0 scale-95 translate-y-2 pointer-events-none transition-all duration-300 ease-out"
               >
                 <div class="flex justify-between items-center mb-3">
                   <h2 class="text-sm font-semibold text-gray-800">Your Cart</h2>
@@ -1264,13 +1336,24 @@
               </div>
               <!-- End:: Cart Popup -->
             </div>
-            <!-- End:: Cart -->
 
-            <!-- Script -->
+            
+            <!-- Start:: Script -->
             <script>
               function toggleCart() {
                 const popup = document.getElementById("cartPopup");
-                popup.classList.toggle("hidden");
+
+                const isHidden = popup.classList.contains("opacity-0");
+
+                if (isHidden) {
+                  // Show popup smoothly
+                  popup.classList.remove("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.add("opacity-100", "scale-100", "translate-y-0");
+                } else {
+                  // Hide popup smoothly
+                  popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+                }
               }
 
               // Close when clicking outside
@@ -1278,23 +1361,26 @@
                 const btn = document.getElementById("cartBtn");
                 const popup = document.getElementById("cartPopup");
                 if (!btn.contains(e.target) && !popup.contains(e.target)) {
-                  popup.classList.add("hidden");
+                  popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
                 }
               });
 
-              // Close button
-              document
-                .getElementById("closeCartPopup")
-                .addEventListener("click", (e) => {
-                  e.stopPropagation();
-                  document.getElementById("cartPopup").classList.add("hidden");
-                });
+              // Close button inside popup
+              document.getElementById("closeCartPopup").addEventListener("click", (e) => {
+                e.stopPropagation();
+                const popup = document.getElementById("cartPopup");
+                popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+              });
             </script>
+            <!-- Start:: Script -->
+
 
             <!-- End:: Cart -->
 
             <!-- Start:: Separator -->
-            <div class="mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
+            <div class="mx-2.5 xl:mx-5 h-7 w-0.5 bg-[var(--shade-1)]"></div>
             <!-- End:: Separator -->
 
             <!-- Start:: User Profile -->
@@ -1326,222 +1412,307 @@
       <!--Start:: Main Navigation for mobile -->
 
       <!--Start:: Navigation Container -->
-      <nav
-        class="top-0 z-10 flex w-full items-center justify-between bg-white p-4 text-black lg:hidden"
-      >
-        <!-- Start:: Hamburger Menu -->
-        <div class="cursor-pointer text-2xl" onclick="toggleMenu()">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M25.3 8.99999H6.7C6.3 8.99999 6 8.69999 6 8.19999C6 7.69999 6.3 7.39999 6.8 7.39999H25.3C25.7 7.39999 26.1 7.69999 26.1 8.19999C26.1 8.69999 25.7 8.99999 25.3 8.99999Z"
-              fill="#192434"
-            />
-            <path
-              d="M25.3 16H6.7C6.3 16 6 15.7 6 15.2C6 14.7 6.3 14.4 6.8 14.4H25.3C25.7 14.4 26.1 14.7 26.1 15.2C26.1 15.7 25.7 16 25.3 16Z"
-              fill="#192434"
-            />
-            <path
-              d="M25.3 23H6.7C6.3 23 6 22.7 6 22.2C6 21.7 6.3 21.4 6.8 21.4H25.3C25.7 21.4 26.1 21.7 26.1 22.2C26.1 22.7 25.7 23 25.3 23Z"
-              fill="#192434"
-            />
-          </svg>
-        </div>
-        <!--End:: Hamburger Menu -->
-
-        <!-- Start:: Logo -->
-        <div class="text-xl font-bold">
-          <img src="assets/logo-blue.png" alt="logo" />
-        </div>
-        <!-- End:: Logo -->
-
-        <!--Start:: Icons -->
-
-        <div class="relative flex items-start gap-4">
-          <!-- Search Icon -->
-          <svg
-          onclick="toggleMenu()"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="cursor-pointer stroke-[#192739] hover:stroke-[var(--primary-lemon)]"
-          >
-            <path
-              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M20.9984 21.0004L16.6484 16.6504"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <!-- Global Button (with relative wrapper) -->
-          <div id="globalBtn" class="relative">
+      <div class="bg-white px-5 ">
+        <nav
+          class="mx-auto container top-0 z-10 flex w-full items-center justify-between bg-white py-4  text-black lg:hidden"
+        >
+          <!-- Start:: Hamburger Menu -->
+          <div class="cursor-pointer text-2xl" onclick="toggleMenu()">
             <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="cursor-pointer fill-[#192739] hover:fill-[var(--primary-lemon)]"
             >
-              <mask
-                id="mask0_19795_52744"
-                style="mask-type: alpha"
-                maskUnits="userSpaceOnUse"
-                x="0"
-                y="0"
+              <path
+                d="M25.3 8.99999H6.7C6.3 8.99999 6 8.69999 6 8.19999C6 7.69999 6.3 7.39999 6.8 7.39999H25.3C25.7 7.39999 26.1 7.69999 26.1 8.19999C26.1 8.69999 25.7 8.99999 25.3 8.99999Z"
+                fill="#192434"
+              />
+              <path
+                d="M25.3 16H6.7C6.3 16 6 15.7 6 15.2C6 14.7 6.3 14.4 6.8 14.4H25.3C25.7 14.4 26.1 14.7 26.1 15.2C26.1 15.7 25.7 16 25.3 16Z"
+                fill="#192434"
+              />
+              <path
+                d="M25.3 23H6.7C6.3 23 6 22.7 6 22.2C6 21.7 6.3 21.4 6.8 21.4H25.3C25.7 21.4 26.1 21.7 26.1 22.2C26.1 22.7 25.7 23 25.3 23Z"
+                fill="#192434"
+              />
+            </svg>
+          </div>
+          <!--End:: Hamburger Menu -->
+
+          <!-- Start:: Logo -->
+          <div class="text-xl font-bold">
+            <img src="assets/logo-blue.png" alt="logo" />
+          </div>
+          <!-- End:: Logo -->
+
+          <!--Start:: Icons -->
+
+          <div class="relative flex items-start gap-4">
+            <!-- Search Icon -->
+            <!-- Start:: Cart Button -->
+            <div
+              id="cartMbtn"
+              class="px-2.5 hover:cursor-pointer group"
+              onclick="toggleCart()"
+            >
+              <svg
                 width="24"
                 height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="stroke-[var(--text-blue)] duration-100 ease-in-out hover:stroke-[var(--primary-lemon)]"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="24" height="24" />
-              </mask>
-              <g mask="url(#mask0_19795_52744)">
                 <path
-                  d="M12 21.5C10.6975 21.5 9.46833 21.2503 8.3125 20.751C7.15667 20.2517 6.14867 19.5718 5.2885 18.7115C4.42817 17.8513 3.74833 16.8433 3.249 15.6875C2.74967 14.5317 2.5 13.3025 2.5 12C2.5 10.6872 2.74967 9.45542 3.249 8.30475C3.74833 7.15408 4.42817 6.14867 5.2885 5.2885C6.14867 4.42817 7.15667 3.74833 8.3125 3.249C9.46833 2.74967 10.6975 2.5 12 2.5C13.3128 2.5 14.5446 2.74967 15.6953 3.249C16.8459 3.74833 17.8513 4.42817 18.7115 5.2885C19.5718 6.14867 20.2517 7.15408 20.751 8.30475C21.2503 9.45542 21.5 10.6872 21.5 12C21.5 13.3025 21.2503 14.5317 20.751 15.6875C20.2517 16.8433 19.5718 17.8513 18.7115 18.7115C17.8513 19.5718 16.8459 20.2517 15.6953 20.751C14.5446 21.2503 13.3128 21.5 12 21.5ZM12 19.9788C12.5103 19.3019 12.9398 18.6192 13.2885 17.9307C13.6372 17.2422 13.9212 16.4897 14.1405 15.673H9.8595C10.0917 16.5153 10.3789 17.2808 10.7213 17.9693C11.0634 18.6578 11.4897 19.3276 12 19.9788ZM10.0635 19.7038C9.68017 19.1538 9.33592 18.5285 9.03075 17.828C8.72558 17.1273 8.48842 16.409 8.31925 15.673H4.927C5.45517 16.7115 6.1635 17.584 7.052 18.2905C7.9405 18.9968 8.94433 19.4679 10.0635 19.7038ZM13.9365 19.7038C15.0557 19.4679 16.0595 18.9968 16.948 18.2905C17.8365 17.584 18.5448 16.7115 19.073 15.673H15.6807C15.4794 16.4153 15.2262 17.1368 14.921 17.8375C14.616 18.5382 14.2878 19.1602 13.9365 19.7038ZM4.298 14.173H8.0155C7.95267 13.8013 7.90708 13.4369 7.87875 13.0798C7.85058 12.7227 7.8365 12.3628 7.8365 12C7.8365 11.6372 7.85058 11.2773 7.87875 10.9202C7.90708 10.5631 7.95267 10.1987 8.0155 9.827H4.298C4.20183 10.1667 4.12817 10.5198 4.077 10.8865C4.02567 11.2532 4 11.6243 4 12C4 12.3757 4.02567 12.7468 4.077 13.1135C4.12817 13.4802 4.20183 13.8333 4.298 14.173ZM9.51525 14.173H14.4848C14.5474 13.8013 14.5929 13.4402 14.6212 13.0895C14.6494 12.7388 14.6635 12.3757 14.6635 12C14.6635 11.6243 14.6494 11.2612 14.6212 10.9105C14.5929 10.5598 14.5474 10.1987 14.4848 9.827H9.51525C9.45258 10.1987 9.40708 10.5598 9.37875 10.9105C9.35058 11.2612 9.3365 11.6243 9.3365 12C9.3365 12.3757 9.35058 12.7388 9.37875 13.0895C9.40708 13.4402 9.45258 13.8013 9.51525 14.173ZM15.9845 14.173H19.702C19.7982 13.8333 19.8718 13.4802 19.923 13.1135C19.9743 12.7468 20 12.3757 20 12C20 11.6243 19.9743 11.2532 19.923 10.8865C19.8718 10.5198 19.7982 10.1667 19.702 9.827H15.9845C16.0473 10.1987 16.0929 10.5631 16.1212 10.9202C16.1494 11.2773 16.1635 11.6372 16.1635 12C16.1635 12.3628 16.1494 12.7227 16.1212 13.0798C16.0929 13.4369 16.0473 13.8013 15.9845 14.173ZM15.6807 8.327H19.073C18.5385 7.27567 17.835 6.40317 16.9625 5.7095C16.09 5.016 15.0813 4.54167 13.9365 4.2865C14.3198 4.8685 14.6608 5.50508 14.9595 6.19625C15.2583 6.88725 15.4987 7.5975 15.6807 8.327ZM9.8595 8.327H14.1405C13.9083 7.491 13.6163 6.72075 13.2645 6.01625C12.9125 5.31175 12.491 4.64675 12 4.02125C11.509 4.64675 11.0875 5.31175 10.7355 6.01625C10.3837 6.72075 10.0917 7.491 9.8595 8.327ZM4.927 8.327H8.31925C8.50125 7.5975 8.74167 6.88725 9.0405 6.19625C9.33917 5.50508 9.68017 4.8685 10.0635 4.2865C8.91217 4.54167 7.90192 5.01767 7.03275 5.7145C6.16342 6.41117 5.4615 7.282 4.927 8.327Z"
+                  d="M16.0004 9V6C16.0004 3.79086 14.2095 2 12.0004 2C9.79123 2 8.00037 3.79086 8.00037 6V9M3.59237 10.352L2.99237 16.752C2.82178 18.5717 2.73648 19.4815 3.03842 20.1843C3.30367 20.8016 3.76849 21.3121 4.35839 21.6338C5.0299 22 5.94374 22 7.77142 22H16.2293C18.057 22 18.9708 22 19.6423 21.6338C20.2322 21.3121 20.6971 20.8016 20.9623 20.1843C21.2643 19.4815 21.179 18.5717 21.0084 16.752L20.4084 10.352C20.2643 8.81535 20.1923 8.04704 19.8467 7.46616C19.5424 6.95458 19.0927 6.54511 18.555 6.28984C17.9444 6 17.1727 6 15.6293 6L8.37142 6C6.82806 6 6.05638 6 5.44579 6.28984C4.90803 6.54511 4.45838 6.95458 4.15403 7.46616C3.80846 8.04704 3.73643 8.81534 3.59237 10.352Z"
+                  stroke-opacity="0.94"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
-              </g>
-            </svg>
+              </svg>
 
-            <!-- Popup (positioned below) -->
-            <!-- Popup (positioned below) -->
+              <!-- Start:: Cart Count -->
+              <div
+                class="absolute -top-2.5 right-9 h-5 w-5 rounded-full bg-[var(--bg-blue)] py-0.5 text-center text-sm leading-none font-thin text-[var(--text-white)] duration-100 ease-in-out group-hover:bg-[var(--primary-lemon)]"
+              >
+                1
+              </div>
+              <!-- End:: Cart Count -->
+            </div>
+            <!-- End:: Cart Button -->
+            
+            <!-- Start:: Cart Popup -->
             <div
-              id="popup"
-              class="pointer-events-none absolute top-11 right-0 z-50 scale-95 rounded-2xl  bg-white opacity-0 shadow-xl transition-all duration-200 ease-out w-[350px] p-5"
+              id="cartMpopup"
+              class="absolute right-1/2 z-50 w-[320px] rounded-xl border border-gray-200 bg-white p-4 shadow-lg mt-11
+        opacity-0 scale-95 translate-y-2 pointer-events-none transition-all duration-300 ease-out"
             >
-              <!-- Close button -->
-
-              <div class="flex justify-end mb-2">
-                <svg id="closePopup" class=" text-gray-400 hover:text-gray-600 p-[13px] shadow-[0_8px_20px_var(--shade-light-4)] rounded-full" width="40" height="40" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.575 7.975L1.675 12.875C1.49167 13.0583 1.25833 13.15 0.975 13.15C0.691667 13.15 0.458333 13.0583 0.275 12.875C0.0916667 12.6917 0 12.4583 0 12.175C0 11.8917 0.0916667 11.6583 0.275 11.475L5.175 6.575L0.275 1.675C0.0916667 1.49167 0 1.25833 0 0.975C0 0.691667 0.0916667 0.458333 0.275 0.275C0.458333 0.0916667 0.691667 0 0.975 0C1.25833 0 1.49167 0.0916667 1.675 0.275L6.575 5.175L11.475 0.275C11.6583 0.0916667 11.8917 0 12.175 0C12.4583 0 12.6917 0.0916667 12.875 0.275C13.0583 0.458333 13.15 0.691667 13.15 0.975C13.15 1.25833 13.0583 1.49167 12.875 1.675L7.975 6.575L12.875 11.475C13.0583 11.6583 13.15 11.8917 13.15 12.175C13.15 12.4583 13.0583 12.6917 12.875 12.875C12.6917 13.0583 12.4583 13.15 12.175 13.15C11.8917 13.15 11.6583 13.0583 11.475 12.875L6.575 7.975Z" fill="#192739" fill-opacity="0.94"/>
+              <div class="flex justify-between items-center mb-3">
+                <h2 class="text-sm font-semibold text-gray-800">Your Cart</h2>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 10.75L10.75 0.75M0.75 0.75L10.75 10.75" stroke="#1B2B41" stroke-opacity="0.69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
+
               </div>
 
+              <ul class="divide-y divide-gray-200 text-gray-700">
+                <li class="py-2 flex justify-between items-center">
+                  <span>Product 1</span>
+                  <span class="font-semibold">$25</span>
+                </li>
+                <li class="py-2 flex justify-between items-center">
+                  <span>Product 2</span>
+                  <span class="font-semibold">$40</span>
+                </li>
+                <li class="py-2 flex justify-between items-center">
+                  <span>Product 3</span>
+                  <span class="font-semibold">$15</span>
+                </li>
+              </ul>
 
-              <!-- Start:: Country Dropdown -->
-              <div class="mb-5">
-                <label class="block text-sm font-normal text-[var(--text-grey)] mb-3"
-                  >Country</label
+              <div class="mt-3 flex justify-between items-center font-semibold text-gray-800">
+                <span>Total:</span>
+                <span>$80</span>
+              </div>
+            </div>
+            <!-- End:: Cart Popup -->
+
+            <script>
+              function toggleCart() {
+                const popup = document.getElementById("cartMpopup");
+
+                const isHidden = popup.classList.contains("opacity-0");
+
+                if (isHidden) {
+                  // Show popup smoothly
+                  popup.classList.remove("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.add("opacity-100", "scale-100", "translate-y-0");
+                } else {
+                  // Hide popup smoothly
+                  popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+                }
+              }
+
+              // Close when clicking outside
+              window.addEventListener("click", (e) => {
+                const btn = document.getElementById("cartMbtn");
+                const popup = document.getElementById("cartMpopup");
+                if (!btn.contains(e.target) && !popup.contains(e.target)) {
+                  popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                  popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+                }
+              });
+
+              // Close button inside popup
+              document.getElementById("closeCartMpopup").addEventListener("click", (e) => {
+                e.stopPropagation();
+                const popup = document.getElementById("cartMpopup");
+                popup.classList.add("opacity-0", "scale-95", "translate-y-2", "pointer-events-none");
+                popup.classList.remove("opacity-100", "scale-100", "translate-y-0");
+              });
+            </script>
+
+            <!-- Global Button (with relative wrapper) -->
+            <div id="globalBtn" class="relative">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="cursor-pointer fill-[#192739] hover:fill-[var(--primary-lemon)]"
+              >
+                <mask
+                  id="mask0_19795_52744"
+                  style="mask-type: alpha"
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="24"
+                  height="24"
                 >
-                <div class="relative w-[310px]">
-                  <select
-                    class="w-full appearance-none rounded-lg border border-gray-300 px-3 py-2.5 pr-8 text-sm text-[var(--text-blue)] font-medium focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  >
-                    <option>Bangladesh (BDT ৳)</option>
-                    <option>United States (USD $)</option>
-                    <option>India (INR ₹)</option>
-                    <option>United Kingdom (GBP £)</option>
-                  </select>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-[var(--text-blue)] font-medium"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
+                  <rect width="24" height="24" />
+                </mask>
+                <g mask="url(#mask0_19795_52744)">
+                  <path
+                    d="M12 21.5C10.6975 21.5 9.46833 21.2503 8.3125 20.751C7.15667 20.2517 6.14867 19.5718 5.2885 18.7115C4.42817 17.8513 3.74833 16.8433 3.249 15.6875C2.74967 14.5317 2.5 13.3025 2.5 12C2.5 10.6872 2.74967 9.45542 3.249 8.30475C3.74833 7.15408 4.42817 6.14867 5.2885 5.2885C6.14867 4.42817 7.15667 3.74833 8.3125 3.249C9.46833 2.74967 10.6975 2.5 12 2.5C13.3128 2.5 14.5446 2.74967 15.6953 3.249C16.8459 3.74833 17.8513 4.42817 18.7115 5.2885C19.5718 6.14867 20.2517 7.15408 20.751 8.30475C21.2503 9.45542 21.5 10.6872 21.5 12C21.5 13.3025 21.2503 14.5317 20.751 15.6875C20.2517 16.8433 19.5718 17.8513 18.7115 18.7115C17.8513 19.5718 16.8459 20.2517 15.6953 20.751C14.5446 21.2503 13.3128 21.5 12 21.5ZM12 19.9788C12.5103 19.3019 12.9398 18.6192 13.2885 17.9307C13.6372 17.2422 13.9212 16.4897 14.1405 15.673H9.8595C10.0917 16.5153 10.3789 17.2808 10.7213 17.9693C11.0634 18.6578 11.4897 19.3276 12 19.9788ZM10.0635 19.7038C9.68017 19.1538 9.33592 18.5285 9.03075 17.828C8.72558 17.1273 8.48842 16.409 8.31925 15.673H4.927C5.45517 16.7115 6.1635 17.584 7.052 18.2905C7.9405 18.9968 8.94433 19.4679 10.0635 19.7038ZM13.9365 19.7038C15.0557 19.4679 16.0595 18.9968 16.948 18.2905C17.8365 17.584 18.5448 16.7115 19.073 15.673H15.6807C15.4794 16.4153 15.2262 17.1368 14.921 17.8375C14.616 18.5382 14.2878 19.1602 13.9365 19.7038ZM4.298 14.173H8.0155C7.95267 13.8013 7.90708 13.4369 7.87875 13.0798C7.85058 12.7227 7.8365 12.3628 7.8365 12C7.8365 11.6372 7.85058 11.2773 7.87875 10.9202C7.90708 10.5631 7.95267 10.1987 8.0155 9.827H4.298C4.20183 10.1667 4.12817 10.5198 4.077 10.8865C4.02567 11.2532 4 11.6243 4 12C4 12.3757 4.02567 12.7468 4.077 13.1135C4.12817 13.4802 4.20183 13.8333 4.298 14.173ZM9.51525 14.173H14.4848C14.5474 13.8013 14.5929 13.4402 14.6212 13.0895C14.6494 12.7388 14.6635 12.3757 14.6635 12C14.6635 11.6243 14.6494 11.2612 14.6212 10.9105C14.5929 10.5598 14.5474 10.1987 14.4848 9.827H9.51525C9.45258 10.1987 9.40708 10.5598 9.37875 10.9105C9.35058 11.2612 9.3365 11.6243 9.3365 12C9.3365 12.3757 9.35058 12.7388 9.37875 13.0895C9.40708 13.4402 9.45258 13.8013 9.51525 14.173ZM15.9845 14.173H19.702C19.7982 13.8333 19.8718 13.4802 19.923 13.1135C19.9743 12.7468 20 12.3757 20 12C20 11.6243 19.9743 11.2532 19.923 10.8865C19.8718 10.5198 19.7982 10.1667 19.702 9.827H15.9845C16.0473 10.1987 16.0929 10.5631 16.1212 10.9202C16.1494 11.2773 16.1635 11.6372 16.1635 12C16.1635 12.3628 16.1494 12.7227 16.1212 13.0798C16.0929 13.4369 16.0473 13.8013 15.9845 14.173ZM15.6807 8.327H19.073C18.5385 7.27567 17.835 6.40317 16.9625 5.7095C16.09 5.016 15.0813 4.54167 13.9365 4.2865C14.3198 4.8685 14.6608 5.50508 14.9595 6.19625C15.2583 6.88725 15.4987 7.5975 15.6807 8.327ZM9.8595 8.327H14.1405C13.9083 7.491 13.6163 6.72075 13.2645 6.01625C12.9125 5.31175 12.491 4.64675 12 4.02125C11.509 4.64675 11.0875 5.31175 10.7355 6.01625C10.3837 6.72075 10.0917 7.491 9.8595 8.327ZM4.927 8.327H8.31925C8.50125 7.5975 8.74167 6.88725 9.0405 6.19625C9.33917 5.50508 9.68017 4.8685 10.0635 4.2865C8.91217 4.54167 7.90192 5.01767 7.03275 5.7145C6.16342 6.41117 5.4615 7.282 4.927 8.327Z"
+                  />
+                </g>
+              </svg>
+
+              <!-- Popup (positioned below) -->
+              <!-- Popup (positioned below) -->
+              <div
+                id="popup"
+                class="pointer-events-none absolute top-11 right-0 z-50 scale-95 rounded-2xl  bg-white opacity-0 shadow-xl transition-all duration-200 ease-out w-[350px] p-5"
+              >
+                <!-- Close button -->
+
+                <div class="flex justify-end mb-2">
+                  <svg id="closePopup" class=" text-gray-400 hover:text-gray-600 p-[13px] shadow-[0_8px_20px_var(--shade-light-4)] rounded-full" width="40" height="40" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.575 7.975L1.675 12.875C1.49167 13.0583 1.25833 13.15 0.975 13.15C0.691667 13.15 0.458333 13.0583 0.275 12.875C0.0916667 12.6917 0 12.4583 0 12.175C0 11.8917 0.0916667 11.6583 0.275 11.475L5.175 6.575L0.275 1.675C0.0916667 1.49167 0 1.25833 0 0.975C0 0.691667 0.0916667 0.458333 0.275 0.275C0.458333 0.0916667 0.691667 0 0.975 0C1.25833 0 1.49167 0.0916667 1.675 0.275L6.575 5.175L11.475 0.275C11.6583 0.0916667 11.8917 0 12.175 0C12.4583 0 12.6917 0.0916667 12.875 0.275C13.0583 0.458333 13.15 0.691667 13.15 0.975C13.15 1.25833 13.0583 1.49167 12.875 1.675L7.975 6.575L12.875 11.475C13.0583 11.6583 13.15 11.8917 13.15 12.175C13.15 12.4583 13.0583 12.6917 12.875 12.875C12.6917 13.0583 12.4583 13.15 12.175 13.15C11.8917 13.15 11.6583 13.0583 11.475 12.875L6.575 7.975Z" fill="#192739" fill-opacity="0.94"/>
                   </svg>
                 </div>
-              </div>
-              <!-- End:: Country Dropdown -->
 
-              <!-- Start:: Language Dropdown -->
-              <div>
-                <label class="block text-sm font-normal text-[var(--text-grey)] mb-3"
-                  >Language</label
-                >
-                <div class="relative w-[310px] ">
-                  <select
-                    class="w-full appearance-none rounded-lg border border-gray-300 px-3 py-2.5 pr-8 text-sm text-[var(--text-blue)] font-medium focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+
+                <!-- Start:: Country Dropdown -->
+                <div class="mb-5">
+                  <label class="block text-sm font-normal text-[var(--text-grey)] mb-3"
+                    >Country</label
                   >
-                    <option>English</option>
-                    <option>বাংলা (Bangla)</option>
-                    <option>हिन्दी (Hindi)</option>
-                  </select>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-[var(--text-blue)] font-medium"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+                  <div class="relative w-[310px]">
+                    <select
+                      class="w-full appearance-none rounded-lg border border-gray-300 px-3 py-2.5 pr-8 text-sm text-[var(--text-blue)] font-medium focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    >
+                      <option>Bangladesh (BDT ৳)</option>
+                      <option>United States (USD $)</option>
+                      <option>India (INR ₹)</option>
+                      <option>United Kingdom (GBP £)</option>
+                    </select>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-[var(--text-blue)] font-medium"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
                 </div>
+                <!-- End:: Country Dropdown -->
+
+                <!-- Start:: Language Dropdown -->
+                <div>
+                  <label class="block text-sm font-normal text-[var(--text-grey)] mb-3"
+                    >Language</label
+                  >
+                  <div class="relative w-[310px] ">
+                    <select
+                      class="w-full appearance-none rounded-lg border border-gray-300 px-3 py-2.5 pr-8 text-sm text-[var(--text-blue)] font-medium focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    >
+                      <option>English</option>
+                      <option>বাংলা (Bangla)</option>
+                      <option>हिन्दी (Hindi)</option>
+                    </select>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-[var(--text-blue)] font-medium"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <!-- End:: Language Dropdown -->
               </div>
-              <!-- End:: Language Dropdown -->
             </div>
           </div>
-        </div>
-        <!-- Start:: Global Button popup script  -->
-        <script>
-          const globalBtn = document.getElementById("globalBtn");
-          const popup = document.getElementById("popup");
-          const closePopup = document.getElementById("closePopup");
+          <!-- Start:: Global Button popup script  -->
+          <script>
+            const globalBtn = document.getElementById("globalBtn");
+            const popup = document.getElementById("popup");
+            const closePopup = document.getElementById("closePopup");
 
-          function openPopup() {
-            popup.classList.remove(
-              "opacity-0",
-              "scale-95",
-              "pointer-events-none",
-            );
-            popup.classList.add("opacity-100", "scale-100");
-          }
-
-          function closePopupFn() {
-            popup.classList.add("opacity-0", "scale-95", "pointer-events-none");
-            popup.classList.remove("opacity-100", "scale-100");
-          }
-
-          globalBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            if (popup.classList.contains("opacity-0")) openPopup();
-            else closePopupFn();
-          });
-
-          closePopup.addEventListener("click", (e) => {
-            e.stopPropagation();
-            closePopupFn();
-          });
-
-          popup.addEventListener("click", (e) => e.stopPropagation());
-
-          document.addEventListener("click", (e) => {
-            if (!globalBtn.contains(e.target) && !popup.contains(e.target)) {
-              closePopupFn();
+            function openPopup() {
+              popup.classList.remove(
+                "opacity-0",
+                "scale-95",
+                "pointer-events-none",
+              );
+              popup.classList.add("opacity-100", "scale-100");
             }
-          });
 
-          document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") closePopupFn();
-          });
-        </script>
-        <!-- End:: Global Button popup script  -->
+            function closePopupFn() {
+              popup.classList.add("opacity-0", "scale-95", "pointer-events-none");
+              popup.classList.remove("opacity-100", "scale-100");
+            }
 
-        <!--End: Icons -->
-      </nav>
+            globalBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              if (popup.classList.contains("opacity-0")) openPopup();
+              else closePopupFn();
+            });
+
+            closePopup.addEventListener("click", (e) => {
+              e.stopPropagation();
+              closePopupFn();
+            });
+
+            popup.addEventListener("click", (e) => e.stopPropagation());
+
+            document.addEventListener("click", (e) => {
+              if (!globalBtn.contains(e.target) && !popup.contains(e.target)) {
+                closePopupFn();
+              }
+            });
+
+            document.addEventListener("keydown", (e) => {
+              if (e.key === "Escape") closePopupFn();
+            });
+          </script>
+          <!-- End:: Global Button popup script  -->
+
+          <!--End: Icons -->
+        </nav>
+      </div>
+
       <!--End:: Navigation Container -->
 
       <!-- Start::  Popup Menu -->
@@ -2176,10 +2347,10 @@
     <!-- End:: Header Section -->
 
     <!-- Start:: Main Content Section -->
-    <main style="min-height: 2000px">
+    <main  class="mt-[110px]">
       <!-- Start:: Buy more save more -->
-      <section class="bg-[rgba(5,8,12,1)] py-[40px] md:pt-20 md:pb-[100px]">
-        <div class="svao-container px-[20px]">
+      <section class=" mx-auto bg-[rgba(5,8,12,1)] py-[40px] md:pt-20 md:pb-[100px]">
+        <div class="container mx-auto px-[20px]">
           <!-- Start:: Section title -->
           <h1
             class="mb-12 text-center text-[32px] font-semibold text-[var(--text-white)] md:text-[64px]"
@@ -2193,26 +2364,26 @@
 
           <!-- Start:: Section content -->
           <div
-            class="flex flex-col items-center justify-between gap-8 text-[var(--text-blue)] md:flex-row"
+            class="md:flex text-[var(--text-blue)]"
           >
             <!-- Start:: First -->
 
             <div
-              class="group flex-column h relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px]"
+              class="group  rounded-4xl relative flex max-w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4x l bg-[#F6EDEE] md:max-w-[500px] "
             >
               <div class="mx-auto text-center">
                 <p class="uppercase">Latest</p>
                 <h3
-                  class="mb-2.5 w-[165px] text-[40px] leading-[45px] font-medium"
+                  class="mb-2.5 w-[165px] text-[32px] md:text-[40px] leading-[45px] font-normal md:font-medium"
                 >
                   Goggles
                 </h3>
                 <a href="" class="border-b border-[#42526E] pb-2.5">SHOP NOW</a>
               </div>
 
-              <div class="mx-auto w-[265px]">
+              <div class="mx-auto">
                 <img
-                  class="mx-auto h-[130px] transition-all duration-500 ease-in-out group-hover:-rotate-12"
+                  class="mx-auto max-h-[130px] transition-all duration-500 ease-in-out group-hover:-rotate-12"
                   src="./assets/products/brown-white-shoe-with-white-stripe-brown-sole-jBVjrRuI_-transformed 1.png"
                   alt="Brown white shoe"
                 />
@@ -2223,12 +2394,12 @@
 
             <!-- Start:: Second -->
             <div
-              class="group flex-column h relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px]"
+              class="group flex-column relative flex max-w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:max-w-[500px]"
             >
               <div class="mx-auto text-center">
                 <p class="uppercase">Latest</p>
                 <h3
-                  class="mb-2.5 w-[165px] text-[40px] leading-[45px] font-medium"
+                  class="mb-2.5 w-[165px] text-[32px] md:text-[40px] leading-[45px] font-normal md:font-medium"
                 >
                   Goggles
                 </h3>
@@ -2248,12 +2419,12 @@
             <!-- Start:: Third -->
 
             <div
-              class="group flex-column h relative flex h-[273px] w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE] md:h-[300px] md:w-[500px]"
+              class="group flex-column relative flex max-w-[350px] flex-col-reverse justify-center overflow-hidden rounded-4xl bg-[#F6EDEE]  md:max-w-[500px]"
             >
               <div class="mx-auto text-center">
                 <p class="uppercase">Latest</p>
                 <h3
-                  class="mb-2.5 w-[165px] text-[40px] leading-[45px] font-medium"
+                  class="mb-2.5 w-[165px] text-[32px] md:text-[40px] leading-[45px] font-normal md:font-medium"
                 >
                   Goggles
                 </h3>
@@ -2276,11 +2447,162 @@
       </section>
       <!-- End:: Buy more save more -->
 
-      <!-- Start:: Weekend Deals Section -->
-      <section>
-        <div class="mx-auto svao-container text-[var(--text-blue)]">
+
+      <!-- Start:: Weekly top section -->
+      <section class="px-5 lg:px-12 pt-[100px] pb-[50px]">
+        <div
+          class="container mx-auto text-[var(--text-blue)]"
+        >
           <!-- Start:: Section title -->
-          <h1 class="mb-2 text-[32px] font-semibold uppercase md:text-[64px]">
+          <h1 class="mb-2 text-[32px] md:text-[64px] font-semibold uppercase text-center md:text-start">
+            <span class="svao-stroke-text-blue text-transparent"> WEEKLY </span>
+            Top
+          </h1>
+          <!-- End:: Section title -->
+
+          <!-- Start:: Section description -->
+          <p class="mb-12 text-[14px] md:text-xl text-center md:text-start md:max-w-[700px]">
+            Our top selection showcases the freshest additions to our
+            collection, bringing you cutting-edge products and exciting
+            innovations.
+          </p>
+          <!-- End:: Section description -->
+
+          <!-- Start:: Section content -->
+          <div
+            class="flex flex-col lg:flex-row justify-center lg:gap-[170px] rounded-4xl bg-[#FDFDFD] py-[38px] px-[14px]"
+          >
+            <div class="">
+              <img class=" mx-auto" src="./assets/products/product-image.png" alt="" />
+            </div>
+            <div class="max-w-[594px]">
+              <span class="text-lg text-[var(--text-grey)]">New</span>
+              <h3
+                class="mb-3 text-[20px] md:text-[32px] font-semibold text-[var(--text-blue)]"
+              >
+                Copper Brown Genuine Leather Wallet
+              </h3>
+              <div
+                class="flex items-center gap-1 text-[32px] font-medium text-[var(--text-grey)]"
+              >
+                $200
+                <del class="text-xl text-[var(--text-grey)]/56">$220.00</del>
+              </div>
+              <div class="mb-5 text-xl text-[#B3BAC5]">Tax included</div>
+              <div class="mb-5 text-[var(--text-blue)]">
+                <div class="mb-2 text-[16px] font-medium">Description:</div>
+                <p class="text-[14px] font-normal">Brown embossed genuine leather wallet with multiple chambers for
+                cash and cards. Features card holder.</p>
+              </div>
+
+              <div>
+                <h3 class="text-[16px] font-normal">Color: Brown</h3>
+                <div class="mt-2">
+                  <div
+                    class="h-8 w-8 rounded-sm bg-[#FE813E] outline-2 outline-offset-2 outline-[#8993A4]"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="mt-11">
+                <div class="mb-5 flex gap-4">
+                  <!-- Start:: Quantity input -->
+                  <div
+                    class="flex w-full max-w-[128px] items-center justify-between rounded-full border border-[#B3BAC5] px-[14px] py-3 text-[#8993A4]"
+                  >
+                    <div
+                      class="hover:bg-red rounded-[3px] transition-all duration-100 ease-in-out hover:cursor-pointer hover:border-1"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19479_41124"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="20"
+                          height="20"
+                        >
+                          <rect width="20" height="20" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19479_41124)">
+                          <path
+                            d="M4.99935 10.8327C4.76324 10.8327 4.56532 10.7528 4.4056 10.5931C4.24588 10.4334 4.16602 10.2355 4.16602 9.99935C4.16602 9.76324 4.24588 9.56532 4.4056 9.4056C4.56532 9.24588 4.76324 9.16602 4.99935 9.16602H14.9993C15.2355 9.16602 15.4334 9.24588 15.5931 9.4056C15.7528 9.56532 15.8327 9.76324 15.8327 9.99935C15.8327 10.2355 15.7528 10.4334 15.5931 10.5931C15.4334 10.7528 15.2355 10.8327 14.9993 10.8327H4.99935Z"
+                            fill="#8993A4"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      name="quantity"
+                      class="w-[50px] text-center focus-visible:outline-none"
+                      value="1"
+                      min="1"
+                    />
+                    <div
+                      class="hover:bg-red rounded-[3px] transition-all duration-100 ease-in-out hover:cursor-pointer hover:border-1"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="mask0_19479_41128"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="20"
+                          height="20"
+                        >
+                          <rect width="20" height="20" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_19479_41128)">
+                          <path
+                            d="M9.16602 10.8327H4.99935C4.76324 10.8327 4.56532 10.7528 4.4056 10.5931C4.24588 10.4334 4.16602 10.2355 4.16602 9.99935C4.16602 9.76324 4.24588 9.56532 4.4056 9.4056C4.56532 9.24588 4.76324 9.16602 4.99935 9.16602H9.16602V4.99935C9.16602 4.76324 9.24588 4.56532 9.4056 4.4056C9.56532 4.24588 9.76324 4.16602 9.99935 4.16602C10.2355 4.16602 10.4334 4.24588 10.5931 4.4056C10.7528 4.56532 10.8327 4.76324 10.8327 4.99935V9.16602H14.9993C15.2355 9.16602 15.4334 9.24588 15.5931 9.4056C15.7528 9.56532 15.8327 9.76324 15.8327 9.99935C15.8327 10.2355 15.7528 10.4334 15.5931 10.5931C15.4334 10.7528 15.2355 10.8327 14.9993 10.8327H10.8327V14.9993C10.8327 15.2355 10.7528 15.4334 10.5931 15.5931C10.4334 15.7528 10.2355 15.8327 9.99935 15.8327C9.76324 15.8327 9.56532 15.7528 9.4056 15.5931C9.24588 15.4334 9.16602 15.2355 9.16602 14.9993V10.8327Z"
+                            fill="#8993A4"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- End:: Quantity input -->
+                  <button
+                    class="max-w-[250px] w-full rounded-full border border-[#B3BAC5] px-4 py-3 transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-[var(--text-blue)] hover:text-white"
+                  >
+                    ADD TO BAG
+                  </button>
+                </div>
+
+                <button
+                  class="max-w-[395px] w-full rounded-full border border-[#B3BAC5] bg-[var(--text-blue)] px-4 py-3 text-white transition-all duration-300 ease-in-out hover:cursor-pointer hover:border-[var(--primary-lemon)] hover:bg-[var(--primary-lemon)] hover:text-[var(--text-blue)]"
+                >
+                  BUY IT NOW
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- End:: Section content -->
+        </div>
+      </section>
+      <!-- End:: Weekly top section -->
+
+
+      <!-- Start:: Weekend Deals Section -->
+      <section class="px-5 lg:px-12">
+        <div class="mx-auto container text-[var(--text-blue)]">
+          <!-- Start:: Section title -->
+          <h1 class="mb-2 text-[32px] font-semibold uppercase md:text-[64px] border border-red-400 px-5 lg:px-12">
             <span class="svao-stroke-text-blue text-transparent">
               WEEKEND
             </span>
@@ -2290,7 +2612,7 @@
 
           <!-- Start:: Section description -->
           <div
-            class="mb-7 flex flex-col justify-between md:mb-[50px] lg:flex-row lg:items-center"
+            class="mb-7 flex flex-col justify-between md:mb-[50px] lg:flex-row lg:items-center border border-yellow-400"
           >
             <p class="text-[14px] md:text-xl lg:w-1/2 lg:text-left">
               Our top selection showcases the freshest additions to our
@@ -2329,9 +2651,9 @@
           <!-- End:: Section description -->
 
           <!-- Start:: Section content -->
-          <div class="lg:bf flex flex-col-reverse gap-5 md:flex-row">
+          <div class="lg:bf flex flex-col-reverse gap-5 md:flex-row ">
             <div
-              class="xl:1/4 relative min-h-[580px] w-full overflow-hidden rounded-[32px] rounded-b-4xl bg-cover bg-center bg-no-repeat md:w-1/2 lg:block lg:w-2/6"
+              class="xl:w-1/4 relative min-h-[580px] w-full overflow-hidden rounded-[32px] rounded-b-4xl bg-cover bg-center bg-no-repeat md:w-1/2 lg:block lg:w-2/6"
               style="
                 background-image: url(./assets/stylish-young-man-buttoning-cuff-links-sleeves-style.png);
               "
@@ -2388,7 +2710,7 @@
               </div>
             </div>
 
-            <div class="xl:3/4 w-full md:w-1/2 lg:w-4/6">
+            <div class="xl:w-3/4 w-full md:w-1/2 lg:w-4/6">
               <div class="tab-content relative">
                 <!-- Start:: Tab-1 -->
                 <div id="tab1" class="svao-tab-body active overflow-hidden">
@@ -2448,7 +2770,7 @@
                               >
                                 <b>Color</b>
                                 <!-- Start:: Separator -->
-                                <div class="mx-3 h-5 w-0.5 bg-[#8993A4]"></div>
+                                <div class="mx-3  h-5 w-0.5 bg-[#8993A4]"></div>
                                 <!-- End:: Separator -->
                                 <span class="text-[var(--text-grey)]"
                                   >Daisy White</span
@@ -3462,7 +3784,7 @@
                   <!-- Start:: Product Swiper -->
 
                   <!-- Start:: Arrow button Tab-1 -->
-                  <div class="group flex justify-between">
+                  <div class="group flex justify-between ">
                     <button
                       class="custom-button2 prev tab1-prev absolute top-1/2 left-2 z-10 -translate-y-1/2 rounded-xl border-2 border-[var(--bg-blue)] bg-transparent px-1.5 py-2 hover:bg-[var(--bg-blue)]"
                     >
@@ -3481,7 +3803,7 @@
                       </svg>
                     </button>
                     <button
-                      class="custom-button2 next tab1-next absolute top-1/2 right-0 z-10 rounded-xl border-2 border-[var(--text-blue)] bg-transparent px-1.5 py-2.5 hover:bg-[var(--bg-blue)]"
+                      class="custom-button2 next tab1-next absolute top-1/2 right-2 z-10 -translate-y-1/2 rounded-xl border-2 border-[var(--text-blue)] bg-transparent px-1.5 py-2.5 hover:bg-[var(--bg-blue)]"
                     >
                       <svg
                         width="24"
@@ -5726,6 +6048,12 @@
       </section>
       <!-- End:: Weekend Deals Section  -->
 
+
+
+
+
+      
+
       <!-- Start:: Carousel -->
       <div class="my-[100px] flex flex-col gap-6 overflow-hidden md:gap-8">
         <!-- Start:: Top moving Carousel -->
@@ -5915,163 +6243,725 @@
       <!-- End:: Carousel -->
 
       <!-- Start:: Support & Resources -->
-      <section class="svao-container">
-      <h1 class="text-[64px] font-semibold"><span class="text-[var(--text-blue)]">support &</span> <span class="svao-stroke-text-blue">resources</span></h1>
-      <div class="flex flex-col md:flex-row gap-[21px] mt-[50px]">
-        <div class="p-[35px] bg-[var(--bg-blue)] max-w-[404px] rounded-4xl">
-          <div class="p-[21px] border rounded-full w-[70px] h-[70px] flex items-center">
-            <svg width="37" height="27" viewBox="0 0 37 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.89208 26.6388C6.51958 26.6388 5.35181 26.1581 4.38875 25.1967C3.42597 24.2353 2.94458 23.0679 2.94458 21.6946H1.38875C0.995417 21.6946 0.665556 21.5614 0.399167 21.295C0.133056 21.0289 0 20.699 0 20.3054V2.77792C0 2.02792 0.275417 1.37736 0.82625 0.826251C1.37736 0.275417 2.02792 0 2.77792 0H23.8612C24.6251 0 25.279 0.271945 25.8229 0.815834C26.3668 1.36 26.6388 2.01403 26.6388 2.77792V6.86125H29.8333C30.2731 6.86125 30.6897 6.95958 31.0833 7.15625C31.4769 7.35292 31.801 7.62486 32.0554 7.97208L36.3888 13.7363C36.4815 13.8518 36.551 13.979 36.5971 14.1179C36.6435 14.2568 36.6667 14.4074 36.6667 14.5696V20.3054C36.6667 20.699 36.5336 21.0289 36.2675 21.295C36.0011 21.5614 35.6712 21.6946 35.2779 21.6946H33.5833C33.5833 23.0649 33.1029 24.2315 32.1421 25.1946C31.1812 26.1574 30.0146 26.6388 28.6421 26.6388C27.2696 26.6388 26.1018 26.1581 25.1388 25.1967C24.176 24.2353 23.6946 23.0679 23.6946 21.6946H12.8333C12.8333 23.0649 12.3529 24.2315 11.3921 25.1946C10.4313 26.1574 9.26458 26.6388 7.89208 26.6388ZM7.88875 23.8612C8.49069 23.8612 9.00236 23.6506 9.42375 23.2292C9.84486 22.8078 10.0554 22.2963 10.0554 21.6946C10.0554 21.0926 9.84486 20.581 9.42375 20.1596C9.00236 19.7385 8.49069 19.5279 7.88875 19.5279C7.28708 19.5279 6.77556 19.7385 6.35417 20.1596C5.93278 20.581 5.72208 21.0926 5.72208 21.6946C5.72208 22.2963 5.93278 22.8078 6.35417 23.2292C6.77556 23.6506 7.28708 23.8612 7.88875 23.8612ZM28.6388 23.8612C29.2407 23.8612 29.7524 23.6506 30.1737 23.2292C30.5949 22.8078 30.8054 22.2963 30.8054 21.6946C30.8054 21.0926 30.5949 20.581 30.1737 20.1596C29.7524 19.7385 29.2407 19.5279 28.6388 19.5279C28.0371 19.5279 27.5256 19.7385 27.1042 20.1596C26.6828 20.581 26.4721 21.0926 26.4721 21.6946C26.4721 22.2963 26.6828 22.8078 27.1042 23.2292C27.5256 23.6506 28.0371 23.8612 28.6388 23.8612ZM26.6388 15.4167H34.1667L29.8333 9.63875H26.6388V15.4167Z" fill="white"/>
-            </svg>
-          </div>
-          <div class="mt-[30px]">
-            <h1 class="text-[32px] font-semibold">Free Shipping</h1>
-            <p class="text-[14px] font-normal">Enjoy free shipping on all orders, no minimum required.</p>
-          </div>
 
+      <section class="bg-[var(--bg-off-white)] px-5 lg:px-12">
+        <div class="container mx-auto">
+          <h1 class="text-[32px] md:text-[56px] lg:text-[64px] font-semibold mb-[32px] md:mb-[40px] w-[320px] md:w-full">
+            <span class="text-[var(--text-blue)]">support &</span>
+            <span class="svao-stroke-text-blue">resources</span>
+          </h1>
+
+          <!-- Scrollable only on mobile & tablet -->
+          <div class="flex gap-[19px] 
+                      overflow-x-auto lg:overflow-x-visible 
+                      pb-6 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent 
+                      snap-x snap-mandatory lg:snap-none">
+
+            <!-- Start:: Card 1 -->
+            <div class="group relative p-6 md:p-[35px] bg-[rgba(230,230,230,1)] rounded-4xl max-w-[304px] lg:min-w-0 lg:max-w-[404px] w-full snap-start flex-shrink-0 lg:flex-shrink overflow-hidden">
+                <div
+                  class="absolute inset-0 flex items-center justify-center overflow-hidden"
+                >
+                  <div
+                    class="absolute h-[470px] w-[470px] -translate-y-full transform rounded-full bg-[var(--bg-blue)] transition-all duration-400 ease-in-out group-hover:translate-y-0"
+                  ></div>
+                </div>
+                <!-- main content  -->
+              <dev class="relative z-10">
+                <div class="p-[21px] rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px] flex items-center border-[2px] border-[var(--text-blue)] group-hover:border-white transition-all duration-500 ease-in-out">
+                <svg width="37" height="27" viewBox="0 0 37 27" class="fill-[#192434] transition-colors duration-400 group-hover:fill-white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.89208 26.6388C6.51958 26.6388 5.35181 26.1581 4.38875 25.1967C3.42597 24.2353 2.94458 23.0679 2.94458 21.6946H1.38875C0.995417 21.6946 0.665556 21.5614 0.399167 21.295C0.133056 21.0289 0 20.699 0 20.3054V2.77792C0 2.02792 0.275417 1.37736 0.82625 0.826251C1.37736 0.275417 2.02792 0 2.77792 0H23.8612C24.6251 0 25.279 0.271945 25.8229 0.815834C26.3668 1.36 26.6388 2.01403 26.6388 2.77792V6.86125H29.8333C30.2731 6.86125 30.6897 6.95958 31.0833 7.15625C31.4769 7.35292 31.801 7.62486 32.0554 7.97208L36.3888 13.7363C36.4815 13.8518 36.551 13.979 36.5971 14.1179C36.6435 14.2568 36.6667 14.4074 36.6667 14.5696V20.3054C36.6667 20.699 36.5336 21.0289 36.2675 21.295C36.0011 21.5614 35.6712 21.6946 35.2779 21.6946H33.5833C33.5833 23.0649 33.1029 24.2315 32.1421 25.1946C31.1812 26.1574 30.0146 26.6388 28.6421 26.6388C27.2696 26.6388 26.1018 26.1581 25.1388 25.1967C24.176 24.2353 23.6946 23.0679 23.6946 21.6946H12.8333C12.8333 23.0649 12.3529 24.2315 11.3921 25.1946C10.4313 26.1574 9.26458 26.6388 7.89208 26.6388ZM7.88875 23.8612C8.49069 23.8612 9.00236 23.6506 9.42375 23.2292C9.84486 22.8078 10.0554 22.2963 10.0554 21.6946C10.0554 21.0926 9.84486 20.581 9.42375 20.1596C9.00236 19.7385 8.49069 19.5279 7.88875 19.5279C7.28708 19.5279 6.77556 19.7385 6.35417 20.1596C5.93278 20.581 5.72208 21.0926 5.72208 21.6946C5.72208 22.2963 5.93278 22.8078 6.35417 23.2292C6.77556 23.6506 7.28708 23.8612 7.88875 23.8612ZM28.6388 23.8612C29.2407 23.8612 29.7524 23.6506 30.1737 23.2292C30.5949 22.8078 30.8054 22.2963 30.8054 21.6946C30.8054 21.0926 30.5949 20.581 30.1737 20.1596C29.7524 19.7385 29.2407 19.5279 28.6388 19.5279C28.0371 19.5279 27.5256 19.7385 27.1042 20.1596C26.6828 20.581 26.4721 21.0926 26.4721 21.6946C26.4721 22.2963 26.6828 22.8078 27.1042 23.2292C27.5256 23.6506 28.0371 23.8612 28.6388 23.8612ZM26.6388 15.4167H34.1667L29.8333 9.63875H26.6388V15.4167Z"/>
+                </svg>
+
+                </div>
+                <div class="mt-[30px] text-[var(--text-blue)] group-hover:text-white">
+                  <h1 class="text-[24px] md:text-[30px] font-semibold  mb-2 transition-all duration-500 ease-in-out">Free Shipping</h1>
+                  <p class="text-[14px] font-normal transition-all duration-500 ease-in-out">Enjoy free shipping on all orders, no minimum required.</p>
+                </div>
+              </dev>
+            </div>
+            <!-- End:: Card 1 -->
+
+            <!-- Start:: Card 2 -->
+            <div class="group relative p-6 md:p-[35px] bg-[rgba(230,230,230,1)] rounded-4xl max-w-[304px] lg:min-w-0 lg:max-w-[404px] w-full snap-start flex-shrink-0 lg:flex-shrink overflow-hidden">
+                <div
+                  class="absolute inset-0 flex items-center justify-center overflow-hidden"
+                >
+                  <div
+                    class="absolute h-[470px] w-[470px] -translate-y-full transform rounded-full bg-[var(--bg-blue)] transition-all duration-400 ease-in-out group-hover:translate-y-0"
+                  ></div>
+                </div>
+                <!-- main content  -->
+              <dev class="relative z-10">
+                <div class="p-[21px]  rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px] flex items-center border-[2px] border-[var(--text-blue)] group-hover:border-white transition-all duration-500 ease-in-out">
+                  <svg width="27" height="33" viewBox="0 0 27 33" xmlns="http://www.w3.org/2000/svg" class="fill-[#192434] transition-colors duration-400 group-hover:fill-white">
+                    <path d="M11.9167 21.5H14.75C14.9583 21.5 15.14 21.4132 15.295 21.2396C15.4503 21.066 15.5001 20.875 15.4446 20.6667L14.5696 15.6804C15.1338 15.4185 15.5779 15.0385 15.9021 14.5404C16.2265 14.0424 16.3888 13.4918 16.3888 12.8888C16.3888 12.0485 16.0893 11.3292 15.4904 10.7308C14.8918 10.1325 14.1719 9.83333 13.3308 9.83333C12.49 9.83333 11.771 10.1325 11.1738 10.7308C10.5765 11.3292 10.2779 12.0485 10.2779 12.8888C10.2779 13.4918 10.4401 14.0424 10.7646 14.5404C11.0887 15.0385 11.5329 15.4185 12.0971 15.6804L11.2221 20.6667C11.1665 20.875 11.2164 21.066 11.3717 21.2396C11.5267 21.4132 11.7083 21.5 11.9167 21.5ZM13.3333 33C13.17 33 13.0183 32.9861 12.8783 32.9583C12.7383 32.9306 12.5983 32.8889 12.4583 32.8333C8.63417 31.5464 5.60181 29.2154 3.36125 25.8404C1.12042 22.4654 0 18.7861 0 14.8025V6.73625C0 6.14819 0.167778 5.61889 0.503333 5.14833C0.839167 4.67778 1.27319 4.33667 1.80542 4.125L12.3613 0.180417C12.6946 0.0601396 13.0186 0 13.3333 0C13.6481 0 13.9721 0.0601396 14.3054 0.180417L24.8612 4.125C25.3935 4.33667 25.8275 4.67778 26.1633 5.14833C26.4989 5.61889 26.6667 6.14819 26.6667 6.73625V14.8025C26.6667 18.7861 25.5463 22.4654 23.3054 25.8404C21.0649 29.2154 18.0325 31.5464 14.2083 32.8333C14.0683 32.8889 13.9283 32.9306 13.7883 32.9583C13.6483 32.9861 13.4967 33 13.3333 33Z"/>
+                  </svg>
+                </div>
+                <div class="mt-[30px] text-[var(--text-blue)] group-hover:text-white">
+                  <h1 class="text-[24px] md:text-[30px] font-semibold  mb-2 transition-all duration-500 ease-in-out">Free Shipping</h1>
+                  <p class="text-[14px] font-normal transition-all duration-500 ease-in-out">Enjoy free shipping on all orders, no minimum required.</p>
+                </div>
+              </dev>
+            </div>
+            <!-- End:: Card 2  -->
+
+            <!-- Start:: Card 3 -->
+            <div class="group relative p-6 md:p-[35px] bg-[rgba(230,230,230,1)] rounded-4xl max-w-[304px] lg:min-w-0 lg:max-w-[404px] w-full snap-start flex-shrink-0 lg:flex-shrink overflow-hidden">
+                <div
+                  class="absolute inset-0 flex items-center justify-center overflow-hidden"
+                >
+                  <div
+                    class="absolute h-[470px] w-[470px] -translate-y-full transform rounded-full bg-[var(--bg-blue)] transition-all duration-400 ease-in-out group-hover:translate-y-0"
+                  ></div>
+                </div>
+                <!-- main content  -->
+              <dev class="relative z-10">
+                <div class="p-[21px]  rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px] flex items-center border-[2px] border-[var(--text-blue)] group-hover:border-white transition-all duration-500 ease-in-out">
+                  <svg width="30" height="34" viewBox="0 0 30 34" xmlns="http://www.w3.org/2000/svg" class="fill-[#192434] transition-colors duration-400 group-hover:fill-white">
+                  <path d="M14.0138 19.7221H20C20.3981 19.7221 20.729 19.5901 20.9929 19.3263C21.2568 19.0624 21.3888 18.7314 21.3888 18.3333C21.3888 17.9353 21.2568 17.6043 20.9929 17.3404C20.729 17.0765 20.3981 16.9446 20 16.9446H14.0138L15.9863 14.9721C16.2546 14.7038 16.3888 14.3821 16.3888 14.0071C16.3888 13.6321 16.2499 13.3057 15.9721 13.0279C15.7037 12.7593 15.3751 12.625 14.9863 12.625C14.5974 12.625 14.2686 12.7593 14 13.0279L9.63875 17.3613C9.36097 17.639 9.22208 17.9631 9.22208 18.3333C9.22208 18.7036 9.36097 19.0276 9.63875 19.3054L14 23.6667C14.2686 23.9353 14.595 24.0672 14.9792 24.0625C15.3633 24.0578 15.6943 23.9165 15.9721 23.6388C16.2407 23.3704 16.375 23.0418 16.375 22.6529C16.375 22.264 16.2407 21.9353 15.9721 21.6667L14.0138 19.7221ZM2.77792 33.3333C2.00931 33.3333 1.35417 33.0625 0.8125 32.5208C0.270833 31.9792 0 31.324 0 30.5554V6.11125C0 5.34264 0.270833 4.6875 0.8125 4.14583C1.35417 3.60417 2.00931 3.33333 2.77792 3.33333H10.8054C11.0185 2.35194 11.5163 1.55097 12.2988 0.930417C13.081 0.31014 13.9814 0 15 0C16.0186 0 16.919 0.31014 17.7013 0.930417C18.4838 1.55097 18.9815 2.35194 19.1946 3.33333H27.2221C27.9907 3.33333 28.6458 3.60417 29.1875 4.14583C29.7292 4.6875 30 5.34264 30 6.11125V30.5554C30 31.324 29.7292 31.9792 29.1875 32.5208C28.6458 33.0625 27.9907 33.3333 27.2221 33.3333H2.77792ZM15 5.22208C15.3797 5.22208 15.7061 5.08556 15.9792 4.8125C16.2522 4.53944 16.3888 4.21306 16.3888 3.83333C16.3888 3.45361 16.2522 3.12722 15.9792 2.85417C15.7061 2.58111 15.3797 2.44458 15 2.44458C14.6203 2.44458 14.2939 2.58111 14.0208 2.85417C13.7478 3.12722 13.6113 3.45361 13.6113 3.83333C13.6113 4.21306 13.7478 4.53944 14.0208 4.8125C14.2939 5.08556 14.6203 5.22208 15 5.22208Z"/>
+                  </svg>
+
+                </div>
+                <div class="mt-[30px] text-[var(--text-blue)] group-hover:text-white">
+                  <h1 class="text-[24px] md:text-[30px] font-semibold  mb-2 transition-all duration-500 ease-in-out">Free Shipping</h1>
+                  <p class="text-[14px] font-normal transition-all duration-500 ease-in-out">Enjoy free shipping on all orders, no minimum required.</p>
+                </div>
+              </dev>
+            </div>
+            <!-- End:: Card 3 -->
+
+            <!-- Start:: Card 4 -->
+            <div class="group relative p-6 md:p-[35px] bg-[rgba(230,230,230,1)] rounded-4xl max-w-[304px] lg:min-w-0 lg:max-w-[404px] w-full snap-start flex-shrink-0 lg:flex-shrink overflow-hidden">
+                <div
+                  class="absolute inset-0 flex items-center justify-center overflow-hidden"
+                >
+                  <div
+                    class="absolute h-[470px] w-[470px] -translate-y-full transform rounded-full bg-[var(--bg-blue)] transition-all duration-400 ease-in-out group-hover:translate-y-0"
+                  ></div>
+                </div>
+                <!-- main content  -->
+              <dev class="relative z-10">
+                <div class="p-[21px]  rounded-full w-[60px] h-[60px] md:w-[70px] md:h-[70px] flex items-center border border-[var(--text-blue)] group-hover:border-white transition-all duration-500 ease-in-out">
+                <svg width="34" height="32" viewBox="0 0 34 32" class="fill-[#192434] transition-colors duration-400 group-hover:fill-white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.9446 31.3612C31.7779 31.3612 31.6113 31.3288 31.4446 31.2638C31.2779 31.199 31.1204 31.0926 30.9721 30.9446L26.6946 26.6667H9.44458C8.67597 26.6667 8.02083 26.3958 7.47917 25.8542C6.9375 25.3125 6.66667 24.6574 6.66667 23.8887V21.1113H25C25.7686 21.1113 26.4238 20.8404 26.9654 20.2988C27.5071 19.7571 27.7779 19.1019 27.7779 18.3333V6.66667H30.5554C31.324 6.66667 31.9792 6.9375 32.5208 7.47917C33.0625 8.02083 33.3333 8.67597 33.3333 9.44458V29.9583C33.3333 30.3842 33.1899 30.7244 32.9029 30.9792C32.6157 31.2339 32.2963 31.3612 31.9446 31.3612ZM1.38875 23.0554C1.03708 23.0554 0.717639 22.9282 0.430417 22.6738C0.143472 22.419 0 22.0788 0 21.6529V2.77792C0 2.0093 0.270833 1.35417 0.8125 0.8125C1.35417 0.270833 2.00931 0 2.77792 0H22.2221C22.9907 0 23.6458 0.270833 24.1875 0.8125C24.7292 1.35417 25 2.0093 25 2.77792V15.5554C25 16.324 24.7292 16.9792 24.1875 17.5208C23.6458 18.0625 22.9907 18.3333 22.2221 18.3333H6.66667L2.36125 22.6387C2.21292 22.7871 2.05542 22.8936 1.88875 22.9583C1.72208 23.0231 1.55542 23.0554 1.38875 23.0554Z"/>
+                </svg>
+
+                </div>
+                <div class="mt-[30px] text-[var(--text-blue)] group-hover:text-white">
+                  <h1 class="text-[24px] md:text-[30px] font-semibold  mb-2 transition-all duration-500 ease-in-out">Free Shipping</h1>
+                  <p class="text-[14px] font-normal transition-all duration-500 ease-in-out">Enjoy free shipping on all orders, no minimum required.</p>
+                </div>
+              </dev>
+            </div>
+            <!-- End:: Card 4 -->
+
+          </div>
         </div>
-
-        <div class="p-[35px] bg-slate-200 max-w-[404px] rounded-4xl">
-          <div class="p-[21px] border rounded-full w-[70px] h-[70px] text-[var(--text-blue)] flex items-center">
-          <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.9167 21.5H14.75C14.9583 21.5 15.14 21.4132 15.295 21.2396C15.4503 21.066 15.5001 20.875 15.4446 20.6667L14.5696 15.6804C15.1338 15.4185 15.5779 15.0385 15.9021 14.5404C16.2265 14.0424 16.3888 13.4918 16.3888 12.8888C16.3888 12.0485 16.0893 11.3292 15.4904 10.7308C14.8918 10.1325 14.1719 9.83333 13.3308 9.83333C12.49 9.83333 11.771 10.1325 11.1738 10.7308C10.5765 11.3292 10.2779 12.0485 10.2779 12.8888C10.2779 13.4918 10.4401 14.0424 10.7646 14.5404C11.0887 15.0385 11.5329 15.4185 12.0971 15.6804L11.2221 20.6667C11.1665 20.875 11.2164 21.066 11.3717 21.2396C11.5267 21.4132 11.7083 21.5 11.9167 21.5ZM13.3333 33C13.17 33 13.0183 32.9861 12.8783 32.9583C12.7383 32.9306 12.5983 32.8889 12.4583 32.8333C8.63417 31.5464 5.60181 29.2154 3.36125 25.8404C1.12042 22.4654 0 18.7861 0 14.8025V6.73625C0 6.14819 0.167778 5.61889 0.503333 5.14833C0.839167 4.67778 1.27319 4.33667 1.80542 4.125L12.3613 0.180417C12.6946 0.0601396 13.0186 0 13.3333 0C13.6481 0 13.9721 0.0601396 14.3054 0.180417L24.8612 4.125C25.3935 4.33667 25.8275 4.67778 26.1633 5.14833C26.4989 5.61889 26.6667 6.14819 26.6667 6.73625V14.8025C26.6667 18.7861 25.5463 22.4654 23.3054 25.8404C21.0649 29.2154 18.0325 31.5464 14.2083 32.8333C14.0683 32.8889 13.9283 32.9306 13.7883 32.9583C13.6483 32.9861 13.4967 33 13.3333 33Z" fill="#192434"/>
-          </svg>
-          </div>
-          <div class="mt-[30px] text-[var(--text-blue)]">
-            <h1 class="text-[32px] font-semibold">Free Shipping</h1>
-            <p class="text-[14px] font-normal">Enjoy free shipping on all orders, no minimum required.</p>
-          </div>
-        </div>
-
-        <div class="p-[35px] bg-slate-200 max-w-[404px] rounded-4xl">
-          <div class="p-[21px] border rounded-full w-[70px] h-[70px] text-[var(--text-blue)] flex items-center">
-          <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.0138 19.7221H20C20.3981 19.7221 20.729 19.5901 20.9929 19.3263C21.2568 19.0624 21.3888 18.7314 21.3888 18.3333C21.3888 17.9353 21.2568 17.6043 20.9929 17.3404C20.729 17.0765 20.3981 16.9446 20 16.9446H14.0138L15.9863 14.9721C16.2546 14.7038 16.3888 14.3821 16.3888 14.0071C16.3888 13.6321 16.2499 13.3057 15.9721 13.0279C15.7037 12.7593 15.3751 12.625 14.9863 12.625C14.5974 12.625 14.2686 12.7593 14 13.0279L9.63875 17.3613C9.36097 17.639 9.22208 17.9631 9.22208 18.3333C9.22208 18.7036 9.36097 19.0276 9.63875 19.3054L14 23.6667C14.2686 23.9353 14.595 24.0672 14.9792 24.0625C15.3633 24.0578 15.6943 23.9165 15.9721 23.6388C16.2407 23.3704 16.375 23.0418 16.375 22.6529C16.375 22.264 16.2407 21.9353 15.9721 21.6667L14.0138 19.7221ZM2.77792 33.3333C2.00931 33.3333 1.35417 33.0625 0.8125 32.5208C0.270833 31.9792 0 31.324 0 30.5554V6.11125C0 5.34264 0.270833 4.6875 0.8125 4.14583C1.35417 3.60417 2.00931 3.33333 2.77792 3.33333H10.8054C11.0185 2.35194 11.5163 1.55097 12.2988 0.930417C13.081 0.31014 13.9814 0 15 0C16.0186 0 16.919 0.31014 17.7013 0.930417C18.4838 1.55097 18.9815 2.35194 19.1946 3.33333H27.2221C27.9907 3.33333 28.6458 3.60417 29.1875 4.14583C29.7292 4.6875 30 5.34264 30 6.11125V30.5554C30 31.324 29.7292 31.9792 29.1875 32.5208C28.6458 33.0625 27.9907 33.3333 27.2221 33.3333H2.77792ZM15 5.22208C15.3797 5.22208 15.7061 5.08556 15.9792 4.8125C16.2522 4.53944 16.3888 4.21306 16.3888 3.83333C16.3888 3.45361 16.2522 3.12722 15.9792 2.85417C15.7061 2.58111 15.3797 2.44458 15 2.44458C14.6203 2.44458 14.2939 2.58111 14.0208 2.85417C13.7478 3.12722 13.6113 3.45361 13.6113 3.83333C13.6113 4.21306 13.7478 4.53944 14.0208 4.8125C14.2939 5.08556 14.6203 5.22208 15 5.22208Z" fill="#192434"/>
-            </svg>
-          </div>
-          <div class="mt-[30px] text-[var(--text-blue)]">
-            <h1 class="text-[32px] font-semibold">Free Shipping</h1>
-            <p class="text-[14px] font-normal">Enjoy free shipping on all orders, no minimum required.</p>
-          </div>
-        </div>
-
-        <div class="p-[35px] bg-slate-200 max-w-[404px] rounded-4xl">
-          <div class="p-[21px] border rounded-full w-[70px] h-[70px] text-[var(--text-blue)] flex items-center">
-            <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M31.9446 31.3612C31.7779 31.3612 31.6113 31.3288 31.4446 31.2638C31.2779 31.199 31.1204 31.0926 30.9721 30.9446L26.6946 26.6667H9.44458C8.67597 26.6667 8.02083 26.3958 7.47917 25.8542C6.9375 25.3125 6.66667 24.6574 6.66667 23.8887V21.1113H25C25.7686 21.1113 26.4238 20.8404 26.9654 20.2988C27.5071 19.7571 27.7779 19.1019 27.7779 18.3333V6.66667H30.5554C31.324 6.66667 31.9792 6.9375 32.5208 7.47917C33.0625 8.02083 33.3333 8.67597 33.3333 9.44458V29.9583C33.3333 30.3842 33.1899 30.7244 32.9029 30.9792C32.6157 31.2339 32.2963 31.3612 31.9446 31.3612ZM1.38875 23.0554C1.03708 23.0554 0.717639 22.9282 0.430417 22.6738C0.143472 22.419 0 22.0788 0 21.6529V2.77792C0 2.0093 0.270833 1.35417 0.8125 0.8125C1.35417 0.270833 2.00931 0 2.77792 0H22.2221C22.9907 0 23.6458 0.270833 24.1875 0.8125C24.7292 1.35417 25 2.0093 25 2.77792V15.5554C25 16.324 24.7292 16.9792 24.1875 17.5208C23.6458 18.0625 22.9907 18.3333 22.2221 18.3333H6.66667L2.36125 22.6387C2.21292 22.7871 2.05542 22.8936 1.88875 22.9583C1.72208 23.0231 1.55542 23.0554 1.38875 23.0554Z" fill="#192434"/>
-            </svg>
-          </div>
-          <div class="mt-[30px] text-[var(--text-blue)]">
-            <h1 class="text-[32px] font-semibold">Free Shipping</h1>
-            <p class="text-[14px] font-normal">Enjoy free shipping on all orders, no minimum required.</p>
-          </div>
-        </div>
-
-        
-      </div>
       </section>
+
       <!-- End:: Support & Resources -->
 
 
-      <!-- Start:: Shop the looks -->
-      <section class="bg-white">
-        <div class="container mx-auto px-4 py-12">
-          <div class="flex flex-col lg:flex-row gap-[85px] items-center">
-            <!-- Start:: Image Section -->
-            <div class="w-full max-w-[1200px]">
-              <div class="relative rounded-2xl overflow-hidden">
-                <img 
-                  src="./assets/images/show-the-looks.png" 
-                  alt="Shop the look - Man in casual streetwear"
-                  class="w-full h-auto object-cover"
-                />
-                <!-- Hotspot Markers -->
-                <button class="absolute top-[15%] right-[25%] w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
-                  <span class="w-3 h-3 bg-gray-800 rounded-full"></span>
-                </button>
-                <button class="absolute top-[45%] left-[20%] w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
-                  <span class="w-3 h-3 bg-gray-800 rounded-full"></span>
-                </button>
-                <button class="absolute bottom-[20%] right-[30%] w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
-                  <span class="w-3 h-3 bg-gray-800 rounded-full"></span>
-                </button>
-              </div>
+      
+      
+
+
+      <!-- Start:: Shope the look -->
+      <section class="lg:flex bg-white py-[30px] md:py-[100px]">
+        <!-- Start:: Section image full -->
+        <div
+          class="relative lg:w-[50%] xl:w-3/5 min-h-[600px] overflow-hidden lg:rounded-r-4xl bg-gray-200 bg-cover bg-center bg-no-repeat"
+          style="background-image: url('./assets/shop-the-look.jpg')"
+        >
+          <!-- Start: Dot ping over the background image -->
+          <div class="group absolute top-[25%] right-[48%] cursor-pointer">
+            <!-- Pinging dot:: Visible by default, hides on hover -->
+            <span
+              class="relative flex size-6 items-center justify-center transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+            >
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex size-4 rounded-full bg-white outline-1 outline-offset-2 outline-white"
+              ></span>
+            </span>
+
+            <!-- Image container:: Hidden by default, shows on hover -->
+            <div
+              class="absolute top-1/2 left-1/2 flex h-0 w-0 -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full bg-white transition-all duration-300 ease-in-out group-hover:h-[100px] group-hover:w-[100px]"
+            >
+              <img
+                src="./assets/products/jaket.png"
+                alt=""
+                class="object-contain opacity-0 transition-opacity delay-100 duration-200 group-hover:opacity-100"
+              />
             </div>
-            <!-- End:: Image Section -->
-
-            <!-- Start:: Products Section -->
-            <div class="w-full max-w-[515px]">
-              <h2 class="text-4xl md:text[64px] font-bold mb-8">
-                <span class="text-[var(--text-blue)]">SHOP</span> <span class="svao-stroke-text-blue">THE LOOK</span>
-              </h2>
-
-              <div class="space-y-1">
-                <p class="text-sm font-medium text-gray-600 mb-4">Products:</p>
-
-                <!-- Start:: Product 1 -->
-                <div class="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
-                  <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=100&q=80" alt="Navy Blue Bomber Jacket" class="w-full h-full object-cover rounded-lg" />
-                  </div>
-                  <div class="flex-grow">
-                    <h3 class="font-medium text-[var(--text-blue)] text-[20px]">Navy Blue Boomber Jacket</h3>
-                    <p class="text-[24px] font-normal text-[var(--text-blue)]">$29.00</p>
-                  </div>
-                  <button class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
-                    <span>+</span> ADD
-                  </button>
-                </div>
-                <!-- End:: Product 1 -->
-
-                <!-- Start:: Product 2 -->
-                <div class="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
-                  <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=100&q=80" alt="Comfort white Pant" class="w-full h-full object-cover rounded-lg" />
-                  </div>
-                  <div class="flex-grow">
-                    <h3 class="font-medium text-gray-900">Comfort white Pant</h3>
-                    <p class="text-lg font-semibold text-gray-900">$29.00</p>
-                  </div>
-                  <button class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
-                    <span>+</span> ADD
-                  </button>
-                </div>
-                <!-- End:: Product 2 -->
-
-                 <!-- Start:: Product 3 -->
-                <div class="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
-                  <div class="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=100&q=80" alt="Men's Lifestyle Sneaker" class="w-full h-full object-cover rounded-lg" />
-                  </div>
-                  <div class="flex-grow">
-                    <h3 class="font-medium text-gray-900">Men's Lifestyle Sneaker</h3>
-                    <p class="text-lg font-semibold text-gray-900">$29.00</p>
-                  </div>
-                  <button class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
-                    <span>+</span> ADD
-                  </button>
-                </div>
-                <!-- End:: Product 3 -->
-              </div>
-            </div>
-            <!-- End:: Products Section -->
           </div>
+          <!-- End:: Dot ping over the background image -->
+
+          <!-- Start: Dot ping over the background image -->
+          <div class="group absolute bottom-[35%] left-[42%] cursor-pointer">
+            <!-- Pinging dot:: Visible by default, hides on hover -->
+            <span
+              class="relative flex size-6 items-center justify-center transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+            >
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex size-4 rounded-full bg-white outline-1 outline-offset-2 outline-white"
+              ></span>
+            </span>
+
+            <!-- Image container:: Hidden by default, shows on hover -->
+            <div
+              class="absolute top-1/2 left-1/2 flex h-0 w-0 -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full bg-white transition-all duration-300 ease-in-out group-hover:h-[100px] group-hover:w-[100px]"
+            >
+              <img
+                src="./assets/products/gray-pant.png"
+                alt=""
+                class="object-contain opacity-0 transition-opacity delay-100 duration-200 group-hover:opacity-100"
+              />
+            </div>
+          </div>
+          <!-- End:: Dot ping over the background image -->
+
+          <!-- Start: Dot ping over the background image -->
+          <div class="group absolute right-[46%] bottom-[15%] cursor-pointer">
+            <!-- Pinging dot:: Visible by default, hides on hover -->
+            <span
+              class="relative flex size-6 items-center justify-center transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+            >
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex size-4 rounded-full bg-white outline-1 outline-offset-2 outline-white"
+              ></span>
+            </span>
+
+            <!-- Image container:: Hidden by default, shows on hover -->
+            <div
+              class="absolute top-1/2 left-1/2 flex h-0 w-0 -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full bg-white transition-all duration-300 ease-in-out group-hover:h-[100px] group-hover:w-[100px]"
+            >
+              <img
+                src="./assets/products/off-white-shoue.png"
+                alt=""
+                class="object-contain opacity-0 transition-opacity delay-100 duration-200 group-hover:opacity-100"
+              />
+            </div>
+          </div>
+          <!-- End:: Dot ping over the background image -->
+        </div>
+        <!-- End:: Section image full -->
+
+        <!-- Start:: Section info full -->
+        <div class="px-5 lg:w-[50%] xl:w-[40%]">
+        <div
+          class="sm:px-0 py-8 xl:py-[65px] xl:pl-8  2xl:pl-[85px] text-xl font-medium text-[var(--text-blue)] sm:container lg:max-w-none mx-auto"
+        >
+          <!-- Start:: Section title-->
+          <h1 class="mb-8 lg:mb-[52px] text-[32px] lg:text-[58px] 2xl:text-[64px] font-semibold">
+            SHOP
+            <span class="svao-stroke-text-blue text-transparent">
+              THE LOOK
+            </span>
+          </h1>
+          <!-- End:: Section title-->
+
+          <!-- Start:: Products list -->
+          <div class="pb-4">Products:</div>
+          <div class="svao-scrollbar-y pr-2 lg:max-w-[515px] overflow-auto lg:pr-2.5  h-[430px] space-y-4 md:space-y-6 ">
+            <!-- Start:: Product's list item -->
+            <div
+              class=" lg:gap-0 xl:gap-2 flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-3 md:px-10 lg:px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-lg hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center "
+                >
+                  <img
+                    src="./assets/products/jaket.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div class="">
+                  <div class="text-[16px] md:text-xl font-medium">
+                    Navy Blue Boomber Jacket
+                  </div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+
+            <div
+              class=" flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center"
+                >
+                  <img
+                    src="./assets/products/gray-pant.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div>
+                  <div class="text-[16px] md:text-xl font-medium">Comfort white Pant</div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center"
+                >
+                  <img
+                    src="./assets/products/off-white-shoue.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div>
+                  <div class="text-[16px] md:text-xl font-medium">Men's Lifestyle Sneaker</div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="lg:gap-0 xl:gap-2 flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-3 md:px-10 lg:px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-lg hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center "
+                >
+                  <img
+                    src="./assets/products/jaket.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div class="">
+                  <div class="text-[16px] md:text-xl font-medium">
+                    Navy Blue Boomber Jacket
+                  </div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+
+            <div
+              class=" flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center"
+                >
+                  <img
+                    src="./assets/products/gray-pant.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div>
+                  <div class="text-[16px] md:text-xl font-medium">Comfort white Pant</div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex items-center justify-between rounded-[8px] border border-[#DFE1E6] px-5 py-4 transition-all duration-200 ease-in-out hover:shadow-md hover:shadow-[#F4F5F7]"
+            >
+              <div class="flex items-center gap-6">
+                <div
+                  class="flex h-[90px] w-[77px] shrink-0 items-center justify-center"
+                >
+                  <img
+                    src="./assets/products/off-white-shoue.png"
+                    alt="Product image"
+                    class="object-contain"
+                  />
+                </div>
+                <div>
+                  <div class="text-[16px] md:text-xl font-medium">Men's Lifestyle Sneaker</div>
+                  <div class="text-xl md:text-2xl text-[var(--text-blue)]">$29.00</div>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <a
+                  href="#"
+                  class="group flex items-center rounded-full bg-[#DFE1E6] px-3 py-1 text-[14px] md:text-base font-medium transition-colors duration-200 hover:bg-[var(--bg-blue)] hover:text-white"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    class="fill-[var(--bg-blue)] group-hover:fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="mask0_19479_41263"
+                      style="mask-type: alpha"
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="18"
+                      height="18"
+                    >
+                      <rect width="18" height="18" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_19479_41263)">
+                      <path
+                        d="M8.25 9.75H4.5C4.2875 9.75 4.10938 9.67812 3.96562 9.53438C3.82187 9.39062 3.75 9.2125 3.75 9C3.75 8.7875 3.82187 8.60938 3.96562 8.46562C4.10938 8.32188 4.2875 8.25 4.5 8.25H8.25V4.5C8.25 4.2875 8.32188 4.10938 8.46562 3.96562C8.60938 3.82187 8.7875 3.75 9 3.75C9.2125 3.75 9.39062 3.82187 9.53438 3.96562C9.67812 4.10938 9.75 4.2875 9.75 4.5V8.25H13.5C13.7125 8.25 13.8906 8.32188 14.0344 8.46562C14.1781 8.60938 14.25 8.7875 14.25 9C14.25 9.2125 14.1781 9.39062 14.0344 9.53438C13.8906 9.67812 13.7125 9.75 13.5 9.75H9.75V13.5C9.75 13.7125 9.67812 13.8906 9.53438 14.0344C9.39062 14.1781 9.2125 14.25 9 14.25C8.7875 14.25 8.60938 14.1781 8.46562 14.0344C8.32188 13.8906 8.25 13.7125 8.25 13.5V9.75Z"
+                      />
+                    </g>
+                  </svg>
+                  Add</a
+                >
+              </div>
+            </div>
+            <!-- End:: Product's list item -->
+          </div>
+          <!-- End:: Products list -->
+        </div>
+        </div>
+        <!-- End:: Section info full -->
+      </section>
+      <!-- End:: Shope the look -->
+
+
+
+
+
+      <!-- Start:: Before/After image slider comparison  -->
+      <section class="px-5 lg:px-12 mt-[100px]">
+        <div class="container mx-auto ">
+          <style>
+            .comparison-slider {
+              position: relative;
+              overflow: hidden;
+              border-radius: 16px;
+              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+              height: 730px; /* Set your desired height here */
+            }
+
+            .before-image,
+            .after-image {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            .before-image {
+              clip-path: polygon(
+                0 0,
+                var(--slider-position, 50%) 0,
+                var(--slider-position, 50%) 100%,
+                0 100%
+              );
+            }
+
+            .after-image {
+              clip-path: polygon(
+                var(--slider-position, 50%) 0,
+                100% 0,
+                100% 100%,
+                var(--slider-position, 50%) 100%
+              );
+            }
+
+            .slider-line {
+              position: absolute;
+              top: 0;
+              width: 0.2rem;
+              height: 100%;
+              background-color: #ffffff;
+              z-index: 8;
+              left: var(--slider-position, 50%);
+              transform: translateX(-50%);
+              pointer-events: none;
+            }
+
+            .slider-button {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 45px;
+              height: 45px;
+              background: white;
+              left: var(--slider-position, 50%);
+              border-radius: 50%;
+              z-index: 100;
+              box-shadow: 1px 1px 1p var(--shade-dark-4);
+            }
+          </style>
+          <!-- Start:: Section title and info -->
+          <div
+            class="mx-auto mb-6 md:mb-[40px] max-w-[872px] text-center text-xl text-[var(--text-blue)]"
+          >
+            <div class="text-[14px] mb-1.5 md:text-[20px]">Latest Fashion Demand</div>
+            <h1 class="mb-2.5 text-[32px] md:text-[64px] font-semibold uppercase">
+              ELEGANT
+              <span class="svao-stroke-text-blue text-transparent"> LOOK </span>
+            </h1>
+            <div class="text-[14px] md:text-[20px]">
+              Our latest collection of fashion item offers something special for
+              every occasion. Our festival and casual outfit ensures you are
+              prepared for anything.
+            </div>
+          </div>
+          <!-- End:: Section title and info -->
+
+          <!-- Start:: Section content -->
+          <div class="svao-comparison-container mx-auto w-full">
+            <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
+              <div class="lg:col-span-2 ">
+                <div
+                  class="comparison-slider mx-auto aspect-video w-full"
+                  id="comparisonSlider"
+                >
+                  <!-- Before Image -->
+                  <img
+                    src="./assets/comparison-image-dark.jpg"
+                    alt="Before"
+                    class="before-image"
+                  />
+
+                  <!-- After Image -->
+                  <img
+                    src="./assets/comparison-image.jpg"
+                    alt="After"
+                    class="after-image"
+                  />
+
+                  <!-- Slider Line -->
+                  <div class="slider-line"></div>
+
+                  <!-- Slider Handle -->
+                  <div class="slider-button" id="sliderHandle">
+                    <div
+                      class="flex h-full w-full items-center justify-center gap-1"
+                    >
+                      <svg
+                        width="12"
+                        height="20"
+                        viewBox="0 0 12 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.54922 9.99962L10.8992 17.3496C11.1492 17.5996 11.2701 17.8913 11.2617 18.2246C11.2534 18.558 11.1242 18.8496 10.8742 19.0996C10.6242 19.3496 10.3326 19.4746 9.99922 19.4746C9.66589 19.4746 9.37422 19.3496 9.12422 19.0996L1.42422 11.4246C1.22422 11.2246 1.07422 10.9996 0.974219 10.7496C0.874219 10.4996 0.824219 10.2496 0.824219 9.99962C0.824219 9.74962 0.874219 9.49962 0.974219 9.24962C1.07422 8.99962 1.22422 8.77462 1.42422 8.57462L9.12422 0.874622C9.37422 0.624622 9.67005 0.503789 10.0117 0.512122C10.3534 0.520455 10.6492 0.649622 10.8992 0.899622C11.1492 1.14962 11.2742 1.44129 11.2742 1.77462C11.2742 2.10796 11.1492 2.39962 10.8992 2.64962L3.54922 9.99962Z"
+                          fill="#1C1B1F"
+                        />
+                      </svg>
+
+                      <svg
+                        width="12"
+                        height="20"
+                        viewBox="0 0 12 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.45078 9.99962L1.10078 17.3496C0.850779 17.5996 0.729945 17.8913 0.738278 18.2246C0.746613 18.558 0.875778 18.8496 1.12578 19.0996C1.37578 19.3496 1.66745 19.4746 2.00078 19.4746C2.33411 19.4746 2.62578 19.3496 2.87578 19.0996L10.5758 11.4246C10.7758 11.2246 10.9258 10.9996 11.0258 10.7496C11.1258 10.4996 11.1758 10.2496 11.1758 9.99962C11.1758 9.74962 11.1258 9.49962 11.0258 9.24962C10.9258 8.99962 10.7758 8.77462 10.5758 8.57462L2.87578 0.874622C2.62578 0.624622 2.32995 0.503789 1.98828 0.512122C1.64661 0.520455 1.35078 0.649622 1.10078 0.899622C0.850779 1.14962 0.725779 1.44129 0.725779 1.77462C0.725779 2.10796 0.850779 2.39962 1.10078 2.64962L8.45078 9.99962Z"
+                          fill="#1C1B1F"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End:: Section content -->
         </div>
       </section>
-      <!-- End:: Shop the looks -->
+      <!-- End:: Before/After image slider comparison -->
+
+      
+      
+      
       
     </main>
     <!-- End:: Main Content Section -->
 
     <!-- Start:: Footer Section -->
     <footer
-      class="font-poppins mt-[100px] rounded-t-[32px] bg-[#192434] px-[20px] pt-[40px] pb-[30px] text-white md:pt-[60px]"
+      class="font-poppins px-5 lg:px-12 mt-[100px] rounded-t-[32px] bg-[#192434] pt-[40px] pb-[30px] text-white md:pt-[60px]"
     >
       <div class="container mx-auto">
         <!-- Start:: Top Footer Content -->
         <div class="flex flex-wrap justify-between">
           <!-- Start:: Left Brand Section -->
-          <div class="w-full md:space-y-8 lg:w-[312px]">
+          <div class="w-full md:space-y-8 lg:w-[312px] flex flex-col sm:flex-row sm:justify-between lg:block lg:flex-col">
             <div class="space-y-[18px]">
               <div class="mb-4 w-[140px]">
                 <a href="#">
@@ -6088,7 +6978,7 @@
             </div>
 
             <div
-              class="mt-[28px] mb-[32px] border border-slate-700 bg-[#B3BAC5] md:hidden"
+              class="mt-[28px] mb-[32px] h-[1px] bg-[var(--shade-dark-1)] md:hidden"
             ></div>
             <!-- Start:: Social Icons -->
             <div class="flex flex-col gap-4">
@@ -6190,7 +7080,7 @@
 
           <!-- Start:: Divider -->
           <div
-            class="mt-[28px] mb-[32px] w-full border border-slate-700 bg-[#B3BAC5] md:hidden"
+            class="mt-[28px] mb-[32px] w-full h-[1px] bg-[var(--shade-dark-1)] lg:hidden"
           ></div>
           <!-- End:: Divider -->
 
@@ -6199,7 +7089,7 @@
             <div class="mb-2.5 flex items-center justify-between md:mb-4">
               <h3 class="text-[18px] font-semibold text-white">TOP CATEGORY</h3>
               <button
-                class="toggle-btn text-[18px] font-bold text-white transition-all duration-500 ease-in-out md:hidden"
+                class="toggle-btn text-[18px] font-bold text-white transition-all duration-500 ease-in-out lg:hidden"
               >
                 <svg
                   width="18"
@@ -6216,7 +7106,7 @@
               </button>
             </div>
             <ul
-              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out md:block md:max-h-none md:opacity-100"
+              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out lg:block lg:max-h-none lg:opacity-100"
             >
               <li class="">
                 <a
@@ -6332,7 +7222,7 @@
           <div class="mb-5 w-full lg:w-[200px]">
             <div class="mb-2.5 flex items-center justify-between md:mb-4">
               <h3 class="text-[18px] font-medium text-white">QUICK LINKS</h3>
-              <button class="toggle-btn text-xl font-bold text-white md:hidden">
+              <button class="toggle-btn text-xl font-bold text-white lg:hidden">
                 <svg
                   width="18"
                   height="18"
@@ -6348,7 +7238,7 @@
               </button>
             </div>
             <ul
-              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out md:block md:max-h-none md:opacity-100"
+              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out lg:block lg:max-h-none lg:opacity-100"
             >
               <li>
                 <a
@@ -6444,7 +7334,7 @@
               <h3 class="text-[18px] font-medium text-white">
                 HELP AND SUPPORT
               </h3>
-              <button class="toggle-btn text-xl font-bold text-white md:hidden">
+              <button class="toggle-btn text-xl font-bold text-white lg:hidden">
                 <svg
                   width="18"
                   height="18"
@@ -6460,7 +7350,7 @@
               </button>
             </div>
             <ul
-              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out md:block md:max-h-none md:opacity-100"
+              class="toggle-list max-h-0 space-y-2.5 overflow-hidden text-[14px] font-normal opacity-0 transition-all duration-500 ease-in-out lg:block lg:max-h-none lg:opacity-100"
             >
               <li>
                 <a
@@ -6538,7 +7428,7 @@
 
           <!-- Start:: Divider -->
           <div
-            class="mt-[28px] mb-[32px] w-full border border-slate-700 bg-[#B3BAC5] md:hidden"
+            class="mt-[28px] mb-[32px] w-full h-[1px] bg-[var(--shade-dark-1)] lg:hidden"
           ></div>
           <!-- End:: Divider -->
 
@@ -6550,7 +7440,7 @@
               POPULAR TAGS
             </h3>
             <div
-              class="mb-[18px] flex flex-wrap gap-2 text-[14px] font-normal md:max-w-[274px]"
+              class="mb-[18px] flex flex-wrap gap-2 text-[14px] font-normal"
             >
               <span
                 class="flex h-[33px] cursor-pointer items-center justify-center rounded-[2px] border border-[#6C6F06] px-[12px] transition hover:bg-[#DBE112] hover:text-[#192739]/90"
@@ -6647,7 +7537,7 @@
 
         <!-- Start:: Divider -->
         <div
-          class="mt-[28px] mb-[32px] w-full border border-slate-700 bg-[#B3BAC5]"
+          class="mt-[28px] mb-[32px] w-full h-[1px] bg-[var(--shade-dark-1)]"
         ></div>
         <!-- End:: Divider -->
 
@@ -6697,7 +7587,7 @@
   <script src="./assets/swiper@12/swiper-bundle.min.js"></script>
   <!-- End:: Plugin script links -->
 
-  <!-- Start:: Javascript linking -->
+  <!-- Start:: Footer Javascript linking -->
   <script>
     const toggleButtons = document.querySelectorAll(".toggle-btn");
 
@@ -6730,7 +7620,7 @@
       });
     });
   </script>
-  <!-- End:: Javascript linking -->
+  <!-- End:: Footer Javascript linking -->
 
   <!-- Start:: JS for Weekend Deals Section-->
   <script>
@@ -6898,4 +7788,62 @@
     });
   </script>
   <!-- End:: New Arrival section's script  -->
+
+    <!-- Start:: JS Before/After image slider comparison -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("comparisonSlider");
+        const handle = document.getElementById("sliderHandle");
+        let isDragging = false;
+
+        function updateSliderPosition(clientX) {
+          const rect = slider.getBoundingClientRect();
+          const position = ((clientX - rect.left) / rect.width) * 100;
+          const clampedPosition = Math.max(0, Math.min(100, position));
+
+          slider.style.setProperty("--slider-position", `${clampedPosition}%`);
+        }
+
+        // Mouse events
+        handle.addEventListener("mousedown", function (e) {
+          isDragging = true;
+          e.preventDefault();
+        });
+
+        document.addEventListener("mousemove", function (e) {
+          if (isDragging) {
+            updateSliderPosition(e.clientX);
+          }
+        });
+
+        document.addEventListener("mouseup", function () {
+          isDragging = false;
+        });
+
+        // Touch events for mobile
+        handle.addEventListener("touchstart", function (e) {
+          isDragging = true;
+          e.preventDefault();
+        });
+
+        document.addEventListener("touchmove", function (e) {
+          if (isDragging && e.touches.length > 0) {
+            updateSliderPosition(e.touches[0].clientX);
+          }
+        });
+
+        document.addEventListener("touchend", function () {
+          isDragging = false;
+        });
+
+        // Click on slider to move handle
+        slider.addEventListener("click", function (e) {
+          updateSliderPosition(e.clientX);
+        });
+      });
+    </script>
+    <!-- End:: JS Before/After image slider comparison -->
+
+  
+  
 </html>

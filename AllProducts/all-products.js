@@ -11,9 +11,9 @@ function toggleCollapse(contentId, arrowId) {
   }
 }
 
-const rangeInput = document.querySelectorAll(".range-input input"),
+const rangeInput = document.querySelectorAll(".svao-range-input input"),
   priceInput = document.querySelectorAll(".price-input input"),
-  range = document.querySelector(".slider .progress");
+  range = document.querySelector(".svao-slider-x4 .svao-progress-x4");
 let priceGap = 1000;
 priceInput.forEach((input) => {
   input.addEventListener("input", (e) => {
@@ -52,3 +52,100 @@ rangeInput.forEach((input) => {
     }
   });
 });
+
+function changeCardView (cardNumber){
+  //v card- sm:grid-cols-2 grid xl:grid lg:grid-cols-3 grid-cols-1 2xl:grid-cols-3 gap-5
+//  h-card- hidden md:grid grid-cols-2 gap-5
+// l -card - hidden sm:grid grid-cols-1 gap-5
+const allProductsPage = document.querySelector(".all-product-page")
+const varticalCard = document.querySelector(".vCards")
+const horizontalCard = document.querySelector(".hCards")
+const listCard = document.querySelector(".lCards")
+console.log(cardNumber, allProductsPage.offsetWidth,varticalCard,horizontalCard,listCard)
+switch (cardNumber) {
+  case 1:
+  
+    
+    break;
+  case 2:
+    if(allProductsPage.offsetWidth >= 1536){
+      varticalCard.classList.remove("grid")
+      varticalCard.style.display = 'none'
+
+    }
+    
+    break;
+  case 3:
+    if(allProductsPage.offsetWidth >= 1536){
+      varticalCard.classList.remove("2xl:grid-cols-4")
+      varticalCard.style.display = 'grid'
+      varticalCard.classList.add("2xl:grid-cols-3")
+
+    }
+
+    
+    break;
+  case 4:
+    if(allProductsPage.offsetWidth >= 1536){
+      varticalCard.classList.remove("2xl:grid-cols-3")
+      varticalCard.classList.add("2xl:grid-cols-4")
+
+    }
+
+    
+    break;
+
+  default:
+    break;
+}
+
+
+}
+// Start:: Testimonial Slider Script
+
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    loop: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    navigation: {
+      nextEl: ".swiper-shop-next",
+      prevEl: ".swiper-shop-prev",
+    },
+
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    breakpoints: {
+      // When window width is >= 320px
+      320: {
+        slidesPerView: 1, // Show 1 slide
+        spaceBetween: 16,
+      },
+      // When window width is >= 640px
+      640: {
+        slidesPerView: 2, // Show 2 slides
+        spaceBetween: 16,
+      },
+      768:{
+        slidesPerView: 3, // Show 2 slides
+        spaceBetween: 30,
+
+      },
+      // When window width is >= 1024px
+      1024: {
+        slidesPerView: 4, // Show 2 slides
+        spaceBetween: 30,
+      },
+      // When window width is >= 1440px
+      1280: {
+        slidesPerView: 5, // Show 3 slides
+        spaceBetween: 30,
+      },
+    },
+  });
+
+//End:: Testimonial Slider Script 
