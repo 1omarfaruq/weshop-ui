@@ -4,7 +4,6 @@
   --breakpoint-3xl: 105rem; /* 1640px */
 }
 
-
 /* Start:: Carousel custom design */
 
 @keyframes right-left-scroll {
@@ -24,7 +23,6 @@
     transform: translateX(0);
   }
 }
-
 
 @layer utilities {
   .svao-collections-top-scroll {
@@ -46,8 +44,6 @@
 
 /* End:: Carousel custom design */
 
-
-
 /* Start:: Scroll bar design */
 /* End:: Scroll bar design */
 .svao-scrollbar-y {
@@ -58,9 +54,7 @@
 }
 
 .svao-scrollbar-x::-webkit-scrollbar {
-  
   height: 5px;
-
 }
 .svao-scrollbar-y::-webkit-scrollbar {
   width: 6px;
@@ -91,10 +85,8 @@
   border-radius: 10px;
 }
 
-
 .svao-container {
   @apply mx-auto sm:w-[40rem] md:w-[48rem] lg:w-[64rem] xl:w-[80rem] 2xl:w-[105rem];
- 
 }
 
 /* Start:: Navigation Bar Styles */
@@ -109,9 +101,6 @@
 .svao-nav-item a {
   @apply flex items-center p-2.5 text-base font-medium text-[var(--text-blue)] duration-100 ease-in-out hover:text-[var(--primary-lemon)];
 }
-
-
- 
 
 .svao-nav-item a:hover span svg {
   @apply fill-[var(--primary-lemon)] duration-100 ease-in-out;
@@ -174,7 +163,7 @@
 }
 
 .svao-tab-button {
-  @apply cursor-pointer rounded-[12px] border-[1.5px] border-[var(--bg-blue)] px-[38px] py-[8px]  md:px-9 md:py-2.5 text-[14px] md:text-xl font-medium text-[var(--text-blue)] transition-all duration-300;
+  @apply cursor-pointer rounded-[12px] border-[1.5px] border-[var(--bg-blue)] px-[38px] py-[8px] text-[14px] font-medium text-[var(--text-blue)] transition-all duration-300 md:px-9 md:py-2.5 md:text-xl;
 }
 
 .svao-tab-button:hover,
@@ -190,7 +179,16 @@
   @apply block;
 }
 
-/* Start menu style */
+/* Start menu style for desktop menu*/
+nav ul li.active > a {
+  @apply text-[var(--primary-lemon)];
+}
+nav ul li.active > a svg {
+  @apply fill-[var(--primary-lemon)];
+}
+/* End menu style for desktop menu*/
+
+/* Start menu style for mobile menu*/
 #menuPopup ul li {
   @apply border-b border-[var(--shade-light-4)];
 }
@@ -272,15 +270,10 @@
   @apply border-b border-[var(--shade-light-3)];
 }
 
-
-
 /* footer css */
 
 .svao-dropdown-mobile ul {
-  @apply p-0
+  @apply p-0;
 }
-
-
-
 
 /* End menu style */
