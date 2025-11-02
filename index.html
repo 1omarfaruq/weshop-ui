@@ -153,10 +153,181 @@
 
       <!-- Start:: Store & Language Selector -->
       <div class="hidden gap-4 sm:flex">
-        <!-- Start:: Store Selector -->
-        <div class="group flex gap-2.5 hover:text-[var(--primary-lemon)]">
-          <!-- Start:: Store Icon -->
-          <span>
+
+
+        <!-- Start:: Language Selector -->
+        <div class="relative inline-block text-left">
+          <!-- Button -->
+          <button
+            id="languageToggle"
+            type="button"
+            class="flex items-center justify-between gap-2 rounded-md px-3  text-white hover:text-[var(--primary-lemon)] focus:outline-none group"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img
+              src="https://flagcdn.com/w20/us.png"
+              alt="English"
+              class=" h-4 rounded-sm object-cover"
+            />
+            <span class="whitespace-nowrap">English (US)</span>
+            <svg
+              class="w-4 h-4 fill-white opacity-70 group-hover:opacity-100 group-hover:fill-[var(--primary-lemon)]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <!-- Dropdown -->
+          <ul
+            id="languageMenu"
+            class="absolute right-0 z-70 mt-3 w-44 bg-[var(--bg-blue)] py-2 text-white shadow-lg rounded-md overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out svao-dark-scrollbar-y "
+          >
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/us.png" alt="English" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/bd.png" alt="Bangladesh" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/us.png" alt="English" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/bd.png" alt="Bangladesh" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/us.png" alt="English" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/bd.png" alt="Bangladesh" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/us.png" alt="English" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/bd.png" alt="Bangladesh" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/us.png" alt="English" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/bd.png" alt="Bangladesh" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>  
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/us.png" alt="English" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/bd.png" alt="Bangladesh" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/us.png" alt="English" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <img src="https://flagcdn.com/w20/bd.png" alt="Bangladesh" class="h-4 rounded-sm object-cover" />
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>  
+            
+          </ul>
+
+        </div>
+        <!-- End:: Language Selector -->
+        
+        <!-- Start:: Stores Selector -->
+        <div class="relative inline-block text-left">
+          <!-- Button -->
+          <button
+            id="stores-toggle"
+            type="button"
+            class="flex items-center justify-between gap-2 rounded-md px-3  text-white hover:text-[var(--primary-lemon)] focus:outline-none group"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             <svg width="20" height="21" viewBox="0 0 20 21" class="fill-white group-hover:fill-[var(--primary-lemon)]"
               xmlns="http://www.w3.org/2000/svg">
               <mask id="mask0_19123_48057" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
@@ -168,34 +339,167 @@
                   d="M4.18755 18C3.72922 18 3.33686 17.8368 3.01047 17.5104C2.68408 17.184 2.52089 16.7917 2.52089 16.3333V9.70833C2.20144 9.41667 1.95491 9.04167 1.7813 8.58333C1.60769 8.125 1.60422 7.625 1.77089 7.08333L2.64589 4.25C2.757 3.88889 2.95491 3.59028 3.23964 3.35417C3.52436 3.11806 3.85422 3 4.22922 3H15.8126C16.1876 3 16.5139 3.11458 16.7917 3.34375C17.0695 3.57292 17.2709 3.875 17.3959 4.25L18.2709 7.08333C18.4376 7.625 18.4341 8.11806 18.2605 8.5625C18.0869 9.00694 17.8403 9.38889 17.5209 9.70833V16.3333C17.5209 16.7917 17.3577 17.184 17.0313 17.5104C16.7049 17.8368 16.3126 18 15.8542 18H4.18755ZM11.8542 8.83333C12.2292 8.83333 12.5139 8.70486 12.7084 8.44792C12.9028 8.19097 12.9792 7.90278 12.9376 7.58333L12.4792 4.66667H10.8542V7.75C10.8542 8.04167 10.9514 8.29514 11.1459 8.51042C11.3403 8.72569 11.5764 8.83333 11.8542 8.83333ZM8.10422 8.83333C8.42366 8.83333 8.68408 8.72569 8.88547 8.51042C9.08686 8.29514 9.18755 8.04167 9.18755 7.75V4.66667H7.56255L7.10422 7.58333C7.04866 7.91667 7.12158 8.20833 7.32297 8.45833C7.52436 8.70833 7.78478 8.83333 8.10422 8.83333ZM4.39589 8.83333C4.64589 8.83333 4.86464 8.74306 5.05214 8.5625C5.23964 8.38194 5.35422 8.15278 5.39589 7.875L5.85422 4.66667H4.22922L3.39589 7.45833C3.31255 7.73611 3.35769 8.03472 3.5313 8.35417C3.70491 8.67361 3.99311 8.83333 4.39589 8.83333ZM15.6459 8.83333C16.0487 8.83333 16.3403 8.67361 16.5209 8.35417C16.7014 8.03472 16.7431 7.73611 16.6459 7.45833L15.7709 4.66667H14.1876L14.6459 7.875C14.6876 8.15278 14.8021 8.38194 14.9896 8.5625C15.1771 8.74306 15.3959 8.83333 15.6459 8.83333ZM4.18755 16.3333H15.8542V10.4583C15.7848 10.4861 15.7396 10.5 15.7188 10.5H15.6459C15.2709 10.5 14.941 10.4375 14.6563 10.3125C14.3716 10.1875 14.0903 9.98611 13.8126 9.70833C13.5626 9.95833 13.2778 10.1528 12.9584 10.2917C12.6389 10.4306 12.2987 10.5 11.9376 10.5C11.5626 10.5 11.2119 10.4306 10.8855 10.2917C10.5591 10.1528 10.2709 9.95833 10.0209 9.70833C9.78478 9.95833 9.51047 10.1528 9.19797 10.2917C8.88547 10.4306 8.54866 10.5 8.18755 10.5C7.78478 10.5 7.42019 10.4306 7.0938 10.2917C6.76741 10.1528 6.47922 9.95833 6.22922 9.70833C5.93755 10 5.64936 10.2049 5.36464 10.3229C5.07991 10.441 4.757 10.5 4.39589 10.5H4.30214C4.26741 10.5 4.22922 10.4861 4.18755 10.4583V16.3333Z" />
               </g>
             </svg>
-          </span>
-          <!-- End:: Store Icon -->
-
-          Stores
-        </div>
-        <!-- End:: Store Selector -->
-
-        <!-- Start:: Language Selector -->
-        <div class="group flex gap-2.5 hover:text-[var(--primary-lemon)]">
-          <!-- Start:: Language Icon -->
-          <span>
-            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-white group-hover:fill-[var(--primary-lemon)]"
-              xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0_19123_48064" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
-                height="20">
-                <rect width="20" height="20" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_19123_48064)">
-                <path
-                  d="M9.99935 18.3327C8.84657 18.3327 7.76324 18.1139 6.74935 17.6764C5.73546 17.2389 4.85352 16.6452 4.10352 15.8952C3.35352 15.1452 2.75977 14.2632 2.32227 13.2493C1.88477 12.2355 1.66602 11.1521 1.66602 9.99935C1.66602 8.84657 1.88477 7.76324 2.32227 6.74935C2.75977 5.73546 3.35352 4.85352 4.10352 4.10352C4.85352 3.35352 5.73546 2.75977 6.74935 2.32227C7.76324 1.88477 8.84657 1.66602 9.99935 1.66602C11.1521 1.66602 12.2355 1.88477 13.2493 2.32227C14.2632 2.75977 15.1452 3.35352 15.8952 4.10352C16.6452 4.85352 17.2389 5.73546 17.6764 6.74935C18.1139 7.76324 18.3327 8.84657 18.3327 9.99935C18.3327 11.1521 18.1139 12.2355 17.6764 13.2493C17.2389 14.2632 16.6452 15.1452 15.8952 15.8952C15.1452 16.6452 14.2632 17.2389 13.2493 17.6764C12.2355 18.1139 11.1521 18.3327 9.99935 18.3327ZM9.16602 16.6243V14.9993C8.70768 14.9993 8.31532 14.8362 7.98893 14.5098C7.66254 14.1834 7.49935 13.791 7.49935 13.3327V12.4993L3.49935 8.49935C3.45768 8.74935 3.41949 8.99935 3.38477 9.24935C3.35004 9.49935 3.33268 9.74935 3.33268 9.99935C3.33268 11.6799 3.88477 13.1521 4.98893 14.416C6.0931 15.6799 7.48546 16.416 9.16602 16.6243ZM14.916 14.4993C15.1938 14.1938 15.4438 13.8639 15.666 13.5098C15.8882 13.1556 16.0723 12.7875 16.2181 12.4056C16.3639 12.0237 16.475 11.6313 16.5514 11.2285C16.6278 10.8257 16.666 10.416 16.666 9.99935C16.666 8.63824 16.2875 7.39518 15.5306 6.27018C14.7737 5.14518 13.7632 4.33268 12.4993 3.83268V4.16602C12.4993 4.62435 12.3362 5.01671 12.0098 5.3431C11.6834 5.66949 11.291 5.83268 10.8327 5.83268H9.16602V7.49935C9.16602 7.73546 9.08615 7.93338 8.92643 8.0931C8.76671 8.25282 8.56879 8.33268 8.33268 8.33268H6.66602V9.99935H11.666C11.9021 9.99935 12.1 10.0792 12.2598 10.2389C12.4195 10.3987 12.4993 10.5966 12.4993 10.8327V13.3327H13.3327C13.6938 13.3327 14.0202 13.4403 14.3118 13.6556C14.6035 13.8709 14.8049 14.1521 14.916 14.4993Z" />
-              </g>
+            <span class="whitespace-nowrap group-hover:fill-[var(--primary-lemon)]">Stores</span>
+            <svg
+              class="w-4 h-4 fill-white opacity-70 group-hover:fill-[var(--primary-lemon)]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
             </svg>
-          </span>
-          <!-- End:: Language Icon -->
+          </button>
 
-          English (US)
+          <!-- Dropdown -->
+          <!-- Dropdown -->
+          <ul
+            id="stores-menu"
+            class="absolute right-0 z-70 mt-3 w-44 bg-[var(--bg-blue)] py-2 text-white shadow-lg rounded-md overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out svao-dark-scrollbar-y "
+          >
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>  
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/en" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">English (US)</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fr" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Français</span>
+              </a>
+            </li>
+            <li>
+              <a href="/bd" class="flex items-center gap-2 px-3 py-2 hover:bg-[var(--primary-lemon)] hover:text-black">
+                <span class="truncate">Bangladesh (Asia)</span>
+              </a>
+            </li>  
+            
+          </ul>
+
         </div>
-        <!-- End:: Language Selector -->
+        <!-- End:: Stores Selector -->
+      
+        
+        <script>
+        function dropdown(toggleId, menuId) {
+          const toggleBtn = document.getElementById(toggleId);
+          const menu = document.getElementById(menuId);
+
+          toggleBtn.addEventListener("click", () => {
+            if (menu.classList.contains("max-h-0")) {
+              menu.classList.remove("max-h-0", "opacity-0");
+              menu.classList.add("max-h-[400px]", "opacity-100");
+            } else {
+              menu.classList.add("max-h-0", "opacity-0");
+              menu.classList.remove("max-h-[400px]", "opacity-100");
+            }
+            toggleBtn.setAttribute(
+              "aria-expanded",
+              menu.classList.contains("max-h-0") ? "false" : "true"
+            );
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggleBtn.contains(e.target) && !menu.contains(e.target)) {
+              menu.classList.add("max-h-0", "opacity-0");
+              menu.classList.remove("max-h-96", "opacity-100");
+              toggleBtn.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        dropdown("languageToggle", "languageMenu");
+        dropdown("stores-toggle","stores-menu")
+
+        </script>
+        
       </div>
       <!-- End:: Store & Language Selector -->
     </div>
@@ -1643,6 +1947,8 @@
 
   <!-- Start:: Main Content Section -->
   <main>
+    
+    
 
 
     <!-- Start:: Weekly top section -->
