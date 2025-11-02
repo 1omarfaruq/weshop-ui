@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Image Swiper + Magnifier</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .img-viewport { 
+      touch-action: pan-y; 
+      position: relative; 
+      overflow: hidden; 
+      user-select: none; 
+    }
+    .thumb { 
+      transition: box-shadow .15s, transform .12s; 
+    }
+    .thumb.active { 
+      box-shadow: 0 6px 18px rgba(0,0,0,.12); 
+      transform: translateY(-3px); 
+    }
+
+    /* Magnifier lens styling */
+    .magnifier-lens {
+      position: absolute;
+      border: 2px solid #ddd;
+      border-radius: 50%;
+      cursor: none;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      display: none;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+      z-index: 20;
+      pointer-events: none;
+    }
+    .magnifier-lens img {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      object-fit: cover;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <div class="max-w-6xl mx-auto p-6">
+    <div class="grid grid-cols-12 gap-6 items-start">
+
+      <!-- LEFT: Thumbnails column -->
+      <div class="col-span-2 flex flex-col items-center">
+        <button id="thumb-up" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow mb-2">▲</button>
+
+        <div id="thumb-list" class="flex flex-col gap-3 h-[400px] overflow-hidden relative"></div>
+
+        <button id="thumb-down" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shadow mt-2">▼</button>
+      </div>
+
+      <!-- CENTER: Main image with prev/next -->
+      <div class="col-span-6 flex items-center justify-center">
+        <div class="relative w-full max-w-[560px]">
+          <div id="main-viewport" class="img-viewport bg-gray-50 rounded-2xl aspect-[4/4] flex items-center justify-center">
+            <img id="main-image" src="" alt="Product image" class="max-h-[78vh] max-w-full object-contain select-none" draggable="false">
+            <div id="lens" class="magnifier-lens">
+              <img id="zoomed-image" src="" alt="">
+            </div>
+          </div>
+
+          <button id="prev-btn" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow">◀</button>
+          <button id="next-btn" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow">▶</button>
+
+          <div class="absolute left-1/2 -translate-x-1/2 bottom-3 bg-white/80 rounded-full px-3 py-1 text-sm shadow">
+            <span id="index-indicator">1 / 5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Product info placeholder -->
+      <div class="col-span-4">
+        <h2 class="text-2xl font-semibold mb-2">Textured white hooded sweatshirt — winter</h2>
+        <p class="text-xl font-bold text-gray-900 mb-4">$200.00 
+          <span class="text-sm line-through text-gray-400">$220.00</span>
+        </p>
+        <p class="text-gray-600">
+          Experience comfort and style with our premium hoodie, designed for warmth and long-lasting wearability.
+          Made with soft, breathable fabric, this hoodie offers comfort for casual outings or lounging at home.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+const images = [
+  'https://i.ibb.co/BznwzFj/probook-450-g8-004-500x500-1.jpg',
+  'https://i.ibb.co/6s6Zn5X/iphone-16.png',
+  'https://i.ibb.co/QJbZ611/Apple-i-Phone-X-64-GB-Unlocked-GSM-Phone-w-Dual-12-MP-Camera-Space-Gray-B-Grade-Used-15c2b968-bb85-4.webp',
+  'https://i.ibb.co/C6KFrLK/Redmi-Note-13-Pro-4-G-1.jpg',
+  'https://i.ibb.co/Jj4tT3d/Samsung-Galaxy-S24-ultra.jpg',
+  'https://i.ibb.co/VqzNpP5/motorola-edge-50-pro.jpg'
+];
+
+const thumbListEl = document.getElementById('thumb-list');
+const mainImageEl = document.getElementById('main-image');
+const indexIndicator = document.getElementById('index-indicator');
+const viewport = document.getElementById('main-viewport');
+const lens = document.getElementById('lens');
+const zoomedImage = document.getElementById('zoomed-image');
+
+let current = 0;
+let startIndex = 0;
+const visibleThumbs = 3;
+let magnifierActive = false;
+
+// Render thumbnails
+function renderThumbs() {
+  thumbListEl.innerHTML = '';
+  const visible = images.slice(startIndex, startIndex + visibleThumbs);
+  visible.forEach((src, i) => {
+    const realIndex = startIndex + i;
+    const btn = document.createElement('button');
+    btn.className = 'thumb bg-white rounded-lg overflow-hidden w-24 h-24 flex items-center justify-center border border-gray-100';
+    btn.innerHTML = `<img src="${src}" class="object-cover w-full h-full">`;
+    if (realIndex === current) btn.classList.add('active');
+    btn.addEventListener('click', () => goTo(realIndex));
+    thumbListEl.appendChild(btn);
+  });
+}
+
+// Render main image
+function renderMain() {
+  mainImageEl.src = images[current];
+  zoomedImage.src = images[current];
+  indexIndicator.textContent = `${current + 1} / ${images.length}`;
+}
+
+// Navigation
+function goTo(i) {
+  current = (i + images.length) % images.length;
+  renderMain();
+  renderThumbs();
+}
+
+document.getElementById('prev-btn').addEventListener('click', () => goTo(current - 1));
+document.getElementById('next-btn').addEventListener('click', () => goTo(current + 1));
+
+document.getElementById('thumb-up').addEventListener('click', () => {
+  startIndex = Math.max(0, startIndex - 1);
+  renderThumbs();
+});
+document.getElementById('thumb-down').addEventListener('click', () => {
+  startIndex = Math.min(images.length - visibleThumbs, startIndex + 1);
+  renderThumbs();
+});
+
+// Swipe gestures
+let startX = null;
+viewport.addEventListener('pointerdown', e => {
+  if (magnifierActive) return;
+  startX = e.clientX;
+});
+viewport.addEventListener('pointerup', e => {
+  if (magnifierActive) return;
+  const dx = e.clientX - startX;
+  if (dx > 60) goTo(current - 1);
+  if (dx < -60) goTo(current + 1);
+});
+
+// ---------- Magnifier Logic ----------
+function enableMagnifier() {
+  magnifierActive = true;
+  zoomedImage.src = mainImageEl.src;
+  lens.style.display = 'block';
+}
+function disableMagnifier() {
+  magnifierActive = false;
+  lens.style.display = 'none';
+}
+
+viewport.addEventListener('mouseenter', enableMagnifier);
+viewport.addEventListener('mouseleave', disableMagnifier);
+viewport.addEventListener('mousemove', moveLens);
+
+function moveLens(e) {
+  if (!magnifierActive) return;
+  const rect = viewport.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const lensSize = lens.offsetWidth / 2;
+  let lensX = x - lensSize;
+  let lensY = y - lensSize;
+
+  // Constrain lens inside the viewport
+  if (lensX < 0) lensX = 0;
+  if (lensY < 0) lensY = 0;
+  if (lensX > rect.width - lens.offsetWidth) lensX = rect.width - lens.offsetWidth;
+  if (lensY > rect.height - lens.offsetHeight) lensY = rect.height - lens.offsetHeight;
+
+  lens.style.left = lensX + 'px';
+  lens.style.top = lensY + 'px';
+
+  const zoomRatio = 2; // 2x zoom
+  zoomedImage.style.left = -lensX * zoomRatio + 'px';
+  zoomedImage.style.top = -lensY * zoomRatio + 'px';
+}
+
+renderMain();
+renderThumbs();
+  </script>
+</body>
+</html>
