@@ -5,122 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tab View</title>
     <link rel="stylesheet" href="styles.css" />
-    \
-    <style>
-      /* Basic styles for layout */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-
-      .tabs {
-        width: 60%;
-        margin: 50px auto;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-      }
-
-      /* Tab buttons */
-      .tab-buttons {
-        display: flex;
-        justify-content: space-around;
-        background-color: #f1f1f1;
-        padding: 10px;
-      }
-
-      .tab-button {
-        padding: 10px 20px;
-        background-color: transparent;
-        border: 1px solid #ccc;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .tab-button.active {
-        background-color: #007bff;
-        color: white;
-      }
-
-      .tab-button:hover {
-        background-color: #ddd;
-      }
-
-      /* Tab content */
-      .tab-content {
-        padding: 20px;
-      }
-
-      .tab-pane {
-        display: none;
-      }
-
-      .tab-pane.active {
-        display: block;
-      }
-
-      /* Style for content inside tabs */
-      h2 {
-        margin-top: 0;
-      }
-    </style>
   </head>
   <body>
-    <div class="tabs">
-      <!-- Tab buttons -->
-      <div class="tab-buttons">
-        <button class="tab-button active" onclick="openTab(event, 'tab1')">
-          Tab 1
-        </button>
-        <button class="tab-button" onclick="openTab(event, 'tab2')">
-          Tab 2
-        </button>
-        <button class="tab-button" onclick="openTab(event, 'tab3')">
-          Tab 3
-        </button>
-      </div>
+<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<el-dropdown class="inline-block">
+  <button class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white inset-ring-1 inset-ring-white/5 hover:bg-white/20">
+    Options
+    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
+      <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+    </svg>
+  </button>
 
-      <!-- Tab content -->
-      <div class="tab-content">
-        <div id="tab1" class="tab-pane active">
-          <h2>Tab 1 Content</h2>
-          <p>This is the content for Tab 1.</p>
-        </div>
-        <div id="tab2" class="tab-pane">
-          <h2>Tab 2 Content</h2>
-          <p>This is the content for Tab 2.</p>
-        </div>
-        <div id="tab3" class="tab-pane">
-          <h2>Tab 3 Content</h2>
-          <p>This is the content for Tab 3.</p>
-        </div>
-      </div>
+  <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+    <div class="py-1">
+      <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Account settings</a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Support</a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">License</a>
+      <form action="#" method="POST">
+        <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-300 focus:bg-white/5 focus:text-white focus:outline-hidden">Sign out</button>
+      </form>
     </div>
+  </el-menu>
+</el-dropdown>
 
-    <script>
-      // Function to open the tab and switch the active class
-      function openTab(event, tabId) {
-        var i, tabContent, tabButtons;
-
-        // Hide all tab content
-        tabContent = document.getElementsByClassName("tab-pane");
-        for (i = 0; i < tabContent.length; i++) {
-          tabContent[i].classList.remove("active");
-        }
-
-        // Remove active class from all buttons
-        tabButtons = document.getElementsByClassName("tab-button");
-        for (i = 0; i < tabButtons.length; i++) {
-          tabButtons[i].classList.remove("active");
-        }
-
-        // Show the clicked tab's content and add active class to the button
-        document.getElementById(tabId).classList.add("active");
-        event.currentTarget.classList.add("active");
-      }
-    </script>
   </body>
 </html>
