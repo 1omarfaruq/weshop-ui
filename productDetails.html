@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Image Swiper + Magnifier</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <div class="container mx-auto p-6">
+    <div class="flex">
+        <!-- Start:: left content  -->
+        <div class="w-1/2 flex border border-black">
+            <!-- LEFT: Thumbnails column -->
+            <div class="w-[150px] flex flex-col items-center border border-red-400 px-6">
+                <div>
+                    <div class="max-w-[148px] py-4 flex items-center rounded-[28px] border border-black/80"><img class="object-contain" src="https://i.ibb.co/6s6Zn5X/iphone-16.png" alt=""></div>
+                    <div class="max-w-[148px] py-4 flex items-center rounded-[28px] border border-black/80"><img src="https://i.ibb.co/C6KFrLK/Redmi-Note-13-Pro-4-G-1.jpg" alt=""></div>
+                    <div class="max-w-[148px] py-4 flex items-center rounded-[28px] border border-black/80"><img src="https://i.ibb.co/Jj4tT3d/Samsung-Galaxy-S24-ultra.jpg" alt=""></div>
+                    <div class="max-w-[148px] py-4 flex items-center rounded-[28px] border border-black/80"><img src="https://i.ibb.co/VqzNpP5/motorola-edge-50-pro.jpg" alt=""></div>
+                </div>
+                <div class="flex h-[48px] border w-full">
+<div class="w-1/2">
+    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.575 2.4L1.675 6.275C1.49167 6.45833 1.2625 6.55417 0.9875 6.5625C0.7125 6.57083 0.475 6.475 0.275 6.275C0.0916667 6.09167 0 5.85833 0 5.575C0 5.29167 0.0916667 5.05833 0.275 4.875L4.875 0.275C4.975 0.175 5.08333 0.104167 5.2 0.0625C5.31667 0.0208333 5.44167 0 5.575 0C5.70833 0 5.83333 0.0208333 5.95 0.0625C6.06667 0.104167 6.175 0.175 6.275 0.275L10.875 4.875C11.0583 5.05833 11.1542 5.2875 11.1625 5.5625C11.1708 5.8375 11.075 6.075 10.875 6.275C10.6917 6.45833 10.4583 6.55 10.175 6.55C9.89167 6.55 9.65833 6.45833 9.475 6.275L5.575 2.4Z" fill="#1C3454" fill-opacity="0.26"/>
+    </svg>
+</div>
+
+<div class="w-1/2">
+    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.58809 4.1625L9.48809 0.2875C9.67142 0.104167 9.90059 0.00833321 10.1756 0C10.4506 -0.00833321 10.6881 0.0875001 10.8881 0.2875C11.0714 0.470833 11.1631 0.704166 11.1631 0.9875C11.1631 1.27083 11.0714 1.50417 10.8881 1.6875L6.28809 6.2875C6.18809 6.3875 6.07975 6.45833 5.96309 6.5C5.84642 6.54167 5.72142 6.5625 5.58809 6.5625C5.45475 6.5625 5.32975 6.54167 5.21309 6.5C5.09642 6.45833 4.98809 6.3875 4.88809 6.2875L0.288086 1.6875C0.104753 1.50417 0.00891876 1.275 0.000585556 1C-0.00774765 0.725 0.0880861 0.4875 0.288086 0.2875C0.471419 0.104167 0.704752 0.0124998 0.988086 0.0124998C1.27142 0.0124998 1.50475 0.104167 1.68809 0.2875L5.58809 4.1625Z" fill="#192739" fill-opacity="0.94"/>
+    </svg>
+</div>
+                </div>
+
+            </div>
+
+            <!-- CENTER: Main image with prev/next -->
+            <div class="border border-blue-400">
+                <div class="relative w-full">
+                    <div id="main-viewport" class="img-viewport bg-gray-50 rounded-2xl aspect-[4/4] flex items-center justify-center">
+                        <img id="main-image" src="https://i.ibb.co/BznwzFj/probook-450-g8-004-500x500-1.jpg" alt="Product image" class="max-h-[78vh] max-w-full object-contain select-none" draggable="false">
+                        <div id="lens" class="magnifier-lens">
+                        <img id="zoomed-image" src="" alt="">
+                        </div>
+                    </div>
+
+                <button id="prev-btn" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow">◀</button>
+                <button id="next-btn" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow">▶</button>
+                </div>
+            </div>
+        </div>
+
+      <!-- Start:: Right content -->
+      <div class="col-span-4 w-1/2">
+        <h2 class="text-2xl font-semibold mb-2">Textured white hooded sweatshirt — winter</h2>
+        <p class="text-xl font-bold text-gray-900 mb-4">$200.00 
+          <span class="text-sm line-through text-gray-400">$220.00</span>
+        </p>
+        <p class="text-gray-600">
+          Experience comfort and style with our premium hoodie, designed for warmth and long-lasting wearability.
+          Made with soft, breathable fabric, this hoodie offers comfort for casual outings or lounging at home.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
