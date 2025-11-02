@@ -777,6 +777,9 @@
   .h-\[40px\] {
     height: 40px;
   }
+  .h-\[48px\] {
+    height: 48px;
+  }
   .h-\[50px\] {
     height: 50px;
   }
@@ -800,6 +803,9 @@
   }
   .h-\[144px\] {
     height: 144px;
+  }
+  .h-\[179px\] {
+    height: 179px;
   }
   .h-\[264px\] {
     height: 264px;
@@ -864,6 +870,9 @@
   .max-h-\[130px\] {
     max-height: 130px;
   }
+  .max-h-\[179px\] {
+    max-height: 179px;
+  }
   .max-h-\[245px\] {
     max-height: 245px;
   }
@@ -914,6 +923,9 @@
   }
   .w-0\.5 {
     width: calc(var(--spacing) * 0.5);
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -1035,6 +1047,12 @@
   .w-\[140px\] {
     width: 140px;
   }
+  .w-\[148px\] {
+    width: 148px;
+  }
+  .w-\[150px\] {
+    width: 150px;
+  }
   .w-\[155px\] {
     width: 155px;
   }
@@ -1089,6 +1107,9 @@
   .w-\[515px\] {
     width: 515px;
   }
+  .w-\[560px\] {
+    width: 560px;
+  }
   .w-\[594px\] {
     width: 594px;
   }
@@ -1118,6 +1139,9 @@
   }
   .max-w-\[140px\] {
     max-width: 140px;
+  }
+  .max-w-\[148px\] {
+    max-width: 148px;
   }
   .max-w-\[165px\] {
     max-width: 165px;
@@ -1544,6 +1568,9 @@
   .overflow-y-scroll {
     overflow-y: scroll;
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -1707,6 +1734,24 @@
   .border-black {
     border-color: var(--color-black);
   }
+  .border-black\/50 {
+    border-color: color-mix(in srgb, #000 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
+  }
+  .border-black\/70 {
+    border-color: color-mix(in srgb, #000 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-black) 70%, transparent);
+    }
+  }
+  .border-black\/80 {
+    border-color: color-mix(in srgb, #000 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-black) 80%, transparent);
+    }
+  }
   .border-blue-400 {
     border-color: var(--color-blue-400);
   }
@@ -1721,6 +1766,9 @@
   }
   .border-gray-400 {
     border-color: var(--color-gray-400);
+  }
+  .border-red-400 {
+    border-color: var(--color-red-400);
   }
   .border-red-500 {
     border-color: var(--color-red-500);
